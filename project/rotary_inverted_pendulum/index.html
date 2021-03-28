@@ -1,0 +1,1449 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Cheng Zhang" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A rotary inverted pendulum system built with an encoder, a brush motor, a STM32F103 board that is capable of setting target orientation, non-stop swinging and automatically swinging up." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://chengzhag.github.io/project/rotary_inverted_pendulum/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.9a66e344a68eb664b392d406a3f80726.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120268499-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-120268499-3', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="https://chengzhag.github.io/project/rotary_inverted_pendulum/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Cheng Zhang" />
+  <meta property="og:url" content="https://chengzhag.github.io/project/rotary_inverted_pendulum/" />
+  <meta property="og:title" content="Rotary Inverted Pendulum | Cheng Zhang" />
+  <meta property="og:description" content="A rotary inverted pendulum system built with an encoder, a brush motor, a STM32F103 board that is capable of setting target orientation, non-stop swinging and automatically swinging up." /><meta property="og:image" content="https://chengzhag.github.io/project/rotary_inverted_pendulum/featured.jpg" />
+    <meta property="twitter:image" content="https://chengzhag.github.io/project/rotary_inverted_pendulum/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2017-04-09T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2017-04-09T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chengzhag.github.io/project/rotary_inverted_pendulum/"
+  },
+  "headline": "Rotary Inverted Pendulum",
+  
+  "image": [
+    "https://chengzhag.github.io/project/rotary_inverted_pendulum/featured.jpg"
+  ],
+  
+  "datePublished": "2017-04-09T00:00:00Z",
+  "dateModified": "2017-04-09T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Cheng Zhang"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cheng Zhang",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "A rotary inverted pendulum system built with an encoder, a brush motor, a STM32F103 board that is capable of setting target orientation, non-stop swinging and automatically swinging up."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Rotary Inverted Pendulum | Cheng Zhang</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="a8f9d12f6d2d712d537277742928f936" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Cheng Zhang</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Cheng Zhang</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publication</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Rotary Inverted Pendulum</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 9, 2017
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://github.com/pidan1231239/inverted_pendulum" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://www.youtube.com/watch?v=R4VLmF_X5qM" target="_blank" rel="noopener">
+  Video
+</a>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 540px;">
+  <div style="position: relative">
+    <img src="/project/rotary_inverted_pendulum/featured_huaa4fd96d1ed81a5ffbd9197268127a3d_1296256_720x0_resize_q75_lanczos.jpg" alt="" class="featured-image">
+    <span class="article-header-caption">The whole system on a tripod</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="introduction">Introduction</h2>
+<p>Rotary Inverted Pendulum is built with an encoder, a brush motor, a STM32F103 board. No rotation limit. Capable of setting target angle, non-stop swinging and automatically swinging up.</p>
+<p>Rotary Inverted Pendulum project is a work of team. The other two teammates are <a href="https://github.com/shicaiwei123" target="_blank" rel="noopener">shicaiwei123</a> and <a href="https://github.com/yoyolalala" target="_blank" rel="noopener">yoyolalala</a>.</p>
+<p>Code and document <a href="https://github.com/pidan1231239/inverted_pendulum" target="_blank" rel="noopener">here</a>. Platform details <a href="/project/ball_on_big_plate/">here</a>.</p>
+<h2 id="demo">Demo</h2>
+<p>Primary demo with very limited precision and robustness is shown below.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/R4VLmF_X5qM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="mechanical-structure">Mechanical structure</h2>
+<p>I use an optical encoder to measure the angle of the pendulum. The absolute angle of the pendulum need calibrate every time after reset.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-optical-encoder">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="Optical encoder" srcset="
+               /project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_bccfc1d3fb70d4b69a668e86d80cef72.jpg 400w,
+               /project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_2e90878c6482a3e2229eafbc304c4182.jpg 760w,
+               /project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_bccfc1d3fb70d4b69a668e86d80cef72.jpg"
+               width="570"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Optical encoder
+    </figcaption></figure>
+<p>A slip ring is used to prevent the winding of the wire.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-slip-ring">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="Slip ring" srcset="
+               /project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_bdec35728bec195e5da368e4421b480f.jpg 400w,
+               /project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_d2c969277c6bb9288f06d45f819c6074.jpg 760w,
+               /project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_bdec35728bec195e5da368e4421b480f.jpg"
+               width="392"
+               height="311"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Slip ring
+    </figcaption></figure>
+<p>The DC brush motor with gearbox and magnetic encoder is driven by a TB6612FNG model controlled with PWM signal. A 3s lithium battery powers the system like the following projects.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-complete-circuit-board">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="Complete circuit board" srcset="
+               /project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_4c655b0a37c440c9abde2b7838a41c03.jpg 400w,
+               /project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_816acf2e68b95478844676142de8f819.jpg 760w,
+               /project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_4c655b0a37c440c9abde2b7838a41c03.jpg"
+               width="760"
+               height="570"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Complete circuit board
+    </figcaption></figure>
+<p>The mechanical structure includes three round mounting plates to mount slip ring, motor, and quick-release plate. The plates are connected with hexagonal copper pillars. The whole structure is mounted to a tripod through the quick-release plate.</p>
+<p>The round plates are rendered as acrylic plate below. But they are made of carbon fiber in the final work.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-the-core-mechanical-structure">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="The core mechanical structure" srcset="
+               /project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_8251107b285f1eb5f05becb6302c3af9.png 400w,
+               /project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_dafb348746f227f7c5be5afa57300713.png 760w,
+               /project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_1200x1200_fit_lanczos_2.png 1200w"
+               src="/project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_8251107b285f1eb5f05becb6302c3af9.png"
+               width="492"
+               height="720"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      The core mechanical structure
+    </figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-the-complete-mechanical-structure">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="84C~Z%7bNZ1N42UWZE8$K2QQ9.png" alt="The complete mechanical structure" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      The complete mechanical structure
+    </figcaption></figure>
+<h2 id="software-design">Software design</h2>
+<blockquote>
+<p>Please refer to <a href="http://en.cnki.com.cn/Article_en/CJFDTOTAL-JZDF2007S1010.htm" target="_blank" rel="noopener">Study on PID Control of a Single Inverted Pendulum System</a> for the PID control system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-pid-control-system">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="S$$%28M%29IHI%60GJ%29_%25$CIG[MO0.png" alt="PID control system" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      PID control system
+    </figcaption></figure></p>
+</blockquote>
+<blockquote>
+<p>Also we refer to <a href="http://www.ahkjwx.cn:81/article/detail.aspx?id=669914934" target="_blank" rel="noopener">Research and Implementation of the Swing - up and Stabilizing Operation for Rotational Inverted Pendulum</a> for the swing-up and stabilizing operation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-swing---up-and-stabilizing-operation">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="A%29$0J%29GGY_]VH@%7d9J52[1HD.png" alt="Swing - up and stabilizing operation" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Swing - up and stabilizing operation
+    </figcaption></figure></p>
+</blockquote>
+<p>The swing-up and stabilizing operation and the changes between different modes are modeled as a state machine.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-state-machine-for-swing-up-and-stabilizing-operation">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="State machine for swing-up and stabilizing operation" srcset="
+               /project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_7007e2f9a97b56f15b5ee966b77ea37f.png 400w,
+               /project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_61038c37b0013f6aface338fabbc1938.png 760w,
+               /project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_1200x1200_fit_lanczos_2.png 1200w"
+               src="/project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_7007e2f9a97b56f15b5ee966b77ea37f.png"
+               width="760"
+               height="486"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      State machine for swing-up and stabilizing operation
+    </figcaption></figure>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/contest/">Contest</a>
+  
+  <a class="badge badge-light" href="/tag/control-system/">Control System</a>
+  
+  <a class="badge badge-light" href="/tag/electronics-design/">Electronics Design</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://chengzhag.github.io/project/rotary_inverted_pendulum/&amp;text=Rotary%20Inverted%20Pendulum" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://chengzhag.github.io/project/rotary_inverted_pendulum/&amp;t=Rotary%20Inverted%20Pendulum" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Rotary%20Inverted%20Pendulum&amp;body=https://chengzhag.github.io/project/rotary_inverted_pendulum/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://chengzhag.github.io/project/rotary_inverted_pendulum/&amp;title=Rotary%20Inverted%20Pendulum" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Rotary%20Inverted%20Pendulum%20https://chengzhag.github.io/project/rotary_inverted_pendulum/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://chengzhag.github.io/project/rotary_inverted_pendulum/&amp;title=Rotary%20Inverted%20Pendulum" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://chengzhag.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu576bf810bc605a94727766389217b97b_418874_270x270_fill_q75_lanczos_center.jpg" alt="Cheng Zhang"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://chengzhag.github.io/">Cheng Zhang</a></h5>
+      <h6 class="card-subtitle">Graduate Student</h6>
+      <p class="card-text">My research interests include 3D reconstruction, 3D detection, 3D scene understanding, etc.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=2uEyZJQAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/pidan1231239" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:chengzhag@std.uestc.edu.cn" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/project/ball_on_big_plate/">Ball on Big Plate</a></li>
+      
+      <li><a href="/project/ball_on_small_plate/">Ball on Small Plate</a></li>
+      
+      <li><a href="/project/ball_on_beam/">Ball on Beam</a></li>
+      
+      <li><a href="/project/fmcw_positioning_radar/">FMCW Positioning Radar</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b61a8f62b6e5c0cd322c8158c5b5dfb6.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cheng Zhang</title>
+    <link>https://chengzhag.github.io/</link>
+      <atom:link href="https://chengzhag.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <description>Cheng Zhang</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Cheng Zhang</title>
+      <link>https://chengzhag.github.io/</link>
+    </image>
+    
+    <item>
+      <title>Example Talk</title>
+      <link>https://chengzhag.github.io/talk/example-talk/</link>
+      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/talk/example-talk/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Wowchemy&amp;rsquo;s &lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Further event details, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;page elements&lt;/a&gt; such as image galleries, can be added to the body of this page.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Holistic 3D Scene Understanding from a Single Image with Implicit Representation</title>
+      <link>https://chengzhag.github.io/publication/im3d/</link>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/publication/im3d/</guid>
+      <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h2 id=&#34;3d-scene-understanding&#34;&gt;3D Scene Understanding&lt;/h2&gt;
+&lt;p&gt;Given a single color image,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Estimate the room layout, including object categories and poses in 3D space&lt;/li&gt;
+&lt;li&gt;Reconstruct mesh of individual object&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;motivations&#34;&gt;Motivations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Implicit representation like Signed Distance Function (SDF) can be used to detect collision and propagate gradients&lt;/li&gt;
+&lt;li&gt;And together with structured representation (LDIF), the shapes can be learned better and more shape priors can be provided for relationship understanding&lt;/li&gt;
+&lt;li&gt;Graph Convolutional Network (GCN) is proven to be good at resolving context information in the task of scene graph generation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-our-proposed-pipeline-we-initialize-the-layout-estimation-and-3d-object-poses-with-len-and-odn-from-prior-work-then-refine-them-with-scene-graph-convolutional-network-sgcn-we-utilize-a-local-implicit-embedding-network-lien-to-encode-latent-code-for-ldif-decoder-and-to-extract-implicit-features-for-sgcn-with-the-help-of-ldif-and-marching-cube-algorithm-object-meshes-are-extracted-then-rotated-scaled-and-put-into-places-to-construct-the-scene&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Our proposed pipeline. We initialize the layout estimation and 3D object poses with LEN and ODN from prior work, then refine them with Scene Graph Convolutional Network (SGCN). We utilize a Local Implicit Embedding Network (LIEN) to encode latent code for LDIF decoder and to extract implicit features for SGCN. With the help of LDIF and marching cube algorithm, object meshes are extracted then rotated, scaled, and put into places to construct the scene.&#34; srcset=&#34;
+               /publication/im3d/pipeline_hu5d54da59d234241780e2960c3ffaee78_1922141_973334ed13e4d2cb3eabdf9219279ebe.png 400w,
+               /publication/im3d/pipeline_hu5d54da59d234241780e2960c3ffaee78_1922141_ef8517bd9f675e4bedaf968e44c025e5.png 760w,
+               /publication/im3d/pipeline_hu5d54da59d234241780e2960c3ffaee78_1922141_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/pipeline_hu5d54da59d234241780e2960c3ffaee78_1922141_973334ed13e4d2cb3eabdf9219279ebe.png&#34;
+               width=&#34;760&#34;
+               height=&#34;300&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Our proposed pipeline. We initialize the layout estimation and 3D object poses with LEN and ODN from prior work, then refine them with Scene Graph Convolutional Network (SGCN). We utilize a Local Implicit Embedding Network (LIEN) to encode latent code for LDIF decoder and to extract implicit features for SGCN. With the help of LDIF and marching cube algorithm, object meshes are extracted then rotated, scaled, and put into places to construct the scene.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The proposed system consists of two stages, i.e., the initial estimation stage, and the refinement stage.
+In the initial estimation stage, a 2D detector is first adopted to extract the 2D bounding box from the input image, followed by an Object Detection Network (ODN) to recover the object poses as 3D bounding boxes and a new Local Implicit Embedding Network (LIEN) to extract the implicit local shape information from the image directly, which can further be decoded to infer 3D geometry.
+The input image is also fed into a Layout Estimation Network (LEN) to produce a 3D layout bounding box and relative camera pose.
+In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is designed to refine the initial predictions via the scene context information.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-qualitative-comparison-on-object-detection-and-scene-reconstruction-we-compare-object-detection-results-with-total3d-and-ground-truth-in-both-oblique-view-and-camera-view-the-results-show-that-our-method-gives-more-accurate-bounding-box-estimation-and-with-less-intersection-we-compare-scene-reconstruction-results-with-total3d-in-camera-view-and-observe-more-reasonable-object-poses&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Qualitative comparison on object detection and scene reconstruction. We compare object detection results with Total3D and ground truth in both oblique view and camera view. The results show that our method gives more accurate bounding box estimation and with less intersection. We compare scene reconstruction results with Total3D in camera view and observe more reasonable object poses.&#34; srcset=&#34;
+               /publication/im3d/results_hu40da7b1c92c60a32bded852532bb1b8e_2223271_974e0c0e3b6a4e4b9629f7b302cf9883.png 400w,
+               /publication/im3d/results_hu40da7b1c92c60a32bded852532bb1b8e_2223271_74508ae60005474b267bfa284ca2971f.png 760w,
+               /publication/im3d/results_hu40da7b1c92c60a32bded852532bb1b8e_2223271_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/results_hu40da7b1c92c60a32bded852532bb1b8e_2223271_974e0c0e3b6a4e4b9629f7b302cf9883.png&#34;
+               width=&#34;666&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Qualitative comparison on object detection and scene reconstruction. We compare object detection results with Total3D and ground truth in both oblique view and camera view. The results show that our method gives more accurate bounding box estimation and with less intersection. We compare scene reconstruction results with Total3D in camera view and observe more reasonable object poses.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Welcome to Wowchemy, the website builder for Hugo</title>
+      <link>https://chengzhag.github.io/post/getting-started/</link>
+      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/post/getting-started/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site&lt;/li&gt;
+&lt;li&gt;The template can be modified and customised to suit your needs. It&amp;rsquo;s a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a &lt;strong&gt;no-code solution (write in Markdown and customize with YAML parameters)&lt;/strong&gt; and having &lt;strong&gt;flexibility to later add even deeper personalization with HTML and CSS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-the-template-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png&#34; alt=&#34;The template is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      The template is mobile first with a responsive design to ensure that your site looks stunning on every device.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;get-started&#34;&gt;Get Started&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;👉 &lt;a href=&#34;https://wowchemy.com/templates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Create a new site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📚 &lt;a href=&#34;https://wowchemy.com/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Personalize your site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💬 &lt;a href=&#34;https://discord.gg/z8wNYzb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;Wowchemy community&lt;/strong&gt;&lt;/a&gt; or &lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Hugo community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🐦 Twitter: &lt;a href=&#34;https://twitter.com/wowchemy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@wowchemy&lt;/a&gt; &lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%28%23MadeWithWowchemy%20OR%20%23MadeWithAcademic%29&amp;amp;src=typed_query&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithWowchemy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💡 &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt; for &lt;em&gt;Wowchemy&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;strong&gt;Updating Wowchemy?&lt;/strong&gt; View the &lt;a href=&#34;https://wowchemy.com/docs/guide/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;crowd-funded-open-source-software&#34;&gt;Crowd-funded open-source software&lt;/h2&gt;
+&lt;p&gt;To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.&lt;/p&gt;
+&lt;h3 id=&#34;-click-here-to-become-a-sponsor-and-help-support-wowchemys-future-httpswowchemycomplans&#34;&gt;&lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;❤️ Click here to become a sponsor and help support Wowchemy&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;As a token of appreciation for sponsoring, you can &lt;strong&gt;unlock &lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these&lt;/a&gt; awesome rewards and extra features 🦄✨&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/wowchemy/hugo-academic-cli&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Academic CLI&lt;/a&gt;:&lt;/strong&gt; Automatically import publications from BibTeX&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or &lt;a href=&#34;https://wowchemy.com/user-stories/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with &lt;a href=&#34;https://wowchemy.com/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&#34;https://wowchemy.com/docs/import/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or &lt;a href=&#34;https://wowchemy.com/docs/install-locally/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable &lt;a href=&#34;https://wowchemy.com/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 34+ language packs including English, 中文, and Português&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;p&gt;Wowchemy and its templates come with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/customization&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully customizable.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Slides</title>
+      <link>https://chengzhag.github.io/slides/example/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/slides/example/</guid>
+      <description>&lt;h1 id=&#34;create-slides-in-markdown-with-wowchemy&#34;&gt;Create slides in Markdown with Wowchemy&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wowchemy&lt;/a&gt; | &lt;a href=&#34;https://owchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;Mobile friendly slides&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
+&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Code block:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
+if porridge == &amp;quot;blueberry&amp;quot;:
+    print(&amp;quot;Eating...&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
+&lt;p&gt;Block math:&lt;/p&gt;
+&lt;p&gt;$$
+f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
+&lt;p&gt;Make content appear incrementally&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
+One
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+&lt;strong&gt;Two&lt;/strong&gt;
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+Three
+&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
+&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
+- Only the speaker can read these notes
+- Press `S` key to view
+{{% /speaker_note %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
+&lt;aside class=&#34;notes&#34;&gt;
+  &lt;ul&gt;
+&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/aside&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;/media/boards.jpg&#34;
+  &gt;
+
+&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
+&lt;p&gt;Customize the slide style and background&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/media/boards.jpg&amp;quot; &amp;gt;}}
+{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
+{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  color: navy;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/discussions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>FMCW Positioning Radar</title>
+      <link>https://chengzhag.github.io/project/fmcw_positioning_radar/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/project/fmcw_positioning_radar/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;FMCW Positioning Radar project is a work of team made up of three people. We were trying to get the qualification to attend &lt;a href=&#34;http://nuedc.sjtu.edu.cn/CN/content.aspx?info_lb=37&amp;amp;flag=2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ESDC&lt;/a&gt; through this project. Sadly, we were out of the game in the stage of school contest.&lt;/p&gt;
+&lt;p&gt;The radar works in the 2.7 GHz - 3.7 GHz band. It has 4 transmitting antenna and 12 receive antenna. With a transmission power of less than 10 dBm, it localizes a person within a median of 5 cm in the y dimension. Within 5 meters, it has an accuracy of about 20 cm. Without further tests, the maximum distance is unknown. However, it can indicate a person behind a 25 cm concrete wall.&lt;/p&gt;
+&lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The final presentation with hardware and data processing flow introduction see &lt;a href=&#34;https://sway.com/5uSW86N1bUqbrA7T?ref=Link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;fmcw&#34;&gt;FMCW&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Frequency-modulated continuous-wave radar (FM-CW) – also called continuous-wave frequency-modulated (CWFM) radar – is a short-range measuring radar set capable of determining distance (&lt;a href=&#34;https://en.wikipedia.org/wiki/Continuous-wave_radar&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Continuous-wave radar wiki&lt;/a&gt;).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you have no idea about it, the tutorial below is a good starting point.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.radartutorial.eu/02.basics/Frequency%20Modulated%20Continuous%20Wave%20Radar.en.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Frequency-Modulated Continuous-Wave Radar&lt;/a&gt; (&lt;a href=&#34;http://www.radartutorial.eu/02.basics/Frequency%20Modulated%20Continuous%20Wave%20Radar.en.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FMCW Radar&lt;/a&gt;): a brief introduction of the principle of FMCW&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ocw.mit.edu/resources/res-ll-003-build-a-small-radar-system-capable-of-sensing-range-doppler-and-synthetic-aperture-radar-imaging-january-iap-2011/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Build a Small Radar System Capable of Sensing Range, Doppler, and Synthetic Aperture Radar Imaging&lt;/a&gt;: an MIT course to build an FMCW radar yourself&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hackaday.com/2014/02/24/guest-post-try-radar-for-your-next-project/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GUEST POST: TRY RADAR FOR YOUR NEXT PROJECT&lt;/a&gt;: an article written by the instructor of the course above&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://training.ti.com/intro-mmwave-sensing-fmcw-radars-module-1-range-estimation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Intro to mmWave Sensing: FMCW Radars - Module 1: Range Estimation&lt;/a&gt;: a series of 5 short videos  providing a concise yet in-depth introduction to sensing using FMCW radars&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sdr&#34;&gt;SDR&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Software-defined_radio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Software-defined radio&lt;/a&gt; (SDR) is a radio communication system where components that have been traditionally implemented in hardware (e.g. mixers, filters, amplifiers, modulators/demodulators, detectors, etc.) are instead implemented by means of software on a personal computer or embedded system.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The project uses a USRP N210 with an LFRX  daughter board. SDR is not an important part of this project cause the RF front end are made with RF modules and the FMCW generator is build separately. The USRP here acts as a role of ADC and is accessed via Simulink. See how to use a USRP with Simulink below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ww2.mathworks.cn/hardware-support/usrp.html?s_tid=srchtitle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;USRP® Support Package from Communications System Toolbox&lt;/a&gt;: Matlab toolbox for USRP&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ecewp.ece.wpi.edu/wordpress/wireless/textbooks/sdrlabs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Digital Communication Systems Engineering Using Software Defined Radio&lt;/a&gt;: a tutorial of SDR using Simulink&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
+&lt;p&gt;The hardware design can be introduced in two parts, RF front end and FMCW generator. The design references the projects and the papers below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ocw.mit.edu/resources/res-ll-003-build-a-small-radar-system-capable-of-sensing-range-doppler-and-synthetic-aperture-radar-imaging-january-iap-2011/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Build a Small Radar System Capable of Sensing Range, Doppler, and Synthetic Aperture Radar Imaging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rfcapture.csail.mit.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RF-Capture&lt;/a&gt;: &lt;a href=&#34;http://rfcapture.csail.mit.edu/rfcapture-paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper see RF-Capture: Capturing a Coarse Human Figure Through a Wall&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://witrack.csail.mit.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WiTrack&lt;/a&gt;: papers see &lt;a href=&#34;http://witrack.csail.mit.edu/witrack-paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;3D Tracking via Body Radio Reflections&lt;/a&gt;, &lt;a href=&#34;http://witrack.csail.mit.edu/witrack2-paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multi-Person Localization via RF Body Reflections&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fmcw-generator&#34;&gt;FMCW generator&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.analog.com/en/products/clock-and-timing/phase-locked-loop/fractional-n-pll/adf4159.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADF4159&lt;/a&gt; evaluation board: &lt;a href=&#34;http://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/eval-adf4159.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;EV-ADF4159EB3Z&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Loop filter: &lt;a href=&#34;http://www.analog.com/cn/products/amplifiers/operational-amplifiers/jfet-input-amplifiers/ad8065.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AD8065&lt;/a&gt;. It is designed with &lt;a href=&#34;https://form.analog.com/Form_Pages/RFComms/ADISimPll.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADIsimPLL&lt;/a&gt; under the guidance of &lt;a href=&#34;http://www.analog.com/media/en/reference-design-documentation/reference-designs/CN0302.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CN-0302&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;VCO: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=ZX95-3800A%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ZX95-3800A+&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Power splitter: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=ZX10-2-42%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ZX10-2-42+&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Attenuator: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=VAT-3%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VAT-3+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The final design works in 2.7 GHz to 3.7 GHz to avoid 2.4 GHz band.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-fmcw-generator&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;FMCW generator&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/FMCW%E4%BF%A1%E5%8F%B7%E5%8F%91%E7%94%9F_hu26183943111256a42d4d4152b4a53e13_20891_3916a8230585af7ced2f41ff60977b55.png 400w,
+               /project/fmcw_positioning_radar/FMCW%E4%BF%A1%E5%8F%B7%E5%8F%91%E7%94%9F_hu26183943111256a42d4d4152b4a53e13_20891_c4543a458b2c6486c29181ec7218fe12.png 760w,
+               /project/fmcw_positioning_radar/FMCW%E4%BF%A1%E5%8F%B7%E5%8F%91%E7%94%9F_hu26183943111256a42d4d4152b4a53e13_20891_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/FMCW%E4%BF%A1%E5%8F%B7%E5%8F%91%E7%94%9F_hu26183943111256a42d4d4152b4a53e13_20891_3916a8230585af7ced2f41ff60977b55.png&#34;
+               width=&#34;760&#34;
+               height=&#34;170&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      FMCW generator
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;rf-front-end&#34;&gt;RF front end&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;PA and LNA: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=ZX60-53LNB%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ZX60-53LNB+&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Power splitter: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=ZN2PD-9G%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ZN2PD-9G+&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Attenuator: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=FW-9%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FW-9+&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mixer: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=ZX05-43%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ZX05-43+&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Switch: ADRF5040&lt;/li&gt;
+&lt;li&gt;mbed board: ST NUCLEO-L476RG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The mbed board detects the trigger edge and overlay current antenna pair number after the edge. The baseband signal from the mixer and coded sync signal from mbed board are sent into the same LFRX board to achieve synchronization, then will be analyzed in Simulink in real time.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-rf-front-end&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;RF front end&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/FMCW%E5%B0%84%E9%A2%91%E5%89%8D%E7%AB%AF_hue03815aa217ca09856e7c0a7584fbbac_32696_5dcddf45cfc496d8638f2a8c276fc51d.png 400w,
+               /project/fmcw_positioning_radar/FMCW%E5%B0%84%E9%A2%91%E5%89%8D%E7%AB%AF_hue03815aa217ca09856e7c0a7584fbbac_32696_6f8da16e8be8df1a14764a9750385147.png 760w,
+               /project/fmcw_positioning_radar/FMCW%E5%B0%84%E9%A2%91%E5%89%8D%E7%AB%AF_hue03815aa217ca09856e7c0a7584fbbac_32696_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/FMCW%E5%B0%84%E9%A2%91%E5%89%8D%E7%AB%AF_hue03815aa217ca09856e7c0a7584fbbac_32696_5dcddf45cfc496d8638f2a8c276fc51d.png&#34;
+               width=&#34;760&#34;
+               height=&#34;292&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      RF front end
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+&lt;p&gt;Software part includes ADF4159 evaluation board configuration, mbed code, and Simulink model.&lt;/p&gt;
+&lt;h3 id=&#34;adf4159&#34;&gt;ADF4159&lt;/h3&gt;
+&lt;p&gt;The ADF4159 evaluation board is configured using &lt;a href=&#34;http://www.analog.com/media/en/evaluation-boards-kits/evaluation-software/ADF4158-9_Setup_v4_10_6.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADF4158 and ADF4159 Evaluation Board Software&lt;/a&gt; via USB. The configuration file &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/ad4159&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; can be loaded into the software. The board is configured as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ramp mode: Continuous sawtooth&lt;/li&gt;
+&lt;li&gt;RF frequency: 2.7 GHz - 3.7 GHz&lt;/li&gt;
+&lt;li&gt;Ramp frequency: 2000 Hz&lt;/li&gt;
+&lt;li&gt;Charge pump: 1.25 mA&lt;/li&gt;
+&lt;li&gt;Muxout: Digital lock Detect. It is used as a sync signal to trigger the switching of antennas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The 4 Tx and 12 Rx makes up 4*12 antenna pairs. With ramp frequency of 2000 Hz, every antenna pair is switched to for 41.7 times per second.&lt;/p&gt;
+&lt;h3 id=&#34;mbed-code&#34;&gt;mbed code&lt;/h3&gt;
+&lt;p&gt;The mbed board switches antenna pairs after every trigger edge from the ADF4159 Muxout pin. And it also overlay the antenna pair number to the sync signal. Considering that MCU has some unstable reaction delay between the trigger edge of the sync signal and the first down edge of the output, the MCU first pulls down the sync signal then output bits of the number. In this way, the down edge of the overlaid signal has no jitter. Code of mbed board is &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/mcu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-antenna-switching-timing-diagram&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Antenna switching timing diagram&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/IMG_20180623_094926_huca20fb634e53dde3c09519b7bcecdcb5_343173_eae03d90855160a5a651ee5549a59d8b.jpg 400w,
+               /project/fmcw_positioning_radar/IMG_20180623_094926_huca20fb634e53dde3c09519b7bcecdcb5_343173_660eb27965bd32b5343feb2418ca1a11.jpg 760w,
+               /project/fmcw_positioning_radar/IMG_20180623_094926_huca20fb634e53dde3c09519b7bcecdcb5_343173_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/IMG_20180623_094926_huca20fb634e53dde3c09519b7bcecdcb5_343173_eae03d90855160a5a651ee5549a59d8b.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;724&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Antenna switching timing diagram
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;simulink-model&#34;&gt;Simulink model&lt;/h3&gt;
+&lt;p&gt;All the models are in the &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/simulink&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simulink&lt;/a&gt; folder. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/RadarImagingAndPositioning.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RadarImagingAndPositioning.slx&lt;/a&gt; block implements the basic signal processing logic and output the 2D heat map and target position. The data processing flow is shown in the presentation above. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/usrp_4t12r_heatmap.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;usrp_4t12r_heatmap.slx&lt;/a&gt;  connects the basic blocks to show the imaging result and targets. For more information about using USRP with Simulink, see the Introduction section above.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;In the experimental stage, I built a system with 1 Tx and 3 Rx.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-1tx3rx-system&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;1TX3RX system&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/IMG_20180131_161431_hua447367f1554f7b9f6ef38b45a736be8_2844453_608d3d14ba232f53656c9d172b52e797.jpg 400w,
+               /project/fmcw_positioning_radar/IMG_20180131_161431_hua447367f1554f7b9f6ef38b45a736be8_2844453_98fa3b880510463182b55dad50006926.jpg 760w,
+               /project/fmcw_positioning_radar/IMG_20180131_161431_hua447367f1554f7b9f6ef38b45a736be8_2844453_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/IMG_20180131_161431_hua447367f1554f7b9f6ef38b45a736be8_2844453_608d3d14ba232f53656c9d172b52e797.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      1TX3RX system
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The overlaid sync signal is shown below.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-sync-signal&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Sync signal&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/IMG_20180131_103642_hu8d85f0640960bde96e2b1ae9e9f41d3b_2042183_da5c54715b46335e54faae34f6deace6.jpg 400w,
+               /project/fmcw_positioning_radar/IMG_20180131_103642_hu8d85f0640960bde96e2b1ae9e9f41d3b_2042183_6d87b66883961bf4cf4ee902f4a03465.jpg 760w,
+               /project/fmcw_positioning_radar/IMG_20180131_103642_hu8d85f0640960bde96e2b1ae9e9f41d3b_2042183_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/IMG_20180131_103642_hu8d85f0640960bde96e2b1ae9e9f41d3b_2042183_da5c54715b46335e54faae34f6deace6.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Sync signal
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;1D imaging of each antenna pair is shown below. Tested with a person walking away then walking back. The d axis shows the round trip of the radar signal.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-1d-imaging-of-each-antenna-pair&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;1d imaging of each antenna pair&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/%E4%B8%89%E6%A0%B9%E5%A4%A9%E7%BA%BF%E7%80%91%E5%B8%83%E5%9B%BE_hu95d8e0e5e4514c2335bb54c686fd91e3_150387_a025354eccc17bd053f939b0af2e351c.jpg 400w,
+               /project/fmcw_positioning_radar/%E4%B8%89%E6%A0%B9%E5%A4%A9%E7%BA%BF%E7%80%91%E5%B8%83%E5%9B%BE_hu95d8e0e5e4514c2335bb54c686fd91e3_150387_874b543fe1498bb4b493a46ecca33f85.jpg 760w,
+               /project/fmcw_positioning_radar/%E4%B8%89%E6%A0%B9%E5%A4%A9%E7%BA%BF%E7%80%91%E5%B8%83%E5%9B%BE_hu95d8e0e5e4514c2335bb54c686fd91e3_150387_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/%E4%B8%89%E6%A0%B9%E5%A4%A9%E7%BA%BF%E7%80%91%E5%B8%83%E5%9B%BE_hu95d8e0e5e4514c2335bb54c686fd91e3_150387_a025354eccc17bd053f939b0af2e351c.jpg&#34;
+               width=&#34;733&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      1d imaging of each antenna pair
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The system was then expanded to 1 Tx and 8 Rx. In this stage, 2D imaging can be done.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-1tx8rx-system&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;1TX8RX system&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/IMG_20180205_100729_hu45db6a084c1ff16c9fb139d18d576334_3344766_d8599033960a701de596e987e4d13f5f.jpg 400w,
+               /project/fmcw_positioning_radar/IMG_20180205_100729_hu45db6a084c1ff16c9fb139d18d576334_3344766_22721d2db80b1c8f43e3164ae09c4120.jpg 760w,
+               /project/fmcw_positioning_radar/IMG_20180205_100729_hu45db6a084c1ff16c9fb139d18d576334_3344766_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/IMG_20180205_100729_hu45db6a084c1ff16c9fb139d18d576334_3344766_d8599033960a701de596e987e4d13f5f.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      1TX8RX system
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The following image is the heat map captured from the 1Tx8Rx system. The x-axis indicates angle from left to right. y-axis indicates the round distance of the radar signal. This illustration was made in a hurry so there is no complete annotation.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-1tx8rx-top-down-heatmap&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;1Tx8Rx top-down heatmap&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/Image_hu53c2b146e41b1abaaf339536bc9d4456_16606_51cebd848db84e90452d7fe2cccdc9ff.png 400w,
+               /project/fmcw_positioning_radar/Image_hu53c2b146e41b1abaaf339536bc9d4456_16606_fa2044fdd9fef4b518cb942c25befe20.png 760w,
+               /project/fmcw_positioning_radar/Image_hu53c2b146e41b1abaaf339536bc9d4456_16606_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/Image_hu53c2b146e41b1abaaf339536bc9d4456_16606_51cebd848db84e90452d7fe2cccdc9ff.png&#34;
+               width=&#34;493&#34;
+               height=&#34;409&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      1Tx8Rx top-down heatmap
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;After that, the system was expanded to 4 Tx and 12 Rx. In this stage, 3D imaging can be done.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-4tx12rx-system&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;4TX12RX system&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/1522473970150_48c5a36482b4463d3e4516373d3e01c5_hu3bd8cd3939b07eababb838e569c7a786_2152364_877eb2795ba63eaf22836c4a7b449e5b.jpg 400w,
+               /project/fmcw_positioning_radar/1522473970150_48c5a36482b4463d3e4516373d3e01c5_hu3bd8cd3939b07eababb838e569c7a786_2152364_3ca333879363013d299ed92df5c333a5.jpg 760w,
+               /project/fmcw_positioning_radar/1522473970150_48c5a36482b4463d3e4516373d3e01c5_hu3bd8cd3939b07eababb838e569c7a786_2152364_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/1522473970150_48c5a36482b4463d3e4516373d3e01c5_hu3bd8cd3939b07eababb838e569c7a786_2152364_877eb2795ba63eaf22836c4a7b449e5b.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      4TX12RX system
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The following gif shows the 3D imaging projected to xz-plane of a person holding a corner reflector and drawing a circle in the air.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-heatmap-front-view&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Heatmap front view&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/_hu9d2a310dd94e072dfba2a9d7def6ad75_3655283_276e26ecbfc490ab1ca0465ea6927075.gif 400w,
+               /project/fmcw_positioning_radar/_hu9d2a310dd94e072dfba2a9d7def6ad75_3655283_3ba4f4e8a9ba757d72271bfec70916b1.gif 760w,
+               /project/fmcw_positioning_radar/_hu9d2a310dd94e072dfba2a9d7def6ad75_3655283_78f3f39ee8dd8adff9f34ca607e19cca.gif 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/_hu9d2a310dd94e072dfba2a9d7def6ad75_3655283_276e26ecbfc490ab1ca0465ea6927075.gif&#34;
+               width=&#34;560&#34;
+               height=&#34;420&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Heatmap front view
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The gif below shows the 2D imaging of xy-plane with target tracking. The target person was walking around in the distance of 3 meters. The y-axis indicates the round distance of radar signal.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-heatmap-top-down-view&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Heatmap top-down view&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/heatMapTarget_hu9d00e611e044496101eb698a1149f236_1478066_99a6cdd3971d7428d4e24ab3c3716bee.gif 400w,
+               /project/fmcw_positioning_radar/heatMapTarget_hu9d00e611e044496101eb698a1149f236_1478066_913ee12c029a82525015a3bcb888e8b0.gif 760w,
+               /project/fmcw_positioning_radar/heatMapTarget_hu9d00e611e044496101eb698a1149f236_1478066_1200x1200_fit_lanczos.gif 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/heatMapTarget_hu9d00e611e044496101eb698a1149f236_1478066_99a6cdd3971d7428d4e24ab3c3716bee.gif&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Heatmap top-down view
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;I tried to extract the z-axis coordinate of person target. However, because of the reflection angle mentioned in &lt;a href=&#34;http://rfcapture.csail.mit.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RF-Capture&lt;/a&gt;, and the intensified effect by the lower frequency band of our system, the height of a person cannot be accurately detected.&lt;/p&gt;
+&lt;p&gt;The image shows the heat map of the target in the z-axis changing with time. The target is walking in place then squats in the 10th second. As shown below, the height drops several times when the target moves.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-heatmap-z&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Heatmap z&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/Image2_hu0ebc041c16d6d6cdba6f5a60288afea2_50325_51a4351994d031752db7ae7fc0cb88f0.png 400w,
+               /project/fmcw_positioning_radar/Image2_hu0ebc041c16d6d6cdba6f5a60288afea2_50325_b804661373cc5c4aed6fd15fed9de303.png 760w,
+               /project/fmcw_positioning_radar/Image2_hu0ebc041c16d6d6cdba6f5a60288afea2_50325_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/Image2_hu0ebc041c16d6d6cdba6f5a60288afea2_50325_51a4351994d031752db7ae7fc0cb88f0.png&#34;
+               width=&#34;515&#34;
+               height=&#34;414&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Heatmap z
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The final work was put on a cart.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-final-system&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Final system&#34; srcset=&#34;
+               /project/fmcw_positioning_radar/IMG_20180416_155121_hu334e9b627c680a8ef93de0d84f8837c8_3746606_0e76cccf2dbf9dbdcdf4bc02c0385f3b.jpg 400w,
+               /project/fmcw_positioning_radar/IMG_20180416_155121_hu334e9b627c680a8ef93de0d84f8837c8_3746606_ed5121006969014feda62bfd43f354af.jpg 760w,
+               /project/fmcw_positioning_radar/IMG_20180416_155121_hu334e9b627c680a8ef93de0d84f8837c8_3746606_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/IMG_20180416_155121_hu334e9b627c680a8ef93de0d84f8837c8_3746606_0e76cccf2dbf9dbdcdf4bc02c0385f3b.jpg&#34;
+               width=&#34;570&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Final system
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ball on Big Plate</title>
+      <link>https://chengzhag.github.io/project/ball_on_big_plate/</link>
+      <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/project/ball_on_big_plate/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Ball on Big Plate project is a work of team made up with three people. We are fortunate enough to get the first prize with this in &lt;a href=&#34;https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2017NUEDC&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was responsible for building the structure and programming STM32 and Raspberry Pi. Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_big_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/zianglei&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zianglei&lt;/a&gt;. Sadly that &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt; left the team before the contest. The preparation projects below can not be done without her. I&amp;rsquo;d like to thank her here.&lt;/p&gt;
+&lt;p&gt;The final work has been handed in to our school and there will be no plan to write a detailed document for it. This page tells the story behind it.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The ball-on-plate system is a promoted version of the traditional ball-on-beam control problem. The problem consists of a plate which its deviation can be manipulated in two perpendicular directions. The goal is to carry the ball moving on the plate to a desired position, that is to control a freely rolling ball on a specific position or moving on a trajectory on the plate. - &lt;a href=&#34;http://web.engr.illinois.edu/~khashab2/files/2011_LinearControl/16.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Modelling and Control of Ball-Plate System&lt;/a&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-ball-on-plate-system&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Ball-on-plate system&#34; srcset=&#34;
+               /project/ball_on_big_plate/ball-on-plate_system_hu401e0adde6039723bbf54217f0a1800e_52854_00bb0da7b79b8ec2a89f74aaa8c272b3.png 400w,
+               /project/ball_on_big_plate/ball-on-plate_system_hu401e0adde6039723bbf54217f0a1800e_52854_0f51bcccccf543a8bad20b0bca7cc22a.png 760w,
+               /project/ball_on_big_plate/ball-on-plate_system_hu401e0adde6039723bbf54217f0a1800e_52854_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/ball-on-plate_system_hu401e0adde6039723bbf54217f0a1800e_52854_00bb0da7b79b8ec2a89f74aaa8c272b3.png&#34;
+               width=&#34;732&#34;
+               height=&#34;310&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Ball-on-plate system
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Specifically in this project, according to the contest requirements, the system is supposed to move a ball between any two of nine evenly distributed circles drawn on the plate and avoids other circles. The plate must have a size around 65cm*65cm. The &lt;a href=&#34;%e6%bb%9a%e7%90%83%e6%8e%a7%e5%88%b6%e7%b3%bb%e7%bb%9f%ef%bc%88B%e9%a2%98%ef%bc%89.pdf&#34;&gt;document&lt;/a&gt; shows the distribution of the circles.&lt;/p&gt;
+&lt;h2 id=&#34;the-contest&#34;&gt;The Contest&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NUEDC&lt;/a&gt; is one of the largest electronic design competitions in China. The competition last three and a half days. Four categories of more than ten subjects are published on the official website on the day it begins. Participants usually prepare for a long time before the competition. The competition in 2017 which I attended started from August 9 to August 12. Our team started preparing about four months in advance.&lt;/p&gt;
+&lt;p&gt;I was responsible for building the structure and programming STM32 and Raspberry Pi. Although I had got some experience with programming, I barely knew the basics of control system. However, I chose the control system direction to prepare because of my interest in it.&lt;/p&gt;
+&lt;p&gt;In the preparation process, we learned from five projects, three of which are listed below.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/&#34;&gt;Rotary Inverted Pendulum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chengzhag.github.io/project/ball_on_beam/&#34;&gt;Ball on Beam&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on Small Plate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sadly, I&amp;rsquo;ve got no video demo of the final work since we were too busy moving forward. So let&amp;rsquo;s jump into the details of the design.&lt;/p&gt;
+&lt;h2 id=&#34;platform&#34;&gt;Platform&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi Zero and Raspberry Pi 3b with OpenCV installed&lt;/li&gt;
+&lt;li&gt;STM32F103 minimum system board&lt;/li&gt;
+&lt;li&gt;PC with Visual Studio and VisualGDB installed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Raspberry Pi is developed with C++ language using Raspberry toolchain provided by &lt;a href=&#34;https://visualgdb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VisualGDB&lt;/a&gt; (tutorial &lt;a href=&#34;https://visualgdb.com/tutorials/raspberry/crosscompiler/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;). The STM32 is developed with C++ language using Arm toolchain provided by &lt;a href=&#34;https://visualgdb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VisualGDB&lt;/a&gt; (tutorial &lt;a href=&#34;https://visualgdb.com/tutorials/arm/stm32/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;). The Raspberry runs OpenCV program and sends the results to STM32 through UART.&lt;/p&gt;
+&lt;p&gt;I made use of a C++ API written for STM32 named &lt;a href=&#34;https://github.com/eboxmaker/eBox_STM32F1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ebox&lt;/a&gt;. Although it saved me a lot of time then, I found &lt;a href=&#34;https://www.mbed.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mbed&lt;/a&gt; even easier than it after the competition. By the way, it was said that Arduino is not allowed in the competition.&lt;/p&gt;
+&lt;h2 id=&#34;mechanical-structure&#34;&gt;Mechanical structure&lt;/h2&gt;
+&lt;p&gt;The final work uses a PCB motherboard made in &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on Small Plate project&lt;/a&gt; to put the electronic modules together.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-pcb-mother-board&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;PCB mother board&#34; srcset=&#34;
+               /project/ball_on_big_plate/3_hu5b2f59df253a5b5e17c21a55e3e8cdac_73189_785d6f99c757b7c770351aa00cd38ac0.jpg 400w,
+               /project/ball_on_big_plate/3_hu5b2f59df253a5b5e17c21a55e3e8cdac_73189_76497d01199216078995878235f2a7eb.jpg 760w,
+               /project/ball_on_big_plate/3_hu5b2f59df253a5b5e17c21a55e3e8cdac_73189_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/3_hu5b2f59df253a5b5e17c21a55e3e8cdac_73189_785d6f99c757b7c770351aa00cd38ac0.jpg&#34;
+               width=&#34;304&#34;
+               height=&#34;444&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      PCB mother board
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The 65cm*65cm plate is made of light wood laminate board.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-the-plate&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;The plate&#34; srcset=&#34;
+               /project/ball_on_big_plate/ball_on_big_plate_camera_support_hu9faa7677584c6a5ed502ac08b85761df_63275_7529cfd3cbfeb014e84b0f14d612ce50.jpg 400w,
+               /project/ball_on_big_plate/ball_on_big_plate_camera_support_hu9faa7677584c6a5ed502ac08b85761df_63275_3c7994c340e4570077e6356c74ed2dba.jpg 760w,
+               /project/ball_on_big_plate/ball_on_big_plate_camera_support_hu9faa7677584c6a5ed502ac08b85761df_63275_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/ball_on_big_plate_camera_support_hu9faa7677584c6a5ed502ac08b85761df_63275_7529cfd3cbfeb014e84b0f14d612ce50.jpg&#34;
+               width=&#34;555&#34;
+               height=&#34;464&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      The plate
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;There are ribs below the plate to support it. The dynamic structure of the plate is same as &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on small plate&lt;/a&gt;.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-under-the-plate&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Under the plate&#34; srcset=&#34;
+               /project/ball_on_big_plate/ball_on_big_plate_under_the_plate_hu075f68648887d406443fbbde5c88157d_55883_47ba6f4ebc7c5a8714543d6a25641ea4.jpg 400w,
+               /project/ball_on_big_plate/ball_on_big_plate_under_the_plate_hu075f68648887d406443fbbde5c88157d_55883_52b3de4d7bb87d95f5506311cc5dc83d.jpg 760w,
+               /project/ball_on_big_plate/ball_on_big_plate_under_the_plate_hu075f68648887d406443fbbde5c88157d_55883_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/ball_on_big_plate_under_the_plate_hu075f68648887d406443fbbde5c88157d_55883_47ba6f4ebc7c5a8714543d6a25641ea4.jpg&#34;
+               width=&#34;754&#34;
+               height=&#34;465&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Under the plate
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;Design documents of the reinforcing ribs and others are also on the &lt;a href=&#34;https://github.com/pidan1231239/ball_on_big_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub page&lt;/a&gt;.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-reinforcing-ribs&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Reinforcing ribs&#34; srcset=&#34;
+               /project/ball_on_big_plate/650%E6%9D%BF%E5%8A%A0%E5%BC%BA%E7%AD%8B%E6%BF%80%E5%85%89%E5%88%87%E5%89%B2.dwg_hu3707290dae8ca9a240fccc758ec42ec3_10971_5f29f62ec286cc651effb28aad29cff0.png 400w,
+               /project/ball_on_big_plate/650%E6%9D%BF%E5%8A%A0%E5%BC%BA%E7%AD%8B%E6%BF%80%E5%85%89%E5%88%87%E5%89%B2.dwg_hu3707290dae8ca9a240fccc758ec42ec3_10971_4ff11d6cd4fd877a8f3710d898ffeaec.png 760w,
+               /project/ball_on_big_plate/650%E6%9D%BF%E5%8A%A0%E5%BC%BA%E7%AD%8B%E6%BF%80%E5%85%89%E5%88%87%E5%89%B2.dwg_hu3707290dae8ca9a240fccc758ec42ec3_10971_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/650%E6%9D%BF%E5%8A%A0%E5%BC%BA%E7%AD%8B%E6%BF%80%E5%85%89%E5%88%87%E5%89%B2.dwg_hu3707290dae8ca9a240fccc758ec42ec3_10971_5f29f62ec286cc651effb28aad29cff0.png&#34;
+               width=&#34;574&#34;
+               height=&#34;223&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Reinforcing ribs
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-cardan-joint&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Cardan joint&#34; srcset=&#34;
+               /project/ball_on_big_plate/ball_on_big_plate_universal_joint_hue5065797c09f45fbc09bea488ffff103_39155_032c1cb11fa2384b78956807d939a682.jpg 400w,
+               /project/ball_on_big_plate/ball_on_big_plate_universal_joint_hue5065797c09f45fbc09bea488ffff103_39155_4b64b643aba6a621bcc5b4ae86a297e7.jpg 760w,
+               /project/ball_on_big_plate/ball_on_big_plate_universal_joint_hue5065797c09f45fbc09bea488ffff103_39155_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/ball_on_big_plate_universal_joint_hue5065797c09f45fbc09bea488ffff103_39155_032c1cb11fa2384b78956807d939a682.jpg&#34;
+               width=&#34;545&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Cardan joint
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-servo-with-connecting-rod&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Servo with connecting rod&#34; srcset=&#34;
+               /project/ball_on_big_plate/ball_on_big_plate_ball_rod_hu98463fa3f0b48c879fc04fc962965cec_35251_3d30553a4a68fa1047d9432bbfcf94fa.jpg 400w,
+               /project/ball_on_big_plate/ball_on_big_plate_ball_rod_hu98463fa3f0b48c879fc04fc962965cec_35251_525aaebd67fa8ad444a342b74086402b.jpg 760w,
+               /project/ball_on_big_plate/ball_on_big_plate_ball_rod_hu98463fa3f0b48c879fc04fc962965cec_35251_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/ball_on_big_plate_ball_rod_hu98463fa3f0b48c879fc04fc962965cec_35251_3d30553a4a68fa1047d9432bbfcf94fa.jpg&#34;
+               width=&#34;503&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Servo with connecting rod
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The camera is supported by carbon fiber tubes like in &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on small plate&lt;/a&gt;. And the same LED circle is installed around the camera.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-led-around-camera&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;LED around camera&#34; srcset=&#34;
+               /project/ball_on_big_plate/ball_on_big_plate_led_hu967ebdb53dcb1fcd9d5e0564e6e1f0e4_40911_554b83073aaa5c7569d200f94e5d74b4.jpg 400w,
+               /project/ball_on_big_plate/ball_on_big_plate_led_hu967ebdb53dcb1fcd9d5e0564e6e1f0e4_40911_6760e63b37666f5eb57c328bdb3c2fd6.jpg 760w,
+               /project/ball_on_big_plate/ball_on_big_plate_led_hu967ebdb53dcb1fcd9d5e0564e6e1f0e4_40911_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/ball_on_big_plate_led_hu967ebdb53dcb1fcd9d5e0564e6e1f0e4_40911_554b83073aaa5c7569d200f94e5d74b4.jpg&#34;
+               width=&#34;555&#34;
+               height=&#34;461&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      LED around camera
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The Raspberry Pi 3b is hanged beyond the camera to reduce the load on the servos.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-the-complete-work&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;The complete work&#34; srcset=&#34;
+               /project/ball_on_big_plate/featured_hu9cd5afef1db27636d675cd88743d69a4_2462070_36b25ea95fc8663e56ea82866b5f5336.jpg 400w,
+               /project/ball_on_big_plate/featured_hu9cd5afef1db27636d675cd88743d69a4_2462070_a53eb37a612ee16dd33f4e33bb96d381.jpg 760w,
+               /project/ball_on_big_plate/featured_hu9cd5afef1db27636d675cd88743d69a4_2462070_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/featured_hu9cd5afef1db27636d675cd88743d69a4_2462070_36b25ea95fc8663e56ea82866b5f5336.jpg&#34;
+               width=&#34;570&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      The complete work
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;After the work was done and tested by ourselves, we packed it with cardboard then handed it over to the competition organizer.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-complete-work-packed-with-cardboard-kinda-like-a-house&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Complete work packed with cardboard, kinda like a house&#34; srcset=&#34;
+               /project/ball_on_big_plate/IMG_20170812_225850_001_hu4ab653ed4835e564cdb00ed26b426726_3478685_c49ff276e79c38571e79b8e772e0bf85.jpg 400w,
+               /project/ball_on_big_plate/IMG_20170812_225850_001_hu4ab653ed4835e564cdb00ed26b426726_3478685_aac123b99d5ddb77c53ab3e32c74abd1.jpg 760w,
+               /project/ball_on_big_plate/IMG_20170812_225850_001_hu4ab653ed4835e564cdb00ed26b426726_3478685_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/IMG_20170812_225850_001_hu4ab653ed4835e564cdb00ed26b426726_3478685_c49ff276e79c38571e79b8e772e0bf85.jpg&#34;
+               width=&#34;570&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Complete work packed with cardboard, kinda like a house
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;final-test&#34;&gt;Final test&lt;/h2&gt;
+&lt;p&gt;After a successful test in front of the judges of Sichuan division and a small test on our electronic design capabilities, we stepped into our journey to Xi&amp;rsquo;an. Here show some photos taken along the trip.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-xian&#34; href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/xian/IMG_20170830_175531.jpg&#34; data-caption=&#34;On the way to the final test&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/xian/IMG_20170830_175531_huf239b37952eacffb4c4031101051e0b4_2249789_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;On the way to the final test&#34; width=&#34;143&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-xian&#34; href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/xian/IMG_20170831_144038_01.jpg&#34; data-caption=&#34;Final test in Jiaotong University&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/xian/IMG_20170831_144038_01_hu4d15f4a00f65c19f29f729be94eecbff_3993016_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;Final test in Jiaotong University&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-xian&#34; href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/xian/IMG_20170831_163601.jpg&#34; data-caption=&#34;DaYanTa station of Xi&amp;amp;rsquo;an metro Line 3&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/xian/IMG_20170831_163601_hu6ae07835f4e9d1fb4809e4095e62bb43_2586014_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;DaYanTa station of Xi&amp;#39;an metro Line 3&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-xian&#34; href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/xian/IMG_20170831_164508.jpg&#34; data-caption=&#34;Dayan Tower of Xi&amp;amp;rsquo;an&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/xian/IMG_20170831_164508_hu3f841f8eeb94b158707483dd82dfd544_2201361_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;Dayan Tower of Xi&amp;#39;an&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-xian&#34; href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/xian/IMG_20170831_190316.jpg&#34; data-caption=&#34;Mutton soup with bread of Xi&amp;amp;rsquo;an&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/project/ball_on_big_plate/xian/IMG_20170831_190316_huf91ae3e5c3d16363a0d1fc79b9b6709b_3390636_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;Mutton soup with bread of Xi&amp;#39;an&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ball on Small Plate</title>
+      <link>https://chengzhag.github.io/project/ball_on_small_plate/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/project/ball_on_small_plate/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Ball on Small Plate is built with a Raspberry Zero, a camera, two servos, a STM32F103 board. Capable of setting target coordinate, circle around the center with adjustable radius.&lt;/p&gt;
+&lt;p&gt;Ball on Small Plate project is a work of team. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+&lt;p&gt;Primary demo with very limited precision and robustness is shown below.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/UgZbSz2ecN0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;mechanical-structure&#34;&gt;Mechanical structure&lt;/h2&gt;
+&lt;h3 id=&#34;first-version&#34;&gt;First version&lt;/h3&gt;
+&lt;p&gt;The 20cm*20cm plate is made of 1mm thick black glass fiber board. In the first version shown in the video, the plate is covered with white paper to provide contrast between ball and plate. Below shows the original plate.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-deisigning-the-mechanical-structure&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Deisigning the mechanical structure&#34; srcset=&#34;
+               /project/ball_on_small_plate/IMG_20170619_162559_huee1120c721bb8f208075eae0c50a4226_1718480_9a44171a6b959f75373c7459b606941f.jpg 400w,
+               /project/ball_on_small_plate/IMG_20170619_162559_huee1120c721bb8f208075eae0c50a4226_1718480_f36fd04c346bfa9d1a5f3c0e5a1fa9a8.jpg 760w,
+               /project/ball_on_small_plate/IMG_20170619_162559_huee1120c721bb8f208075eae0c50a4226_1718480_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_small_plate/IMG_20170619_162559_huee1120c721bb8f208075eae0c50a4226_1718480_9a44171a6b959f75373c7459b606941f.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Deisigning the mechanical structure
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The plate is supported by a universal joint with 2 degrees of freedom. Two servos control the angle of the plate through ball bearing connecting rods.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-installation-of-plate-and-two-servos&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Installation of plate and two servos&#34; srcset=&#34;
+               /project/ball_on_small_plate/IMG_20170619_172950_huf3367135c0755eb0dcffd44cde0ceb3b_3899672_32805882de131fe90af0377c4a98e24e.jpg 400w,
+               /project/ball_on_small_plate/IMG_20170619_172950_huf3367135c0755eb0dcffd44cde0ceb3b_3899672_7e2c37ace75def3d7b55b2558d5d88c8.jpg 760w,
+               /project/ball_on_small_plate/IMG_20170619_172950_huf3367135c0755eb0dcffd44cde0ceb3b_3899672_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_small_plate/IMG_20170619_172950_huf3367135c0755eb0dcffd44cde0ceb3b_3899672_32805882de131fe90af0377c4a98e24e.jpg&#34;
+               width=&#34;570&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Installation of plate and two servos
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;In this first version. The camera and a Raspberry Pi Zero is beyond the plate and fixed to the base. In this case, the area of the plate must be segmented and projected into a square. The noise introduced in this progress is one of the reasons for the jitter in the video.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-installation-of-camera-and-raspberry-pi-zero&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Installation of camera and Raspberry Pi Zero&#34; srcset=&#34;
+               /project/ball_on_small_plate/cap_VID_20170624_154918_00_00_02_01_hud7bbec429c3ed9e6a9e4bd567b79a25d_147483_fd3a12a7a76310e5836123ab0b44b8b8.jpg 400w,
+               /project/ball_on_small_plate/cap_VID_20170624_154918_00_00_02_01_hud7bbec429c3ed9e6a9e4bd567b79a25d_147483_fb5c4efcf7fa5f511329c638ef257b21.jpg 760w,
+               /project/ball_on_small_plate/cap_VID_20170624_154918_00_00_02_01_hud7bbec429c3ed9e6a9e4bd567b79a25d_147483_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_small_plate/cap_VID_20170624_154918_00_00_02_01_hud7bbec429c3ed9e6a9e4bd567b79a25d_147483_fd3a12a7a76310e5836123ab0b44b8b8.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Installation of camera and Raspberry Pi Zero
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;second-version&#34;&gt;Second version&lt;/h3&gt;
+&lt;p&gt;I managed to reduce the jitter by fixing the camera with carbon fiber tubes to the plate in the second version. The plate itself is also changed to yellow. A Raspberry Pi 3b is hanged beyond the camera.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-camera-is-connected-to-the-plate-to-reduce-jitter&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Camera is connected to the plate to reduce jitter&#34; srcset=&#34;
+               /project/ball_on_small_plate/8_hu893020c1b70a6d9d85814ad6d70ccaf3_150552_a73bbb2deddb2277352a996e7083ece9.jpg 400w,
+               /project/ball_on_small_plate/8_hu893020c1b70a6d9d85814ad6d70ccaf3_150552_33725ba751af1dec8762feec47ca5780.jpg 760w,
+               /project/ball_on_small_plate/8_hu893020c1b70a6d9d85814ad6d70ccaf3_150552_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_small_plate/8_hu893020c1b70a6d9d85814ad6d70ccaf3_150552_a73bbb2deddb2277352a996e7083ece9.jpg&#34;
+               width=&#34;571&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Camera is connected to the plate to reduce jitter
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;A LED circle is around the camera for illustration.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-camera-and-led-installation&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Camera and LED installation&#34; srcset=&#34;
+               /project/ball_on_small_plate/6_huc54370fea8ce56218cbdfffe57a7de1c_26160_de738f3c511c9095b5f52bc5eca76199.jpg 400w,
+               /project/ball_on_small_plate/6_huc54370fea8ce56218cbdfffe57a7de1c_26160_1d9aa333467529f53134d863228e3d71.jpg 760w,
+               /project/ball_on_small_plate/6_huc54370fea8ce56218cbdfffe57a7de1c_26160_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_small_plate/6_huc54370fea8ce56218cbdfffe57a7de1c_26160_de738f3c511c9095b5f52bc5eca76199.jpg&#34;
+               width=&#34;574&#34;
+               height=&#34;429&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Camera and LED installation
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;Below shows the PCB board also used in the later project &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;Ball on Big Plate&lt;/a&gt;.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-pcb-mother-board&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;PCB mother board&#34; srcset=&#34;
+               /project/ball_on_small_plate/ball_on_big_plate_pcb_huc3da0135bebb0686444372f5df76b114_56909_a351bed299fa01d08441058b05c329eb.jpg 400w,
+               /project/ball_on_small_plate/ball_on_big_plate_pcb_huc3da0135bebb0686444372f5df76b114_56909_ace9bdf6babb28234664ecae0ff64f8a.jpg 760w,
+               /project/ball_on_small_plate/ball_on_big_plate_pcb_huc3da0135bebb0686444372f5df76b114_56909_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/ball_on_small_plate/ball_on_big_plate_pcb_huc3da0135bebb0686444372f5df76b114_56909_a351bed299fa01d08441058b05c329eb.jpg&#34;
+               width=&#34;422&#34;
+               height=&#34;540&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      PCB mother board
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ball on Beam</title>
+      <link>https://chengzhag.github.io/project/ball_on_beam/</link>
+      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/project/ball_on_beam/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Ball on Beam is built with a Raspberry Zero, a camera, one servo, a STM32F103 board.
+Ball on Beam project is a work of team. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
+Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+&lt;p&gt;Primary demo with very limited precision and robustness is shown below.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/za6t0JMttOk&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Rotary Inverted Pendulum</title>
+      <link>https://chengzhag.github.io/project/rotary_inverted_pendulum/</link>
+      <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/project/rotary_inverted_pendulum/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Rotary Inverted Pendulum is built with an encoder, a brush motor, a STM32F103 board. No rotation limit. Capable of setting target angle, non-stop swinging and automatically swinging up.&lt;/p&gt;
+&lt;p&gt;Rotary Inverted Pendulum project is a work of team. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/inverted_pendulum&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+&lt;p&gt;Primary demo with very limited precision and robustness is shown below.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/R4VLmF_X5qM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;mechanical-structure&#34;&gt;Mechanical structure&lt;/h2&gt;
+&lt;p&gt;I use an optical encoder to measure the angle of the pendulum. The absolute angle of the pendulum need calibrate every time after reset.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-optical-encoder&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Optical encoder&#34; srcset=&#34;
+               /project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_bccfc1d3fb70d4b69a668e86d80cef72.jpg 400w,
+               /project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_2e90878c6482a3e2229eafbc304c4182.jpg 760w,
+               /project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_bccfc1d3fb70d4b69a668e86d80cef72.jpg&#34;
+               width=&#34;570&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Optical encoder
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;A slip ring is used to prevent the winding of the wire.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-slip-ring&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Slip ring&#34; srcset=&#34;
+               /project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_bdec35728bec195e5da368e4421b480f.jpg 400w,
+               /project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_d2c969277c6bb9288f06d45f819c6074.jpg 760w,
+               /project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_bdec35728bec195e5da368e4421b480f.jpg&#34;
+               width=&#34;392&#34;
+               height=&#34;311&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Slip ring
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The DC brush motor with gearbox and magnetic encoder is driven by a TB6612FNG model controlled with PWM signal. A 3s lithium battery powers the system like the following projects.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-complete-circuit-board&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Complete circuit board&#34; srcset=&#34;
+               /project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_4c655b0a37c440c9abde2b7838a41c03.jpg 400w,
+               /project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_816acf2e68b95478844676142de8f819.jpg 760w,
+               /project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_4c655b0a37c440c9abde2b7838a41c03.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Complete circuit board
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The mechanical structure includes three round mounting plates to mount slip ring, motor, and quick-release plate. The plates are connected with hexagonal copper pillars. The whole structure is mounted to a tripod through the quick-release plate.&lt;/p&gt;
+&lt;p&gt;The round plates are rendered as acrylic plate below. But they are made of carbon fiber in the final work.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-the-core-mechanical-structure&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;The core mechanical structure&#34; srcset=&#34;
+               /project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_8251107b285f1eb5f05becb6302c3af9.png 400w,
+               /project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_dafb348746f227f7c5be5afa57300713.png 760w,
+               /project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_8251107b285f1eb5f05becb6302c3af9.png&#34;
+               width=&#34;492&#34;
+               height=&#34;720&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      The core mechanical structure
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-the-complete-mechanical-structure&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;84C~Z%7bNZ1N42UWZE8$K2QQ9.png&#34; alt=&#34;The complete mechanical structure&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      The complete mechanical structure
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;software-design&#34;&gt;Software design&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Please refer to &lt;a href=&#34;http://en.cnki.com.cn/Article_en/CJFDTOTAL-JZDF2007S1010.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Study on PID Control of a Single Inverted Pendulum System&lt;/a&gt; for the PID control system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-pid-control-system&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;S$$%28M%29IHI%60GJ%29_%25$CIG[MO0.png&#34; alt=&#34;PID control system&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      PID control system
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Also we refer to &lt;a href=&#34;http://www.ahkjwx.cn:81/article/detail.aspx?id=669914934&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Research and Implementation of the Swing - up and Stabilizing Operation for Rotational Inverted Pendulum&lt;/a&gt; for the swing-up and stabilizing operation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-swing---up-and-stabilizing-operation&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;A%29$0J%29GGY_]VH@%7d9J52[1HD.png&#34; alt=&#34;Swing - up and stabilizing operation&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Swing - up and stabilizing operation
+    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The swing-up and stabilizing operation and the changes between different modes are modeled as a state machine.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-state-machine-for-swing-up-and-stabilizing-operation&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;State machine for swing-up and stabilizing operation&#34; srcset=&#34;
+               /project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_7007e2f9a97b56f15b5ee966b77ea37f.png 400w,
+               /project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_61038c37b0013f6aface338fabbc1938.png 760w,
+               /project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_7007e2f9a97b56f15b5ee966b77ea37f.png&#34;
+               width=&#34;760&#34;
+               height=&#34;486&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      State machine for swing-up and stabilizing operation
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://chengzhag.github.io/admin/config.yml</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/admin/config.yml</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
