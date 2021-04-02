@@ -32,18 +32,39 @@
 
 
 Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h2 id=&#34;centercvpr-2021centerhttpcvpr2021thecvfcom&#34;&gt;&lt;a href=&#34;http://cvpr2021.thecvf.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;center&gt;CVPR 2021&lt;/center&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;center&gt;
-  &lt;a href=&#34;https://chengzhag.github.io/&#34;&gt;Cheng Zhang&lt;/a&gt; 
+  &lt;a href=&#34;https://chengzhag.github.io/&#34; target=&#34;_blank&#34;&gt;Cheng Zhang&lt;/a&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
   &amp;nbsp; &amp;nbsp;
-  &lt;a href=&#34;https://zhpcui.github.io/&#34;&gt;Zhaopeng Cui&lt;/a&gt; 
+  &lt;a href=&#34;https://zhpcui.github.io/&#34; target=&#34;_blank&#34;&gt;Zhaopeng Cui&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
   &amp;nbsp; &amp;nbsp;
-  &lt;a href=&#34;https://www.zhangyinda.com/&#34;&gt;Yinda Zhang&lt;/a&gt; 
+  &lt;a href=&#34;https://www.zhangyinda.com/&#34; target=&#34;_blank&#34;&gt;Yinda Zhang&lt;/a&gt;
+  &lt;sup&gt;3&lt;/sup&gt;
   &amp;nbsp; &amp;nbsp;
-  &lt;a href=&#34;https://scholar.google.com/citations?user=4y0QncgAAAAJ&amp;hl=en&#34;&gt;Bing Zeng&lt;/a&gt; 
+  &lt;a href=&#34;https://scholar.google.com/citations?user=4y0QncgAAAAJ&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Bing Zeng&lt;/a&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
   &amp;nbsp; &amp;nbsp;
-  &lt;a href=&#34;https://people.inf.ethz.ch/pomarc/&#34;&gt;Marc Pollefeys&lt;/a&gt;
+  &lt;a href=&#34;https://people.inf.ethz.ch/pomarc/&#34; target=&#34;_blank&#34;&gt;Marc Pollefeys&lt;/a&gt;
+  &lt;sup&gt;4&lt;/sup&gt;
   &amp;nbsp; &amp;nbsp;
-  &lt;a href=&#34;http://www.liushuaicheng.org/&#34;&gt;Shuaicheng Liu&lt;/a&gt;
+  &lt;a href=&#34;http://www.liushuaicheng.org/&#34; target=&#34;_blank&#34;&gt;Shuaicheng Liu&lt;/a&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
+&lt;/center&gt;
+&lt;center&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &lt;a href=&#34;http://www.cad.zju.edu.cn/english.html&#34; target=&#34;_blank&#34;&gt;State Key Lab of CAD &amp; CG, Zhejiang University&lt;/a&gt; 
+  &lt;!-- &amp;nbsp; &amp;nbsp; --&gt;
+  &lt;br /&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
+  &lt;a href=&#34;https://en.uestc.edu.cn/&#34; target=&#34;_blank&#34;&gt;University of Electronic Science and Technology of China&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;sup&gt;3&lt;/sup&gt;
+  &lt;a href=&#34;https://www.ai.google/&#34; target=&#34;_blank&#34;&gt;Google&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;sup&gt;4&lt;/sup&gt;
+  &lt;a href=&#34;https://ethz.ch/en.html&#34; target=&#34;_blank&#34;&gt;ETH Zurich&lt;/a&gt; 
 &lt;/center&gt;
 
 
@@ -168,7 +189,7 @@ Given a single color image,
   &lt;/a&gt;
   &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://github.com/pidan1231239/Implicit3DUnderstanding&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
-  GitHub
+  Code
   &lt;/a&gt;
 &lt;/center&gt;
 &lt;!-- &lt;center&gt;
