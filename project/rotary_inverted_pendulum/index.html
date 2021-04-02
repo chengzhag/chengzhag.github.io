@@ -235,8 +235,9 @@
   
     
       
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+      
     
   
 
@@ -245,7 +246,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.9a66e344a68eb664b392d406a3f80726.css" />
+  <link rel="stylesheet" href="/css/wowchemy.5b43e6cc839129dfa9edd533901f66bc.css" />
 
   
 
@@ -415,7 +416,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js"></script>
+  <script src="/js/wowchemy-init.min.9dad2fecac7f370e439d06c4a1b59e05.js"></script>
 
   
 
@@ -636,23 +637,6 @@
 
       
       
-      <li class="nav-item dropdown theme-dropdown">
-        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
-          <i class="fas fa-moon" aria-hidden="true"></i>
-        </a>
-        <div class="dropdown-menu">
-          <a href="#" class="dropdown-item js-set-theme-light">
-            <span>Light</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-dark">
-            <span>Dark</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-auto">
-            <span>Automatic</span>
-          </a>
-        </div>
-      </li>
-      
 
       
       
@@ -804,10 +788,12 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="introduction">Introduction</h2>
+      <hr>
+<h2 id="introduction">Introduction</h2>
 <p>Rotary Inverted Pendulum is built with an encoder, a brush motor, a STM32F103 board. No rotation limit. Capable of setting target angle, non-stop swinging and automatically swinging up.</p>
 <p>Rotary Inverted Pendulum project is a work of team. The other two teammates are <a href="https://github.com/shicaiwei123" target="_blank" rel="noopener">shicaiwei123</a> and <a href="https://github.com/yoyolalala" target="_blank" rel="noopener">yoyolalala</a>.</p>
 <p>Code and document <a href="https://github.com/pidan1231239/inverted_pendulum" target="_blank" rel="noopener">here</a>. Platform details <a href="/project/ball_on_big_plate/">here</a>.</p>
+<hr>
 <h2 id="demo">Demo</h2>
 <p>Primary demo with very limited precision and robustness is shown below.</p>
 
@@ -815,6 +801,7 @@
   <iframe src="https://www.youtube.com/embed/R4VLmF_X5qM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
+<hr>
 <h2 id="mechanical-structure">Mechanical structure</h2>
 <p>I use an optical encoder to measure the angle of the pendulum. The absolute angle of the pendulum need calibrate every time after reset.</p>
 
@@ -953,6 +940,7 @@
   </div><figcaption>
       The complete mechanical structure
     </figcaption></figure>
+<hr>
 <h2 id="software-design">Software design</h2>
 <blockquote>
 <p>Please refer to <a href="http://en.cnki.com.cn/Article_en/CJFDTOTAL-JZDF2007S1010.htm" target="_blank" rel="noopener">Study on PID Control of a Single Inverted Pendulum System</a> for the PID control system.

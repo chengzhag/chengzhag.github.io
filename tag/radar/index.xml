@@ -17,7 +17,8 @@
       <link>https://chengzhag.github.io/project/fmcw_positioning_radar/</link>
       <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
       <guid>https://chengzhag.github.io/project/fmcw_positioning_radar/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;FMCW Positioning Radar project is a work of team made up of three people. We were trying to get the qualification to attend &lt;a href=&#34;http://nuedc.sjtu.edu.cn/CN/content.aspx?info_lb=37&amp;amp;flag=2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ESDC&lt;/a&gt; through this project. Sadly, we were out of the game in the stage of school contest.&lt;/p&gt;
 &lt;p&gt;The radar works in the 2.7 GHz - 3.7 GHz band. It has 4 transmitting antenna and 12 receive antenna. With a transmission power of less than 10 dBm, it localizes a person within a median of 5 cm in the y dimension. Within 5 meters, it has an accuracy of about 20 cm. Without further tests, the maximum distance is unknown. However, it can indicate a person behind a 25 cm concrete wall.&lt;/p&gt;
 &lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The final presentation with hardware and data processing flow introduction see &lt;a href=&#34;https://sway.com/5uSW86N1bUqbrA7T?ref=Link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -41,6 +42,7 @@
 &lt;li&gt;&lt;a href=&#34;https://ww2.mathworks.cn/hardware-support/usrp.html?s_tid=srchtitle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;USRP® Support Package from Communications System Toolbox&lt;/a&gt;: Matlab toolbox for USRP&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://ecewp.ece.wpi.edu/wordpress/wireless/textbooks/sdrlabs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Digital Communication Systems Engineering Using Software Defined Radio&lt;/a&gt;: a tutorial of SDR using Simulink&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
 &lt;p&gt;The hardware design can be introduced in two parts, RF front end and FMCW generator. The design references the projects and the papers below:&lt;/p&gt;
 &lt;ul&gt;
@@ -123,6 +125,7 @@
   &lt;/div&gt;&lt;figcaption&gt;
       RF front end
     &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
 &lt;p&gt;Software part includes ADF4159 evaluation board configuration, mbed code, and Simulink model.&lt;/p&gt;
 &lt;h3 id=&#34;adf4159&#34;&gt;ADF4159&lt;/h3&gt;
@@ -167,6 +170,7 @@
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;simulink-model&#34;&gt;Simulink model&lt;/h3&gt;
 &lt;p&gt;All the models are in the &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/simulink&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simulink&lt;/a&gt; folder. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/RadarImagingAndPositioning.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RadarImagingAndPositioning.slx&lt;/a&gt; block implements the basic signal processing logic and output the 2D heat map and target position. The data processing flow is shown in the presentation above. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/usrp_4t12r_heatmap.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;usrp_4t12r_heatmap.slx&lt;/a&gt;  connects the basic blocks to show the imaging result and targets. For more information about using USRP with Simulink, see the Introduction section above.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
 &lt;p&gt;In the experimental stage, I built a system with 1 Tx and 3 Rx.&lt;/p&gt;
 

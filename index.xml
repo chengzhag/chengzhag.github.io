@@ -5,32 +5,12 @@
     <link>https://chengzhag.github.io/</link>
       <atom:link href="https://chengzhag.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Cheng Zhang</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 11 Mar 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Cheng Zhang</title>
       <link>https://chengzhag.github.io/</link>
     </image>
-    
-    <item>
-      <title>Example Talk</title>
-      <link>https://chengzhag.github.io/talk/example-talk/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>https://chengzhag.github.io/talk/example-talk/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Wowchemy&amp;rsquo;s &lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Further event details, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;page elements&lt;/a&gt; such as image galleries, can be added to the body of this page.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Holistic 3D Scene Understanding from a Single Image with Implicit Representation</title>
@@ -52,18 +32,123 @@
 
 
 Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
-&lt;h2 id=&#34;3d-scene-understanding&#34;&gt;3D Scene Understanding&lt;/h2&gt;
-&lt;p&gt;Given a single color image,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Estimate the room layout, including object categories and poses in 3D space&lt;/li&gt;
-&lt;li&gt;Reconstruct mesh of individual object&lt;/li&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;We present a new pipeline for holistic 3D scene understanding from a single image, which could predict object shape, object pose, and scene layout. As it is a highly ill-posed problem, existing methods usually suffer from inaccurate estimation of both shapes and layout especially for the cluttered scene due to the heavy occlusion between objects. We propose to utilize the latest deep implicit representation to solve this challenge. We not only propose an image-based local structured implicit network to improve the object shape estimation, but also refine 3D object pose and scene layout via a novel implicit scene graph neural network that exploits the implicit local object features. A novel physical violation loss is also proposed to avoid incorrect context between objects. Extensive experiments demonstrate that our method outperforms the state-of-the-art methods in terms of object shape, scene layout estimation, and 3D object detection.&lt;/p&gt;
+&lt;!-- ## 3D Scene Understanding 
+Given a single color image,
+- Estimate the room layout, including object categories and poses in 3D space
+- Reconstruct mesh of individual object --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;paper&#34;&gt;Paper&lt;/h2&gt;
+&lt;!-- ![page1](02192_页面_01.png)![page3](02192_页面_03.png)![page5](02192_页面_05.png)![page7](02192_页面_07.png) --&gt;
+&lt;center&gt;
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_01.png&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_01_hu7b4e8c585c78596d52f33bba49723711_179891_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_01.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_03.png&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_03_hu7b4e8c585c78596d52f33bba49723711_221609_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_03.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_05.png&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_05_hu7b4e8c585c78596d52f33bba49723711_201925_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_05.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_07.png&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_07_hu7b4e8c585c78596d52f33bba49723711_293071_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_07.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;center&gt;
+  &lt;!-- &lt;ul class=&#34;cta-group&#34;&gt;
+  
+  &lt;li&gt;
+    &lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;arXiv&lt;/a&gt;
+  &lt;/li&gt;
+  
+  
 &lt;/ul&gt;
+ --&gt;
+  &lt;!-- &lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34; class=&#34;btn btn-primary px-3 py-3&#34;&gt;Paper&lt;/a&gt; --&gt;
+  &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;/publication/im3d/cite.bib&#34;&gt;
+  Cite
+  &lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  arXiv
+  &lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://arxiv.org/pdf/2103.06422&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Paper
+  &lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;02192-supp.pdf&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Supp
+  &lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://github.com/pidan1231239/Implicit3DUnderstanding&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  GitHub
+  &lt;/a&gt;
+&lt;/center&gt;
+&lt;!-- &lt;center&gt;
+&lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34;&gt;[arXiv]&lt;/a&gt; 
+&amp;nbsp; &amp;nbsp;
+&lt;a href=&#34;https://arxiv.org/pdf/2103.06422&#34;&gt;[Paper]&lt;/a&gt; 
+&amp;nbsp; &amp;nbsp;
+&lt;a href=&#34;02192-supp.pdf&#34;&gt;[Supp]&lt;/a&gt; 
+&amp;nbsp; &amp;nbsp;
+&lt;a href=&#34;https://github.com/pidan1231239/Implicit3DUnderstanding&#34;&gt;[GitHub]&lt;/a&gt;
+&lt;/center&gt; --&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;motivations&#34;&gt;Motivations&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Implicit representation like Signed Distance Function (SDF) can be used to detect collision and propagate gradients&lt;/li&gt;
 &lt;li&gt;And together with structured representation (LDIF), the shapes can be learned better and more shape priors can be provided for relationship understanding&lt;/li&gt;
 &lt;li&gt;Graph Convolutional Network (GCN) is proven to be good at resolving context information in the task of scene graph generation&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
 
 
@@ -97,6 +182,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
 In the initial estimation stage, a 2D detector is first adopted to extract the 2D bounding box from the input image, followed by an Object Detection Network (ODN) to recover the object poses as 3D bounding boxes and a new Local Implicit Embedding Network (LIEN) to extract the implicit local shape information from the image directly, which can further be decoded to infer 3D geometry.
 The input image is also fed into a Layout Estimation Network (LEN) to produce a 3D layout bounding box and relative camera pose.
 In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is designed to refine the initial predictions via the scene context information.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
 
 
@@ -130,217 +216,12 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
     </item>
     
     <item>
-      <title>Welcome to Wowchemy, the website builder for Hugo</title>
-      <link>https://chengzhag.github.io/post/getting-started/</link>
-      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://chengzhag.github.io/post/getting-started/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site&lt;/li&gt;
-&lt;li&gt;The template can be modified and customised to suit your needs. It&amp;rsquo;s a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a &lt;strong&gt;no-code solution (write in Markdown and customize with YAML parameters)&lt;/strong&gt; and having &lt;strong&gt;flexibility to later add even deeper personalization with HTML and CSS&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-the-template-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png&#34; alt=&#34;The template is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption&gt;
-      The template is mobile first with a responsive design to ensure that your site looks stunning on every device.
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;get-started&#34;&gt;Get Started&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;👉 &lt;a href=&#34;https://wowchemy.com/templates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Create a new site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📚 &lt;a href=&#34;https://wowchemy.com/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Personalize your site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;💬 &lt;a href=&#34;https://discord.gg/z8wNYzb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;Wowchemy community&lt;/strong&gt;&lt;/a&gt; or &lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Hugo community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;🐦 Twitter: &lt;a href=&#34;https://twitter.com/wowchemy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@wowchemy&lt;/a&gt; &lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%28%23MadeWithWowchemy%20OR%20%23MadeWithAcademic%29&amp;amp;src=typed_query&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithWowchemy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;💡 &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt; for &lt;em&gt;Wowchemy&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;⬆️ &lt;strong&gt;Updating Wowchemy?&lt;/strong&gt; View the &lt;a href=&#34;https://wowchemy.com/docs/guide/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;crowd-funded-open-source-software&#34;&gt;Crowd-funded open-source software&lt;/h2&gt;
-&lt;p&gt;To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.&lt;/p&gt;
-&lt;h3 id=&#34;-click-here-to-become-a-sponsor-and-help-support-wowchemys-future-httpswowchemycomplans&#34;&gt;&lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;❤️ Click here to become a sponsor and help support Wowchemy&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;As a token of appreciation for sponsoring, you can &lt;strong&gt;unlock &lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these&lt;/a&gt; awesome rewards and extra features 🦄✨&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/wowchemy/hugo-academic-cli&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Academic CLI&lt;/a&gt;:&lt;/strong&gt; Automatically import publications from BibTeX&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or &lt;a href=&#34;https://wowchemy.com/user-stories/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with &lt;a href=&#34;https://wowchemy.com/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&#34;https://wowchemy.com/docs/import/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or &lt;a href=&#34;https://wowchemy.com/docs/install-locally/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable &lt;a href=&#34;https://wowchemy.com/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 34+ language packs including English, 中文, and Português&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-&lt;p&gt;Wowchemy and its templates come with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/customization&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully customizable.&lt;/p&gt;
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Slides</title>
-      <link>https://chengzhag.github.io/slides/example/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://chengzhag.github.io/slides/example/</guid>
-      <description>&lt;h1 id=&#34;create-slides-in-markdown-with-wowchemy&#34;&gt;Create slides in Markdown with Wowchemy&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wowchemy&lt;/a&gt; | &lt;a href=&#34;https://owchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
-&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
-&lt;li&gt;Supports speaker notes&lt;/li&gt;
-&lt;li&gt;Mobile friendly slides&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
-&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Code block:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
-if porridge == &amp;quot;blueberry&amp;quot;:
-    print(&amp;quot;Eating...&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
-&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
-&lt;p&gt;Block math:&lt;/p&gt;
-&lt;p&gt;$$
-f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
-$$&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
-&lt;p&gt;Make content appear incrementally&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
-{{% fragment %}} **Two** {{% /fragment %}}
-{{% fragment %}} Three {{% /fragment %}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
-One
-&lt;/span&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-&lt;strong&gt;Two&lt;/strong&gt;
-&lt;/span&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-Three
-&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
-&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
-- Only the speaker can read these notes
-- Press `S` key to view
-{{% /speaker_note %}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
-&lt;aside class=&#34;notes&#34;&gt;
-  &lt;ul&gt;
-&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
-&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/aside&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
-&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
-&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
-&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
-&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
-&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
-&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
-&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-
-&lt;section data-noprocess data-shortcode-slide
-  
-      
-      data-background-image=&#34;/media/boards.jpg&#34;
-  &gt;
-
-&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
-&lt;p&gt;Customize the slide style and background&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/media/boards.jpg&amp;quot; &amp;gt;}}
-{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
-{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
-&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
-&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
-.reveal section h2,
-.reveal section h3 {
-  color: navy;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/discussions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>FMCW Positioning Radar</title>
       <link>https://chengzhag.github.io/project/fmcw_positioning_radar/</link>
       <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
       <guid>https://chengzhag.github.io/project/fmcw_positioning_radar/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;FMCW Positioning Radar project is a work of team made up of three people. We were trying to get the qualification to attend &lt;a href=&#34;http://nuedc.sjtu.edu.cn/CN/content.aspx?info_lb=37&amp;amp;flag=2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ESDC&lt;/a&gt; through this project. Sadly, we were out of the game in the stage of school contest.&lt;/p&gt;
 &lt;p&gt;The radar works in the 2.7 GHz - 3.7 GHz band. It has 4 transmitting antenna and 12 receive antenna. With a transmission power of less than 10 dBm, it localizes a person within a median of 5 cm in the y dimension. Within 5 meters, it has an accuracy of about 20 cm. Without further tests, the maximum distance is unknown. However, it can indicate a person behind a 25 cm concrete wall.&lt;/p&gt;
 &lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The final presentation with hardware and data processing flow introduction see &lt;a href=&#34;https://sway.com/5uSW86N1bUqbrA7T?ref=Link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -364,6 +245,7 @@ Three
 &lt;li&gt;&lt;a href=&#34;https://ww2.mathworks.cn/hardware-support/usrp.html?s_tid=srchtitle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;USRP® Support Package from Communications System Toolbox&lt;/a&gt;: Matlab toolbox for USRP&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://ecewp.ece.wpi.edu/wordpress/wireless/textbooks/sdrlabs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Digital Communication Systems Engineering Using Software Defined Radio&lt;/a&gt;: a tutorial of SDR using Simulink&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
 &lt;p&gt;The hardware design can be introduced in two parts, RF front end and FMCW generator. The design references the projects and the papers below:&lt;/p&gt;
 &lt;ul&gt;
@@ -446,6 +328,7 @@ Three
   &lt;/div&gt;&lt;figcaption&gt;
       RF front end
     &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
 &lt;p&gt;Software part includes ADF4159 evaluation board configuration, mbed code, and Simulink model.&lt;/p&gt;
 &lt;h3 id=&#34;adf4159&#34;&gt;ADF4159&lt;/h3&gt;
@@ -490,6 +373,7 @@ Three
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;simulink-model&#34;&gt;Simulink model&lt;/h3&gt;
 &lt;p&gt;All the models are in the &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/simulink&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simulink&lt;/a&gt; folder. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/RadarImagingAndPositioning.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RadarImagingAndPositioning.slx&lt;/a&gt; block implements the basic signal processing logic and output the 2D heat map and target position. The data processing flow is shown in the presentation above. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/usrp_4t12r_heatmap.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;usrp_4t12r_heatmap.slx&lt;/a&gt;  connects the basic blocks to show the imaging result and targets. For more information about using USRP with Simulink, see the Introduction section above.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
 &lt;p&gt;In the experimental stage, I built a system with 1 Tx and 3 Rx.&lt;/p&gt;
 
@@ -790,7 +674,8 @@ Three
       <link>https://chengzhag.github.io/project/ball_on_big_plate/</link>
       <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
       <guid>https://chengzhag.github.io/project/ball_on_big_plate/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Ball on Big Plate project is a work of team made up with three people. We are fortunate enough to get the first prize with this in &lt;a href=&#34;https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2017NUEDC&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I was responsible for building the structure and programming STM32 and Raspberry Pi. Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_big_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/zianglei&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zianglei&lt;/a&gt;. Sadly that &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt; left the team before the contest. The preparation projects below can not be done without her. I&amp;rsquo;d like to thank her here.&lt;/p&gt;
 &lt;p&gt;The final work has been handed in to our school and there will be no plan to write a detailed document for it. This page tells the story behind it.&lt;/p&gt;
@@ -826,6 +711,7 @@ Three
     &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Specifically in this project, according to the contest requirements, the system is supposed to move a ball between any two of nine evenly distributed circles drawn on the plate and avoids other circles. The plate must have a size around 65cm*65cm. The &lt;a href=&#34;%e6%bb%9a%e7%90%83%e6%8e%a7%e5%88%b6%e7%b3%bb%e7%bb%9f%ef%bc%88B%e9%a2%98%ef%bc%89.pdf&#34;&gt;document&lt;/a&gt; shows the distribution of the circles.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;the-contest&#34;&gt;The Contest&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NUEDC&lt;/a&gt; is one of the largest electronic design competitions in China. The competition last three and a half days. Four categories of more than ten subjects are published on the official website on the day it begins. Participants usually prepare for a long time before the competition. The competition in 2017 which I attended started from August 9 to August 12. Our team started preparing about four months in advance.&lt;/p&gt;
 &lt;p&gt;I was responsible for building the structure and programming STM32 and Raspberry Pi. Although I had got some experience with programming, I barely knew the basics of control system. However, I chose the control system direction to prepare because of my interest in it.&lt;/p&gt;
@@ -836,6 +722,7 @@ Three
 &lt;li&gt;&lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on Small Plate&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Sadly, I&amp;rsquo;ve got no video demo of the final work since we were too busy moving forward. So let&amp;rsquo;s jump into the details of the design.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;platform&#34;&gt;Platform&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Raspberry Pi Zero and Raspberry Pi 3b with OpenCV installed&lt;/li&gt;
@@ -844,6 +731,7 @@ Three
 &lt;/ul&gt;
 &lt;p&gt;The Raspberry Pi is developed with C++ language using Raspberry toolchain provided by &lt;a href=&#34;https://visualgdb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VisualGDB&lt;/a&gt; (tutorial &lt;a href=&#34;https://visualgdb.com/tutorials/raspberry/crosscompiler/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;). The STM32 is developed with C++ language using Arm toolchain provided by &lt;a href=&#34;https://visualgdb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VisualGDB&lt;/a&gt; (tutorial &lt;a href=&#34;https://visualgdb.com/tutorials/arm/stm32/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;). The Raspberry runs OpenCV program and sends the results to STM32 through UART.&lt;/p&gt;
 &lt;p&gt;I made use of a C++ API written for STM32 named &lt;a href=&#34;https://github.com/eboxmaker/eBox_STM32F1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ebox&lt;/a&gt;. Although it saved me a lot of time then, I found &lt;a href=&#34;https://www.mbed.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mbed&lt;/a&gt; even easier than it after the competition. By the way, it was said that Arduino is not allowed in the competition.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;mechanical-structure&#34;&gt;Mechanical structure&lt;/h2&gt;
 &lt;p&gt;The final work uses a PCB motherboard made in &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on Small Plate project&lt;/a&gt; to put the electronic modules together.&lt;/p&gt;
 
@@ -1104,6 +992,7 @@ Three
   &lt;/div&gt;&lt;figcaption&gt;
       Complete work packed with cardboard, kinda like a house
     &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;final-test&#34;&gt;Final test&lt;/h2&gt;
 &lt;p&gt;After a successful test in front of the judges of Sichuan division and a small test on our electronic design capabilities, we stepped into our journey to Xi&amp;rsquo;an. Here show some photos taken along the trip.&lt;/p&gt;
 
@@ -1200,10 +1089,12 @@ Three
       <link>https://chengzhag.github.io/project/ball_on_small_plate/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       <guid>https://chengzhag.github.io/project/ball_on_small_plate/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Ball on Small Plate is built with a Raspberry Zero, a camera, two servos, a STM32F103 board. Capable of setting target coordinate, circle around the center with adjustable radius.&lt;/p&gt;
 &lt;p&gt;Ball on Small Plate project is a work of team. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
 &lt;p&gt;Primary demo with very limited precision and robustness is shown below.&lt;/p&gt;
 
@@ -1211,6 +1102,7 @@ Three
   &lt;iframe src=&#34;https://www.youtube.com/embed/UgZbSz2ecN0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
+&lt;hr&gt;
 &lt;h2 id=&#34;mechanical-structure&#34;&gt;Mechanical structure&lt;/h2&gt;
 &lt;h3 id=&#34;first-version&#34;&gt;First version&lt;/h3&gt;
 &lt;p&gt;The 20cm*20cm plate is made of 1mm thick black glass fiber board. In the first version shown in the video, the plate is covered with white paper to provide contrast between ball and plate. Below shows the original plate.&lt;/p&gt;
@@ -1396,10 +1288,12 @@ Three
       <link>https://chengzhag.github.io/project/ball_on_beam/</link>
       <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       <guid>https://chengzhag.github.io/project/ball_on_beam/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Ball on Beam is built with a Raspberry Zero, a camera, one servo, a STM32F103 board.
 Ball on Beam project is a work of team. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
 Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
 &lt;p&gt;Primary demo with very limited precision and robustness is shown below.&lt;/p&gt;
 
@@ -1415,10 +1309,12 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
       <link>https://chengzhag.github.io/project/rotary_inverted_pendulum/</link>
       <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
       <guid>https://chengzhag.github.io/project/rotary_inverted_pendulum/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Rotary Inverted Pendulum is built with an encoder, a brush motor, a STM32F103 board. No rotation limit. Capable of setting target angle, non-stop swinging and automatically swinging up.&lt;/p&gt;
 &lt;p&gt;Rotary Inverted Pendulum project is a work of team. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/inverted_pendulum&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
 &lt;p&gt;Primary demo with very limited precision and robustness is shown below.&lt;/p&gt;
 
@@ -1426,6 +1322,7 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
   &lt;iframe src=&#34;https://www.youtube.com/embed/R4VLmF_X5qM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
+&lt;hr&gt;
 &lt;h2 id=&#34;mechanical-structure&#34;&gt;Mechanical structure&lt;/h2&gt;
 &lt;p&gt;I use an optical encoder to measure the angle of the pendulum. The absolute angle of the pendulum need calibrate every time after reset.&lt;/p&gt;
 
@@ -1564,6 +1461,7 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
   &lt;/div&gt;&lt;figcaption&gt;
       The complete mechanical structure
     &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;software-design&#34;&gt;Software design&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Please refer to &lt;a href=&#34;http://en.cnki.com.cn/Article_en/CJFDTOTAL-JZDF2007S1010.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Study on PID Control of a Single Inverted Pendulum System&lt;/a&gt; for the PID control system.

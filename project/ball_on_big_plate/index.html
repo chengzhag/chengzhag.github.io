@@ -237,8 +237,9 @@
   
     
       
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+      
     
   
 
@@ -247,7 +248,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.9a66e344a68eb664b392d406a3f80726.css" />
+  <link rel="stylesheet" href="/css/wowchemy.5b43e6cc839129dfa9edd533901f66bc.css" />
 
   
 
@@ -417,7 +418,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js"></script>
+  <script src="/js/wowchemy-init.min.9dad2fecac7f370e439d06c4a1b59e05.js"></script>
 
   
 
@@ -638,23 +639,6 @@
 
       
       
-      <li class="nav-item dropdown theme-dropdown">
-        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
-          <i class="fas fa-moon" aria-hidden="true"></i>
-        </a>
-        <div class="dropdown-menu">
-          <a href="#" class="dropdown-item js-set-theme-light">
-            <span>Light</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-dark">
-            <span>Dark</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-auto">
-            <span>Automatic</span>
-          </a>
-        </div>
-      </li>
-      
 
       
       
@@ -802,7 +786,8 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="introduction">Introduction</h2>
+      <hr>
+<h2 id="introduction">Introduction</h2>
 <p>Ball on Big Plate project is a work of team made up with three people. We are fortunate enough to get the first prize with this in <a href="https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html" target="_blank" rel="noopener">2017NUEDC</a>.</p>
 <p>I was responsible for building the structure and programming STM32 and Raspberry Pi. Code and document <a href="https://github.com/pidan1231239/ball_on_big_plate" target="_blank" rel="noopener">here</a>. The other two teammates are <a href="https://github.com/shicaiwei123" target="_blank" rel="noopener">shicaiwei123</a> and <a href="https://github.com/zianglei" target="_blank" rel="noopener">zianglei</a>. Sadly that <a href="https://github.com/yoyolalala" target="_blank" rel="noopener">yoyolalala</a> left the team before the contest. The preparation projects below can not be done without her. I&rsquo;d like to thank her here.</p>
 <p>The final work has been handed in to our school and there will be no plan to write a detailed document for it. This page tells the story behind it.</p>
@@ -838,6 +823,7 @@
     </figcaption></figure></p>
 </blockquote>
 <p>Specifically in this project, according to the contest requirements, the system is supposed to move a ball between any two of nine evenly distributed circles drawn on the plate and avoids other circles. The plate must have a size around 65cm*65cm. The <a href="%e6%bb%9a%e7%90%83%e6%8e%a7%e5%88%b6%e7%b3%bb%e7%bb%9f%ef%bc%88B%e9%a2%98%ef%bc%89.pdf">document</a> shows the distribution of the circles.</p>
+<hr>
 <h2 id="the-contest">The Contest</h2>
 <p><a href="https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html" target="_blank" rel="noopener">NUEDC</a> is one of the largest electronic design competitions in China. The competition last three and a half days. Four categories of more than ten subjects are published on the official website on the day it begins. Participants usually prepare for a long time before the competition. The competition in 2017 which I attended started from August 9 to August 12. Our team started preparing about four months in advance.</p>
 <p>I was responsible for building the structure and programming STM32 and Raspberry Pi. Although I had got some experience with programming, I barely knew the basics of control system. However, I chose the control system direction to prepare because of my interest in it.</p>
@@ -848,6 +834,7 @@
 <li><a href="/project/ball_on_small_plate/">Ball on Small Plate</a></li>
 </ul>
 <p>Sadly, I&rsquo;ve got no video demo of the final work since we were too busy moving forward. So let&rsquo;s jump into the details of the design.</p>
+<hr>
 <h2 id="platform">Platform</h2>
 <ul>
 <li>Raspberry Pi Zero and Raspberry Pi 3b with OpenCV installed</li>
@@ -856,6 +843,7 @@
 </ul>
 <p>The Raspberry Pi is developed with C++ language using Raspberry toolchain provided by <a href="https://visualgdb.com/" target="_blank" rel="noopener">VisualGDB</a> (tutorial <a href="https://visualgdb.com/tutorials/raspberry/crosscompiler/" target="_blank" rel="noopener">here</a>). The STM32 is developed with C++ language using Arm toolchain provided by <a href="https://visualgdb.com/" target="_blank" rel="noopener">VisualGDB</a> (tutorial <a href="https://visualgdb.com/tutorials/arm/stm32/" target="_blank" rel="noopener">here</a>). The Raspberry runs OpenCV program and sends the results to STM32 through UART.</p>
 <p>I made use of a C++ API written for STM32 named <a href="https://github.com/eboxmaker/eBox_STM32F1" target="_blank" rel="noopener">ebox</a>. Although it saved me a lot of time then, I found <a href="https://www.mbed.com/" target="_blank" rel="noopener">mbed</a> even easier than it after the competition. By the way, it was said that Arduino is not allowed in the competition.</p>
+<hr>
 <h2 id="mechanical-structure">Mechanical structure</h2>
 <p>The final work uses a PCB motherboard made in <a href="/project/ball_on_small_plate/">Ball on Small Plate project</a> to put the electronic modules together.</p>
 
@@ -1116,6 +1104,7 @@
   </div><figcaption>
       Complete work packed with cardboard, kinda like a house
     </figcaption></figure>
+<hr>
 <h2 id="final-test">Final test</h2>
 <p>After a successful test in front of the judges of Sichuan division and a small test on our electronic design capabilities, we stepped into our journey to Xi&rsquo;an. Here show some photos taken along the trip.</p>
 

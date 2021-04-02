@@ -74,6 +74,8 @@
 
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
 
     
     
@@ -235,8 +237,9 @@
   
     
       
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+      
     
   
 
@@ -245,7 +248,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.9a66e344a68eb664b392d406a3f80726.css" />
+  <link rel="stylesheet" href="/css/wowchemy.5b43e6cc839129dfa9edd533901f66bc.css" />
 
   
 
@@ -415,7 +418,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js"></script>
+  <script src="/js/wowchemy-init.min.9dad2fecac7f370e439d06c4a1b59e05.js"></script>
 
   
 
@@ -636,23 +639,6 @@
 
       
       
-      <li class="nav-item dropdown theme-dropdown">
-        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
-          <i class="fas fa-moon" aria-hidden="true"></i>
-        </a>
-        <div class="dropdown-menu">
-          <a href="#" class="dropdown-item js-set-theme-light">
-            <span>Light</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-dark">
-            <span>Dark</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-auto">
-            <span>Automatic</span>
-          </a>
-        </div>
-      </li>
-      
 
       
       
@@ -775,14 +761,8 @@
 
 
   
-    
-  
 
 
-
-<a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/pdf/2103.06422" target="_blank" rel="noopener">
-  PDF
-</a>
 
 
 
@@ -847,41 +827,10 @@
   <div class="article-container">
 
     
-    <h3>Abstract</h3>
-    <p class="pub-abstract">We present a new pipeline for holistic 3D scene understanding from a single image, which could predict object shape, object pose, and scene layout. As it is a highly ill-posed problem, existing methods usually suffer from inaccurate estimation of both shapes and layout especially for the cluttered scene due to the heavy occlusion between objects. We propose to utilize the latest deep implicit representation to solve this challenge. We not only propose an image-based local structured implicit network to improve the object shape estimation, but also refine 3D object pose and scene layout via a novel implicit scene graph neural network that exploits the implicit local object features. A novel physical violation loss is also proposed to avoid incorrect context between objects. Extensive experiments demonstrate that our method outperforms the state-of-the-art methods in terms of object shape, scene layout estimation, and 3D object detection.</p>
-    
 
     
     
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">Type</div>
-          <div class="col-12 col-md-9">
-            <a href="/publication/#1">
-              Conference paper
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    <div class="d-md-none space-below"></div>
-    
 
-    
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-          <div class="col-12 col-md-9">IEEE Conference on Computer Vision and Pattern Recognition, 2021</div>
-        </div>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    <div class="d-md-none space-below"></div>
     
 
     <div class="space-below"></div>
@@ -901,18 +850,123 @@
 
 
 Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). -->
-<h2 id="3d-scene-understanding">3D Scene Understanding</h2>
-<p>Given a single color image,</p>
-<ul>
-<li>Estimate the room layout, including object categories and poses in 3D space</li>
-<li>Reconstruct mesh of individual object</li>
+<hr>
+<h2 id="abstract">Abstract</h2>
+<p>We present a new pipeline for holistic 3D scene understanding from a single image, which could predict object shape, object pose, and scene layout. As it is a highly ill-posed problem, existing methods usually suffer from inaccurate estimation of both shapes and layout especially for the cluttered scene due to the heavy occlusion between objects. We propose to utilize the latest deep implicit representation to solve this challenge. We not only propose an image-based local structured implicit network to improve the object shape estimation, but also refine 3D object pose and scene layout via a novel implicit scene graph neural network that exploits the implicit local object features. A novel physical violation loss is also proposed to avoid incorrect context between objects. Extensive experiments demonstrate that our method outperforms the state-of-the-art methods in terms of object shape, scene layout estimation, and 3D object detection.</p>
+<!-- ## 3D Scene Understanding 
+Given a single color image,
+- Estimate the room layout, including object categories and poses in 3D space
+- Reconstruct mesh of individual object -->
+<hr>
+<h2 id="paper">Paper</h2>
+<!-- ![page1](02192_页面_01.png)![page3](02192_页面_03.png)![page5](02192_页面_05.png)![page7](02192_页面_07.png) -->
+<center>
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="gallery">
+
+  
+  
+  
+    
+    
+    
+    
+    
+    <a data-fancybox="gallery-pages" href="/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_01.png" >
+      <img src="/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_01_hu7b4e8c585c78596d52f33bba49723711_179891_0x190_resize_lanczos_2.png" loading="lazy" alt="02192_页面_01.png" width="147" height="190">
+    </a>
+  
+    
+    
+    
+    
+    
+    <a data-fancybox="gallery-pages" href="/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_03.png" >
+      <img src="/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_03_hu7b4e8c585c78596d52f33bba49723711_221609_0x190_resize_lanczos_2.png" loading="lazy" alt="02192_页面_03.png" width="147" height="190">
+    </a>
+  
+    
+    
+    
+    
+    
+    <a data-fancybox="gallery-pages" href="/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_05.png" >
+      <img src="/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_05_hu7b4e8c585c78596d52f33bba49723711_201925_0x190_resize_lanczos_2.png" loading="lazy" alt="02192_页面_05.png" width="147" height="190">
+    </a>
+  
+    
+    
+    
+    
+    
+    <a data-fancybox="gallery-pages" href="/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_07.png" >
+      <img src="/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_07_hu7b4e8c585c78596d52f33bba49723711_293071_0x190_resize_lanczos_2.png" loading="lazy" alt="02192_页面_07.png" width="147" height="190">
+    </a>
+  
+
+</div>
+</center>
+<center>
+  <!-- <ul class="cta-group">
+  
+  <li>
+    <a href="https://arxiv.org/abs/2103.06422"  class="btn btn-primary px-3 py-3">arXiv</a>
+  </li>
+  
+  
 </ul>
+ -->
+  <!-- <a href="https://arxiv.org/abs/2103.06422" class="btn btn-primary px-3 py-3">Paper</a> -->
+  <a href="#" class="btn btn-outline-primary js-cite-modal" data-filename="/publication/im3d/cite.bib">
+  Cite
+  </a>
+  &nbsp; &nbsp;
+  <a href="https://arxiv.org/abs/2103.06422" class="btn btn-outline-primary" target="_blank">
+  arXiv
+  </a> 
+  &nbsp; &nbsp;
+  <a href="https://arxiv.org/pdf/2103.06422" class="btn btn-outline-primary" target="_blank">
+  Paper
+  </a>
+  &nbsp; &nbsp;
+  <a href="02192-supp.pdf" class="btn btn-outline-primary" target="_blank">
+  Supp
+  </a>
+  &nbsp; &nbsp;
+  <a href="https://github.com/pidan1231239/Implicit3DUnderstanding" class="btn btn-outline-primary" target="_blank">
+  GitHub
+  </a>
+</center>
+<!-- <center>
+<a href="https://arxiv.org/abs/2103.06422">[arXiv]</a> 
+&nbsp; &nbsp;
+<a href="https://arxiv.org/pdf/2103.06422">[Paper]</a> 
+&nbsp; &nbsp;
+<a href="02192-supp.pdf">[Supp]</a> 
+&nbsp; &nbsp;
+<a href="https://github.com/pidan1231239/Implicit3DUnderstanding">[GitHub]</a>
+</center> -->
+<hr>
 <h2 id="motivations">Motivations</h2>
 <ul>
 <li>Implicit representation like Signed Distance Function (SDF) can be used to detect collision and propagate gradients</li>
 <li>And together with structured representation (LDIF), the shapes can be learned better and more shape priors can be provided for relationship understanding</li>
 <li>Graph Convolutional Network (GCN) is proven to be good at resolving context information in the task of scene graph generation</li>
 </ul>
+<hr>
 <h2 id="pipeline">Pipeline</h2>
 
 
@@ -946,6 +1000,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
 In the initial estimation stage, a 2D detector is first adopted to extract the 2D bounding box from the input image, followed by an Object Detection Network (ODN) to recover the object poses as 3D bounding boxes and a new Local Implicit Embedding Network (LIEN) to extract the implicit local shape information from the image directly, which can further be decoded to infer 3D geometry.
 The input image is also fed into a Layout Estimation Network (LEN) to produce a 3D layout bounding box and relative camera pose.
 In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is designed to refine the initial predictions via the scene context information.</p>
+<hr>
 <h2 id="results">Results</h2>
 
 
@@ -1310,6 +1365,8 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
       
 
       
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
       
 
       

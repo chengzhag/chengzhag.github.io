@@ -235,8 +235,9 @@
   
     
       
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+      
     
   
 
@@ -245,7 +246,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.9a66e344a68eb664b392d406a3f80726.css" />
+  <link rel="stylesheet" href="/css/wowchemy.5b43e6cc839129dfa9edd533901f66bc.css" />
 
   
 
@@ -415,7 +416,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js"></script>
+  <script src="/js/wowchemy-init.min.9dad2fecac7f370e439d06c4a1b59e05.js"></script>
 
   
 
@@ -636,23 +637,6 @@
 
       
       
-      <li class="nav-item dropdown theme-dropdown">
-        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
-          <i class="fas fa-moon" aria-hidden="true"></i>
-        </a>
-        <div class="dropdown-menu">
-          <a href="#" class="dropdown-item js-set-theme-light">
-            <span>Light</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-dark">
-            <span>Dark</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-auto">
-            <span>Automatic</span>
-          </a>
-        </div>
-      </li>
-      
 
       
       
@@ -804,7 +788,8 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="introduction">Introduction</h2>
+      <hr>
+<h2 id="introduction">Introduction</h2>
 <p>FMCW Positioning Radar project is a work of team made up of three people. We were trying to get the qualification to attend <a href="http://nuedc.sjtu.edu.cn/CN/content.aspx?info_lb=37&amp;flag=2" target="_blank" rel="noopener">ESDC</a> through this project. Sadly, we were out of the game in the stage of school contest.</p>
 <p>The radar works in the 2.7 GHz - 3.7 GHz band. It has 4 transmitting antenna and 12 receive antenna. With a transmission power of less than 10 dBm, it localizes a person within a median of 5 cm in the y dimension. Within 5 meters, it has an accuracy of about 20 cm. Without further tests, the maximum distance is unknown. However, it can indicate a person behind a 25 cm concrete wall.</p>
 <p>Code and document <a href="https://github.com/pidan1231239/fmcw_positioning_radar" target="_blank" rel="noopener">here</a>. The final presentation with hardware and data processing flow introduction see <a href="https://sway.com/5uSW86N1bUqbrA7T?ref=Link" target="_blank" rel="noopener">here</a>.</p>
@@ -828,6 +813,7 @@
 <li><a href="https://ww2.mathworks.cn/hardware-support/usrp.html?s_tid=srchtitle" target="_blank" rel="noopener">USRP® Support Package from Communications System Toolbox</a>: Matlab toolbox for USRP</li>
 <li><a href="http://ecewp.ece.wpi.edu/wordpress/wireless/textbooks/sdrlabs/" target="_blank" rel="noopener">Digital Communication Systems Engineering Using Software Defined Radio</a>: a tutorial of SDR using Simulink</li>
 </ul>
+<hr>
 <h2 id="hardware">Hardware</h2>
 <p>The hardware design can be introduced in two parts, RF front end and FMCW generator. The design references the projects and the papers below:</p>
 <ul>
@@ -910,6 +896,7 @@
   </div><figcaption>
       RF front end
     </figcaption></figure>
+<hr>
 <h2 id="software">Software</h2>
 <p>Software part includes ADF4159 evaluation board configuration, mbed code, and Simulink model.</p>
 <h3 id="adf4159">ADF4159</h3>
@@ -954,6 +941,7 @@
     </figcaption></figure>
 <h3 id="simulink-model">Simulink model</h3>
 <p>All the models are in the <a href="https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/simulink" target="_blank" rel="noopener">simulink</a> folder. <a href="https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/RadarImagingAndPositioning.slx" target="_blank" rel="noopener">RadarImagingAndPositioning.slx</a> block implements the basic signal processing logic and output the 2D heat map and target position. The data processing flow is shown in the presentation above. <a href="https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/usrp_4t12r_heatmap.slx" target="_blank" rel="noopener">usrp_4t12r_heatmap.slx</a>  connects the basic blocks to show the imaging result and targets. For more information about using USRP with Simulink, see the Introduction section above.</p>
+<hr>
 <h2 id="results">Results</h2>
 <p>In the experimental stage, I built a system with 1 Tx and 3 Rx.</p>
 
