@@ -830,9 +830,12 @@
     <div class="article-style">
       <hr>
 <h2 id="introduction">Introduction</h2>
-<p>Ball on Big Plate project is a work of team made up with three people. We are fortunate enough to get the first prize with this in <a href="https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html" target="_blank" rel="noopener">2017NUEDC</a>.</p>
-<p>I was responsible for building the structure and programming STM32 and Raspberry Pi. Code and document <a href="https://github.com/pidan1231239/ball_on_big_plate" target="_blank" rel="noopener">here</a>. The other two teammates are <a href="https://github.com/shicaiwei123" target="_blank" rel="noopener">shicaiwei123</a> and <a href="https://github.com/zianglei" target="_blank" rel="noopener">zianglei</a>. Sadly that <a href="https://github.com/yoyolalala" target="_blank" rel="noopener">yoyolalala</a> left the team before the contest. The preparation projects below can not be done without her. I&rsquo;d like to thank her here.</p>
-<p>The final work has been handed in to our school and there will be no plan to write a detailed document for it. This page tells the story behind it.</p>
+<p>This project is a work of team of 3, which includes <a href="https://github.com/shicaiwei123" target="_blank" rel="noopener">shicaiwei123</a> and <a href="https://github.com/zianglei" target="_blank" rel="noopener">zianglei</a>.
+The preparations of the contest are done with the help of <a href="https://github.com/yoyolalala" target="_blank" rel="noopener">yoyolalala</a>.
+I was responsible for building mechanical structures and embedded programming (i.e. STM32, Raspberry Pi).
+We are lucky to have received the first prize in <a href="https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html" target="_blank" rel="noopener">2017NUEDC</a>.
+The final work has been handed in to our school thus details will not be provided.
+However, code and document can be found <a href="https://github.com/pidan1231239/ball_on_big_plate" target="_blank" rel="noopener">here</a>.</p>
 <blockquote>
 <p>The ball-on-plate system is a promoted version of the traditional ball-on-beam control problem. The problem consists of a plate which its deviation can be manipulated in two perpendicular directions. The goal is to carry the ball moving on the plate to a desired position, that is to control a freely rolling ball on a specific position or moving on a trajectory on the plate. - <a href="http://web.engr.illinois.edu/~khashab2/files/2011_LinearControl/16.pdf" target="_blank" rel="noopener">Modelling and Control of Ball-Plate System</a>
 
@@ -864,18 +867,18 @@
       Ball-on-plate system
     </figcaption></figure></p>
 </blockquote>
-<p>Specifically in this project, according to the contest requirements, the system is supposed to move a ball between any two of nine evenly distributed circles drawn on the plate and avoids other circles. The plate must have a size around 65cm*65cm. The <a href="%e6%bb%9a%e7%90%83%e6%8e%a7%e5%88%b6%e7%b3%bb%e7%bb%9f%ef%bc%88B%e9%a2%98%ef%bc%89.pdf">document</a> shows the distribution of the circles.</p>
+<p>Specifically in this project, according to the contest requirements, the system is supposed to move a ball between any two of nine evenly distributed circles and avoids the others. The plate must have a size around 65cm*65cm. The <a href="%e6%bb%9a%e7%90%83%e6%8e%a7%e5%88%b6%e7%b3%bb%e7%bb%9f%ef%bc%88B%e9%a2%98%ef%bc%89.pdf">document</a> shows the distribution of the circles.</p>
 <hr>
 <h2 id="the-contest">The Contest</h2>
-<p><a href="https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html" target="_blank" rel="noopener">NUEDC</a> is one of the largest electronic design competitions in China. The competition last three and a half days. Four categories of more than ten subjects are published on the official website on the day it begins. Participants usually prepare for a long time before the competition. The competition in 2017 which I attended started from August 9 to August 12. Our team started preparing about four months in advance.</p>
-<p>I was responsible for building the structure and programming STM32 and Raspberry Pi. Although I had got some experience with programming, I barely knew the basics of control system. However, I chose the control system direction to prepare because of my interest in it.</p>
+<p><a href="https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html" target="_blank" rel="noopener">NUEDC</a> is one of the largest electronic design contest for undergraduate students in China. The contest lasts three and a half days. More than ten topics of four types including control, measurement, communication and power are published in the first day morning, indicating the start of the contest. Participants usually prepare for a long time before the contest. We attended the contest in 2017 starting from August 9th to 12th. Our team started the preparation four months in advance.</p>
+<p>Although I had got some experience with programming, I barely knew the basics of control system. However, I chose this type of topic just in the interest of it.</p>
 <p>In the preparation process, we learned from five projects, three of which are listed below.</p>
 <ul>
 <li><a href="/project/rotary_inverted_pendulum/">Rotary Inverted Pendulum</a></li>
 <li><a href="/project/ball_on_beam/">Ball on Beam</a></li>
 <li><a href="/project/ball_on_small_plate/">Ball on Small Plate</a></li>
 </ul>
-<p>Sadly, I&rsquo;ve got no video demo of the final work since we were too busy moving forward. So let&rsquo;s jump into the details of the design.</p>
+<p>Sadly, no video demo was taken for the limit of time.</p>
 <hr>
 <h2 id="platform">Platform</h2>
 <ul>
@@ -883,11 +886,13 @@
 <li>STM32F103 minimum system board</li>
 <li>PC with Visual Studio and VisualGDB installed</li>
 </ul>
-<p>The Raspberry Pi is developed with C++ language using Raspberry toolchain provided by <a href="https://visualgdb.com/" target="_blank" rel="noopener">VisualGDB</a> (tutorial <a href="https://visualgdb.com/tutorials/raspberry/crosscompiler/" target="_blank" rel="noopener">here</a>). The STM32 is developed with C++ language using Arm toolchain provided by <a href="https://visualgdb.com/" target="_blank" rel="noopener">VisualGDB</a> (tutorial <a href="https://visualgdb.com/tutorials/arm/stm32/" target="_blank" rel="noopener">here</a>). The Raspberry runs OpenCV program and sends the results to STM32 through UART.</p>
-<p>I made use of a C++ API written for STM32 named <a href="https://github.com/eboxmaker/eBox_STM32F1" target="_blank" rel="noopener">ebox</a>. Although it saved me a lot of time then, I found <a href="https://www.mbed.com/" target="_blank" rel="noopener">mbed</a> even easier than it after the competition. By the way, it was said that Arduino is not allowed in the competition.</p>
+<p>The Raspberry Pi is developed with C++ using Raspberry Pi toolchain provided by <a href="https://visualgdb.com/" target="_blank" rel="noopener">VisualGDB</a> (tutorial <a href="https://visualgdb.com/tutorials/raspberry/crosscompiler/" target="_blank" rel="noopener">here</a>).
+It deals with the machine vision tasks and sends the results to STM32 through UART.</p>
+<p>The STM32 is developed with C++ language using Arm toolchain provided by <a href="https://visualgdb.com/" target="_blank" rel="noopener">VisualGDB</a> (tutorial <a href="https://visualgdb.com/tutorials/arm/stm32/" target="_blank" rel="noopener">here</a>).
+A C++ API for STM32 (<a href="https://github.com/eboxmaker/eBox_STM32F1" target="_blank" rel="noopener">Ebox</a>) was used as a replacement of ardunio, which is not allowed in the contest.</p>
 <hr>
 <h2 id="mechanical-structure">Mechanical structure</h2>
-<p>The final work uses a PCB motherboard made in <a href="/project/ball_on_small_plate/">Ball on Small Plate project</a> to put the electronic modules together.</p>
+<p>The final work uses a PCB motherboard (designed by <a href="https://github.com/shicaiwei123" target="_blank" rel="noopener">shicaiwei123</a>) same as <a href="/project/ball_on_small_plate/">Ball on Small Plate project</a> to connect modular electronic parts.</p>
 
 
 
@@ -916,7 +921,7 @@
   </div><figcaption>
       PCB mother board
     </figcaption></figure>
-<p>The 65cm*65cm plate is made of light wood laminate board.</p>
+<p>The 65cm*65cm plate is made of laminated balsa wood board.</p>
 
 
 
@@ -945,7 +950,8 @@
   </div><figcaption>
       The plate
     </figcaption></figure>
-<p>There are ribs below the plate to support it. The dynamic structure of the plate is same as <a href="/project/ball_on_small_plate/">Ball on small plate</a>.</p>
+<p>We design metre-shaped ribs to further reinforce the plate.
+We follow <a href="/project/ball_on_small_plate/">Ball on small plate</a> to support the plate with a universal joint in the center and drive the board with two servos using ball joint rods as connection.</p>
 
 
 
@@ -974,7 +980,7 @@
   </div><figcaption>
       Under the plate
     </figcaption></figure>
-<p>Design documents of the reinforcing ribs and others are also on the <a href="https://github.com/pidan1231239/ball_on_big_plate" target="_blank" rel="noopener">GitHub page</a>.</p>
+<p>Design documents of the reinforcing ribs are also available <a href="https://github.com/pidan1231239/ball_on_big_plate" target="_blank" rel="noopener">here</a>.</p>
 
 
 
@@ -1059,7 +1065,8 @@
   </div><figcaption>
       Servo with connecting rod
     </figcaption></figure>
-<p>The camera is supported by carbon fiber tubes like in <a href="/project/ball_on_small_plate/">Ball on small plate</a>. And the same LED circle is installed around the camera.</p>
+<p>The camera is supported by carbon fiber tubes like in <a href="/project/ball_on_small_plate/">Ball on small plate</a>.
+And the same ring light is installed around the camera to provide better illumination.</p>
 
 
 
@@ -1117,7 +1124,7 @@
   </div><figcaption>
       The complete work
     </figcaption></figure>
-<p>After the work was done and tested by ourselves, we packed it with cardboard then handed it over to the competition organizer.</p>
+<p>The final work is packed with cardboard then submitted to the competition organizer.</p>
 
 
 
@@ -1148,7 +1155,7 @@
     </figcaption></figure>
 <hr>
 <h2 id="final-test">Final test</h2>
-<p>After a successful test in front of the judges of Sichuan division and a small test on our electronic design capabilities, we stepped into our journey to Xi&rsquo;an. Here show some photos taken along the trip.</p>
+<p>After a successful test in front of the judges of Sichuan division, follwed by a basic on-site electronic design test, we went to Xi&rsquo;an for the final test. Below shows some photos taken along the trip.</p>
 
 
 

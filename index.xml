@@ -319,14 +319,14 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
       <guid>https://chengzhag.github.io/project/fmcw_positioning_radar/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;FMCW Positioning Radar project is a work of team made up of three people. We were trying to get the qualification to attend &lt;a href=&#34;http://nuedc.sjtu.edu.cn/CN/content.aspx?info_lb=37&amp;amp;flag=2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ESDC&lt;/a&gt; through this project. Sadly, we were out of the game in the stage of school contest.&lt;/p&gt;
-&lt;p&gt;The radar works in the 2.7 GHz - 3.7 GHz band. It has 4 transmitting antenna and 12 receive antenna. With a transmission power of less than 10 dBm, it localizes a person within a median of 5 cm in the y dimension. Within 5 meters, it has an accuracy of about 20 cm. Without further tests, the maximum distance is unknown. However, it can indicate a person behind a 25 cm concrete wall.&lt;/p&gt;
-&lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The final presentation with hardware and data processing flow introduction see &lt;a href=&#34;https://sway.com/5uSW86N1bUqbrA7T?ref=Link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This project is a work of team of 3, which includes &lt;a href=&#34;https://github.com/hsuhaoo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hsuhaoo&lt;/a&gt; and &lt;a href=&#34;https://chengzhag.github.io/&#34;&gt;Zijing Guan&lt;/a&gt;. It is developed for the contest of &lt;a href=&#34;http://nuedc.sjtu.edu.cn/CN/content.aspx?info_lb=37&amp;amp;flag=2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ESDC&lt;/a&gt;. But we did not managed to realize the full ideas of fall detection for the elderly.&lt;/p&gt;
+&lt;p&gt;The radar works in the 2.7 GHz - 3.7 GHz band, and has 4 transmitting antennas and 12 receive antennas. With the power of less than 10 dBm, it can measure the distance of a person with a median of 5 cm. Within 5 meters, it has an positioning accuracy of about 20 cm. Without further tests, the maximum distance is unknown. However, it can indicate the existance of a person behind a 25 cm concrete wall.&lt;/p&gt;
+&lt;p&gt;Code and documents are available &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Slides introducing hardware and data processing process (in Chinese) are available &lt;a href=&#34;https://sway.com/5uSW86N1bUqbrA7T?ref=Link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;fmcw&#34;&gt;FMCW&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Frequency-modulated continuous-wave radar (FM-CW) – also called continuous-wave frequency-modulated (CWFM) radar – is a short-range measuring radar set capable of determining distance (&lt;a href=&#34;https://en.wikipedia.org/wiki/Continuous-wave_radar&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Continuous-wave radar wiki&lt;/a&gt;).&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;If you have no idea about it, the tutorial below is a good starting point.&lt;/p&gt;
+&lt;p&gt;If you have no idea about FMCW, the following tutorials can be a good starting point.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.radartutorial.eu/02.basics/Frequency%20Modulated%20Continuous%20Wave%20Radar.en.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Frequency-Modulated Continuous-Wave Radar&lt;/a&gt; (&lt;a href=&#34;http://www.radartutorial.eu/02.basics/Frequency%20Modulated%20Continuous%20Wave%20Radar.en.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FMCW Radar&lt;/a&gt;): a brief introduction of the principle of FMCW&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://ocw.mit.edu/resources/res-ll-003-build-a-small-radar-system-capable-of-sensing-range-doppler-and-synthetic-aperture-radar-imaging-january-iap-2011/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Build a Small Radar System Capable of Sensing Range, Doppler, and Synthetic Aperture Radar Imaging&lt;/a&gt;: an MIT course to build an FMCW radar yourself&lt;/li&gt;
@@ -337,20 +337,21 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Software-defined_radio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Software-defined radio&lt;/a&gt; (SDR) is a radio communication system where components that have been traditionally implemented in hardware (e.g. mixers, filters, amplifiers, modulators/demodulators, detectors, etc.) are instead implemented by means of software on a personal computer or embedded system.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;The project uses a USRP N210 with an LFRX  daughter board. SDR is not an important part of this project cause the RF front end are made with RF modules and the FMCW generator is build separately. The USRP here acts as a role of ADC and is accessed via Simulink. See how to use a USRP with Simulink below:&lt;/p&gt;
+&lt;p&gt;We use a USRP N210 with an LFRX daughter board to sample the baseband signal. The RF front end is made with RF modules and the FMCW generator is build on a VCO. The USRP here acts as an ADC and is connected to Simulink. Following links show how to connect a USRP to Simulink:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://ww2.mathworks.cn/hardware-support/usrp.html?s_tid=srchtitle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;USRP® Support Package from Communications System Toolbox&lt;/a&gt;: Matlab toolbox for USRP&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://ecewp.ece.wpi.edu/wordpress/wireless/textbooks/sdrlabs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Digital Communication Systems Engineering Using Software Defined Radio&lt;/a&gt;: a tutorial of SDR using Simulink&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
-&lt;p&gt;The hardware design can be introduced in two parts, RF front end and FMCW generator. The design references the projects and the papers below:&lt;/p&gt;
+&lt;p&gt;In this section, we introduce the hardware design in two parts, i.e. RF front end and FMCW generator. We refer to the following projects and papers for basic ideas:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://ocw.mit.edu/resources/res-ll-003-build-a-small-radar-system-capable-of-sensing-range-doppler-and-synthetic-aperture-radar-imaging-january-iap-2011/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Build a Small Radar System Capable of Sensing Range, Doppler, and Synthetic Aperture Radar Imaging&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://rfcapture.csail.mit.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RF-Capture&lt;/a&gt;: &lt;a href=&#34;http://rfcapture.csail.mit.edu/rfcapture-paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper see RF-Capture: Capturing a Coarse Human Figure Through a Wall&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://witrack.csail.mit.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WiTrack&lt;/a&gt;: papers see &lt;a href=&#34;http://witrack.csail.mit.edu/witrack-paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;3D Tracking via Body Radio Reflections&lt;/a&gt;, &lt;a href=&#34;http://witrack.csail.mit.edu/witrack2-paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multi-Person Localization via RF Body Reflections&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;fmcw-generator&#34;&gt;FMCW generator&lt;/h3&gt;
+&lt;p&gt;Hardware:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.analog.com/en/products/clock-and-timing/phase-locked-loop/fractional-n-pll/adf4159.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADF4159&lt;/a&gt; evaluation board: &lt;a href=&#34;http://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/eval-adf4159.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;EV-ADF4159EB3Z&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Loop filter: &lt;a href=&#34;http://www.analog.com/cn/products/amplifiers/operational-amplifiers/jfet-input-amplifiers/ad8065.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AD8065&lt;/a&gt;. It is designed with &lt;a href=&#34;https://form.analog.com/Form_Pages/RFComms/ADISimPll.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADIsimPLL&lt;/a&gt; under the guidance of &lt;a href=&#34;http://www.analog.com/media/en/reference-design-documentation/reference-designs/CN0302.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CN-0302&lt;/a&gt;.&lt;/li&gt;
@@ -358,7 +359,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
 &lt;li&gt;Power splitter: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=ZX10-2-42%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ZX10-2-42+&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Attenuator: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=VAT-3%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VAT-3+&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The final design works in 2.7 GHz to 3.7 GHz to avoid 2.4 GHz band.&lt;/p&gt;
+&lt;p&gt;Our FMCW generator works in 2.7GHz-3.7GHz band to avoid 2.4GHz wifi signal.&lt;/p&gt;
 
 
 
@@ -388,6 +389,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
       FMCW generator
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;rf-front-end&#34;&gt;RF front end&lt;/h3&gt;
+&lt;p&gt;Hardware:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PA and LNA: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=ZX60-53LNB%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ZX60-53LNB+&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Power splitter: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=ZN2PD-9G%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ZN2PD-9G+&lt;/a&gt;&lt;/li&gt;
@@ -396,7 +398,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
 &lt;li&gt;Switch: ADRF5040&lt;/li&gt;
 &lt;li&gt;mbed board: ST NUCLEO-L476RG&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The mbed board detects the trigger edge and overlay current antenna pair number after the edge. The baseband signal from the mixer and coded sync signal from mbed board are sent into the same LFRX board to achieve synchronization, then will be analyzed in Simulink in real time.&lt;/p&gt;
+&lt;p&gt;The mbed board detects the trigger edge and add a digital signal after the edge to indicate id of antenna pair. The baseband signal from the mixer and the sync signal from mbed board are first sampled with the LFRX daughter board simultaneously, then analyzed with Simulink in real time.&lt;/p&gt;
 
 
 
@@ -427,19 +429,19 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
-&lt;p&gt;Software part includes ADF4159 evaluation board configuration, mbed code, and Simulink model.&lt;/p&gt;
+&lt;p&gt;In this section, we introduce software design in three parts, i.e. ADF4159 evaluation board configuration, mbed code, and Simulink model.&lt;/p&gt;
 &lt;h3 id=&#34;adf4159&#34;&gt;ADF4159&lt;/h3&gt;
-&lt;p&gt;The ADF4159 evaluation board is configured using &lt;a href=&#34;http://www.analog.com/media/en/evaluation-boards-kits/evaluation-software/ADF4158-9_Setup_v4_10_6.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADF4158 and ADF4159 Evaluation Board Software&lt;/a&gt; via USB. The configuration file &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/ad4159&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; can be loaded into the software. The board is configured as follows:&lt;/p&gt;
+&lt;p&gt;The ADF4159 evaluation board is configured using &lt;a href=&#34;http://www.analog.com/media/en/evaluation-boards-kits/evaluation-software/ADF4158-9_Setup_v4_10_6.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADF4158 and ADF4159 Evaluation Board Software&lt;/a&gt; via USB. The configuration file is available &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/ad4159&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The board is configured with follow parameters:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Ramp mode: Continuous sawtooth&lt;/li&gt;
 &lt;li&gt;RF frequency: 2.7 GHz - 3.7 GHz&lt;/li&gt;
 &lt;li&gt;Ramp frequency: 2000 Hz&lt;/li&gt;
 &lt;li&gt;Charge pump: 1.25 mA&lt;/li&gt;
-&lt;li&gt;Muxout: Digital lock Detect. It is used as a sync signal to trigger the switching of antennas.&lt;/li&gt;
+&lt;li&gt;Muxout: Digital lock Detection. It is used as a trigger to switch antenna pairs and a sync signal to align base band signals of each antenna pair. The &lt;em&gt;muxout&lt;/em&gt; port outputs a falling edge on the start of a ramp.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The 4 Tx and 12 Rx makes up 4*12 antenna pairs. With ramp frequency of 2000 Hz, every antenna pair is switched to for 41.7 times per second.&lt;/p&gt;
+&lt;p&gt;The 4 Tx and 12 Rx antennas makes up 4*12 antenna pairs. With ramp frequency of 2000 Hz, every antenna pair can be activated for 41.7 times per second.&lt;/p&gt;
 &lt;h3 id=&#34;mbed-code&#34;&gt;mbed code&lt;/h3&gt;
-&lt;p&gt;The mbed board switches antenna pairs after every trigger edge from the ADF4159 Muxout pin. And it also overlay the antenna pair number to the sync signal. Considering that MCU has some unstable reaction delay between the trigger edge of the sync signal and the first down edge of the output, the MCU first pulls down the sync signal then output bits of the number. In this way, the down edge of the overlaid signal has no jitter. Code of mbed board is &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/mcu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The mbed board switches antenna pairs after every trigger edge from the ADF4159 Muxout pin. And as mentioned before, it adds a digital signal after the edge to indicate id of antenna pair. Considering that MCU is running at a relatively low frequency, which makes the responce to the sync signal unstable, we design the digital signal from MCU to pull down the sync signal after the trigger edge. In this way, the falling edge is kept synced. Code of mbed board is available &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/mcu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 
 
@@ -462,17 +464,17 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
                /project/fmcw_positioning_radar/IMG_20180623_094926_huca20fb634e53dde3c09519b7bcecdcb5_343173_660eb27965bd32b5343feb2418ca1a11.jpg 760w,
                /project/fmcw_positioning_radar/IMG_20180623_094926_huca20fb634e53dde3c09519b7bcecdcb5_343173_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
                src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/IMG_20180623_094926_huca20fb634e53dde3c09519b7bcecdcb5_343173_eae03d90855160a5a651ee5549a59d8b.jpg&#34;
-               width=&#34;760&#34;
+               width=&#34;30%&#34;
                height=&#34;724&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Antenna switching timing diagram
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;simulink-model&#34;&gt;Simulink model&lt;/h3&gt;
-&lt;p&gt;All the models are in the &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/simulink&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simulink&lt;/a&gt; folder. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/RadarImagingAndPositioning.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RadarImagingAndPositioning.slx&lt;/a&gt; block implements the basic signal processing logic and output the 2D heat map and target position. The data processing flow is shown in the presentation above. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/usrp_4t12r_heatmap.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;usrp_4t12r_heatmap.slx&lt;/a&gt;  connects the basic blocks to show the imaging result and targets. For more information about using USRP with Simulink, see the Introduction section above.&lt;/p&gt;
+&lt;p&gt;All the models are in the &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/simulink&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simulink&lt;/a&gt; folder. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/RadarImagingAndPositioning.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RadarImagingAndPositioning.slx&lt;/a&gt; block process baseband signals from USRP and output the 2D heat map and target position. The data processing pipeline is shown in the slides mentioned before. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/usrp_4t12r_heatmap.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;usrp_4t12r_heatmap.slx&lt;/a&gt; cooperates the above block with others to show the imaging and target detection results.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
-&lt;p&gt;In the experimental stage, I built a system with 1 Tx and 3 Rx.&lt;/p&gt;
+&lt;p&gt;In the experimental stage, A system with only 1 Tx and 3 Rx is built for experimental usage.&lt;/p&gt;
 
 
 
@@ -501,7 +503,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       1TX3RX system
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The overlaid sync signal is shown below.&lt;/p&gt;
+&lt;p&gt;The sync signal is shown below.&lt;/p&gt;
 
 
 
@@ -530,7 +532,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       Sync signal
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;1D imaging of each antenna pair is shown below. Tested with a person walking away then walking back. The d axis shows the round trip of the radar signal.&lt;/p&gt;
+&lt;p&gt;Waterfall plot of each antenna pair is shown below. A person is walking away then back in this experiment. The d axis shows the round trip of the radar signal.&lt;/p&gt;
 
 
 
@@ -545,10 +547,10 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
 
 
 
-&lt;figure  id=&#34;figure-1d-imaging-of-each-antenna-pair&#34;&gt;
+&lt;figure  id=&#34;figure-waterfall-plot-of-each-antenna-pair&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;1d imaging of each antenna pair&#34; srcset=&#34;
+        &lt;img alt=&#34;waterfall plot of each antenna pair&#34; srcset=&#34;
                /project/fmcw_positioning_radar/%E4%B8%89%E6%A0%B9%E5%A4%A9%E7%BA%BF%E7%80%91%E5%B8%83%E5%9B%BE_hu95d8e0e5e4514c2335bb54c686fd91e3_150387_a025354eccc17bd053f939b0af2e351c.jpg 400w,
                /project/fmcw_positioning_radar/%E4%B8%89%E6%A0%B9%E5%A4%A9%E7%BA%BF%E7%80%91%E5%B8%83%E5%9B%BE_hu95d8e0e5e4514c2335bb54c686fd91e3_150387_874b543fe1498bb4b493a46ecca33f85.jpg 760w,
                /project/fmcw_positioning_radar/%E4%B8%89%E6%A0%B9%E5%A4%A9%E7%BA%BF%E7%80%91%E5%B8%83%E5%9B%BE_hu95d8e0e5e4514c2335bb54c686fd91e3_150387_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
@@ -557,9 +559,9 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
-      1d imaging of each antenna pair
+      waterfall plot of each antenna pair
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The system was then expanded to 1 Tx and 8 Rx. In this stage, 2D imaging can be done.&lt;/p&gt;
+&lt;p&gt;The system is then expanded to 1 Tx and 8 Rx, which allows 2D imaging with phased array algorithm.&lt;/p&gt;
 
 
 
@@ -588,7 +590,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       1TX8RX system
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The following image is the heat map captured from the 1Tx8Rx system. The x-axis indicates angle from left to right. y-axis indicates the round distance of the radar signal. This illustration was made in a hurry so there is no complete annotation.&lt;/p&gt;
+&lt;p&gt;The image bellow shows the heat map captured from the 1Tx8Rx system. The x-axis indicates angle from left to right. The y-axis indicates the round distance of the radar signal. A person is standing in front of the radar at a distance of about 4 meters in this case.&lt;/p&gt;
 
 
 
@@ -617,7 +619,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       1Tx8Rx top-down heatmap
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;After that, the system was expanded to 4 Tx and 12 Rx. In this stage, 3D imaging can be done.&lt;/p&gt;
+&lt;p&gt;The system is further expanded to 4 Tx and 12 Rx, which allows 3D imaging.&lt;/p&gt;
 
 
 
@@ -646,7 +648,18 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       4TX12RX system
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The following gif shows the 3D imaging projected to xz-plane of a person holding a corner reflector and drawing a circle in the air.&lt;/p&gt;
+&lt;p&gt;The following GIF is the 3D imaging projected to the front view, showing a person drawing a circle in the air with a corner reflector.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&#34;yLoCut_200kHz_800rps_1rpf_4t12r_ztest_circle_reflector.gif&#34;/&gt;
+  &lt;figcaption&gt;Front view heatmap&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The GIF below shows the 2D imaging from above with target detection activated. A person is walking around in the distance of about 3 meters. The y-axis indicates the round distance of radar signal.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&#34;heatMapTarget.gif&#34; width=&#34;40%&#34;/&gt;
+  &lt;figcaption&gt;Top-down view heatmap&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;We tried to extract the signal strength vertical axis of person target doing squatting in the 10th second. However, as the radio waves in this frequency acts more like mirror reflection on the human body, the angle of the reflection surface becomes a issue as mentioned in &lt;a href=&#34;http://rfcapture.csail.mit.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RF-Capture&lt;/a&gt;. This makes the height of a person unpredictable for our system.&lt;/p&gt;
+&lt;p&gt;The figure bellow shows the strength of the reflected signal in the vertical axis vs time. The heat map indicates that the height of the person drops several times during the first 10 seconds, while the target only moves slightly with no changes on height.&lt;/p&gt;
 
 
 
@@ -661,69 +674,10 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
 
 
 
-&lt;figure  id=&#34;figure-heatmap-front-view&#34;&gt;
+&lt;figure  id=&#34;figure-height-axis-heatmap-vs-time&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;Heatmap front view&#34; srcset=&#34;
-               /project/fmcw_positioning_radar/_hu9d2a310dd94e072dfba2a9d7def6ad75_3655283_276e26ecbfc490ab1ca0465ea6927075.gif 400w,
-               /project/fmcw_positioning_radar/_hu9d2a310dd94e072dfba2a9d7def6ad75_3655283_3ba4f4e8a9ba757d72271bfec70916b1.gif 760w,
-               /project/fmcw_positioning_radar/_hu9d2a310dd94e072dfba2a9d7def6ad75_3655283_78f3f39ee8dd8adff9f34ca607e19cca.gif 1200w&#34;
-               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/_hu9d2a310dd94e072dfba2a9d7def6ad75_3655283_276e26ecbfc490ab1ca0465ea6927075.gif&#34;
-               width=&#34;560&#34;
-               height=&#34;420&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption&gt;
-      Heatmap front view
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The gif below shows the 2D imaging of xy-plane with target tracking. The target person was walking around in the distance of 3 meters. The y-axis indicates the round distance of radar signal.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-heatmap-top-down-view&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;Heatmap top-down view&#34; srcset=&#34;
-               /project/fmcw_positioning_radar/heatMapTarget_hu9d00e611e044496101eb698a1149f236_1478066_99a6cdd3971d7428d4e24ab3c3716bee.gif 400w,
-               /project/fmcw_positioning_radar/heatMapTarget_hu9d00e611e044496101eb698a1149f236_1478066_913ee12c029a82525015a3bcb888e8b0.gif 760w,
-               /project/fmcw_positioning_radar/heatMapTarget_hu9d00e611e044496101eb698a1149f236_1478066_1200x1200_fit_lanczos.gif 1200w&#34;
-               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/heatMapTarget_hu9d00e611e044496101eb698a1149f236_1478066_99a6cdd3971d7428d4e24ab3c3716bee.gif&#34;
-               width=&#34;760&#34;
-               height=&#34;570&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption&gt;
-      Heatmap top-down view
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;I tried to extract the z-axis coordinate of person target. However, because of the reflection angle mentioned in &lt;a href=&#34;http://rfcapture.csail.mit.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RF-Capture&lt;/a&gt;, and the intensified effect by the lower frequency band of our system, the height of a person cannot be accurately detected.&lt;/p&gt;
-&lt;p&gt;The image shows the heat map of the target in the z-axis changing with time. The target is walking in place then squats in the 10th second. As shown below, the height drops several times when the target moves.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-heatmap-z&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;Heatmap z&#34; srcset=&#34;
+        &lt;img alt=&#34;Height axis heatmap vs time&#34; srcset=&#34;
                /project/fmcw_positioning_radar/Image2_hu0ebc041c16d6d6cdba6f5a60288afea2_50325_51a4351994d031752db7ae7fc0cb88f0.png 400w,
                /project/fmcw_positioning_radar/Image2_hu0ebc041c16d6d6cdba6f5a60288afea2_50325_b804661373cc5c4aed6fd15fed9de303.png 760w,
                /project/fmcw_positioning_radar/Image2_hu0ebc041c16d6d6cdba6f5a60288afea2_50325_1200x1200_fit_lanczos_2.png 1200w&#34;
@@ -732,9 +686,9 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
                height=&#34;414&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
-      Heatmap z
+      Height axis heatmap vs time
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The final work was put on a cart.&lt;/p&gt;
+&lt;p&gt;The final work was put together on a cart.&lt;/p&gt;
 
 
 
@@ -773,9 +727,12 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
       <guid>https://chengzhag.github.io/project/ball_on_big_plate/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Ball on Big Plate project is a work of team made up with three people. We are fortunate enough to get the first prize with this in &lt;a href=&#34;https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2017NUEDC&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I was responsible for building the structure and programming STM32 and Raspberry Pi. Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_big_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/zianglei&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zianglei&lt;/a&gt;. Sadly that &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt; left the team before the contest. The preparation projects below can not be done without her. I&amp;rsquo;d like to thank her here.&lt;/p&gt;
-&lt;p&gt;The final work has been handed in to our school and there will be no plan to write a detailed document for it. This page tells the story behind it.&lt;/p&gt;
+&lt;p&gt;This project is a work of team of 3, which includes &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/zianglei&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zianglei&lt;/a&gt;.
+The preparations of the contest are done with the help of &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
+I was responsible for building mechanical structures and embedded programming (i.e. STM32, Raspberry Pi).
+We are lucky to have received the first prize in &lt;a href=&#34;https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2017NUEDC&lt;/a&gt;.
+The final work has been handed in to our school thus details will not be provided.
+However, code and document can be found &lt;a href=&#34;https://github.com/pidan1231239/ball_on_big_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The ball-on-plate system is a promoted version of the traditional ball-on-beam control problem. The problem consists of a plate which its deviation can be manipulated in two perpendicular directions. The goal is to carry the ball moving on the plate to a desired position, that is to control a freely rolling ball on a specific position or moving on a trajectory on the plate. - &lt;a href=&#34;http://web.engr.illinois.edu/~khashab2/files/2011_LinearControl/16.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Modelling and Control of Ball-Plate System&lt;/a&gt;
 
@@ -807,18 +764,18 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
       Ball-on-plate system
     &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Specifically in this project, according to the contest requirements, the system is supposed to move a ball between any two of nine evenly distributed circles drawn on the plate and avoids other circles. The plate must have a size around 65cm*65cm. The &lt;a href=&#34;%e6%bb%9a%e7%90%83%e6%8e%a7%e5%88%b6%e7%b3%bb%e7%bb%9f%ef%bc%88B%e9%a2%98%ef%bc%89.pdf&#34;&gt;document&lt;/a&gt; shows the distribution of the circles.&lt;/p&gt;
+&lt;p&gt;Specifically in this project, according to the contest requirements, the system is supposed to move a ball between any two of nine evenly distributed circles and avoids the others. The plate must have a size around 65cm*65cm. The &lt;a href=&#34;%e6%bb%9a%e7%90%83%e6%8e%a7%e5%88%b6%e7%b3%bb%e7%bb%9f%ef%bc%88B%e9%a2%98%ef%bc%89.pdf&#34;&gt;document&lt;/a&gt; shows the distribution of the circles.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-contest&#34;&gt;The Contest&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NUEDC&lt;/a&gt; is one of the largest electronic design competitions in China. The competition last three and a half days. Four categories of more than ten subjects are published on the official website on the day it begins. Participants usually prepare for a long time before the competition. The competition in 2017 which I attended started from August 9 to August 12. Our team started preparing about four months in advance.&lt;/p&gt;
-&lt;p&gt;I was responsible for building the structure and programming STM32 and Raspberry Pi. Although I had got some experience with programming, I barely knew the basics of control system. However, I chose the control system direction to prepare because of my interest in it.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NUEDC&lt;/a&gt; is one of the largest electronic design contest for undergraduate students in China. The contest lasts three and a half days. More than ten topics of four types including control, measurement, communication and power are published in the first day morning, indicating the start of the contest. Participants usually prepare for a long time before the contest. We attended the contest in 2017 starting from August 9th to 12th. Our team started the preparation four months in advance.&lt;/p&gt;
+&lt;p&gt;Although I had got some experience with programming, I barely knew the basics of control system. However, I chose this type of topic just in the interest of it.&lt;/p&gt;
 &lt;p&gt;In the preparation process, we learned from five projects, three of which are listed below.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/&#34;&gt;Rotary Inverted Pendulum&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://chengzhag.github.io/project/ball_on_beam/&#34;&gt;Ball on Beam&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on Small Plate&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Sadly, I&amp;rsquo;ve got no video demo of the final work since we were too busy moving forward. So let&amp;rsquo;s jump into the details of the design.&lt;/p&gt;
+&lt;p&gt;Sadly, no video demo was taken for the limit of time.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;platform&#34;&gt;Platform&lt;/h2&gt;
 &lt;ul&gt;
@@ -826,11 +783,13 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
 &lt;li&gt;STM32F103 minimum system board&lt;/li&gt;
 &lt;li&gt;PC with Visual Studio and VisualGDB installed&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The Raspberry Pi is developed with C++ language using Raspberry toolchain provided by &lt;a href=&#34;https://visualgdb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VisualGDB&lt;/a&gt; (tutorial &lt;a href=&#34;https://visualgdb.com/tutorials/raspberry/crosscompiler/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;). The STM32 is developed with C++ language using Arm toolchain provided by &lt;a href=&#34;https://visualgdb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VisualGDB&lt;/a&gt; (tutorial &lt;a href=&#34;https://visualgdb.com/tutorials/arm/stm32/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;). The Raspberry runs OpenCV program and sends the results to STM32 through UART.&lt;/p&gt;
-&lt;p&gt;I made use of a C++ API written for STM32 named &lt;a href=&#34;https://github.com/eboxmaker/eBox_STM32F1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ebox&lt;/a&gt;. Although it saved me a lot of time then, I found &lt;a href=&#34;https://www.mbed.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mbed&lt;/a&gt; even easier than it after the competition. By the way, it was said that Arduino is not allowed in the competition.&lt;/p&gt;
+&lt;p&gt;The Raspberry Pi is developed with C++ using Raspberry Pi toolchain provided by &lt;a href=&#34;https://visualgdb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VisualGDB&lt;/a&gt; (tutorial &lt;a href=&#34;https://visualgdb.com/tutorials/raspberry/crosscompiler/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).
+It deals with the machine vision tasks and sends the results to STM32 through UART.&lt;/p&gt;
+&lt;p&gt;The STM32 is developed with C++ language using Arm toolchain provided by &lt;a href=&#34;https://visualgdb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VisualGDB&lt;/a&gt; (tutorial &lt;a href=&#34;https://visualgdb.com/tutorials/arm/stm32/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).
+A C++ API for STM32 (&lt;a href=&#34;https://github.com/eboxmaker/eBox_STM32F1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ebox&lt;/a&gt;) was used as a replacement of ardunio, which is not allowed in the contest.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;mechanical-structure&#34;&gt;Mechanical structure&lt;/h2&gt;
-&lt;p&gt;The final work uses a PCB motherboard made in &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on Small Plate project&lt;/a&gt; to put the electronic modules together.&lt;/p&gt;
+&lt;p&gt;The final work uses a PCB motherboard (designed by &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt;) same as &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on Small Plate project&lt;/a&gt; to connect modular electronic parts.&lt;/p&gt;
 
 
 
@@ -859,7 +818,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       PCB mother board
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The 65cm*65cm plate is made of light wood laminate board.&lt;/p&gt;
+&lt;p&gt;The 65cm*65cm plate is made of laminated balsa wood board.&lt;/p&gt;
 
 
 
@@ -888,7 +847,8 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       The plate
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;There are ribs below the plate to support it. The dynamic structure of the plate is same as &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on small plate&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We design metre-shaped ribs to further reinforce the plate.
+We follow &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on small plate&lt;/a&gt; to support the plate with a universal joint in the center and drive the board with two servos using ball joint rods as connection.&lt;/p&gt;
 
 
 
@@ -917,7 +877,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       Under the plate
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;Design documents of the reinforcing ribs and others are also on the &lt;a href=&#34;https://github.com/pidan1231239/ball_on_big_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Design documents of the reinforcing ribs are also available &lt;a href=&#34;https://github.com/pidan1231239/ball_on_big_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 
 
@@ -1002,7 +962,8 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       Servo with connecting rod
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The camera is supported by carbon fiber tubes like in &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on small plate&lt;/a&gt;. And the same LED circle is installed around the camera.&lt;/p&gt;
+&lt;p&gt;The camera is supported by carbon fiber tubes like in &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on small plate&lt;/a&gt;.
+And the same ring light is installed around the camera to provide better illumination.&lt;/p&gt;
 
 
 
@@ -1060,7 +1021,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       The complete work
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;After the work was done and tested by ourselves, we packed it with cardboard then handed it over to the competition organizer.&lt;/p&gt;
+&lt;p&gt;The final work is packed with cardboard then submitted to the competition organizer.&lt;/p&gt;
 
 
 
@@ -1091,7 +1052,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;final-test&#34;&gt;Final test&lt;/h2&gt;
-&lt;p&gt;After a successful test in front of the judges of Sichuan division and a small test on our electronic design capabilities, we stepped into our journey to Xi&amp;rsquo;an. Here show some photos taken along the trip.&lt;/p&gt;
+&lt;p&gt;After a successful test in front of the judges of Sichuan division, follwed by a basic on-site electronic design test, we went to Xi&amp;rsquo;an for the final test. Below shows some photos taken along the trip.&lt;/p&gt;
 
 
 
@@ -1188,12 +1149,11 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
       <guid>https://chengzhag.github.io/project/ball_on_small_plate/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Ball on Small Plate is built with a Raspberry Zero, a camera, two servos, a STM32F103 board. Capable of setting target coordinate, circle around the center with adjustable radius.&lt;/p&gt;
-&lt;p&gt;Ball on Small Plate project is a work of team. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ball on Small Plate is built with a Raspberry Zero, a camera, two servos, a STM32F103 board, and is capable of setting target coordinate, circling around the center with adjustable radius.
+This project is a work of team of 3, which includes &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
+Code and documents are available &lt;a href=&#34;https://github.com/pidan1231239/ball_on_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details are discussed &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
-&lt;p&gt;Primary demo with very limited precision and robustness is shown below.&lt;/p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/UgZbSz2ecN0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -1202,7 +1162,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
 &lt;hr&gt;
 &lt;h2 id=&#34;mechanical-structure&#34;&gt;Mechanical structure&lt;/h2&gt;
 &lt;h3 id=&#34;first-version&#34;&gt;First version&lt;/h3&gt;
-&lt;p&gt;The 20cm*20cm plate is made of 1mm thick black glass fiber board. In the first version shown in the video, the plate is covered with white paper to provide contrast between ball and plate. Below shows the original plate.&lt;/p&gt;
+&lt;p&gt;The 20cm*20cm plate is made of 1mm black glass fiber board. In the first version shown in the video, the plate is covered with white paper to provide more contrast between ball and plate. Below shows the original plate.&lt;/p&gt;
 
 
 
@@ -1231,7 +1191,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       Deisigning the mechanical structure
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The plate is supported by a universal joint with 2 degrees of freedom. Two servos control the angle of the plate through ball bearing connecting rods.&lt;/p&gt;
+&lt;p&gt;The plate is supported with a universal joint in the center and has 2 degrees of freedom. The angle of the plate is controled by two servos with ball joint rods connecting the servos and the plate.&lt;/p&gt;
 
 
 
@@ -1260,7 +1220,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       Installation of plate and two servos
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;In this first version. The camera and a Raspberry Pi Zero is beyond the plate and fixed to the base. In this case, the area of the plate must be segmented and projected into a square. The noise introduced in this progress is one of the reasons for the jitter in the video.&lt;/p&gt;
+&lt;p&gt;In this first version. The camera is fixed to the base, which requires extra procedure to segment the plate from background and warp back to squre. This introduces noise to the positioning of the ball, which is the major reason for the jittering in the video.&lt;/p&gt;
 
 
 
@@ -1290,7 +1250,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
       Installation of camera and Raspberry Pi Zero
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;second-version&#34;&gt;Second version&lt;/h3&gt;
-&lt;p&gt;I managed to reduce the jitter by fixing the camera with carbon fiber tubes to the plate in the second version. The plate itself is also changed to yellow. A Raspberry Pi 3b is hanged beyond the camera.&lt;/p&gt;
+&lt;p&gt;By fixing the camera to the plate with carbon fiber tubes, we managed to avoid the noise. The Raspberry Pi 3b is hanged beyond the camera to reduce the load on the servos. The plate itself is also changed to yellow thus no paper is needed. This reduces friction between the ball and the plate.&lt;/p&gt;
 
 
 
@@ -1319,7 +1279,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       Camera is connected to the plate to reduce jitter
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;A LED circle is around the camera for illustration.&lt;/p&gt;
+&lt;p&gt;A ring light is installed around the camera for better illumination.&lt;/p&gt;
 
 
 
@@ -1348,7 +1308,7 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;/div&gt;&lt;figcaption&gt;
       Camera and LED installation
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;Below shows the PCB board also used in the later project &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;Ball on Big Plate&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Below shows the PCB board installed on the base, which is later used in project &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;Ball on Big Plate&lt;/a&gt;.&lt;/p&gt;
 
 
 
@@ -1387,12 +1347,11 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
       <guid>https://chengzhag.github.io/project/ball_on_beam/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Ball on Beam is built with a Raspberry Zero, a camera, one servo, a STM32F103 board.
-Ball on Beam project is a work of team. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
-Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ball on Beam is built with a Raspberry Zero, a camera, a servo, and a STM32F103 board.
+This project is a work of team of 3, which includes &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
+Code and documents are available &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details are discussed &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
-&lt;p&gt;Primary demo with very limited precision and robustness is shown below.&lt;/p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/za6t0JMttOk&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -1408,12 +1367,11 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
       <guid>https://chengzhag.github.io/project/rotary_inverted_pendulum/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Rotary Inverted Pendulum is built with an encoder, a brush motor, a STM32F103 board. No rotation limit. Capable of setting target angle, non-stop swinging and automatically swinging up.&lt;/p&gt;
-&lt;p&gt;Rotary Inverted Pendulum project is a work of team. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/inverted_pendulum&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Rotary Inverted Pendulum is built with an encoder, a brush motor, a STM32F103 board, and has no rotation limit. It is capable of setting target angle, non-stop swinging and automatically swinging up.
+This project is a work of team of 3, which includes &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
+Code and documents are available &lt;a href=&#34;https://github.com/pidan1231239/inverted_pendulum&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details Code and documents are available &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
-&lt;p&gt;Primary demo with very limited precision and robustness is shown below.&lt;/p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/R4VLmF_X5qM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -1421,7 +1379,7 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
 
 &lt;hr&gt;
 &lt;h2 id=&#34;mechanical-structure&#34;&gt;Mechanical structure&lt;/h2&gt;
-&lt;p&gt;I use an optical encoder to measure the angle of the pendulum. The absolute angle of the pendulum need calibrate every time after reset.&lt;/p&gt;
+&lt;p&gt;An optical encoder is used to measure the angle of the pendulum. Thus calibration needs to be down by relaxing the pendulum to get the absolute angle every time after reset.&lt;/p&gt;
 
 
 
@@ -1444,13 +1402,13 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
                /project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_2e90878c6482a3e2229eafbc304c4182.jpg 760w,
                /project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
                src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_bccfc1d3fb70d4b69a668e86d80cef72.jpg&#34;
-               width=&#34;570&#34;
+               width=&#34;20%&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Optical encoder
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;A slip ring is used to prevent the winding of the wire.&lt;/p&gt;
+&lt;p&gt;A slip ring (or collector ring) is used to prevent the winding of the wire.&lt;/p&gt;
 
 
 
@@ -1473,13 +1431,13 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
                /project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_d2c969277c6bb9288f06d45f819c6074.jpg 760w,
                /project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
                src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_bdec35728bec195e5da368e4421b480f.jpg&#34;
-               width=&#34;392&#34;
+               width=&#34;20%&#34;
                height=&#34;311&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Slip ring
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The DC brush motor with gearbox and magnetic encoder is driven by a TB6612FNG model controlled with PWM signal. A 3s lithium battery powers the system like the following projects.&lt;/p&gt;
+&lt;p&gt;The DC brush motor with reduction gearbox and magnetic encoder is driven by a TB6612FNG model controlled controled with PWM signal. A 3-ceils lithium battery is used as power.&lt;/p&gt;
 
 
 
@@ -1502,14 +1460,14 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
                /project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_816acf2e68b95478844676142de8f819.jpg 760w,
                /project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
                src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_4c655b0a37c440c9abde2b7838a41c03.jpg&#34;
-               width=&#34;760&#34;
+               width=&#34;50%&#34;
                height=&#34;570&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Complete circuit board
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The mechanical structure includes three round mounting plates to mount slip ring, motor, and quick-release plate. The plates are connected with hexagonal copper pillars. The whole structure is mounted to a tripod through the quick-release plate.&lt;/p&gt;
-&lt;p&gt;The round plates are rendered as acrylic plate below. But they are made of carbon fiber in the final work.&lt;/p&gt;
+&lt;p&gt;The mechanical structure consists of three round plates which supports the slip ring, motor, and a quick-release plate. The round plates are connected with hexagonal copper pillars. The whole structure is mounted to a tripod through the quick-release plate.&lt;/p&gt;
+&lt;!-- The round plates are rendered as acrylic plate below. But they are made of carbon fiber in the final work. --&gt;
 
 
 
@@ -1532,7 +1490,7 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
                /project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_dafb348746f227f7c5be5afa57300713.png 760w,
                /project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_1200x1200_fit_lanczos_2.png 1200w&#34;
                src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_8251107b285f1eb5f05becb6302c3af9.png&#34;
-               width=&#34;492&#34;
+               width=&#34;20%&#34;
                height=&#34;720&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
@@ -1554,7 +1512,7 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
 
 &lt;figure  id=&#34;figure-the-complete-mechanical-structure&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;84C~Z%7bNZ1N42UWZE8$K2QQ9.png&#34; alt=&#34;The complete mechanical structure&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;84C~Z%7bNZ1N42UWZE8$K2QQ9.png&#34; alt=&#34;The complete mechanical structure&#34; loading=&#34;lazy&#34; data-zoomable width=&#34;20%&#34; /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       The complete mechanical structure
     &lt;/figcaption&gt;&lt;/figure&gt;
@@ -1629,7 +1587,7 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
                /project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_61038c37b0013f6aface338fabbc1938.png 760w,
                /project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_1200x1200_fit_lanczos_2.png 1200w&#34;
                src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_7007e2f9a97b56f15b5ee966b77ea37f.png&#34;
-               width=&#34;760&#34;
+               width=&#34;80%&#34;
                height=&#34;486&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;

@@ -19,14 +19,14 @@
       <guid>https://chengzhag.github.io/project/fmcw_positioning_radar/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;FMCW Positioning Radar project is a work of team made up of three people. We were trying to get the qualification to attend &lt;a href=&#34;http://nuedc.sjtu.edu.cn/CN/content.aspx?info_lb=37&amp;amp;flag=2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ESDC&lt;/a&gt; through this project. Sadly, we were out of the game in the stage of school contest.&lt;/p&gt;
-&lt;p&gt;The radar works in the 2.7 GHz - 3.7 GHz band. It has 4 transmitting antenna and 12 receive antenna. With a transmission power of less than 10 dBm, it localizes a person within a median of 5 cm in the y dimension. Within 5 meters, it has an accuracy of about 20 cm. Without further tests, the maximum distance is unknown. However, it can indicate a person behind a 25 cm concrete wall.&lt;/p&gt;
-&lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The final presentation with hardware and data processing flow introduction see &lt;a href=&#34;https://sway.com/5uSW86N1bUqbrA7T?ref=Link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This project is a work of team of 3, which includes &lt;a href=&#34;https://github.com/hsuhaoo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hsuhaoo&lt;/a&gt; and &lt;a href=&#34;https://chengzhag.github.io/&#34;&gt;Zijing Guan&lt;/a&gt;. It is developed for the contest of &lt;a href=&#34;http://nuedc.sjtu.edu.cn/CN/content.aspx?info_lb=37&amp;amp;flag=2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ESDC&lt;/a&gt;. But we did not managed to realize the full ideas of fall detection for the elderly.&lt;/p&gt;
+&lt;p&gt;The radar works in the 2.7 GHz - 3.7 GHz band, and has 4 transmitting antennas and 12 receive antennas. With the power of less than 10 dBm, it can measure the distance of a person with a median of 5 cm. Within 5 meters, it has an positioning accuracy of about 20 cm. Without further tests, the maximum distance is unknown. However, it can indicate the existance of a person behind a 25 cm concrete wall.&lt;/p&gt;
+&lt;p&gt;Code and documents are available &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Slides introducing hardware and data processing process (in Chinese) are available &lt;a href=&#34;https://sway.com/5uSW86N1bUqbrA7T?ref=Link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;fmcw&#34;&gt;FMCW&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Frequency-modulated continuous-wave radar (FM-CW) – also called continuous-wave frequency-modulated (CWFM) radar – is a short-range measuring radar set capable of determining distance (&lt;a href=&#34;https://en.wikipedia.org/wiki/Continuous-wave_radar&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Continuous-wave radar wiki&lt;/a&gt;).&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;If you have no idea about it, the tutorial below is a good starting point.&lt;/p&gt;
+&lt;p&gt;If you have no idea about FMCW, the following tutorials can be a good starting point.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.radartutorial.eu/02.basics/Frequency%20Modulated%20Continuous%20Wave%20Radar.en.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Frequency-Modulated Continuous-Wave Radar&lt;/a&gt; (&lt;a href=&#34;http://www.radartutorial.eu/02.basics/Frequency%20Modulated%20Continuous%20Wave%20Radar.en.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FMCW Radar&lt;/a&gt;): a brief introduction of the principle of FMCW&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://ocw.mit.edu/resources/res-ll-003-build-a-small-radar-system-capable-of-sensing-range-doppler-and-synthetic-aperture-radar-imaging-january-iap-2011/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Build a Small Radar System Capable of Sensing Range, Doppler, and Synthetic Aperture Radar Imaging&lt;/a&gt;: an MIT course to build an FMCW radar yourself&lt;/li&gt;
@@ -37,20 +37,21 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Software-defined_radio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Software-defined radio&lt;/a&gt; (SDR) is a radio communication system where components that have been traditionally implemented in hardware (e.g. mixers, filters, amplifiers, modulators/demodulators, detectors, etc.) are instead implemented by means of software on a personal computer or embedded system.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;The project uses a USRP N210 with an LFRX  daughter board. SDR is not an important part of this project cause the RF front end are made with RF modules and the FMCW generator is build separately. The USRP here acts as a role of ADC and is accessed via Simulink. See how to use a USRP with Simulink below:&lt;/p&gt;
+&lt;p&gt;We use a USRP N210 with an LFRX daughter board to sample the baseband signal. The RF front end is made with RF modules and the FMCW generator is build on a VCO. The USRP here acts as an ADC and is connected to Simulink. Following links show how to connect a USRP to Simulink:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://ww2.mathworks.cn/hardware-support/usrp.html?s_tid=srchtitle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;USRP® Support Package from Communications System Toolbox&lt;/a&gt;: Matlab toolbox for USRP&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://ecewp.ece.wpi.edu/wordpress/wireless/textbooks/sdrlabs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Digital Communication Systems Engineering Using Software Defined Radio&lt;/a&gt;: a tutorial of SDR using Simulink&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
-&lt;p&gt;The hardware design can be introduced in two parts, RF front end and FMCW generator. The design references the projects and the papers below:&lt;/p&gt;
+&lt;p&gt;In this section, we introduce the hardware design in two parts, i.e. RF front end and FMCW generator. We refer to the following projects and papers for basic ideas:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://ocw.mit.edu/resources/res-ll-003-build-a-small-radar-system-capable-of-sensing-range-doppler-and-synthetic-aperture-radar-imaging-january-iap-2011/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Build a Small Radar System Capable of Sensing Range, Doppler, and Synthetic Aperture Radar Imaging&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://rfcapture.csail.mit.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RF-Capture&lt;/a&gt;: &lt;a href=&#34;http://rfcapture.csail.mit.edu/rfcapture-paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper see RF-Capture: Capturing a Coarse Human Figure Through a Wall&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://witrack.csail.mit.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WiTrack&lt;/a&gt;: papers see &lt;a href=&#34;http://witrack.csail.mit.edu/witrack-paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;3D Tracking via Body Radio Reflections&lt;/a&gt;, &lt;a href=&#34;http://witrack.csail.mit.edu/witrack2-paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multi-Person Localization via RF Body Reflections&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;fmcw-generator&#34;&gt;FMCW generator&lt;/h3&gt;
+&lt;p&gt;Hardware:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.analog.com/en/products/clock-and-timing/phase-locked-loop/fractional-n-pll/adf4159.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADF4159&lt;/a&gt; evaluation board: &lt;a href=&#34;http://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/eval-adf4159.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;EV-ADF4159EB3Z&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Loop filter: &lt;a href=&#34;http://www.analog.com/cn/products/amplifiers/operational-amplifiers/jfet-input-amplifiers/ad8065.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AD8065&lt;/a&gt;. It is designed with &lt;a href=&#34;https://form.analog.com/Form_Pages/RFComms/ADISimPll.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADIsimPLL&lt;/a&gt; under the guidance of &lt;a href=&#34;http://www.analog.com/media/en/reference-design-documentation/reference-designs/CN0302.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CN-0302&lt;/a&gt;.&lt;/li&gt;
@@ -58,7 +59,7 @@
 &lt;li&gt;Power splitter: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=ZX10-2-42%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ZX10-2-42+&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Attenuator: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=VAT-3%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VAT-3+&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The final design works in 2.7 GHz to 3.7 GHz to avoid 2.4 GHz band.&lt;/p&gt;
+&lt;p&gt;Our FMCW generator works in 2.7GHz-3.7GHz band to avoid 2.4GHz wifi signal.&lt;/p&gt;
 
 
 
@@ -88,6 +89,7 @@
       FMCW generator
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;rf-front-end&#34;&gt;RF front end&lt;/h3&gt;
+&lt;p&gt;Hardware:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PA and LNA: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=ZX60-53LNB%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ZX60-53LNB+&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Power splitter: &lt;a href=&#34;https://www.minicircuits.com/WebStore/modelSearch.html?model=ZN2PD-9G%2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ZN2PD-9G+&lt;/a&gt;&lt;/li&gt;
@@ -96,7 +98,7 @@
 &lt;li&gt;Switch: ADRF5040&lt;/li&gt;
 &lt;li&gt;mbed board: ST NUCLEO-L476RG&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The mbed board detects the trigger edge and overlay current antenna pair number after the edge. The baseband signal from the mixer and coded sync signal from mbed board are sent into the same LFRX board to achieve synchronization, then will be analyzed in Simulink in real time.&lt;/p&gt;
+&lt;p&gt;The mbed board detects the trigger edge and add a digital signal after the edge to indicate id of antenna pair. The baseband signal from the mixer and the sync signal from mbed board are first sampled with the LFRX daughter board simultaneously, then analyzed with Simulink in real time.&lt;/p&gt;
 
 
 
@@ -127,19 +129,19 @@
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
-&lt;p&gt;Software part includes ADF4159 evaluation board configuration, mbed code, and Simulink model.&lt;/p&gt;
+&lt;p&gt;In this section, we introduce software design in three parts, i.e. ADF4159 evaluation board configuration, mbed code, and Simulink model.&lt;/p&gt;
 &lt;h3 id=&#34;adf4159&#34;&gt;ADF4159&lt;/h3&gt;
-&lt;p&gt;The ADF4159 evaluation board is configured using &lt;a href=&#34;http://www.analog.com/media/en/evaluation-boards-kits/evaluation-software/ADF4158-9_Setup_v4_10_6.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADF4158 and ADF4159 Evaluation Board Software&lt;/a&gt; via USB. The configuration file &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/ad4159&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; can be loaded into the software. The board is configured as follows:&lt;/p&gt;
+&lt;p&gt;The ADF4159 evaluation board is configured using &lt;a href=&#34;http://www.analog.com/media/en/evaluation-boards-kits/evaluation-software/ADF4158-9_Setup_v4_10_6.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ADF4158 and ADF4159 Evaluation Board Software&lt;/a&gt; via USB. The configuration file is available &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/ad4159&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The board is configured with follow parameters:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Ramp mode: Continuous sawtooth&lt;/li&gt;
 &lt;li&gt;RF frequency: 2.7 GHz - 3.7 GHz&lt;/li&gt;
 &lt;li&gt;Ramp frequency: 2000 Hz&lt;/li&gt;
 &lt;li&gt;Charge pump: 1.25 mA&lt;/li&gt;
-&lt;li&gt;Muxout: Digital lock Detect. It is used as a sync signal to trigger the switching of antennas.&lt;/li&gt;
+&lt;li&gt;Muxout: Digital lock Detection. It is used as a trigger to switch antenna pairs and a sync signal to align base band signals of each antenna pair. The &lt;em&gt;muxout&lt;/em&gt; port outputs a falling edge on the start of a ramp.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The 4 Tx and 12 Rx makes up 4*12 antenna pairs. With ramp frequency of 2000 Hz, every antenna pair is switched to for 41.7 times per second.&lt;/p&gt;
+&lt;p&gt;The 4 Tx and 12 Rx antennas makes up 4*12 antenna pairs. With ramp frequency of 2000 Hz, every antenna pair can be activated for 41.7 times per second.&lt;/p&gt;
 &lt;h3 id=&#34;mbed-code&#34;&gt;mbed code&lt;/h3&gt;
-&lt;p&gt;The mbed board switches antenna pairs after every trigger edge from the ADF4159 Muxout pin. And it also overlay the antenna pair number to the sync signal. Considering that MCU has some unstable reaction delay between the trigger edge of the sync signal and the first down edge of the output, the MCU first pulls down the sync signal then output bits of the number. In this way, the down edge of the overlaid signal has no jitter. Code of mbed board is &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/mcu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The mbed board switches antenna pairs after every trigger edge from the ADF4159 Muxout pin. And as mentioned before, it adds a digital signal after the edge to indicate id of antenna pair. Considering that MCU is running at a relatively low frequency, which makes the responce to the sync signal unstable, we design the digital signal from MCU to pull down the sync signal after the trigger edge. In this way, the falling edge is kept synced. Code of mbed board is available &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/mcu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 
 
@@ -162,17 +164,17 @@
                /project/fmcw_positioning_radar/IMG_20180623_094926_huca20fb634e53dde3c09519b7bcecdcb5_343173_660eb27965bd32b5343feb2418ca1a11.jpg 760w,
                /project/fmcw_positioning_radar/IMG_20180623_094926_huca20fb634e53dde3c09519b7bcecdcb5_343173_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
                src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/IMG_20180623_094926_huca20fb634e53dde3c09519b7bcecdcb5_343173_eae03d90855160a5a651ee5549a59d8b.jpg&#34;
-               width=&#34;760&#34;
+               width=&#34;30%&#34;
                height=&#34;724&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Antenna switching timing diagram
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;simulink-model&#34;&gt;Simulink model&lt;/h3&gt;
-&lt;p&gt;All the models are in the &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/simulink&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simulink&lt;/a&gt; folder. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/RadarImagingAndPositioning.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RadarImagingAndPositioning.slx&lt;/a&gt; block implements the basic signal processing logic and output the 2D heat map and target position. The data processing flow is shown in the presentation above. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/usrp_4t12r_heatmap.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;usrp_4t12r_heatmap.slx&lt;/a&gt;  connects the basic blocks to show the imaging result and targets. For more information about using USRP with Simulink, see the Introduction section above.&lt;/p&gt;
+&lt;p&gt;All the models are in the &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/tree/master/simulink&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simulink&lt;/a&gt; folder. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/RadarImagingAndPositioning.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RadarImagingAndPositioning.slx&lt;/a&gt; block process baseband signals from USRP and output the 2D heat map and target position. The data processing pipeline is shown in the slides mentioned before. &lt;a href=&#34;https://github.com/pidan1231239/fmcw_positioning_radar/blob/master/simulink/usrp_4t12r_heatmap.slx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;usrp_4t12r_heatmap.slx&lt;/a&gt; cooperates the above block with others to show the imaging and target detection results.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
-&lt;p&gt;In the experimental stage, I built a system with 1 Tx and 3 Rx.&lt;/p&gt;
+&lt;p&gt;In the experimental stage, A system with only 1 Tx and 3 Rx is built for experimental usage.&lt;/p&gt;
 
 
 
@@ -201,7 +203,7 @@
   &lt;/div&gt;&lt;figcaption&gt;
       1TX3RX system
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The overlaid sync signal is shown below.&lt;/p&gt;
+&lt;p&gt;The sync signal is shown below.&lt;/p&gt;
 
 
 
@@ -230,7 +232,7 @@
   &lt;/div&gt;&lt;figcaption&gt;
       Sync signal
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;1D imaging of each antenna pair is shown below. Tested with a person walking away then walking back. The d axis shows the round trip of the radar signal.&lt;/p&gt;
+&lt;p&gt;Waterfall plot of each antenna pair is shown below. A person is walking away then back in this experiment. The d axis shows the round trip of the radar signal.&lt;/p&gt;
 
 
 
@@ -245,10 +247,10 @@
 
 
 
-&lt;figure  id=&#34;figure-1d-imaging-of-each-antenna-pair&#34;&gt;
+&lt;figure  id=&#34;figure-waterfall-plot-of-each-antenna-pair&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;1d imaging of each antenna pair&#34; srcset=&#34;
+        &lt;img alt=&#34;waterfall plot of each antenna pair&#34; srcset=&#34;
                /project/fmcw_positioning_radar/%E4%B8%89%E6%A0%B9%E5%A4%A9%E7%BA%BF%E7%80%91%E5%B8%83%E5%9B%BE_hu95d8e0e5e4514c2335bb54c686fd91e3_150387_a025354eccc17bd053f939b0af2e351c.jpg 400w,
                /project/fmcw_positioning_radar/%E4%B8%89%E6%A0%B9%E5%A4%A9%E7%BA%BF%E7%80%91%E5%B8%83%E5%9B%BE_hu95d8e0e5e4514c2335bb54c686fd91e3_150387_874b543fe1498bb4b493a46ecca33f85.jpg 760w,
                /project/fmcw_positioning_radar/%E4%B8%89%E6%A0%B9%E5%A4%A9%E7%BA%BF%E7%80%91%E5%B8%83%E5%9B%BE_hu95d8e0e5e4514c2335bb54c686fd91e3_150387_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
@@ -257,9 +259,9 @@
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
-      1d imaging of each antenna pair
+      waterfall plot of each antenna pair
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The system was then expanded to 1 Tx and 8 Rx. In this stage, 2D imaging can be done.&lt;/p&gt;
+&lt;p&gt;The system is then expanded to 1 Tx and 8 Rx, which allows 2D imaging with phased array algorithm.&lt;/p&gt;
 
 
 
@@ -288,7 +290,7 @@
   &lt;/div&gt;&lt;figcaption&gt;
       1TX8RX system
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The following image is the heat map captured from the 1Tx8Rx system. The x-axis indicates angle from left to right. y-axis indicates the round distance of the radar signal. This illustration was made in a hurry so there is no complete annotation.&lt;/p&gt;
+&lt;p&gt;The image bellow shows the heat map captured from the 1Tx8Rx system. The x-axis indicates angle from left to right. The y-axis indicates the round distance of the radar signal. A person is standing in front of the radar at a distance of about 4 meters in this case.&lt;/p&gt;
 
 
 
@@ -317,7 +319,7 @@
   &lt;/div&gt;&lt;figcaption&gt;
       1Tx8Rx top-down heatmap
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;After that, the system was expanded to 4 Tx and 12 Rx. In this stage, 3D imaging can be done.&lt;/p&gt;
+&lt;p&gt;The system is further expanded to 4 Tx and 12 Rx, which allows 3D imaging.&lt;/p&gt;
 
 
 
@@ -346,7 +348,18 @@
   &lt;/div&gt;&lt;figcaption&gt;
       4TX12RX system
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The following gif shows the 3D imaging projected to xz-plane of a person holding a corner reflector and drawing a circle in the air.&lt;/p&gt;
+&lt;p&gt;The following GIF is the 3D imaging projected to the front view, showing a person drawing a circle in the air with a corner reflector.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&#34;yLoCut_200kHz_800rps_1rpf_4t12r_ztest_circle_reflector.gif&#34;/&gt;
+  &lt;figcaption&gt;Front view heatmap&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The GIF below shows the 2D imaging from above with target detection activated. A person is walking around in the distance of about 3 meters. The y-axis indicates the round distance of radar signal.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&#34;heatMapTarget.gif&#34; width=&#34;40%&#34;/&gt;
+  &lt;figcaption&gt;Top-down view heatmap&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;We tried to extract the signal strength vertical axis of person target doing squatting in the 10th second. However, as the radio waves in this frequency acts more like mirror reflection on the human body, the angle of the reflection surface becomes a issue as mentioned in &lt;a href=&#34;http://rfcapture.csail.mit.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RF-Capture&lt;/a&gt;. This makes the height of a person unpredictable for our system.&lt;/p&gt;
+&lt;p&gt;The figure bellow shows the strength of the reflected signal in the vertical axis vs time. The heat map indicates that the height of the person drops several times during the first 10 seconds, while the target only moves slightly with no changes on height.&lt;/p&gt;
 
 
 
@@ -361,69 +374,10 @@
 
 
 
-&lt;figure  id=&#34;figure-heatmap-front-view&#34;&gt;
+&lt;figure  id=&#34;figure-height-axis-heatmap-vs-time&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;Heatmap front view&#34; srcset=&#34;
-               /project/fmcw_positioning_radar/_hu9d2a310dd94e072dfba2a9d7def6ad75_3655283_276e26ecbfc490ab1ca0465ea6927075.gif 400w,
-               /project/fmcw_positioning_radar/_hu9d2a310dd94e072dfba2a9d7def6ad75_3655283_3ba4f4e8a9ba757d72271bfec70916b1.gif 760w,
-               /project/fmcw_positioning_radar/_hu9d2a310dd94e072dfba2a9d7def6ad75_3655283_78f3f39ee8dd8adff9f34ca607e19cca.gif 1200w&#34;
-               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/_hu9d2a310dd94e072dfba2a9d7def6ad75_3655283_276e26ecbfc490ab1ca0465ea6927075.gif&#34;
-               width=&#34;560&#34;
-               height=&#34;420&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption&gt;
-      Heatmap front view
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The gif below shows the 2D imaging of xy-plane with target tracking. The target person was walking around in the distance of 3 meters. The y-axis indicates the round distance of radar signal.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-heatmap-top-down-view&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;Heatmap top-down view&#34; srcset=&#34;
-               /project/fmcw_positioning_radar/heatMapTarget_hu9d00e611e044496101eb698a1149f236_1478066_99a6cdd3971d7428d4e24ab3c3716bee.gif 400w,
-               /project/fmcw_positioning_radar/heatMapTarget_hu9d00e611e044496101eb698a1149f236_1478066_913ee12c029a82525015a3bcb888e8b0.gif 760w,
-               /project/fmcw_positioning_radar/heatMapTarget_hu9d00e611e044496101eb698a1149f236_1478066_1200x1200_fit_lanczos.gif 1200w&#34;
-               src=&#34;https://chengzhag.github.io/project/fmcw_positioning_radar/heatMapTarget_hu9d00e611e044496101eb698a1149f236_1478066_99a6cdd3971d7428d4e24ab3c3716bee.gif&#34;
-               width=&#34;760&#34;
-               height=&#34;570&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption&gt;
-      Heatmap top-down view
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;I tried to extract the z-axis coordinate of person target. However, because of the reflection angle mentioned in &lt;a href=&#34;http://rfcapture.csail.mit.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RF-Capture&lt;/a&gt;, and the intensified effect by the lower frequency band of our system, the height of a person cannot be accurately detected.&lt;/p&gt;
-&lt;p&gt;The image shows the heat map of the target in the z-axis changing with time. The target is walking in place then squats in the 10th second. As shown below, the height drops several times when the target moves.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-heatmap-z&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;Heatmap z&#34; srcset=&#34;
+        &lt;img alt=&#34;Height axis heatmap vs time&#34; srcset=&#34;
                /project/fmcw_positioning_radar/Image2_hu0ebc041c16d6d6cdba6f5a60288afea2_50325_51a4351994d031752db7ae7fc0cb88f0.png 400w,
                /project/fmcw_positioning_radar/Image2_hu0ebc041c16d6d6cdba6f5a60288afea2_50325_b804661373cc5c4aed6fd15fed9de303.png 760w,
                /project/fmcw_positioning_radar/Image2_hu0ebc041c16d6d6cdba6f5a60288afea2_50325_1200x1200_fit_lanczos_2.png 1200w&#34;
@@ -432,9 +386,9 @@
                height=&#34;414&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
-      Heatmap z
+      Height axis heatmap vs time
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The final work was put on a cart.&lt;/p&gt;
+&lt;p&gt;The final work was put together on a cart.&lt;/p&gt;
 
 
 

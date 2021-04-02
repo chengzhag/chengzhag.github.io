@@ -19,9 +19,12 @@
       <guid>https://chengzhag.github.io/project/ball_on_big_plate/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Ball on Big Plate project is a work of team made up with three people. We are fortunate enough to get the first prize with this in &lt;a href=&#34;https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2017NUEDC&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I was responsible for building the structure and programming STM32 and Raspberry Pi. Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_big_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/zianglei&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zianglei&lt;/a&gt;. Sadly that &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt; left the team before the contest. The preparation projects below can not be done without her. I&amp;rsquo;d like to thank her here.&lt;/p&gt;
-&lt;p&gt;The final work has been handed in to our school and there will be no plan to write a detailed document for it. This page tells the story behind it.&lt;/p&gt;
+&lt;p&gt;This project is a work of team of 3, which includes &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/zianglei&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zianglei&lt;/a&gt;.
+The preparations of the contest are done with the help of &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
+I was responsible for building mechanical structures and embedded programming (i.e. STM32, Raspberry Pi).
+We are lucky to have received the first prize in &lt;a href=&#34;https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2017NUEDC&lt;/a&gt;.
+The final work has been handed in to our school thus details will not be provided.
+However, code and document can be found &lt;a href=&#34;https://github.com/pidan1231239/ball_on_big_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The ball-on-plate system is a promoted version of the traditional ball-on-beam control problem. The problem consists of a plate which its deviation can be manipulated in two perpendicular directions. The goal is to carry the ball moving on the plate to a desired position, that is to control a freely rolling ball on a specific position or moving on a trajectory on the plate. - &lt;a href=&#34;http://web.engr.illinois.edu/~khashab2/files/2011_LinearControl/16.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Modelling and Control of Ball-Plate System&lt;/a&gt;
 
@@ -53,18 +56,18 @@
       Ball-on-plate system
     &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Specifically in this project, according to the contest requirements, the system is supposed to move a ball between any two of nine evenly distributed circles drawn on the plate and avoids other circles. The plate must have a size around 65cm*65cm. The &lt;a href=&#34;%e6%bb%9a%e7%90%83%e6%8e%a7%e5%88%b6%e7%b3%bb%e7%bb%9f%ef%bc%88B%e9%a2%98%ef%bc%89.pdf&#34;&gt;document&lt;/a&gt; shows the distribution of the circles.&lt;/p&gt;
+&lt;p&gt;Specifically in this project, according to the contest requirements, the system is supposed to move a ball between any two of nine evenly distributed circles and avoids the others. The plate must have a size around 65cm*65cm. The &lt;a href=&#34;%e6%bb%9a%e7%90%83%e6%8e%a7%e5%88%b6%e7%b3%bb%e7%bb%9f%ef%bc%88B%e9%a2%98%ef%bc%89.pdf&#34;&gt;document&lt;/a&gt; shows the distribution of the circles.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-contest&#34;&gt;The Contest&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NUEDC&lt;/a&gt; is one of the largest electronic design competitions in China. The competition last three and a half days. Four categories of more than ten subjects are published on the official website on the day it begins. Participants usually prepare for a long time before the competition. The competition in 2017 which I attended started from August 9 to August 12. Our team started preparing about four months in advance.&lt;/p&gt;
-&lt;p&gt;I was responsible for building the structure and programming STM32 and Raspberry Pi. Although I had got some experience with programming, I barely knew the basics of control system. However, I chose the control system direction to prepare because of my interest in it.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NUEDC&lt;/a&gt; is one of the largest electronic design contest for undergraduate students in China. The contest lasts three and a half days. More than ten topics of four types including control, measurement, communication and power are published in the first day morning, indicating the start of the contest. Participants usually prepare for a long time before the contest. We attended the contest in 2017 starting from August 9th to 12th. Our team started the preparation four months in advance.&lt;/p&gt;
+&lt;p&gt;Although I had got some experience with programming, I barely knew the basics of control system. However, I chose this type of topic just in the interest of it.&lt;/p&gt;
 &lt;p&gt;In the preparation process, we learned from five projects, three of which are listed below.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/&#34;&gt;Rotary Inverted Pendulum&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://chengzhag.github.io/project/ball_on_beam/&#34;&gt;Ball on Beam&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on Small Plate&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Sadly, I&amp;rsquo;ve got no video demo of the final work since we were too busy moving forward. So let&amp;rsquo;s jump into the details of the design.&lt;/p&gt;
+&lt;p&gt;Sadly, no video demo was taken for the limit of time.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;platform&#34;&gt;Platform&lt;/h2&gt;
 &lt;ul&gt;
@@ -72,11 +75,13 @@
 &lt;li&gt;STM32F103 minimum system board&lt;/li&gt;
 &lt;li&gt;PC with Visual Studio and VisualGDB installed&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The Raspberry Pi is developed with C++ language using Raspberry toolchain provided by &lt;a href=&#34;https://visualgdb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VisualGDB&lt;/a&gt; (tutorial &lt;a href=&#34;https://visualgdb.com/tutorials/raspberry/crosscompiler/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;). The STM32 is developed with C++ language using Arm toolchain provided by &lt;a href=&#34;https://visualgdb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VisualGDB&lt;/a&gt; (tutorial &lt;a href=&#34;https://visualgdb.com/tutorials/arm/stm32/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;). The Raspberry runs OpenCV program and sends the results to STM32 through UART.&lt;/p&gt;
-&lt;p&gt;I made use of a C++ API written for STM32 named &lt;a href=&#34;https://github.com/eboxmaker/eBox_STM32F1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ebox&lt;/a&gt;. Although it saved me a lot of time then, I found &lt;a href=&#34;https://www.mbed.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mbed&lt;/a&gt; even easier than it after the competition. By the way, it was said that Arduino is not allowed in the competition.&lt;/p&gt;
+&lt;p&gt;The Raspberry Pi is developed with C++ using Raspberry Pi toolchain provided by &lt;a href=&#34;https://visualgdb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VisualGDB&lt;/a&gt; (tutorial &lt;a href=&#34;https://visualgdb.com/tutorials/raspberry/crosscompiler/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).
+It deals with the machine vision tasks and sends the results to STM32 through UART.&lt;/p&gt;
+&lt;p&gt;The STM32 is developed with C++ language using Arm toolchain provided by &lt;a href=&#34;https://visualgdb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VisualGDB&lt;/a&gt; (tutorial &lt;a href=&#34;https://visualgdb.com/tutorials/arm/stm32/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).
+A C++ API for STM32 (&lt;a href=&#34;https://github.com/eboxmaker/eBox_STM32F1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ebox&lt;/a&gt;) was used as a replacement of ardunio, which is not allowed in the contest.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;mechanical-structure&#34;&gt;Mechanical structure&lt;/h2&gt;
-&lt;p&gt;The final work uses a PCB motherboard made in &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on Small Plate project&lt;/a&gt; to put the electronic modules together.&lt;/p&gt;
+&lt;p&gt;The final work uses a PCB motherboard (designed by &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt;) same as &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on Small Plate project&lt;/a&gt; to connect modular electronic parts.&lt;/p&gt;
 
 
 
@@ -105,7 +110,7 @@
   &lt;/div&gt;&lt;figcaption&gt;
       PCB mother board
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The 65cm*65cm plate is made of light wood laminate board.&lt;/p&gt;
+&lt;p&gt;The 65cm*65cm plate is made of laminated balsa wood board.&lt;/p&gt;
 
 
 
@@ -134,7 +139,8 @@
   &lt;/div&gt;&lt;figcaption&gt;
       The plate
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;There are ribs below the plate to support it. The dynamic structure of the plate is same as &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on small plate&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We design metre-shaped ribs to further reinforce the plate.
+We follow &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on small plate&lt;/a&gt; to support the plate with a universal joint in the center and drive the board with two servos using ball joint rods as connection.&lt;/p&gt;
 
 
 
@@ -163,7 +169,7 @@
   &lt;/div&gt;&lt;figcaption&gt;
       Under the plate
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;Design documents of the reinforcing ribs and others are also on the &lt;a href=&#34;https://github.com/pidan1231239/ball_on_big_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Design documents of the reinforcing ribs are also available &lt;a href=&#34;https://github.com/pidan1231239/ball_on_big_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 
 
@@ -248,7 +254,8 @@
   &lt;/div&gt;&lt;figcaption&gt;
       Servo with connecting rod
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The camera is supported by carbon fiber tubes like in &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on small plate&lt;/a&gt;. And the same LED circle is installed around the camera.&lt;/p&gt;
+&lt;p&gt;The camera is supported by carbon fiber tubes like in &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_small_plate/&#34;&gt;Ball on small plate&lt;/a&gt;.
+And the same ring light is installed around the camera to provide better illumination.&lt;/p&gt;
 
 
 
@@ -306,7 +313,7 @@
   &lt;/div&gt;&lt;figcaption&gt;
       The complete work
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;After the work was done and tested by ourselves, we packed it with cardboard then handed it over to the competition organizer.&lt;/p&gt;
+&lt;p&gt;The final work is packed with cardboard then submitted to the competition organizer.&lt;/p&gt;
 
 
 
@@ -337,7 +344,7 @@
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;final-test&#34;&gt;Final test&lt;/h2&gt;
-&lt;p&gt;After a successful test in front of the judges of Sichuan division and a small test on our electronic design capabilities, we stepped into our journey to Xi&amp;rsquo;an. Here show some photos taken along the trip.&lt;/p&gt;
+&lt;p&gt;After a successful test in front of the judges of Sichuan division, follwed by a basic on-site electronic design test, we went to Xi&amp;rsquo;an for the final test. Below shows some photos taken along the trip.&lt;/p&gt;
 
 
 
@@ -434,12 +441,11 @@
       <guid>https://chengzhag.github.io/project/ball_on_small_plate/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Ball on Small Plate is built with a Raspberry Zero, a camera, two servos, a STM32F103 board. Capable of setting target coordinate, circle around the center with adjustable radius.&lt;/p&gt;
-&lt;p&gt;Ball on Small Plate project is a work of team. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ball on Small Plate is built with a Raspberry Zero, a camera, two servos, a STM32F103 board, and is capable of setting target coordinate, circling around the center with adjustable radius.
+This project is a work of team of 3, which includes &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
+Code and documents are available &lt;a href=&#34;https://github.com/pidan1231239/ball_on_plate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details are discussed &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
-&lt;p&gt;Primary demo with very limited precision and robustness is shown below.&lt;/p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/UgZbSz2ecN0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -448,7 +454,7 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;mechanical-structure&#34;&gt;Mechanical structure&lt;/h2&gt;
 &lt;h3 id=&#34;first-version&#34;&gt;First version&lt;/h3&gt;
-&lt;p&gt;The 20cm*20cm plate is made of 1mm thick black glass fiber board. In the first version shown in the video, the plate is covered with white paper to provide contrast between ball and plate. Below shows the original plate.&lt;/p&gt;
+&lt;p&gt;The 20cm*20cm plate is made of 1mm black glass fiber board. In the first version shown in the video, the plate is covered with white paper to provide more contrast between ball and plate. Below shows the original plate.&lt;/p&gt;
 
 
 
@@ -477,7 +483,7 @@
   &lt;/div&gt;&lt;figcaption&gt;
       Deisigning the mechanical structure
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The plate is supported by a universal joint with 2 degrees of freedom. Two servos control the angle of the plate through ball bearing connecting rods.&lt;/p&gt;
+&lt;p&gt;The plate is supported with a universal joint in the center and has 2 degrees of freedom. The angle of the plate is controled by two servos with ball joint rods connecting the servos and the plate.&lt;/p&gt;
 
 
 
@@ -506,7 +512,7 @@
   &lt;/div&gt;&lt;figcaption&gt;
       Installation of plate and two servos
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;In this first version. The camera and a Raspberry Pi Zero is beyond the plate and fixed to the base. In this case, the area of the plate must be segmented and projected into a square. The noise introduced in this progress is one of the reasons for the jitter in the video.&lt;/p&gt;
+&lt;p&gt;In this first version. The camera is fixed to the base, which requires extra procedure to segment the plate from background and warp back to squre. This introduces noise to the positioning of the ball, which is the major reason for the jittering in the video.&lt;/p&gt;
 
 
 
@@ -536,7 +542,7 @@
       Installation of camera and Raspberry Pi Zero
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;second-version&#34;&gt;Second version&lt;/h3&gt;
-&lt;p&gt;I managed to reduce the jitter by fixing the camera with carbon fiber tubes to the plate in the second version. The plate itself is also changed to yellow. A Raspberry Pi 3b is hanged beyond the camera.&lt;/p&gt;
+&lt;p&gt;By fixing the camera to the plate with carbon fiber tubes, we managed to avoid the noise. The Raspberry Pi 3b is hanged beyond the camera to reduce the load on the servos. The plate itself is also changed to yellow thus no paper is needed. This reduces friction between the ball and the plate.&lt;/p&gt;
 
 
 
@@ -565,7 +571,7 @@
   &lt;/div&gt;&lt;figcaption&gt;
       Camera is connected to the plate to reduce jitter
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;A LED circle is around the camera for illustration.&lt;/p&gt;
+&lt;p&gt;A ring light is installed around the camera for better illumination.&lt;/p&gt;
 
 
 
@@ -594,7 +600,7 @@
   &lt;/div&gt;&lt;figcaption&gt;
       Camera and LED installation
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;Below shows the PCB board also used in the later project &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;Ball on Big Plate&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Below shows the PCB board installed on the base, which is later used in project &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;Ball on Big Plate&lt;/a&gt;.&lt;/p&gt;
 
 
 
@@ -633,12 +639,11 @@
       <guid>https://chengzhag.github.io/project/ball_on_beam/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Ball on Beam is built with a Raspberry Zero, a camera, one servo, a STM32F103 board.
-Ball on Beam project is a work of team. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
-Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ball on Beam is built with a Raspberry Zero, a camera, a servo, and a STM32F103 board.
+This project is a work of team of 3, which includes &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
+Code and documents are available &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details are discussed &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
-&lt;p&gt;Primary demo with very limited precision and robustness is shown below.&lt;/p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/za6t0JMttOk&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -654,12 +659,11 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
       <guid>https://chengzhag.github.io/project/rotary_inverted_pendulum/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Rotary Inverted Pendulum is built with an encoder, a brush motor, a STM32F103 board. No rotation limit. Capable of setting target angle, non-stop swinging and automatically swinging up.&lt;/p&gt;
-&lt;p&gt;Rotary Inverted Pendulum project is a work of team. The other two teammates are &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Code and document &lt;a href=&#34;https://github.com/pidan1231239/inverted_pendulum&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Rotary Inverted Pendulum is built with an encoder, a brush motor, a STM32F103 board, and has no rotation limit. It is capable of setting target angle, non-stop swinging and automatically swinging up.
+This project is a work of team of 3, which includes &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
+Code and documents are available &lt;a href=&#34;https://github.com/pidan1231239/inverted_pendulum&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details Code and documents are available &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
-&lt;p&gt;Primary demo with very limited precision and robustness is shown below.&lt;/p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/R4VLmF_X5qM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -667,7 +671,7 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
 
 &lt;hr&gt;
 &lt;h2 id=&#34;mechanical-structure&#34;&gt;Mechanical structure&lt;/h2&gt;
-&lt;p&gt;I use an optical encoder to measure the angle of the pendulum. The absolute angle of the pendulum need calibrate every time after reset.&lt;/p&gt;
+&lt;p&gt;An optical encoder is used to measure the angle of the pendulum. Thus calibration needs to be down by relaxing the pendulum to get the absolute angle every time after reset.&lt;/p&gt;
 
 
 
@@ -690,13 +694,13 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
                /project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_2e90878c6482a3e2229eafbc304c4182.jpg 760w,
                /project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
                src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/IMG_20170409_204205_hu29a20b0968d69d10407c7466beaac138_239947_bccfc1d3fb70d4b69a668e86d80cef72.jpg&#34;
-               width=&#34;570&#34;
+               width=&#34;20%&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Optical encoder
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;A slip ring is used to prevent the winding of the wire.&lt;/p&gt;
+&lt;p&gt;A slip ring (or collector ring) is used to prevent the winding of the wire.&lt;/p&gt;
 
 
 
@@ -719,13 +723,13 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
                /project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_d2c969277c6bb9288f06d45f819c6074.jpg 760w,
                /project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
                src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20180604-225745_hu51376fd6dc65ca3962c7bb8478d63935_22574_bdec35728bec195e5da368e4421b480f.jpg&#34;
-               width=&#34;392&#34;
+               width=&#34;20%&#34;
                height=&#34;311&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Slip ring
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The DC brush motor with gearbox and magnetic encoder is driven by a TB6612FNG model controlled with PWM signal. A 3s lithium battery powers the system like the following projects.&lt;/p&gt;
+&lt;p&gt;The DC brush motor with reduction gearbox and magnetic encoder is driven by a TB6612FNG model controlled controled with PWM signal. A 3-ceils lithium battery is used as power.&lt;/p&gt;
 
 
 
@@ -748,14 +752,14 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
                /project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_816acf2e68b95478844676142de8f819.jpg 760w,
                /project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
                src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/IMG_20170504_112659_hu79c3b519b802e18d27a72aba7aa84a64_3289927_4c655b0a37c440c9abde2b7838a41c03.jpg&#34;
-               width=&#34;760&#34;
+               width=&#34;50%&#34;
                height=&#34;570&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Complete circuit board
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The mechanical structure includes three round mounting plates to mount slip ring, motor, and quick-release plate. The plates are connected with hexagonal copper pillars. The whole structure is mounted to a tripod through the quick-release plate.&lt;/p&gt;
-&lt;p&gt;The round plates are rendered as acrylic plate below. But they are made of carbon fiber in the final work.&lt;/p&gt;
+&lt;p&gt;The mechanical structure consists of three round plates which supports the slip ring, motor, and a quick-release plate. The round plates are connected with hexagonal copper pillars. The whole structure is mounted to a tripod through the quick-release plate.&lt;/p&gt;
+&lt;!-- The round plates are rendered as acrylic plate below. But they are made of carbon fiber in the final work. --&gt;
 
 
 
@@ -778,7 +782,7 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
                /project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_dafb348746f227f7c5be5afa57300713.png 760w,
                /project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_1200x1200_fit_lanczos_2.png 1200w&#34;
                src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/Snipaste_2018-06-05_07-40-03_hu675d01b2d24dff4d601a9505dc71c6b1_201977_8251107b285f1eb5f05becb6302c3af9.png&#34;
-               width=&#34;492&#34;
+               width=&#34;20%&#34;
                height=&#34;720&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
@@ -800,7 +804,7 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
 
 &lt;figure  id=&#34;figure-the-complete-mechanical-structure&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;84C~Z%7bNZ1N42UWZE8$K2QQ9.png&#34; alt=&#34;The complete mechanical structure&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;84C~Z%7bNZ1N42UWZE8$K2QQ9.png&#34; alt=&#34;The complete mechanical structure&#34; loading=&#34;lazy&#34; data-zoomable width=&#34;20%&#34; /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       The complete mechanical structure
     &lt;/figcaption&gt;&lt;/figure&gt;
@@ -875,7 +879,7 @@ Code and document &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#
                /project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_61038c37b0013f6aface338fabbc1938.png 760w,
                /project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_1200x1200_fit_lanczos_2.png 1200w&#34;
                src=&#34;https://chengzhag.github.io/project/rotary_inverted_pendulum/%E5%80%92%E7%AB%8B%E6%91%86%E7%8A%B6%E6%80%81%E6%9C%BA_hu92dbd56e4e9f025ab3e0ade44578a494_58966_7007e2f9a97b56f15b5ee966b77ea37f.png&#34;
-               width=&#34;760&#34;
+               width=&#34;80%&#34;
                height=&#34;486&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
