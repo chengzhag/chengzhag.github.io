@@ -32,6 +32,45 @@
 
 
 Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;center&gt;
+  &lt;a href=&#34;https://chengzhag.github.io/&#34;&gt;Cheng Zhang&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://zhpcui.github.io/&#34;&gt;Zhaopeng Cui&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://www.zhangyinda.com/&#34;&gt;Yinda Zhang&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://scholar.google.com/citations?user=4y0QncgAAAAJ&amp;hl=en&#34;&gt;Bing Zeng&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://people.inf.ethz.ch/pomarc/&#34;&gt;Marc Pollefeys&lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;http://www.liushuaicheng.org/&#34;&gt;Shuaicheng Liu&lt;/a&gt;
+&lt;/center&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_e9d3a917824ba8aeb1bfb7d5a213cbde.png 400w,
+               /publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_ead458b3d2b59f5730be03c9ec34c976.png 760w,
+               /publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_e9d3a917824ba8aeb1bfb7d5a213cbde.png&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;We present a new pipeline for holistic 3D scene understanding from a single image, which could predict object shape, object pose, and scene layout. As it is a highly ill-posed problem, existing methods usually suffer from inaccurate estimation of both shapes and layout especially for the cluttered scene due to the heavy occlusion between objects. We propose to utilize the latest deep implicit representation to solve this challenge. We not only propose an image-based local structured implicit network to improve the object shape estimation, but also refine 3D object pose and scene layout via a novel implicit scene graph neural network that exploits the implicit local object features. A novel physical violation loss is also proposed to avoid incorrect context between objects. Extensive experiments demonstrate that our method outperforms the state-of-the-art methods in terms of object shape, scene layout estimation, and 3D object detection.&lt;/p&gt;
@@ -133,13 +172,13 @@ Given a single color image,
   &lt;/a&gt;
 &lt;/center&gt;
 &lt;!-- &lt;center&gt;
-&lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34;&gt;[arXiv]&lt;/a&gt; 
-&amp;nbsp; &amp;nbsp;
-&lt;a href=&#34;https://arxiv.org/pdf/2103.06422&#34;&gt;[Paper]&lt;/a&gt; 
-&amp;nbsp; &amp;nbsp;
-&lt;a href=&#34;02192-supp.pdf&#34;&gt;[Supp]&lt;/a&gt; 
-&amp;nbsp; &amp;nbsp;
-&lt;a href=&#34;https://github.com/pidan1231239/Implicit3DUnderstanding&#34;&gt;[GitHub]&lt;/a&gt;
+  &lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34;&gt;[arXiv]&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://arxiv.org/pdf/2103.06422&#34;&gt;[Paper]&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;02192-supp.pdf&#34;&gt;[Supp]&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://github.com/pidan1231239/Implicit3DUnderstanding&#34;&gt;[GitHub]&lt;/a&gt;
 &lt;/center&gt; --&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;motivations&#34;&gt;Motivations&lt;/h2&gt;

@@ -32,18 +32,162 @@
 
 
 Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
-&lt;h2 id=&#34;3d-scene-understanding&#34;&gt;3D Scene Understanding&lt;/h2&gt;
-&lt;p&gt;Given a single color image,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Estimate the room layout, including object categories and poses in 3D space&lt;/li&gt;
-&lt;li&gt;Reconstruct mesh of individual object&lt;/li&gt;
+&lt;center&gt;
+  &lt;a href=&#34;https://chengzhag.github.io/&#34;&gt;Cheng Zhang&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://zhpcui.github.io/&#34;&gt;Zhaopeng Cui&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://www.zhangyinda.com/&#34;&gt;Yinda Zhang&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://scholar.google.com/citations?user=4y0QncgAAAAJ&amp;hl=en&#34;&gt;Bing Zeng&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://people.inf.ethz.ch/pomarc/&#34;&gt;Marc Pollefeys&lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;http://www.liushuaicheng.org/&#34;&gt;Shuaicheng Liu&lt;/a&gt;
+&lt;/center&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_e9d3a917824ba8aeb1bfb7d5a213cbde.png 400w,
+               /publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_ead458b3d2b59f5730be03c9ec34c976.png 760w,
+               /publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_e9d3a917824ba8aeb1bfb7d5a213cbde.png&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;We present a new pipeline for holistic 3D scene understanding from a single image, which could predict object shape, object pose, and scene layout. As it is a highly ill-posed problem, existing methods usually suffer from inaccurate estimation of both shapes and layout especially for the cluttered scene due to the heavy occlusion between objects. We propose to utilize the latest deep implicit representation to solve this challenge. We not only propose an image-based local structured implicit network to improve the object shape estimation, but also refine 3D object pose and scene layout via a novel implicit scene graph neural network that exploits the implicit local object features. A novel physical violation loss is also proposed to avoid incorrect context between objects. Extensive experiments demonstrate that our method outperforms the state-of-the-art methods in terms of object shape, scene layout estimation, and 3D object detection.&lt;/p&gt;
+&lt;!-- ## 3D Scene Understanding 
+Given a single color image,
+- Estimate the room layout, including object categories and poses in 3D space
+- Reconstruct mesh of individual object --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;paper&#34;&gt;Paper&lt;/h2&gt;
+&lt;!-- ![page1](02192_页面_01.png)![page3](02192_页面_03.png)![page5](02192_页面_05.png)![page7](02192_页面_07.png) --&gt;
+&lt;center&gt;
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_01.png&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_01_hu7b4e8c585c78596d52f33bba49723711_179891_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_01.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_03.png&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_03_hu7b4e8c585c78596d52f33bba49723711_221609_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_03.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_05.png&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_05_hu7b4e8c585c78596d52f33bba49723711_201925_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_05.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_07.png&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_07_hu7b4e8c585c78596d52f33bba49723711_293071_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_07.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;center&gt;
+  &lt;!-- &lt;ul class=&#34;cta-group&#34;&gt;
+  
+  &lt;li&gt;
+    &lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;arXiv&lt;/a&gt;
+  &lt;/li&gt;
+  
+  
 &lt;/ul&gt;
+ --&gt;
+  &lt;!-- &lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34; class=&#34;btn btn-primary px-3 py-3&#34;&gt;Paper&lt;/a&gt; --&gt;
+  &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;/publication/im3d/cite.bib&#34;&gt;
+  Cite
+  &lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  arXiv
+  &lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://arxiv.org/pdf/2103.06422&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Paper
+  &lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;02192-supp.pdf&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Supp
+  &lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://github.com/pidan1231239/Implicit3DUnderstanding&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  GitHub
+  &lt;/a&gt;
+&lt;/center&gt;
+&lt;!-- &lt;center&gt;
+  &lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34;&gt;[arXiv]&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://arxiv.org/pdf/2103.06422&#34;&gt;[Paper]&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;02192-supp.pdf&#34;&gt;[Supp]&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://github.com/pidan1231239/Implicit3DUnderstanding&#34;&gt;[GitHub]&lt;/a&gt;
+&lt;/center&gt; --&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;motivations&#34;&gt;Motivations&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Implicit representation like Signed Distance Function (SDF) can be used to detect collision and propagate gradients&lt;/li&gt;
 &lt;li&gt;And together with structured representation (LDIF), the shapes can be learned better and more shape priors can be provided for relationship understanding&lt;/li&gt;
 &lt;li&gt;Graph Convolutional Network (GCN) is proven to be good at resolving context information in the task of scene graph generation&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
 
 
@@ -77,6 +221,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
 In the initial estimation stage, a 2D detector is first adopted to extract the 2D bounding box from the input image, followed by an Object Detection Network (ODN) to recover the object poses as 3D bounding boxes and a new Local Implicit Embedding Network (LIEN) to extract the implicit local shape information from the image directly, which can further be decoded to infer 3D geometry.
 The input image is also fed into a Layout Estimation Network (LEN) to produce a 3D layout bounding box and relative camera pose.
 In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is designed to refine the initial predictions via the scene context information.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
 
 
