@@ -288,8 +288,64 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
 &lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
 &lt;h3 id=&#34;servers-and-network&#34;&gt;Servers and Network&lt;/h3&gt;
 &lt;p&gt;Our team has 5 existing servers, each with 4 x 1080Ti and a system SSD. The problem is that every server is not able to install an extra 10 GbE Network Interface Card (NIC) since all PCIE ports are preserved for GPUs. Thus an NBASE-T switch is used to connect each server via 5 GbE USB NICs. (A more stable and affordable configuration might be using 10 GbE SFP+ switch with PCIE NIC.)&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-no-space-to-install-10-gbe-nic-for-existing-server&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;No space to install 10 GbE NIC for existing server&#34; srcset=&#34;
+               /project/deep_earning_server_system/%E7%85%A7%E7%89%87%20012_hu1aff075b4e8a5dba3f71e9ad4b16f525_247758_3de88a8d69dcaa38351698e7f733ed51.jpg 400w,
+               /project/deep_earning_server_system/%E7%85%A7%E7%89%87%20012_hu1aff075b4e8a5dba3f71e9ad4b16f525_247758_228ef1ef075dd83911d6950962fa0b34.jpg 760w,
+               /project/deep_earning_server_system/%E7%85%A7%E7%89%87%20012_hu1aff075b4e8a5dba3f71e9ad4b16f525_247758_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/deep_earning_server_system/%E7%85%A7%E7%89%87%20012_hu1aff075b4e8a5dba3f71e9ad4b16f525_247758_3de88a8d69dcaa38351698e7f733ed51.jpg&#34;
+               width=&#34;30%&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      No space to install 10 GbE NIC for existing server
+    &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;storage&#34;&gt;Storage&lt;/h3&gt;
 &lt;p&gt;We chose to use QNAP Network Attached Storage (NAS) TS-932X, which can accommodate 5 x 3.5-inch hard drives and 4 x 2.5-inch SSDs, and has dual 10GbE SFP+ ports. The performance of its ARM processor is quit as SSD cache is configured on each server, which makes it possible to load frequently used data from NAS at the first time.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-nas-and-switch&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;NAS and switch&#34; srcset=&#34;
+               /project/deep_earning_server_system/IMG_20191107_161030_hub5951621c5a662dcd39dd207dc787f1e_169416_92b960d00a745cd90d293a8257142fd1.jpg 400w,
+               /project/deep_earning_server_system/IMG_20191107_161030_hub5951621c5a662dcd39dd207dc787f1e_169416_af1397ccbb4cc064edbab70c06ca431b.jpg 760w,
+               /project/deep_earning_server_system/IMG_20191107_161030_hub5951621c5a662dcd39dd207dc787f1e_169416_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/project/deep_earning_server_system/IMG_20191107_161030_hub5951621c5a662dcd39dd207dc787f1e_169416_92b960d00a745cd90d293a8257142fd1.jpg&#34;
+               width=&#34;30%&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      NAS and switch
+    &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
 &lt;h3 id=&#34;nas&#34;&gt;NAS&lt;/h3&gt;
 &lt;p&gt;We configure our NAS with a &lt;code&gt;Public&lt;/code&gt; folder (contraining the git repo of &lt;a href=&#34;https://github.com/chengzhag/nas_directory&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documents&lt;/a&gt;) for &lt;a href=&#34;https://github.com/chengzhag/nas_directory/tree/master/datasets&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shared datasets&lt;/a&gt; storage, and a home folder for each user, allowing users to access their environment (e.g. anaconda), codes, and datasets on every server. QNAP NAS provides an easy-to-use operating system with serveral customizable services. In our cases, it is configured with the following services:&lt;/p&gt;

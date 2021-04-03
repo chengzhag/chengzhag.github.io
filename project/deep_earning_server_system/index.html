@@ -813,8 +813,64 @@
 <h2 id="hardware">Hardware</h2>
 <h3 id="servers-and-network">Servers and Network</h3>
 <p>Our team has 5 existing servers, each with 4 x 1080Ti and a system SSD. The problem is that every server is not able to install an extra 10 GbE Network Interface Card (NIC) since all PCIE ports are preserved for GPUs. Thus an NBASE-T switch is used to connect each server via 5 GbE USB NICs. (A more stable and affordable configuration might be using 10 GbE SFP+ switch with PCIE NIC.)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-no-space-to-install-10-gbe-nic-for-existing-server">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="No space to install 10 GbE NIC for existing server" srcset="
+               /project/deep_earning_server_system/%E7%85%A7%E7%89%87%20012_hu1aff075b4e8a5dba3f71e9ad4b16f525_247758_3de88a8d69dcaa38351698e7f733ed51.jpg 400w,
+               /project/deep_earning_server_system/%E7%85%A7%E7%89%87%20012_hu1aff075b4e8a5dba3f71e9ad4b16f525_247758_228ef1ef075dd83911d6950962fa0b34.jpg 760w,
+               /project/deep_earning_server_system/%E7%85%A7%E7%89%87%20012_hu1aff075b4e8a5dba3f71e9ad4b16f525_247758_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/deep_earning_server_system/%E7%85%A7%E7%89%87%20012_hu1aff075b4e8a5dba3f71e9ad4b16f525_247758_3de88a8d69dcaa38351698e7f733ed51.jpg"
+               width="30%"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      No space to install 10 GbE NIC for existing server
+    </figcaption></figure>
 <h3 id="storage">Storage</h3>
 <p>We chose to use QNAP Network Attached Storage (NAS) TS-932X, which can accommodate 5 x 3.5-inch hard drives and 4 x 2.5-inch SSDs, and has dual 10GbE SFP+ ports. The performance of its ARM processor is quit as SSD cache is configured on each server, which makes it possible to load frequently used data from NAS at the first time.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-nas-and-switch">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="NAS and switch" srcset="
+               /project/deep_earning_server_system/IMG_20191107_161030_hub5951621c5a662dcd39dd207dc787f1e_169416_92b960d00a745cd90d293a8257142fd1.jpg 400w,
+               /project/deep_earning_server_system/IMG_20191107_161030_hub5951621c5a662dcd39dd207dc787f1e_169416_af1397ccbb4cc064edbab70c06ca431b.jpg 760w,
+               /project/deep_earning_server_system/IMG_20191107_161030_hub5951621c5a662dcd39dd207dc787f1e_169416_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/deep_earning_server_system/IMG_20191107_161030_hub5951621c5a662dcd39dd207dc787f1e_169416_92b960d00a745cd90d293a8257142fd1.jpg"
+               width="30%"
+               height="570"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      NAS and switch
+    </figcaption></figure>
 <h2 id="software">Software</h2>
 <h3 id="nas">NAS</h3>
 <p>We configure our NAS with a <code>Public</code> folder (contraining the git repo of <a href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">documents</a>) for <a href="https://github.com/chengzhag/nas_directory/tree/master/datasets" target="_blank" rel="noopener">shared datasets</a> storage, and a home folder for each user, allowing users to access their environment (e.g. anaconda), codes, and datasets on every server. QNAP NAS provides an easy-to-use operating system with serveral customizable services. In our cases, it is configured with the following services:</p>
