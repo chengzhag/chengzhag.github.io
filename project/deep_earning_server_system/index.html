@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="A deep learning system for small R&amp;D team, with multiple GPU servers, centralized network storage, server management, user management, 10 GbE network, and per-server SSD cache." />
+  <meta name="description" content="A deep learning system for small research teams, with multiple GPU servers, centralized network storage, server and user management, 10 GbE network, and per-server SSD cache." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://chengzhag.github.io/project/deep_earning_server_system/" />
@@ -332,7 +332,7 @@
   <meta property="og:site_name" content="Cheng Zhang" />
   <meta property="og:url" content="https://chengzhag.github.io/project/deep_earning_server_system/" />
   <meta property="og:title" content="Deep Learning Server System | Cheng Zhang" />
-  <meta property="og:description" content="A deep learning system for small R&amp;D team, with multiple GPU servers, centralized network storage, server management, user management, 10 GbE network, and per-server SSD cache." /><meta property="og:image" content="https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:description" content="A deep learning system for small research teams, with multiple GPU servers, centralized network storage, server and user management, 10 GbE network, and per-server SSD cache." /><meta property="og:image" content="https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -383,7 +383,7 @@
       "url": "https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "A deep learning system for small R\u0026D team, with multiple GPU servers, centralized network storage, server management, user management, 10 GbE network, and per-server SSD cache."
+  "description": "A deep learning system for small research teams, with multiple GPU servers, centralized network storage, server and user management, 10 GbE network, and per-server SSD cache."
 }
 </script>
 
@@ -766,25 +766,33 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+  
   
   
     
   
-<a class="btn btn-outline-primary btn-page-header" href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">
-  Code
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">
+    
+    documents
+  </a>
 
 
 </div>
@@ -799,9 +807,31 @@
     <div class="article-style">
       <hr>
 <h2 id="introduction">Introduction</h2>
-<p>Ball on Beam is built with a Raspberry Zero, a camera, a servo, and a STM32F103 board.
-This project is a work of team of 3, which includes <a href="https://github.com/shicaiwei123" target="_blank" rel="noopener">shicaiwei123</a> and <a href="https://github.com/yoyolalala" target="_blank" rel="noopener">yoyolalala</a>.
-Code and documents are available <a href="https://github.com/pidan1231239/ball_on_beam" target="_blank" rel="noopener">here</a>. Platform details are discussed <a href="/project/ball_on_big_plate/">here</a>.</p>
+<p>For a small research team with more than a dozen of students, several servers with 4 or 8 GPUs are necessary. However, with independent storage for each servers, datasets, codes, and environments are often duplicated across different servers, which is inefficient and troublesome when using different servers. Also, user management becomes a problem if every user needs to be setup on each of the server.</p>
+<p>To solve the above problems, a system is built with centralized network storage, server and user management, 10 GbE network, and per-server SSD cache. This can be used as a reference for small academic teams on deep learning or maybe small companies.</p>
+<p>For new users and admins, <a href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">documents</a> (in Chinese) are wrote to provide basic informations and regulations.</p>
+<h2 id="hardware">Hardware</h2>
+<h3 id="servers-and-network">Servers and Network</h3>
+<p>Our team has 5 existing servers, each with 4 x 1080Ti and a system SSD. The problem is that every server is not able to install an extra 10 GbE Network Interface Card (NIC) since all PCIE ports are preserved for GPUs. Thus an NBASE-T switch is used to connect each server via 5 GbE USB NICs. (A more stable and affordable configuration might be using 10 GbE SFP+ switch with PCIE NIC.)</p>
+<h3 id="storage">Storage</h3>
+<p>We chose to use QNAP Network Attached Storage (NAS) TS-932X, which can accommodate 5 x 3.5-inch hard drives and 4 x 2.5-inch SSDs, and has dual 10GbE SFP+ ports. The performance of its ARM processor is quit as SSD cache is configured on each server, which makes it possible to load frequently used data from NAS at the first time.</p>
+<h2 id="software">Software</h2>
+<h3 id="nas">NAS</h3>
+<p>We configure our NAS with a <code>Public</code> folder (contraining the git repo of <a href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">documents</a>) for <a href="https://github.com/chengzhag/nas_directory/tree/master/datasets" target="_blank" rel="noopener">shared datasets</a> storage, and a home folder for each user, allowing users to access their environment (e.g. anaconda), codes, and datasets on every server. QNAP NAS provides an easy-to-use operating system with serveral customizable services. In our cases, it is configured with the following services:</p>
+<ul>
+<li>NFS server: for mounting storage on server</li>
+<li>samba server: for mounting storage on client computers</li>
+<li>LDAP server: centralized authorization and user management for both NAS and GPU server</li>
+<li>Other services like Download Station, file management from browser, restoring from snapshot/recycle bin, Qsync, VPN, DDNS, and iperf3 are also available to users.</li>
+</ul>
+<h3 id="server">Server</h3>
+<p>Each server is installed with same version of Ubuntu and Nvidia GPU driver, and is configured with the following services:</p>
+<ul>
+<li>autofs: automatically mount two types of folders (i.e. user home folders to <code>/home</code> and <code>Public</code> folder to <code>/media</code>) through NFS</li>
+<li>cachefilesd: local SSD cache for NFS</li>
+<li>LDAP</li>
+</ul>
+<p>With the configurations above, students can use the same username to login to NAS or any server, access their data or share datasets with others, and configure anaconda environments once to use them on all servers. A <a href="https://github.com/chengzhag/nas_directory/blob/master/documents/server/initserver.sh" target="_blank" rel="noopener">shell script</a> is used to configure servers. It is validated on Ubuntu 18 and might be used as a reference. For easier deployment and management of servers, virtual machine system (e.g. Proxmox) is installed on each server, with GPU passthrough configured. The difference between virtual machine and bare-metal Ubuntu is barely sensible.</p>
 
     </div>
 
