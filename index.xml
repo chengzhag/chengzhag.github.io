@@ -276,6 +276,19 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
     </item>
     
     <item>
+      <title>Deep Learning Server System</title>
+      <link>https://chengzhag.github.io/project/deep_earning_server_system/</link>
+      <pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/project/deep_earning_server_system/</guid>
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Ball on Beam is built with a Raspberry Zero, a camera, a servo, and a STM32F103 board.
+This project is a work of team of 3, which includes &lt;a href=&#34;https://github.com/shicaiwei123&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shicaiwei123&lt;/a&gt; and &lt;a href=&#34;https://github.com/yoyolalala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yoyolalala&lt;/a&gt;.
+Code and documents are available &lt;a href=&#34;https://github.com/pidan1231239/ball_on_beam&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Platform details are discussed &lt;a href=&#34;https://chengzhag.github.io/project/ball_on_big_plate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Long Exposure of Airplane Turning</title>
       <link>https://chengzhag.github.io/post/plane_turn_long_exposure/</link>
       <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
