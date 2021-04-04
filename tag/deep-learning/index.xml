@@ -350,17 +350,18 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
 &lt;h3 id=&#34;nas&#34;&gt;NAS&lt;/h3&gt;
 &lt;p&gt;We configure our NAS with a &lt;code&gt;Public&lt;/code&gt; folder (contraining the git repo of &lt;a href=&#34;https://github.com/chengzhag/nas_directory&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documents&lt;/a&gt;) for &lt;a href=&#34;https://github.com/chengzhag/nas_directory/tree/master/datasets&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shared datasets&lt;/a&gt; storage, and a home folder for each user, allowing users to access their environment (e.g. anaconda), codes, and datasets on every server. QNAP NAS provides an easy-to-use operating system with serveral customizable services. In our cases, it is configured with the following services:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;NFS server: for mounting storage on server&lt;/li&gt;
-&lt;li&gt;samba server: for mounting storage on client computers&lt;/li&gt;
-&lt;li&gt;LDAP server: centralized authorization and user management for both NAS and GPU server&lt;/li&gt;
+&lt;li&gt;NFS server: For mounting storage on server&lt;/li&gt;
+&lt;li&gt;samba server: For mounting storage on client computers&lt;/li&gt;
+&lt;li&gt;LDAP server: Centralized authorization and user management for both NAS and GPU server&lt;/li&gt;
 &lt;li&gt;Other services like Download Station, file management from browser, restoring from snapshot/recycle bin, Qsync, VPN, DDNS, and iperf3 are also available to users.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;server&#34;&gt;Server&lt;/h3&gt;
 &lt;p&gt;Each server is installed with same version of Ubuntu and Nvidia GPU driver, and is configured with the following services:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;autofs: automatically mount two types of folders (i.e. user home folders to &lt;code&gt;/home&lt;/code&gt; and &lt;code&gt;Public&lt;/code&gt; folder to &lt;code&gt;/media&lt;/code&gt;) through NFS&lt;/li&gt;
-&lt;li&gt;cachefilesd: local SSD cache for NFS&lt;/li&gt;
-&lt;li&gt;LDAP&lt;/li&gt;
+&lt;li&gt;autofs: Automatically mount two types of folders (i.e. user home folders to &lt;code&gt;/home&lt;/code&gt; and &lt;code&gt;Public&lt;/code&gt; folder to &lt;code&gt;/media&lt;/code&gt;) through NFS&lt;/li&gt;
+&lt;li&gt;cachefilesd: Local SSD cache for NFS&lt;/li&gt;
+&lt;li&gt;LDAP authentication: Configured with Pluggable Authentication Modules (PAM)&lt;/li&gt;
+&lt;li&gt;ThinLinc: Remote desktop&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;With the configurations above, students can use the same username to login to NAS or any server, access their data or share datasets with others, and configure anaconda environments once to use them on all servers. A &lt;a href=&#34;https://github.com/chengzhag/nas_directory/blob/master/documents/server/initserver.sh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shell script&lt;/a&gt; is used to configure servers. It is validated on Ubuntu 18 and might be used as a reference. For easier deployment and management of servers, virtual machine system (e.g. Proxmox) is installed on each server, with GPU passthrough configured. The difference between virtual machine and bare-metal Ubuntu is barely sensible.&lt;/p&gt;
 </description>

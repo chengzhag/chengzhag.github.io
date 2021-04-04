@@ -875,17 +875,18 @@
 <h3 id="nas">NAS</h3>
 <p>We configure our NAS with a <code>Public</code> folder (contraining the git repo of <a href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">documents</a>) for <a href="https://github.com/chengzhag/nas_directory/tree/master/datasets" target="_blank" rel="noopener">shared datasets</a> storage, and a home folder for each user, allowing users to access their environment (e.g. anaconda), codes, and datasets on every server. QNAP NAS provides an easy-to-use operating system with serveral customizable services. In our cases, it is configured with the following services:</p>
 <ul>
-<li>NFS server: for mounting storage on server</li>
-<li>samba server: for mounting storage on client computers</li>
-<li>LDAP server: centralized authorization and user management for both NAS and GPU server</li>
+<li>NFS server: For mounting storage on server</li>
+<li>samba server: For mounting storage on client computers</li>
+<li>LDAP server: Centralized authorization and user management for both NAS and GPU server</li>
 <li>Other services like Download Station, file management from browser, restoring from snapshot/recycle bin, Qsync, VPN, DDNS, and iperf3 are also available to users.</li>
 </ul>
 <h3 id="server">Server</h3>
 <p>Each server is installed with same version of Ubuntu and Nvidia GPU driver, and is configured with the following services:</p>
 <ul>
-<li>autofs: automatically mount two types of folders (i.e. user home folders to <code>/home</code> and <code>Public</code> folder to <code>/media</code>) through NFS</li>
-<li>cachefilesd: local SSD cache for NFS</li>
-<li>LDAP</li>
+<li>autofs: Automatically mount two types of folders (i.e. user home folders to <code>/home</code> and <code>Public</code> folder to <code>/media</code>) through NFS</li>
+<li>cachefilesd: Local SSD cache for NFS</li>
+<li>LDAP authentication: Configured with Pluggable Authentication Modules (PAM)</li>
+<li>ThinLinc: Remote desktop</li>
 </ul>
 <p>With the configurations above, students can use the same username to login to NAS or any server, access their data or share datasets with others, and configure anaconda environments once to use them on all servers. A <a href="https://github.com/chengzhag/nas_directory/blob/master/documents/server/initserver.sh" target="_blank" rel="noopener">shell script</a> is used to configure servers. It is validated on Ubuntu 18 and might be used as a reference. For easier deployment and management of servers, virtual machine system (e.g. Proxmox) is installed on each server, with GPU passthrough configured. The difference between virtual machine and bare-metal Ubuntu is barely sensible.</p>
 
