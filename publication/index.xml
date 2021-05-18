@@ -32,8 +32,8 @@
 
 
 Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
-&lt;h2 id=&#34;centercvpr-2021centerhttpcvpr2021thecvfcom&#34;&gt;&lt;a href=&#34;http://cvpr2021.thecvf.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;center&gt;CVPR 2021&lt;/center&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;center&gt;
+&lt;h2 id=&#34;div-classpublication-headercvpr-2021divhttpcvpr2021thecvfcom&#34;&gt;&lt;a href=&#34;http://cvpr2021.thecvf.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;div class=&#34;publication-header&#34;&gt;CVPR 2021&lt;/div&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&#34;publication-header&#34;&gt;
   &lt;a href=&#34;https://chengzhag.github.io/&#34; target=&#34;_blank&#34;&gt;Cheng Zhang&lt;/a&gt;
   &lt;sup&gt;2&lt;/sup&gt;
   &amp;nbsp; &amp;nbsp;
@@ -51,8 +51,8 @@ Supplementary notes can be added here, including [code, math, and images](https:
   &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;http://www.liushuaicheng.org/&#34; target=&#34;_blank&#34;&gt;Shuaicheng Liu&lt;/a&gt;
   &lt;sup&gt;2&lt;/sup&gt;
-&lt;/center&gt;
-&lt;center&gt;
+&lt;/div&gt;
+&lt;div class=&#34;publication-header&#34;&gt;
   &lt;sup&gt;1&lt;/sup&gt;
   &lt;a href=&#34;http://www.cad.zju.edu.cn/english.html&#34; target=&#34;_blank&#34;&gt;State Key Lab of CAD &amp; CG, Zhejiang University&lt;/a&gt; 
   &lt;!-- &amp;nbsp; &amp;nbsp; --&gt;
@@ -65,7 +65,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
   &amp;nbsp; &amp;nbsp;
   &lt;sup&gt;4&lt;/sup&gt;
   &lt;a href=&#34;https://ethz.ch/en.html&#34; target=&#34;_blank&#34;&gt;ETH Zurich&lt;/a&gt; 
-&lt;/center&gt;
+&lt;/div&gt;
 
 
 
