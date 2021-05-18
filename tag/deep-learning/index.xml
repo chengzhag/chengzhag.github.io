@@ -239,6 +239,291 @@ In the initial estimation stage, a 2D detector is first adopted to extract the 2
 The input image is also fed into a Layout Estimation Network (LEN) to produce a 3D layout bounding box and relative camera pose.
 In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is designed to refine the initial predictions via the scene context information.&lt;/p&gt;
 &lt;hr&gt;
+&lt;h2 id=&#34;interactive-results&#34;&gt;Interactive Results&lt;/h2&gt;
+&lt;!-- model-viewer css --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;model-viewer.css&#34;&gt;
+&lt;!-- Import the component --&gt;
+&lt;script type=&#34;module&#34; src=&#34;https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js&#34;&gt;&lt;/script&gt;
+&lt;center&gt;
+  &lt;div class=&#39;container&#39;&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;p class=&#39;header&#39;&gt;Input&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;p class=&#39;header&#39;&gt;Total3D&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;p class=&#39;header&#39;&gt;Ours&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/im3d/input/002435_hu9f4da8feeb8f488dbc844ceb4d1e5894_31728_34fede712ec055a09eae71d37c699e2e.jpg 400w,
+               /publication/im3d/input/002435_hu9f4da8feeb8f488dbc844ceb4d1e5894_31728_77ebae929083f1a1d9b2be5aa852d6a2.jpg 760w,
+               /publication/im3d/input/002435_hu9f4da8feeb8f488dbc844ceb4d1e5894_31728_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/input/002435_hu9f4da8feeb8f488dbc844ceb4d1e5894_31728_34fede712ec055a09eae71d37c699e2e.jpg&#34;
+               width=&#34;561&#34;
+               height=&#34;427&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;total3d/2435_mesh.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; camera-target=&#34;2.7m -0.5m 0.1m&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;176.9deg 64.23deg 10m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class =&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;im3d/2435_mesh.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; camera-target=&#34;2.7m -0.5m 0.1m&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;176.9deg 64.23deg 10m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/im3d/input/000724_hu60acda178c6c414ae074c5a84b819e9e_44711_afc315577b48789173e155e63118e555.jpg 400w,
+               /publication/im3d/input/000724_hu60acda178c6c414ae074c5a84b819e9e_44711_8c571ddedd8f9236f8459eba65c0fd6d.jpg 760w,
+               /publication/im3d/input/000724_hu60acda178c6c414ae074c5a84b819e9e_44711_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/input/000724_hu60acda178c6c414ae074c5a84b819e9e_44711_afc315577b48789173e155e63118e555.jpg&#34;
+               width=&#34;730&#34;
+               height=&#34;530&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;total3d/724_mesh.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; camera-target=&#34;2m -0.5m 0.1m&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;176.9deg 64.23deg 10m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class =&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;im3d/724_mesh.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; camera-target=&#34;2m -0.5m 0.1m&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;176.9deg 64.23deg 10m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/im3d/input/000276_huc6e3ab9fc38f58a9bafe19ad89e08761_43748_69c762dbe7b8ef43ff843cb33162b9e1.jpg 400w,
+               /publication/im3d/input/000276_huc6e3ab9fc38f58a9bafe19ad89e08761_43748_06a8cbd97c646a108ee7ef351ca81737.jpg 760w,
+               /publication/im3d/input/000276_huc6e3ab9fc38f58a9bafe19ad89e08761_43748_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/input/000276_huc6e3ab9fc38f58a9bafe19ad89e08761_43748_69c762dbe7b8ef43ff843cb33162b9e1.jpg&#34;
+               width=&#34;730&#34;
+               height=&#34;530&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;total3d/276_mesh.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; camera-target=&#34;2.7m -0.5m 0.1m&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;176.9deg 64.23deg 10m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class =&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;im3d/276_mesh.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; camera-target=&#34;2.7m -0.5m 0.1m&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;176.9deg 64.23deg 10m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/im3d/input/001140_hub6d71cf445d4a1d1444ecd3033d99239_60313_1c2a13736ea7778b63371bd59dc8e498.jpg 400w,
+               /publication/im3d/input/001140_hub6d71cf445d4a1d1444ecd3033d99239_60313_0f716db03a99c16e509b6a61ce8c883f.jpg 760w,
+               /publication/im3d/input/001140_hub6d71cf445d4a1d1444ecd3033d99239_60313_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/input/001140_hub6d71cf445d4a1d1444ecd3033d99239_60313_1c2a13736ea7778b63371bd59dc8e498.jpg&#34;
+               width=&#34;730&#34;
+               height=&#34;530&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;total3d/1140_mesh.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; camera-target=&#34;2.7m -0.5m 0.1m&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;176.9deg 64.23deg 10m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class =&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;im3d/1140_mesh.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; camera-target=&#34;2.7m -0.5m 0.1m&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;176.9deg 64.23deg 10m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/im3d/input/000765_hub1750ce7295fa2f68bd853eff6735d57_46395_6f7c1ff71db8293ea59bace74d38b4e1.jpg 400w,
+               /publication/im3d/input/000765_hub1750ce7295fa2f68bd853eff6735d57_46395_32a99c7691e042129650abca07910c54.jpg 760w,
+               /publication/im3d/input/000765_hub1750ce7295fa2f68bd853eff6735d57_46395_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/input/000765_hub1750ce7295fa2f68bd853eff6735d57_46395_6f7c1ff71db8293ea59bace74d38b4e1.jpg&#34;
+               width=&#34;730&#34;
+               height=&#34;530&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;total3d/765_mesh.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; camera-target=&#34;2m -0.5m 0.1m&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;176.9deg 64.23deg 10m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class =&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;im3d/765_mesh.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; camera-target=&#34;2m -0.5m 0.1m&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;176.9deg 64.23deg 10m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/im3d/input/001149_hue52c2dd20dd88036a18bcafe64c56792_54694_06b9fcbb900685fa99e11f48449cc919.jpg 400w,
+               /publication/im3d/input/001149_hue52c2dd20dd88036a18bcafe64c56792_54694_346b1f8786db404c8b187198b71812e7.jpg 760w,
+               /publication/im3d/input/001149_hue52c2dd20dd88036a18bcafe64c56792_54694_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/input/001149_hue52c2dd20dd88036a18bcafe64c56792_54694_06b9fcbb900685fa99e11f48449cc919.jpg&#34;
+               width=&#34;730&#34;
+               height=&#34;530&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;total3d/1149_mesh.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; camera-target=&#34;2m -0.5m 0.1m&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;0deg 64.23deg 10m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class =&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;im3d/1149_mesh.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; camera-target=&#34;2m -0.5m 0.1m&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;0deg 64.23deg 10m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/center&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
 
 
