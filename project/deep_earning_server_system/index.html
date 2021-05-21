@@ -804,7 +804,7 @@
   
   <a class="btn btn-outline-primary btn-page-header" href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">
     
-    documents
+    Docs
   </a>
 
 
@@ -833,7 +833,7 @@
 <h2 id="introduction">Introduction</h2>
 <p>For a small research team with more than a dozen of students, several servers with 4 or 8 GPUs are necessary. However, with independent storage for each servers, datasets, codes, and environments are often duplicated across different servers, which is inefficient and troublesome when using different servers. Also, user management becomes a problem if every user needs to be setup on each of the server.</p>
 <p>To solve the above problems, a system is built with centralized network storage, server and user management, 10 GbE network, and per-server SSD cache. This can be used as a reference for small academic teams on deep learning or maybe small companies.</p>
-<p>For new users and admins, <a href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">documents</a> (in Chinese) are wrote to provide basic informations and regulations.</p>
+<p>For new users and admins, <a href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">documentation</a> (in Chinese) are wrote to provide basic informations and regulations.</p>
 <h2 id="hardware">Hardware</h2>
 <h3 id="servers-and-network">Servers and Network</h3>
 <p>Our team has 5 existing servers, each with 4 x 1080Ti and a system SSD. The problem is that every server is not able to install an extra 10 GbE Network Interface Card (NIC) since all PCIE ports are preserved for GPUs. Thus an NBASE-T switch is used to connect each server via 5 GbE USB NICs. (A more stable and affordable configuration might be using 10 GbE SFP+ switch with PCIE NIC.)</p>
@@ -897,7 +897,7 @@
     </figcaption></figure>
 <h2 id="software">Software</h2>
 <h3 id="nas">NAS</h3>
-<p>We configure our NAS with a <code>Public</code> folder (contraining the git repo of <a href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">documents</a>) for <a href="https://github.com/chengzhag/nas_directory/tree/master/datasets" target="_blank" rel="noopener">shared datasets</a> storage, and a home folder for each user, allowing users to access their environment (e.g. anaconda), codes, and datasets on every server. QNAP NAS provides an easy-to-use operating system with serveral customizable services. In our cases, it is configured with the following services:</p>
+<p>We configure our NAS with a <code>Public</code> folder (contraining the git repo of <a href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">documentation</a>) for <a href="https://github.com/chengzhag/nas_directory/tree/master/datasets" target="_blank" rel="noopener">shared datasets</a> storage, and a home folder for each user, allowing users to access their environment (e.g. anaconda), codes, and datasets on every server. QNAP NAS provides an easy-to-use operating system with serveral customizable services. In our cases, it is configured with the following services:</p>
 <ul>
 <li>NFS server: For mounting storage on server</li>
 <li>samba server: For mounting storage on client computers</li>
