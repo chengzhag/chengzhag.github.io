@@ -35,13 +35,13 @@ Supplementary notes can be added here, including [code, math, and images](https:
 &lt;h2 id=&#34;div-classpublication-headercvpr-2021divhttpcvpr2021thecvfcom&#34;&gt;&lt;a href=&#34;http://cvpr2021.thecvf.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;div class=&#34;publication-header&#34;&gt;CVPR 2021&lt;/div&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;div class=&#34;publication-header&#34;&gt;
   &lt;a href=&#34;https://chengzhag.github.io/&#34; target=&#34;_blank&#34;&gt;Cheng Zhang&lt;/a&gt;
-  &lt;sup&gt;2&lt;/sup&gt;
+  &lt;sup&gt;2&lt;/sup&gt;*
   &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://zhpcui.github.io/&#34; target=&#34;_blank&#34;&gt;Zhaopeng Cui&lt;/a&gt;
-  &lt;sup&gt;1&lt;/sup&gt;
+  &lt;sup&gt;1&lt;/sup&gt;*
   &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://www.zhangyinda.com/&#34; target=&#34;_blank&#34;&gt;Yinda Zhang&lt;/a&gt;
-  &lt;sup&gt;3&lt;/sup&gt;
+  &lt;sup&gt;3&lt;/sup&gt;*
   &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://scholar.google.com/citations?user=4y0QncgAAAAJ&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Bing Zeng&lt;/a&gt;
   &lt;sup&gt;2&lt;/sup&gt;
@@ -99,6 +99,13 @@ Supplementary notes can be added here, including [code, math, and images](https:
 Given a single color image,
 - Estimate the room layout, including object categories and poses in 3D space
 - Reconstruct mesh of individual object --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;video&#34;&gt;Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Kg0du7mFu60&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;hr&gt;
 &lt;h2 id=&#34;paper&#34;&gt;Paper&lt;/h2&gt;
 &lt;!-- ![page1](02192_页面_01.png)![page3](02192_页面_03.png)![page5](02192_页面_05.png)![page7](02192_页面_07.png) --&gt;
@@ -176,16 +183,20 @@ Given a single color image,
   Cite
   &lt;/a&gt;
   &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://github.com/pidan1231239/Implicit3DUnderstanding&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Code
+  &lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://www.youtube.com/watch?v=Kg0du7mFu60&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Video
+  &lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   arXiv
   &lt;/a&gt; 
   &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://arxiv.org/pdf/2103.06422&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   Paper
-  &lt;/a&gt;
-  &amp;nbsp; &amp;nbsp;
-  &lt;a href=&#34;https://github.com/pidan1231239/Implicit3DUnderstanding&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
-  Code
   &lt;/a&gt;
 &lt;/center&gt;
 &lt;!-- &lt;center&gt;
