@@ -188,7 +188,11 @@ Given a single color image,
   &lt;/a&gt;
   &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://www.youtube.com/watch?v=Kg0du7mFu60&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
-  Video
+  YouTube
+  &lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://www.bilibili.com/video/BV1By4y1g7c5/&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  bilibili
   &lt;/a&gt;
   &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
