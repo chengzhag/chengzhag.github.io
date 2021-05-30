@@ -182,23 +182,18 @@ Given a single color image,
   &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;/publication/im3d/cite.bib&#34;&gt;
   Cite
   &lt;/a&gt;
-  &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://github.com/pidan1231239/Implicit3DUnderstanding&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   Code
   &lt;/a&gt;
-  &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://www.youtube.com/watch?v=Kg0du7mFu60&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   YouTube
   &lt;/a&gt;
-  &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://www.bilibili.com/video/BV1By4y1g7c5/&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   bilibili
   &lt;/a&gt;
-  &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   arXiv
   &lt;/a&gt; 
-  &amp;nbsp; &amp;nbsp;
   &lt;a href=&#34;https://arxiv.org/pdf/2103.06422&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   Paper
   &lt;/a&gt;
