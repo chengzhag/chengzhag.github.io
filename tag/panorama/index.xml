@@ -182,7 +182,7 @@ Experiments demonstrate that our method outperforms existing methods on panorami
   bilibili
   &lt;/a&gt; --&gt;
   &lt;a href=&#34;https://arxiv.org/abs/2108.10743&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
-  arXiv
+  arXiv (Supp included)
   &lt;/a&gt; 
   &lt;a href=&#34;https://arxiv.org/pdf/2108.10743&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   Paper
@@ -212,7 +212,7 @@ Experiments demonstrate that our method outperforms existing methods on panorami
                /publication/dpc/pipeline_huec0f605fdb77d1432156a7253df54842_536075_3a9001872b469daf5acfd858d9ea08a5.png 760w,
                /publication/dpc/pipeline_huec0f605fdb77d1432156a7253df54842_536075_1200x1200_fit_lanczos_2.png 1200w&#34;
                src=&#34;https://chengzhag.github.io/publication/dpc/pipeline_huec0f605fdb77d1432156a7253df54842_536075_15e22d18a9d24bf68f469d791e0065ea.png&#34;
-               width=&#34;760&#34;
+               width=&#34;80%&#34;
                height=&#34;276&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
@@ -235,47 +235,12 @@ Finally, the 3D shape is recovered by feeding the latent shape code into Local I
         &lt;p class=&#39;header&#39;&gt;Input&lt;/p&gt;
       &lt;/div&gt;
       &lt;div class=&#39;column&#39;&gt;
+        &lt;p class=&#39;header&#39;&gt;Detection and Layout&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
         &lt;p class=&#39;header&#39;&gt;Reconstruction&lt;/p&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;!-- &lt;div class=&#39;row&#39; &gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure class=&#34;input&#34; &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;&#34; srcset=&#34;
-               /publication/dpc/input/input-Beechwood_1_int-00028-rgb_hu0300e1e6b130767b005c5a5d49da740c_150563_47de95cc9fa86f5441df82300db3a7fc.jpg 400w,
-               /publication/dpc/input/input-Beechwood_1_int-00028-rgb_hu0300e1e6b130767b005c5a5d49da740c_150563_e851dab3ccc027ff2d95354cec4a6bbf.jpg 760w,
-               /publication/dpc/input/input-Beechwood_1_int-00028-rgb_hu0300e1e6b130767b005c5a5d49da740c_150563_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Beechwood_1_int-00028-rgb_hu0300e1e6b130767b005c5a5d49da740c_150563_47de95cc9fa86f5441df82300db3a7fc.jpg&#34;
-               width=&#34;760&#34;
-               height=&#34;380&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          &lt;model-viewer src=&#34;dpc/recon-Beechwood_1_int-00028-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
-          &lt;/model-viewer&gt; 
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
     &lt;div class=&#39;row&#39; &gt;
       &lt;div class=&#39;column&#39;&gt;
         &lt;div id=&#34;card&#34;&gt;
@@ -293,121 +258,7 @@ Finally, the 3D shape is recovered by feeding the latent shape code into Local I
 
 
 
-&lt;figure class=&#34;input&#34; &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;&#34; srcset=&#34;
-               /publication/dpc/input/input-Beechwood_1_int-00043-rgb_hu24f9214392f024f02123570c32311c0e_163989_b7294468f56e608ab0e7b517e49e219d.jpg 400w,
-               /publication/dpc/input/input-Beechwood_1_int-00043-rgb_hu24f9214392f024f02123570c32311c0e_163989_b984fd291d7c7f28824e1192618f588c.jpg 760w,
-               /publication/dpc/input/input-Beechwood_1_int-00043-rgb_hu24f9214392f024f02123570c32311c0e_163989_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Beechwood_1_int-00043-rgb_hu24f9214392f024f02123570c32311c0e_163989_b7294468f56e608ab0e7b517e49e219d.jpg&#34;
-               width=&#34;760&#34;
-               height=&#34;380&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          &lt;model-viewer src=&#34;dpc/recon-Beechwood_1_int-00043-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
-          &lt;/model-viewer&gt; 
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt; --&gt;
-    &lt;div class=&#39;row&#39; &gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure class=&#34;input&#34; &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;&#34; srcset=&#34;
-               /publication/dpc/input/input-Beechwood_1_int-00069-rgb_hud8ce74b05597b8f53669aa2be60d40e5_181911_8dff108e413a5fcba4bca46cb81051be.jpg 400w,
-               /publication/dpc/input/input-Beechwood_1_int-00069-rgb_hud8ce74b05597b8f53669aa2be60d40e5_181911_6b414d69b0dde67c32d06be69d6a314e.jpg 760w,
-               /publication/dpc/input/input-Beechwood_1_int-00069-rgb_hud8ce74b05597b8f53669aa2be60d40e5_181911_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Beechwood_1_int-00069-rgb_hud8ce74b05597b8f53669aa2be60d40e5_181911_8dff108e413a5fcba4bca46cb81051be.jpg&#34;
-               width=&#34;760&#34;
-               height=&#34;380&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          &lt;model-viewer src=&#34;dpc/recon-Beechwood_1_int-00069-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
-          &lt;/model-viewer&gt; 
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&#39;row&#39; &gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure class=&#34;input&#34; &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;&#34; srcset=&#34;
-               /publication/dpc/input/input-Beechwood_1_int-00089-rgb_hu305647bc122b9941d0da3adc41c23000_156265_3172b1692d45cf2a18f13ac887d43b95.jpg 400w,
-               /publication/dpc/input/input-Beechwood_1_int-00089-rgb_hu305647bc122b9941d0da3adc41c23000_156265_522082302fc409ba2e640dd9a5cf5ae7.jpg 760w,
-               /publication/dpc/input/input-Beechwood_1_int-00089-rgb_hu305647bc122b9941d0da3adc41c23000_156265_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Beechwood_1_int-00089-rgb_hu305647bc122b9941d0da3adc41c23000_156265_3172b1692d45cf2a18f13ac887d43b95.jpg&#34;
-               width=&#34;760&#34;
-               height=&#34;380&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          &lt;model-viewer src=&#34;dpc/recon-Beechwood_1_int-00089-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
-          &lt;/model-viewer&gt; 
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&#39;row&#39; &gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure class=&#34;input&#34; &gt;
+&lt;figure class=&#34;pano&#34; &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;&#34; srcset=&#34;
@@ -423,14 +274,6 @@ Finally, the 3D shape is recovered by feeding the latent shape code into Local I
       &lt;/div&gt;
       &lt;div class=&#39;column&#39;&gt;
         &lt;div id=&#34;card&#34;&gt;
-          &lt;model-viewer src=&#34;dpc/recon-Beechwood_1_int-00094-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
-          &lt;/model-viewer&gt; 
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;!-- &lt;div class=&#39;row&#39; &gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
           
 
 
@@ -445,14 +288,14 @@ Finally, the 3D shape is recovered by feeding the latent shape code into Local I
 
 
 
-&lt;figure class=&#34;input&#34; &gt;
+&lt;figure class=&#34;pano&#34; &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;&#34; srcset=&#34;
-               /publication/dpc/input/input-Merom_0_int-00005-rgb_hu1fe3a910556c5f60567137df1fd96d6a_152040_96e6017b489cf93d3f946b7a51cce65e.jpg 400w,
-               /publication/dpc/input/input-Merom_0_int-00005-rgb_hu1fe3a910556c5f60567137df1fd96d6a_152040_357b959b8f933bf7f6d0c63dc95fba7a.jpg 760w,
-               /publication/dpc/input/input-Merom_0_int-00005-rgb_hu1fe3a910556c5f60567137df1fd96d6a_152040_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_0_int-00005-rgb_hu1fe3a910556c5f60567137df1fd96d6a_152040_96e6017b489cf93d3f946b7a51cce65e.jpg&#34;
+               /publication/dpc/det3d/Ours-Beechwood_1_int-00094-det3d_hu93d8c63e1c0851117f49de9289f004b4_204110_cb572b852efe688193d9476259772a36.jpg 400w,
+               /publication/dpc/det3d/Ours-Beechwood_1_int-00094-det3d_hu93d8c63e1c0851117f49de9289f004b4_204110_ccab5268094829a9bbd70507651221fc.jpg 760w,
+               /publication/dpc/det3d/Ours-Beechwood_1_int-00094-det3d_hu93d8c63e1c0851117f49de9289f004b4_204110_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/det3d/Ours-Beechwood_1_int-00094-det3d_hu93d8c63e1c0851117f49de9289f004b4_204110_cb572b852efe688193d9476259772a36.jpg&#34;
                width=&#34;760&#34;
                height=&#34;380&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -461,7 +304,7 @@ Finally, the 3D shape is recovered by feeding the latent shape code into Local I
       &lt;/div&gt;
       &lt;div class=&#39;column&#39;&gt;
         &lt;div id=&#34;card&#34;&gt;
-          &lt;model-viewer src=&#34;dpc/recon-Merom_0_int-00005-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;model-viewer src=&#34;recon/Ours-Beechwood_1_int-00094-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;629.2deg 46.87deg 9m&#34; field-of-view=&#34;30deg&#34;&gt;
           &lt;/model-viewer&gt; 
         &lt;/div&gt;
       &lt;/div&gt;
@@ -483,159 +326,7 @@ Finally, the 3D shape is recovered by feeding the latent shape code into Local I
 
 
 
-&lt;figure class=&#34;input&#34; &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;&#34; srcset=&#34;
-               /publication/dpc/input/input-Merom_0_int-00006-rgb_hue6017388b097cc7432473fc22bb3448d_156759_b963ffd4451702f6fc6f576217ec7406.jpg 400w,
-               /publication/dpc/input/input-Merom_0_int-00006-rgb_hue6017388b097cc7432473fc22bb3448d_156759_339d281d49a1ea84b0c0dede68d40578.jpg 760w,
-               /publication/dpc/input/input-Merom_0_int-00006-rgb_hue6017388b097cc7432473fc22bb3448d_156759_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_0_int-00006-rgb_hue6017388b097cc7432473fc22bb3448d_156759_b963ffd4451702f6fc6f576217ec7406.jpg&#34;
-               width=&#34;760&#34;
-               height=&#34;380&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          &lt;model-viewer src=&#34;dpc/recon-Merom_0_int-00006-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
-          &lt;/model-viewer&gt; 
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt; --&gt;
-    &lt;div class=&#39;row&#39; &gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure class=&#34;input&#34; &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;&#34; srcset=&#34;
-               /publication/dpc/input/input-Merom_1_int-00070-rgb_hu207d8c1f7d804600ffff7094538af2e3_182182_843599a3c3d2e33ed5ca9d57c120e8db.jpg 400w,
-               /publication/dpc/input/input-Merom_1_int-00070-rgb_hu207d8c1f7d804600ffff7094538af2e3_182182_9c086e7d353f83ffbd43f95fc92607f8.jpg 760w,
-               /publication/dpc/input/input-Merom_1_int-00070-rgb_hu207d8c1f7d804600ffff7094538af2e3_182182_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_1_int-00070-rgb_hu207d8c1f7d804600ffff7094538af2e3_182182_843599a3c3d2e33ed5ca9d57c120e8db.jpg&#34;
-               width=&#34;760&#34;
-               height=&#34;380&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          &lt;model-viewer src=&#34;dpc/recon-Merom_1_int-00070-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
-          &lt;/model-viewer&gt; 
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;!-- &lt;div class=&#39;row&#39; &gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure class=&#34;input&#34; &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;&#34; srcset=&#34;
-               /publication/dpc/input/input-Merom_1_int-00083-rgb_huc6a7d0787000b555b593ed7c3192309f_164445_c1dbe66d396947bdb032bc113b566c7a.jpg 400w,
-               /publication/dpc/input/input-Merom_1_int-00083-rgb_huc6a7d0787000b555b593ed7c3192309f_164445_e2bac8ab27775c154881756d9d66f878.jpg 760w,
-               /publication/dpc/input/input-Merom_1_int-00083-rgb_huc6a7d0787000b555b593ed7c3192309f_164445_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_1_int-00083-rgb_huc6a7d0787000b555b593ed7c3192309f_164445_c1dbe66d396947bdb032bc113b566c7a.jpg&#34;
-               width=&#34;760&#34;
-               height=&#34;380&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          &lt;model-viewer src=&#34;dpc/recon-Merom_1_int-00083-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
-          &lt;/model-viewer&gt; 
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&#39;row&#39; &gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure class=&#34;input&#34; &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;&#34; srcset=&#34;
-               /publication/dpc/input/input-Merom_1_int-00085-rgb_huf69567b28b626721b3d77d25db9d3043_174760_bcd60e2c5e35b2d5d06f44c73440b878.jpg 400w,
-               /publication/dpc/input/input-Merom_1_int-00085-rgb_huf69567b28b626721b3d77d25db9d3043_174760_c34fc370ae1ff55d654fb474241c31b7.jpg 760w,
-               /publication/dpc/input/input-Merom_1_int-00085-rgb_huf69567b28b626721b3d77d25db9d3043_174760_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_1_int-00085-rgb_huf69567b28b626721b3d77d25db9d3043_174760_bcd60e2c5e35b2d5d06f44c73440b878.jpg&#34;
-               width=&#34;760&#34;
-               height=&#34;380&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          &lt;model-viewer src=&#34;dpc/recon-Merom_1_int-00085-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
-          &lt;/model-viewer&gt; 
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt; --&gt;
-    &lt;div class=&#39;row&#39; &gt;
-      &lt;div class=&#39;column&#39;&gt;
-        &lt;div id=&#34;card&#34;&gt;
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure class=&#34;input&#34; &gt;
+&lt;figure class=&#34;pano&#34; &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;&#34; srcset=&#34;
@@ -651,12 +342,42 @@ Finally, the 3D shape is recovered by feeding the latent shape code into Local I
       &lt;/div&gt;
       &lt;div class=&#39;column&#39;&gt;
         &lt;div id=&#34;card&#34;&gt;
-          &lt;model-viewer src=&#34;dpc/recon-Merom_1_int-00086-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;pano&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/det3d/Ours-Merom_1_int-00086-det3d_hu272b7a6012d195e7c1a626eed54ff38a_250774_733bae25648019cb6a9e9f3eb7eb755d.jpg 400w,
+               /publication/dpc/det3d/Ours-Merom_1_int-00086-det3d_hu272b7a6012d195e7c1a626eed54ff38a_250774_08fed0639863ef90d2033f378163d482.jpg 760w,
+               /publication/dpc/det3d/Ours-Merom_1_int-00086-det3d_hu272b7a6012d195e7c1a626eed54ff38a_250774_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/det3d/Ours-Merom_1_int-00086-det3d_hu272b7a6012d195e7c1a626eed54ff38a_250774_733bae25648019cb6a9e9f3eb7eb755d.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;recon/Ours-Merom_1_int-00086-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;540.6deg 40.78deg 11m&#34; field-of-view=&#34;30deg&#34;&gt;
           &lt;/model-viewer&gt; 
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;!-- &lt;div class=&#39;row&#39; &gt;
+    &lt;div class=&#39;row&#39; &gt;
       &lt;div class=&#39;column&#39;&gt;
         &lt;div id=&#34;card&#34;&gt;
           
@@ -673,14 +394,14 @@ Finally, the 3D shape is recovered by feeding the latent shape code into Local I
 
 
 
-&lt;figure class=&#34;input&#34; &gt;
+&lt;figure class=&#34;pano&#34; &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;&#34; srcset=&#34;
-               /publication/dpc/input/input-Merom_1_int-00097-rgb_hub5d9efaccae572ca793347932fd5cab3_163522_458b2ed6ca7a231635f8950fd064b028.jpg 400w,
-               /publication/dpc/input/input-Merom_1_int-00097-rgb_hub5d9efaccae572ca793347932fd5cab3_163522_49794178b46606d6adfe25d00a8c2782.jpg 760w,
-               /publication/dpc/input/input-Merom_1_int-00097-rgb_hub5d9efaccae572ca793347932fd5cab3_163522_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_1_int-00097-rgb_hub5d9efaccae572ca793347932fd5cab3_163522_458b2ed6ca7a231635f8950fd064b028.jpg&#34;
+               /publication/dpc/input/input-Beechwood_1_int-00089-rgb_hu305647bc122b9941d0da3adc41c23000_156265_3172b1692d45cf2a18f13ac887d43b95.jpg 400w,
+               /publication/dpc/input/input-Beechwood_1_int-00089-rgb_hu305647bc122b9941d0da3adc41c23000_156265_522082302fc409ba2e640dd9a5cf5ae7.jpg 760w,
+               /publication/dpc/input/input-Beechwood_1_int-00089-rgb_hu305647bc122b9941d0da3adc41c23000_156265_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Beechwood_1_int-00089-rgb_hu305647bc122b9941d0da3adc41c23000_156265_3172b1692d45cf2a18f13ac887d43b95.jpg&#34;
                width=&#34;760&#34;
                height=&#34;380&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -689,11 +410,177 @@ Finally, the 3D shape is recovered by feeding the latent shape code into Local I
       &lt;/div&gt;
       &lt;div class=&#39;column&#39;&gt;
         &lt;div id=&#34;card&#34;&gt;
-          &lt;model-viewer src=&#34;dpc/recon-Merom_1_int-00097-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;pano&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/det3d/Ours-Beechwood_1_int-00089-det3d_hu82c450f009c646843927e92cb95076a4_230297_f83a0ce9069cb9340e04a0dfbbd9b02c.jpg 400w,
+               /publication/dpc/det3d/Ours-Beechwood_1_int-00089-det3d_hu82c450f009c646843927e92cb95076a4_230297_e5f37aa71926033bfb8232a34c021026.jpg 760w,
+               /publication/dpc/det3d/Ours-Beechwood_1_int-00089-det3d_hu82c450f009c646843927e92cb95076a4_230297_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/det3d/Ours-Beechwood_1_int-00089-det3d_hu82c450f009c646843927e92cb95076a4_230297_f83a0ce9069cb9340e04a0dfbbd9b02c.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;recon/Ours-Beechwood_1_int-00089-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;540.6deg 40.78deg 9m&#34; field-of-view=&#34;30deg&#34;&gt;
           &lt;/model-viewer&gt; 
         &lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt; --&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;pano&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Merom_1_int-00070-rgb_hu207d8c1f7d804600ffff7094538af2e3_182182_843599a3c3d2e33ed5ca9d57c120e8db.jpg 400w,
+               /publication/dpc/input/input-Merom_1_int-00070-rgb_hu207d8c1f7d804600ffff7094538af2e3_182182_9c086e7d353f83ffbd43f95fc92607f8.jpg 760w,
+               /publication/dpc/input/input-Merom_1_int-00070-rgb_hu207d8c1f7d804600ffff7094538af2e3_182182_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_1_int-00070-rgb_hu207d8c1f7d804600ffff7094538af2e3_182182_843599a3c3d2e33ed5ca9d57c120e8db.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;pano&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/det3d/Ours-Merom_1_int-00070-det3d_hu1bb63e02eb2453effdda2d158667711a_279806_f60fa41ecf1d18ffaabcda8ccb56c936.jpg 400w,
+               /publication/dpc/det3d/Ours-Merom_1_int-00070-det3d_hu1bb63e02eb2453effdda2d158667711a_279806_94fd2432bedc3f166b999a635e9ae935.jpg 760w,
+               /publication/dpc/det3d/Ours-Merom_1_int-00070-det3d_hu1bb63e02eb2453effdda2d158667711a_279806_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/det3d/Ours-Merom_1_int-00070-det3d_hu1bb63e02eb2453effdda2d158667711a_279806_f60fa41ecf1d18ffaabcda8ccb56c936.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;recon/Ours-Merom_1_int-00070-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;809.2deg 39.67deg 9m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;pano&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Beechwood_1_int-00069-rgb_hud8ce74b05597b8f53669aa2be60d40e5_181911_8dff108e413a5fcba4bca46cb81051be.jpg 400w,
+               /publication/dpc/input/input-Beechwood_1_int-00069-rgb_hud8ce74b05597b8f53669aa2be60d40e5_181911_6b414d69b0dde67c32d06be69d6a314e.jpg 760w,
+               /publication/dpc/input/input-Beechwood_1_int-00069-rgb_hud8ce74b05597b8f53669aa2be60d40e5_181911_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Beechwood_1_int-00069-rgb_hud8ce74b05597b8f53669aa2be60d40e5_181911_8dff108e413a5fcba4bca46cb81051be.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;pano&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/det3d/Ours-Beechwood_1_int-00069-det3d_huf9f7a7dbd3c4969d7a0a7461b516f8cf_276890_d2118c51c9d8e083cd0ab3b2982f097b.jpg 400w,
+               /publication/dpc/det3d/Ours-Beechwood_1_int-00069-det3d_huf9f7a7dbd3c4969d7a0a7461b516f8cf_276890_1a0d2ca385f863027ab99c54b98105a8.jpg 760w,
+               /publication/dpc/det3d/Ours-Beechwood_1_int-00069-det3d_huf9f7a7dbd3c4969d7a0a7461b516f8cf_276890_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/det3d/Ours-Beechwood_1_int-00069-det3d_huf9f7a7dbd3c4969d7a0a7461b516f8cf_276890_d2118c51c9d8e083cd0ab3b2982f097b.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;recon/Ours-Beechwood_1_int-00069-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;540.6deg 40.78deg 9m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/center&gt;
 &lt;hr&gt;
@@ -720,7 +607,7 @@ Finally, the 3D shape is recovered by feeding the latent shape code into Local I
                /publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_3c6d910f22fa6ff7ad1cbba56831ee80.png 760w,
                /publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_1200x1200_fit_lanczos_2.png 1200w&#34;
                src=&#34;https://chengzhag.github.io/publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_7b6f8801e7d104730ba955cd8f31dd38.png&#34;
-               width=&#34;671&#34;
+               width=&#34;80%&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
