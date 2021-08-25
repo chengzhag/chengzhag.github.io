@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Panorama | Cheng Zhang</title>
+    <link>https://chengzhag.github.io/tag/panorama/</link>
+      <atom:link href="https://chengzhag.github.io/tag/panorama/index.xml" rel="self" type="application/rss+xml" />
+    <description>Panorama</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Panorama</title>
+      <link>https://chengzhag.github.io/tag/panorama/</link>
+    </image>
+    
+    <item>
+      <title>DeepPanoContext: Panoramic 3D Scene Understanding with Holistic Scene Context Graph and Relation-based Optimization</title>
+      <link>https://chengzhag.github.io/publication/dpc/</link>
+      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/publication/dpc/</guid>
+      <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h2 id=&#34;div-classpublication-headericcv-2021-oraldivhttpiccv2021thecvfcomhome&#34;&gt;&lt;a href=&#34;http://iccv2021.thecvf.com/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;div class=&#34;publication-header&#34;&gt;ICCV 2021 Oral&lt;/div&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&#34;publication-header&#34;&gt;
+  &lt;a href=&#34;https://chengzhag.github.io/&#34; target=&#34;_blank&#34;&gt;Cheng Zhang&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://zhpcui.github.io/&#34; target=&#34;_blank&#34;&gt;Zhaopeng Cui&lt;/a&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://github.com/MurrayC7&#34; target=&#34;_blank&#34;&gt;Cai Chen&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;http://www.liushuaicheng.org/&#34; target=&#34;_blank&#34;&gt;Shuaicheng Liu&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://scholar.google.com/citations?user=4y0QncgAAAAJ&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Bing Zeng&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;http://www.cad.zju.edu.cn/home/bao/&#34; target=&#34;_blank&#34;&gt;Hujun Bao&lt;/a&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://www.zhangyinda.com/&#34; target=&#34;_blank&#34;&gt;Yinda Zhang&lt;/a&gt;
+  &lt;sup&gt;3&lt;/sup&gt;
+&lt;/div&gt;
+&lt;div class=&#34;publication-header&#34;&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &lt;a href=&#34;https://en.uestc.edu.cn/&#34; target=&#34;_blank&#34;&gt;University of Electronic Science and Technology of China&lt;/a&gt; 
+  &lt;!-- &amp;nbsp; &amp;nbsp; --&gt;
+  &lt;br /&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
+  &lt;a href=&#34;http://www.cad.zju.edu.cn/english.html&#34; target=&#34;_blank&#34;&gt;State Key Lab of CAD &amp; CG, Zhejiang University&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;sup&gt;3&lt;/sup&gt;
+  &lt;a href=&#34;https://www.ai.google/&#34; target=&#34;_blank&#34;&gt;Google&lt;/a&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/featured_hu87962e9bdc80dddf9cc0d591ccc9df52_507580_17920d1349d9dfa3237b98428d84bc96.png 400w,
+               /publication/dpc/featured_hu87962e9bdc80dddf9cc0d591ccc9df52_507580_1cb099382ce8cb5246db5683c0e94613.png 760w,
+               /publication/dpc/featured_hu87962e9bdc80dddf9cc0d591ccc9df52_507580_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/featured_hu87962e9bdc80dddf9cc0d591ccc9df52_507580_17920d1349d9dfa3237b98428d84bc96.png&#34;
+               width=&#34;760&#34;
+               height=&#34;379&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Panorama images have a much larger field-of-view thus naturally encode enriched scene context information compared to standard perspective images, which however is not well exploited in the previous scene understanding methods.
+In this paper, we propose a novel method for panoramic 3D scene understanding which recovers the 3D room layout and the shape, pose, position, and semantic category for each object from a single full-view panorama image.
+In order to fully utilize the rich context information, we design a novel graph neural network based context model to predict the relationship among objects and room layout, and a differentiable relationship-based optimization module to optimize object arrangement with well-designed objective functions on-the-fly.
+Realizing the existing data are either with incomplete ground truth or overly-simplified scene, we present a new synthetic dataset with good diversity in room layout and furniture placement, and realistic image quality for total panoramic 3D scene understanding.
+Experiments demonstrate that our method outperforms existing methods on panoramic scene understanding in terms of both geometry accuracy and object arrangement.&lt;/p&gt;
+&lt;!-- ---
+## Video
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Kg0du7mFu60&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+ --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;paper&#34;&gt;Paper&lt;/h2&gt;
+&lt;center&gt;
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_01.png&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_01_hu5f1572c67a6f7cc7201698862c58c249_352891_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;07881_页面_01.png&#34; width=&#34;134&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_03.png&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_03_hu35a9a6da8ea7856690f21d9c68501222_750444_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;07881_页面_03.png&#34; width=&#34;134&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_07.png&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_07_hu092b48727c0cf5fdb7020edb7dde2be4_8126158_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;07881_页面_07.png&#34; width=&#34;134&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_08.png&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_08_hu5f1572c67a6f7cc7201698862c58c249_389067_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;07881_页面_08.png&#34; width=&#34;134&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;center&gt;
+  &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;/publication/dpc/cite.bib&#34;&gt;
+  Cite
+  &lt;/a&gt;
+  &lt;!-- &lt;a href=&#34;https://github.com/pidan1231239/Implicit3DUnderstanding&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Code
+  &lt;/a&gt;
+  &lt;a href=&#34;https://www.youtube.com/watch?v=Kg0du7mFu60&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  YouTube
+  &lt;/a&gt;
+  &lt;a href=&#34;https://www.bilibili.com/video/BV1By4y1g7c5/&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  bilibili
+  &lt;/a&gt; --&gt;
+  &lt;a href=&#34;https://arxiv.org/abs/2108.10743&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  arXiv
+  &lt;/a&gt; 
+  &lt;a href=&#34;https://arxiv.org/pdf/2108.10743&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Paper
+  &lt;/a&gt;
+&lt;/center&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-our-proposed-pipeline-we-first-do-a-bottom-up-initialization-with-several-sota-methods-and-provide-various-features-including-geometric-semantic-and-appearance-features-of-objects-and-layout-these-are-then-fed-into-our-proposed-rgcn-network-to-refine-the-initial-object-pose-and-estimate-the-relation-among-objects-and-layout-a-relation-optimization-is-adopted-afterward-to-further-adjust-the-3d-object-arrangement-to-align-with-the-2d-observation-conform-with-the-predicted-relation-and-resolve-physical-collision&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Our proposed pipeline. We first do a bottom-up initialization with several SoTA methods and provide various features, including geometric, semantic, and appearance features of objects and layout. These are then fed into our proposed RGCN network to refine the initial object pose and estimate the relation among objects and layout. A relation optimization is adopted afterward to further adjust the 3d object arrangement to align with the 2D observation, conform with the predicted relation, and resolve physical collision.&#34; srcset=&#34;
+               /publication/dpc/pipeline_huec0f605fdb77d1432156a7253df54842_536075_15e22d18a9d24bf68f469d791e0065ea.png 400w,
+               /publication/dpc/pipeline_huec0f605fdb77d1432156a7253df54842_536075_3a9001872b469daf5acfd858d9ea08a5.png 760w,
+               /publication/dpc/pipeline_huec0f605fdb77d1432156a7253df54842_536075_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/pipeline_huec0f605fdb77d1432156a7253df54842_536075_15e22d18a9d24bf68f469d791e0065ea.png&#34;
+               width=&#34;760&#34;
+               height=&#34;276&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Our proposed pipeline. We first do a bottom-up initialization with several SoTA methods and provide various features, including geometric, semantic, and appearance features of objects and layout. These are then fed into our proposed RGCN network to refine the initial object pose and estimate the relation among objects and layout. A relation optimization is adopted afterward to further adjust the 3d object arrangement to align with the 2D observation, conform with the predicted relation, and resolve physical collision.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;We first extract the whole-room layout under Manhattan World assumption and the initial object estimates including locations, sizes, poses, semantic categories, and latent shape codes.
+These, along with extracted features, are then fed into the Relation-based Graph Convolutional Network (RGCN) for refinement and to estimate relations among objects and layout simultaneously.
+Then, a differentiable Relation Optimization (RO) based on physical violation, observation, and relation is proposed to resolve collisions and adjust object poses.
+Finally, the 3D shape is recovered by feeding the latent shape code into Local Implicit Deep Function (LDIF), and combined with object pose and room layout to achieve total scene understanding.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;interactive-results&#34;&gt;Interactive Results&lt;/h2&gt;
+&lt;!-- model-viewer css --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;model-viewer.css&#34;&gt;
+&lt;!-- Import the component --&gt;
+&lt;script type=&#34;module&#34; src=&#34;https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js&#34;&gt;&lt;/script&gt;
+&lt;center&gt;
+  &lt;div class=&#39;container&#39;&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;p class=&#39;header&#39;&gt;Input&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;p class=&#39;header&#39;&gt;Reconstruction&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Beechwood_1_int-00028-rgb_hu0300e1e6b130767b005c5a5d49da740c_150563_47de95cc9fa86f5441df82300db3a7fc.jpg 400w,
+               /publication/dpc/input/input-Beechwood_1_int-00028-rgb_hu0300e1e6b130767b005c5a5d49da740c_150563_e851dab3ccc027ff2d95354cec4a6bbf.jpg 760w,
+               /publication/dpc/input/input-Beechwood_1_int-00028-rgb_hu0300e1e6b130767b005c5a5d49da740c_150563_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Beechwood_1_int-00028-rgb_hu0300e1e6b130767b005c5a5d49da740c_150563_47de95cc9fa86f5441df82300db3a7fc.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;dpc/recon-Beechwood_1_int-00028-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Beechwood_1_int-00043-rgb_hu24f9214392f024f02123570c32311c0e_163989_b7294468f56e608ab0e7b517e49e219d.jpg 400w,
+               /publication/dpc/input/input-Beechwood_1_int-00043-rgb_hu24f9214392f024f02123570c32311c0e_163989_b984fd291d7c7f28824e1192618f588c.jpg 760w,
+               /publication/dpc/input/input-Beechwood_1_int-00043-rgb_hu24f9214392f024f02123570c32311c0e_163989_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Beechwood_1_int-00043-rgb_hu24f9214392f024f02123570c32311c0e_163989_b7294468f56e608ab0e7b517e49e219d.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;dpc/recon-Beechwood_1_int-00043-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt; --&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Beechwood_1_int-00069-rgb_hud8ce74b05597b8f53669aa2be60d40e5_181911_8dff108e413a5fcba4bca46cb81051be.jpg 400w,
+               /publication/dpc/input/input-Beechwood_1_int-00069-rgb_hud8ce74b05597b8f53669aa2be60d40e5_181911_6b414d69b0dde67c32d06be69d6a314e.jpg 760w,
+               /publication/dpc/input/input-Beechwood_1_int-00069-rgb_hud8ce74b05597b8f53669aa2be60d40e5_181911_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Beechwood_1_int-00069-rgb_hud8ce74b05597b8f53669aa2be60d40e5_181911_8dff108e413a5fcba4bca46cb81051be.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;dpc/recon-Beechwood_1_int-00069-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Beechwood_1_int-00089-rgb_hu305647bc122b9941d0da3adc41c23000_156265_3172b1692d45cf2a18f13ac887d43b95.jpg 400w,
+               /publication/dpc/input/input-Beechwood_1_int-00089-rgb_hu305647bc122b9941d0da3adc41c23000_156265_522082302fc409ba2e640dd9a5cf5ae7.jpg 760w,
+               /publication/dpc/input/input-Beechwood_1_int-00089-rgb_hu305647bc122b9941d0da3adc41c23000_156265_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Beechwood_1_int-00089-rgb_hu305647bc122b9941d0da3adc41c23000_156265_3172b1692d45cf2a18f13ac887d43b95.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;dpc/recon-Beechwood_1_int-00089-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Beechwood_1_int-00094-rgb_hu1f1421bf608bff761f5cad7df635da0a_142383_f0451d9b53e541db5377fa872d1f53ee.jpg 400w,
+               /publication/dpc/input/input-Beechwood_1_int-00094-rgb_hu1f1421bf608bff761f5cad7df635da0a_142383_43fd2df5f15e528c1a7e75dc37bb8680.jpg 760w,
+               /publication/dpc/input/input-Beechwood_1_int-00094-rgb_hu1f1421bf608bff761f5cad7df635da0a_142383_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Beechwood_1_int-00094-rgb_hu1f1421bf608bff761f5cad7df635da0a_142383_f0451d9b53e541db5377fa872d1f53ee.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;dpc/recon-Beechwood_1_int-00094-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Merom_0_int-00005-rgb_hu1fe3a910556c5f60567137df1fd96d6a_152040_96e6017b489cf93d3f946b7a51cce65e.jpg 400w,
+               /publication/dpc/input/input-Merom_0_int-00005-rgb_hu1fe3a910556c5f60567137df1fd96d6a_152040_357b959b8f933bf7f6d0c63dc95fba7a.jpg 760w,
+               /publication/dpc/input/input-Merom_0_int-00005-rgb_hu1fe3a910556c5f60567137df1fd96d6a_152040_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_0_int-00005-rgb_hu1fe3a910556c5f60567137df1fd96d6a_152040_96e6017b489cf93d3f946b7a51cce65e.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;dpc/recon-Merom_0_int-00005-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Merom_0_int-00006-rgb_hue6017388b097cc7432473fc22bb3448d_156759_b963ffd4451702f6fc6f576217ec7406.jpg 400w,
+               /publication/dpc/input/input-Merom_0_int-00006-rgb_hue6017388b097cc7432473fc22bb3448d_156759_339d281d49a1ea84b0c0dede68d40578.jpg 760w,
+               /publication/dpc/input/input-Merom_0_int-00006-rgb_hue6017388b097cc7432473fc22bb3448d_156759_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_0_int-00006-rgb_hue6017388b097cc7432473fc22bb3448d_156759_b963ffd4451702f6fc6f576217ec7406.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;dpc/recon-Merom_0_int-00006-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt; --&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Merom_1_int-00070-rgb_hu207d8c1f7d804600ffff7094538af2e3_182182_843599a3c3d2e33ed5ca9d57c120e8db.jpg 400w,
+               /publication/dpc/input/input-Merom_1_int-00070-rgb_hu207d8c1f7d804600ffff7094538af2e3_182182_9c086e7d353f83ffbd43f95fc92607f8.jpg 760w,
+               /publication/dpc/input/input-Merom_1_int-00070-rgb_hu207d8c1f7d804600ffff7094538af2e3_182182_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_1_int-00070-rgb_hu207d8c1f7d804600ffff7094538af2e3_182182_843599a3c3d2e33ed5ca9d57c120e8db.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;dpc/recon-Merom_1_int-00070-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Merom_1_int-00083-rgb_huc6a7d0787000b555b593ed7c3192309f_164445_c1dbe66d396947bdb032bc113b566c7a.jpg 400w,
+               /publication/dpc/input/input-Merom_1_int-00083-rgb_huc6a7d0787000b555b593ed7c3192309f_164445_e2bac8ab27775c154881756d9d66f878.jpg 760w,
+               /publication/dpc/input/input-Merom_1_int-00083-rgb_huc6a7d0787000b555b593ed7c3192309f_164445_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_1_int-00083-rgb_huc6a7d0787000b555b593ed7c3192309f_164445_c1dbe66d396947bdb032bc113b566c7a.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;dpc/recon-Merom_1_int-00083-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Merom_1_int-00085-rgb_huf69567b28b626721b3d77d25db9d3043_174760_bcd60e2c5e35b2d5d06f44c73440b878.jpg 400w,
+               /publication/dpc/input/input-Merom_1_int-00085-rgb_huf69567b28b626721b3d77d25db9d3043_174760_c34fc370ae1ff55d654fb474241c31b7.jpg 760w,
+               /publication/dpc/input/input-Merom_1_int-00085-rgb_huf69567b28b626721b3d77d25db9d3043_174760_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_1_int-00085-rgb_huf69567b28b626721b3d77d25db9d3043_174760_bcd60e2c5e35b2d5d06f44c73440b878.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;dpc/recon-Merom_1_int-00085-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt; --&gt;
+    &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Merom_1_int-00086-rgb_hueefa868c6405496793cc8591e2bea1ad_169365_09e12c344faeedf315c6f95a8b72e285.jpg 400w,
+               /publication/dpc/input/input-Merom_1_int-00086-rgb_hueefa868c6405496793cc8591e2bea1ad_169365_851da08d12f8552ee8f5cac12e45c4fa.jpg 760w,
+               /publication/dpc/input/input-Merom_1_int-00086-rgb_hueefa868c6405496793cc8591e2bea1ad_169365_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_1_int-00086-rgb_hueefa868c6405496793cc8591e2bea1ad_169365_09e12c344faeedf315c6f95a8b72e285.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;dpc/recon-Merom_1_int-00086-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- &lt;div class=&#39;row&#39; &gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class=&#34;input&#34; &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/dpc/input/input-Merom_1_int-00097-rgb_hub5d9efaccae572ca793347932fd5cab3_163522_458b2ed6ca7a231635f8950fd064b028.jpg 400w,
+               /publication/dpc/input/input-Merom_1_int-00097-rgb_hub5d9efaccae572ca793347932fd5cab3_163522_49794178b46606d6adfe25d00a8c2782.jpg 760w,
+               /publication/dpc/input/input-Merom_1_int-00097-rgb_hub5d9efaccae572ca793347932fd5cab3_163522_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/input/input-Merom_1_int-00097-rgb_hub5d9efaccae572ca793347932fd5cab3_163522_458b2ed6ca7a231635f8950fd064b028.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#39;column&#39;&gt;
+        &lt;div id=&#34;card&#34;&gt;
+          &lt;model-viewer src=&#34;dpc/recon-Merom_1_int-00097-rgb.glb&#34; interaction-prompt=&#34;when-focused&#34; camera-controls exposure=&#34;0.72&#34; shadow-intensity=&#34;2.7&#34; shadow-softness=&#34;0.84&#34; min-camera-orbit=&#34;auto auto auto&#34; max-camera-orbit=&#34;auto auto 11.89m&#34; camera-orbit=&#34;299.1deg 68.47deg 9.413m&#34; field-of-view=&#34;30deg&#34;&gt;
+          &lt;/model-viewer&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt; --&gt;
+  &lt;/div&gt;
+&lt;/center&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-qualitative-comparison-on-3d-object-detection-and-scene-reconstruction-we-compare-object-detection-and-compare-scene-reconstruction-results-with-total3d-pers-and-im3d-pers-in-both-birds-eye-view-and-panorama-format&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Qualitative comparison on 3D object detection and scene reconstruction. We compare object detection and compare scene reconstruction results with Total3D-Pers and Im3D-Pers in both bird&amp;#39;s eye view and panorama format.&#34; srcset=&#34;
+               /publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_7b6f8801e7d104730ba955cd8f31dd38.png 400w,
+               /publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_3c6d910f22fa6ff7ad1cbba56831ee80.png 760w,
+               /publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_7b6f8801e7d104730ba955cd8f31dd38.png&#34;
+               width=&#34;671&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Qualitative comparison on 3D object detection and scene reconstruction. We compare object detection and compare scene reconstruction results with Total3D-Pers and Im3D-Pers in both bird&amp;rsquo;s eye view and panorama format.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
