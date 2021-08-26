@@ -190,34 +190,16 @@ Experiments demonstrate that our method outperforms existing methods on panorami
 &lt;/center&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-our-proposed-pipeline-we-first-do-a-bottom-up-initialization-with-several-sota-methods-and-provide-various-features-including-geometric-semantic-and-appearance-features-of-objects-and-layout-these-are-then-fed-into-our-proposed-rgcn-network-to-refine-the-initial-object-pose-and-estimate-the-relation-among-objects-and-layout-a-relation-optimization-is-adopted-afterward-to-further-adjust-the-3d-object-arrangement-to-align-with-the-2d-observation-conform-with-the-predicted-relation-and-resolve-physical-collision&#34;&gt;
+&lt;figure&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
+    &lt;div class=&#34;w-100&#34;&gt;
         &lt;img alt=&#34;Our proposed pipeline. We first do a bottom-up initialization with several SoTA methods and provide various features, including geometric, semantic, and appearance features of objects and layout. These are then fed into our proposed RGCN network to refine the initial object pose and estimate the relation among objects and layout. A relation optimization is adopted afterward to further adjust the 3d object arrangement to align with the 2D observation, conform with the predicted relation, and resolve physical collision.&#34; srcset=&#34;
-               /publication/dpc/pipeline_huec0f605fdb77d1432156a7253df54842_536075_15e22d18a9d24bf68f469d791e0065ea.png 400w,
-               /publication/dpc/pipeline_huec0f605fdb77d1432156a7253df54842_536075_3a9001872b469daf5acfd858d9ea08a5.png 760w,
-               /publication/dpc/pipeline_huec0f605fdb77d1432156a7253df54842_536075_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/pipeline_huec0f605fdb77d1432156a7253df54842_536075_15e22d18a9d24bf68f469d791e0065ea.png&#34;
-               width=&#34;90%&#34;
-               height=&#34;276&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption&gt;
+               pipeline_anim.gif&#34; src=&#34;pipeline_anim.gif&#34; width=&#34;90%&#34; loading=&#34;lazy&#34; data-zoomable=&#34;&#34; class=&#34;medium-zoom-image&#34;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;figcaption&gt;
       Our proposed pipeline. We first do a bottom-up initialization with several SoTA methods and provide various features, including geometric, semantic, and appearance features of objects and layout. These are then fed into our proposed RGCN network to refine the initial object pose and estimate the relation among objects and layout. A relation optimization is adopted afterward to further adjust the 3d object arrangement to align with the 2D observation, conform with the predicted relation, and resolve physical collision.
-    &lt;/figcaption&gt;&lt;/figure&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;We first extract the whole-room layout under Manhattan World assumption and the initial object estimates including locations, sizes, poses, semantic categories, and latent shape codes.
 These, along with extracted features, are then fed into the Relation-based Graph Convolutional Network (RGCN) for refinement and to estimate relations among objects and layout simultaneously.
 Then, a differentiable Relation Optimization (RO) based on physical violation, observation, and relation is proposed to resolve collisions and adjust object poses.
