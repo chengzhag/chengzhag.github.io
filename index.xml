@@ -99,14 +99,13 @@ In this paper, we propose a novel method for panoramic 3D scene understanding wh
 In order to fully utilize the rich context information, we design a novel graph neural network based context model to predict the relationship among objects and room layout, and a differentiable relationship-based optimization module to optimize object arrangement with well-designed objective functions on-the-fly.
 Realizing the existing data are either with incomplete ground truth or overly-simplified scene, we present a new synthetic dataset with good diversity in room layout and furniture placement, and realistic image quality for total panoramic 3D scene understanding.
 Experiments demonstrate that our method outperforms existing methods on panoramic scene understanding in terms of both geometry accuracy and object arrangement.&lt;/p&gt;
-&lt;!-- ---
-## Video
-
+&lt;hr&gt;
+&lt;h2 id=&#34;video&#34;&gt;Video&lt;/h2&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/Kg0du7mFu60&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/mO1EtUHnX4w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
- --&gt;
+
 &lt;hr&gt;
 &lt;h2 id=&#34;paper&#34;&gt;Paper&lt;/h2&gt;
 &lt;center&gt;
@@ -175,12 +174,12 @@ Experiments demonstrate that our method outperforms existing methods on panorami
   &lt;a href=&#34;https://github.com/chengzhag/DeepPanoContext&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   Code
   &lt;/a&gt;
-  &lt;!-- &lt;a href=&#34;https://www.youtube.com/watch?v=Kg0du7mFu60&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  &lt;a href=&#34;https://www.youtube.com/watch?v=mO1EtUHnX4w&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   YouTube
   &lt;/a&gt;
-  &lt;a href=&#34;https://www.bilibili.com/video/BV1By4y1g7c5/&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  &lt;a href=&#34;https://www.bilibili.com/video/BV1JU4y1w7Yu/&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   bilibili
-  &lt;/a&gt; --&gt;
+  &lt;/a&gt;
   &lt;a href=&#34;https://arxiv.org/abs/2108.10743&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   arXiv (Supp included)
   &lt;/a&gt; 
