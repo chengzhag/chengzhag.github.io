@@ -5,12 +5,326 @@
     <link>https://chengzhag.github.io/publication-type/1/</link>
       <atom:link href="https://chengzhag.github.io/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
     <description>1</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 11 Apr 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>1</title>
       <link>https://chengzhag.github.io/publication-type/1/</link>
     </image>
+    
+    <item>
+      <title>Taming Stable Diffusion for Text to 360° Panorama Image Generation</title>
+      <link>https://chengzhag.github.io/publication/panfusion/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/publication/panfusion/</guid>
+      <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h2 id=&#34;div-classpublication-headercvpr-2024-hightlightdivhttpscvprthecvfcomconferences2024&#34;&gt;&lt;a href=&#34;https://cvpr.thecvf.com/Conferences/2024&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;div class=&#34;publication-header&#34;&gt;CVPR 2024 Hightlight&lt;/div&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&#34;publication-header&#34;&gt;
+  &lt;a href=&#34;https://chengzhag.github.io/&#34; target=&#34;_blank&#34;&gt;Cheng Zhang&lt;/a&gt;
+  &lt;sup&gt;1,3&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://wuqianyi.top&#34; target=&#34;_blank&#34;&gt;Qianyi Wu&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://www.researchgate.net/profile/Camilo-Cruz-Gambardella&#34; target=&#34;_blank&#34;&gt;Camilo Cruz Gambardella&lt;/a&gt;
+  &lt;sup&gt;1,3&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://xiaoshuihuang.github.io&#34; target=&#34;_blank&#34;&gt;Xiaoshui Huang&lt;/a&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
+  &lt;!-- &amp;nbsp; &amp;nbsp; --&gt;
+  &lt;br /&gt;
+  &lt;a href=&#34;https://dinhphung.ml&#34; target=&#34;_blank&#34;&gt;Dinh Phung&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://wlouyang.github.io&#34; target=&#34;_blank&#34;&gt;Wanli Ouyang&lt;/a&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://jianfei-cai.github.io&#34; target=&#34;_blank&#34;&gt;Jianfei Cai&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+&lt;/div&gt;
+&lt;div class=&#34;publication-header&#34;&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &lt;a href=&#34;https://www.monash.edu&#34; target=&#34;_blank&#34;&gt;Monash University&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;!-- &lt;br /&gt; --&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
+  &lt;a href=&#34;https://www.shlab.org.cn&#34; target=&#34;_blank&#34;&gt;Shanghai AI Laboratory&lt;/a&gt; 
+  &lt;!-- &lt;br /&gt; --&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;sup&gt;3&lt;/sup&gt;
+  &lt;a href=&#34;https://building4pointzero.org&#34; target=&#34;_blank&#34;&gt;Building 4.0 CRC, Caulfield East, Victoria, Australia&lt;/a&gt;
+&lt;/div&gt;
+&lt;center&gt;
+  &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;/publication/im3d/cite.bib&#34;&gt;
+  Cite
+  &lt;/a&gt;
+  &lt;a href=&#34;https://github.com/chengzhag/PanFusion&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Code
+  &lt;/a&gt;
+  &lt;!-- &lt;a href=&#34;https://www.youtube.com/watch?v=Kg0du7mFu60&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  YouTube
+  &lt;/a&gt;
+  &lt;a href=&#34;https://www.bilibili.com/video/BV1By4y1g7c5/&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  bilibili
+  &lt;/a&gt; --&gt;
+  &lt;a href=&#34;&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  arXiv
+  &lt;/a&gt; 
+  &lt;a href=&#34;&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Paper
+  &lt;/a&gt;
+&lt;/center&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/panfusion/teaser_hu23e90f8fc396241f8530cb1ea731a87a_1860576_0928c4c585427def2d388ebe77f14275.png 400w,
+               /publication/panfusion/teaser_hu23e90f8fc396241f8530cb1ea731a87a_1860576_f207e05f78e9893810166e7770e29f1c.png 760w,
+               /publication/panfusion/teaser_hu23e90f8fc396241f8530cb1ea731a87a_1860576_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/panfusion/teaser_hu23e90f8fc396241f8530cb1ea731a87a_1860576_0928c4c585427def2d388ebe77f14275.png&#34;
+               width=&#34;90%&#34;
+               height=&#34;312&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Generative models, e.g., Stable Diffusion, have enabled the creation of photorealistic images from text prompts. Yet, the generation of 360-degree panorama images from text remains a challenge, particularly due to the dearth of paired text-panorama data and the domain gap between panorama and perspective images. In this paper, we introduce a novel dual-branch diffusion model named PanFusion to generate a 360-degree image from a text prompt. We leverage the stable diffusion model as one branch to provide prior knowledge in natural image generation and register it to another panorama branch for holistic image generation. We propose a unique cross-attention mechanism with projection awareness to minimize distortion during the collaborative denoising process. Our experiments validate that PanFusion surpasses existing methods and, thanks to its dual-branch structure, can integrate additional constraints like room layout for customized panorama outputs. Code is available at &lt;a href=&#34;https://chengzhag.github.io/publication/panfusion&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://chengzhag.github.io/publication/panfusion&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-our-proposed-dual-branch-panfusion-pipeline-the-panorama-branch-upper-provides-global-layout-guidance-and-registers-the-perspective-information-to-get-seamless-panorama-output-the-perspective-branch-lower-harnesses-the-rich-prior-knowledge-of-stable-diffusion-sd-and-provides-guidance-to-alleviate-distortion-under-perspective-projection-both-branches-employ-the-same-unet-backbone-with-shared-weights-while-finetuned-with-separate-lora-layers-equirectangular-perspective-projection-attention-eppa-modules-are-plugged-into-different-layers-of-the-unet-to-pass-information-between-the-two-branches&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Our proposed dual-branch PanFusion pipeline. The panorama branch (upper) provides global layout guidance and registers the perspective information to get seamless panorama output. The perspective branch (lower) harnesses the rich prior knowledge of Stable Diffusion (SD) and provides guidance to alleviate distortion under perspective projection. Both branches employ the same UNet backbone with shared weights, while finetuned with separate LoRA layers. Equirectangular-Perspective Projection Attention (EPPA) modules are plugged into different layers of the UNet to pass information between the two branches.&#34; srcset=&#34;
+               /publication/panfusion/pipeline_hu5f367bf169fefbabfa80074700fc729f_661292_326e05803f6d9f1e5ffd2f4213e4ea06.png 400w,
+               /publication/panfusion/pipeline_hu5f367bf169fefbabfa80074700fc729f_661292_da9ba806b6797c65f763d5a92a23b4fb.png 760w,
+               /publication/panfusion/pipeline_hu5f367bf169fefbabfa80074700fc729f_661292_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/panfusion/pipeline_hu5f367bf169fefbabfa80074700fc729f_661292_326e05803f6d9f1e5ffd2f4213e4ea06.png&#34;
+               width=&#34;760&#34;
+               height=&#34;280&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Our proposed dual-branch PanFusion pipeline. The panorama branch (upper) provides global layout guidance and registers the perspective information to get seamless panorama output. The perspective branch (lower) harnesses the rich prior knowledge of Stable Diffusion (SD) and provides guidance to alleviate distortion under perspective projection. Both branches employ the same UNet backbone with shared weights, while finetuned with separate LoRA layers. Equirectangular-Perspective Projection Attention (EPPA) modules are plugged into different layers of the UNet to pass information between the two branches.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;comparisons&#34;&gt;Comparisons&lt;/h2&gt;
+&lt;center&gt;
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-comp&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_05.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_05_hu700275244aab45103b63a9bdebf71928_853380_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_05.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-comp&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_06.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_06_hu700275244aab45103b63a9bdebf71928_912323_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_06.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-comp&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_07.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_07_hu700275244aab45103b63a9bdebf71928_745484_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_07.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-comp&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_08.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_08_hu700275244aab45103b63a9bdebf71928_990152_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_08.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-comp&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_09.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_09_hu700275244aab45103b63a9bdebf71928_1072684_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_09.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-comp&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_10.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_10_hu700275244aab45103b63a9bdebf71928_1114310_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_10.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-comp&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_11.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_11_hu700275244aab45103b63a9bdebf71928_873045_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_11.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-comp&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_12.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_12_hu700275244aab45103b63a9bdebf71928_892583_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_12.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-comp&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_13.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_13_hu700275244aab45103b63a9bdebf71928_786101_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_13.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-comp&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_14.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/comp/629_supp_Page_14_hu700275244aab45103b63a9bdebf71928_926780_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_14.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;generalization&#34;&gt;Generalization&lt;/h2&gt;
+&lt;center&gt;
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-generalization&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/generalization/629_supp_Page_17.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/generalization/629_supp_Page_17_hu700275244aab45103b63a9bdebf71928_1248988_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_17.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-generalization&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/generalization/629_supp_Page_18.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/generalization/629_supp_Page_18_hu700275244aab45103b63a9bdebf71928_1174457_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_18.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-generalization&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/generalization/629_supp_Page_19.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/generalization/629_supp_Page_19_hu700275244aab45103b63a9bdebf71928_1171826_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_19.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-generalization&#34; href=&#34;https://chengzhag.github.io/publication/panfusion/generalization/629_supp_Page_20.jpg&#34; &gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/panfusion/generalization/629_supp_Page_20_hu700275244aab45103b63a9bdebf71928_1066654_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;629_supp_Page_20.jpg&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+&lt;/center&gt;
+</description>
+    </item>
     
     <item>
       <title>DeepPanoContext: Panoramic 3D Scene Understanding with Holistic Scene Context Graph and Relation-based Optimization</title>
@@ -84,10 +398,10 @@ Supplementary notes can be added here, including [code, math, and images](https:
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;&#34; srcset=&#34;
-               /publication/dpc/teaser_hucb88ee454679c854cbd5711aaf4cf21d_726202_1959d045dc63ff4c2f0c50f112dfe563.png 400w,
-               /publication/dpc/teaser_hucb88ee454679c854cbd5711aaf4cf21d_726202_a127dcb872e42fe7907d4ed9c9fe6ee6.png 760w,
-               /publication/dpc/teaser_hucb88ee454679c854cbd5711aaf4cf21d_726202_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/teaser_hucb88ee454679c854cbd5711aaf4cf21d_726202_1959d045dc63ff4c2f0c50f112dfe563.png&#34;
+               /publication/dpc/teaser_hucb88ee454679c854cbd5711aaf4cf21d_726202_b9a63cebf26ae21d1f81adcd7a843a0f.png 400w,
+               /publication/dpc/teaser_hucb88ee454679c854cbd5711aaf4cf21d_726202_7a2b8742a70b6bdfea1c46b18ed58ffd.png 760w,
+               /publication/dpc/teaser_hucb88ee454679c854cbd5711aaf4cf21d_726202_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/teaser_hucb88ee454679c854cbd5711aaf4cf21d_726202_b9a63cebf26ae21d1f81adcd7a843a0f.png&#34;
                width=&#34;90%&#34;
                height=&#34;253&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -134,7 +448,7 @@ Experiments demonstrate that our method outperforms existing methods on panorami
     
     
     &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_01.png&#34; &gt;
-      &lt;img src=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_01_hu5f1572c67a6f7cc7201698862c58c249_352891_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;07881_页面_01.png&#34; width=&#34;134&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_01_hu5f1572c67a6f7cc7201698862c58c249_352891_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;07881_页面_01.png&#34; width=&#34;134&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -143,7 +457,7 @@ Experiments demonstrate that our method outperforms existing methods on panorami
     
     
     &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_03.png&#34; &gt;
-      &lt;img src=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_03_hu35a9a6da8ea7856690f21d9c68501222_750444_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;07881_页面_03.png&#34; width=&#34;134&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_03_hu35a9a6da8ea7856690f21d9c68501222_750444_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;07881_页面_03.png&#34; width=&#34;134&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -152,7 +466,7 @@ Experiments demonstrate that our method outperforms existing methods on panorami
     
     
     &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_07.png&#34; &gt;
-      &lt;img src=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_07_hu092b48727c0cf5fdb7020edb7dde2be4_8126158_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;07881_页面_07.png&#34; width=&#34;134&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_07_hu092b48727c0cf5fdb7020edb7dde2be4_8126158_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;07881_页面_07.png&#34; width=&#34;134&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -161,7 +475,7 @@ Experiments demonstrate that our method outperforms existing methods on panorami
     
     
     &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_08.png&#34; &gt;
-      &lt;img src=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_08_hu5f1572c67a6f7cc7201698862c58c249_389067_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;07881_页面_08.png&#34; width=&#34;134&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/dpc/pages/07881_%E9%A1%B5%E9%9D%A2_08_hu5f1572c67a6f7cc7201698862c58c249_389067_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;07881_页面_08.png&#34; width=&#34;134&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
 
@@ -584,10 +898,10 @@ Finally, the 3D shape is recovered by feeding the latent shape code into Local I
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;Qualitative comparison on 3D object detection and scene reconstruction. We compare object detection and compare scene reconstruction results with Total3D-Pers and Im3D-Pers in both bird&amp;#39;s eye view and panorama format.&#34; srcset=&#34;
-               /publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_f249a5b0a973eea3b839d1d54c1a5f99.png 400w,
-               /publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_925b8e883ad574f6e31ea8928a79b386.png 760w,
-               /publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_f249a5b0a973eea3b839d1d54c1a5f99.png&#34;
+               /publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_7b6f8801e7d104730ba955cd8f31dd38.png 400w,
+               /publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_3c6d910f22fa6ff7ad1cbba56831ee80.png 760w,
+               /publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/dpc/results_hu3e44127679b5aa673fe84eb09188cd51_2521313_7b6f8801e7d104730ba955cd8f31dd38.png&#34;
                width=&#34;90%&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -669,10 +983,10 @@ Supplementary notes can be added here, including [code, math, and images](https:
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;&#34; srcset=&#34;
-               /publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_bfc8824b71f9ec152d86210b9806e31b.png 400w,
-               /publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_1f6969e2615edac370857669719bc786.png 760w,
-               /publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_bfc8824b71f9ec152d86210b9806e31b.png&#34;
+               /publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_e9d3a917824ba8aeb1bfb7d5a213cbde.png 400w,
+               /publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_ead458b3d2b59f5730be03c9ec34c976.png 760w,
+               /publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/featured_hue4f967c6ccd009b15285c6dc5f298fa7_616395_e9d3a917824ba8aeb1bfb7d5a213cbde.png&#34;
                width=&#34;760&#34;
                height=&#34;428&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -720,7 +1034,7 @@ Given a single color image,
     
     
     &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_01.png&#34; &gt;
-      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_01_hu7b4e8c585c78596d52f33bba49723711_179891_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_01.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_01_hu7b4e8c585c78596d52f33bba49723711_179891_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_01.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -729,7 +1043,7 @@ Given a single color image,
     
     
     &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_03.png&#34; &gt;
-      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_03_hu7b4e8c585c78596d52f33bba49723711_221609_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_03.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_03_hu7b4e8c585c78596d52f33bba49723711_221609_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_03.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -738,7 +1052,7 @@ Given a single color image,
     
     
     &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_05.png&#34; &gt;
-      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_05_hu7b4e8c585c78596d52f33bba49723711_201925_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_05.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_05_hu7b4e8c585c78596d52f33bba49723711_201925_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_05.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -747,7 +1061,7 @@ Given a single color image,
     
     
     &lt;a data-fancybox=&#34;gallery-pages&#34; href=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_07.png&#34; &gt;
-      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_07_hu7b4e8c585c78596d52f33bba49723711_293071_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_07.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://chengzhag.github.io/publication/im3d/pages/02192_%E9%A1%B5%E9%9D%A2_07_hu7b4e8c585c78596d52f33bba49723711_293071_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;02192_页面_07.png&#34; width=&#34;147&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
 
@@ -819,10 +1133,10 @@ Given a single color image,
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;Our proposed pipeline. We initialize the layout estimation and 3D object poses with LEN and ODN from prior work, then refine them with Scene Graph Convolutional Network (SGCN). We utilize a Local Implicit Embedding Network (LIEN) to encode latent code for LDIF decoder and to extract implicit features for SGCN. With the help of LDIF and marching cube algorithm, object meshes are extracted then rotated, scaled, and put into places to construct the scene.&#34; srcset=&#34;
-               /publication/im3d/pipeline_hu5d54da59d234241780e2960c3ffaee78_1922141_a5a8bbc1c18e7e5ec52029e7183ad04e.png 400w,
-               /publication/im3d/pipeline_hu5d54da59d234241780e2960c3ffaee78_1922141_40df168e6656bf5c2ce79b37e90f7b84.png 760w,
-               /publication/im3d/pipeline_hu5d54da59d234241780e2960c3ffaee78_1922141_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/im3d/pipeline_hu5d54da59d234241780e2960c3ffaee78_1922141_a5a8bbc1c18e7e5ec52029e7183ad04e.png&#34;
+               /publication/im3d/pipeline_hu5d54da59d234241780e2960c3ffaee78_1922141_973334ed13e4d2cb3eabdf9219279ebe.png 400w,
+               /publication/im3d/pipeline_hu5d54da59d234241780e2960c3ffaee78_1922141_ef8517bd9f675e4bedaf968e44c025e5.png 760w,
+               /publication/im3d/pipeline_hu5d54da59d234241780e2960c3ffaee78_1922141_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/pipeline_hu5d54da59d234241780e2960c3ffaee78_1922141_973334ed13e4d2cb3eabdf9219279ebe.png&#34;
                width=&#34;760&#34;
                height=&#34;300&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -1138,10 +1452,10 @@ In the refinement stage, a novel Scene Graph Convolutional Network (SGCN) is des
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;Qualitative comparison on object detection and scene reconstruction. We compare object detection results with Total3D and ground truth in both oblique view and camera view. The results show that our method gives more accurate bounding box estimation and with less intersection. We compare scene reconstruction results with Total3D in camera view and observe more reasonable object poses.&#34; srcset=&#34;
-               /publication/im3d/results_hu40da7b1c92c60a32bded852532bb1b8e_2223271_3058ff0e8ae246e820524b09ff625f0a.png 400w,
-               /publication/im3d/results_hu40da7b1c92c60a32bded852532bb1b8e_2223271_8658a1b709242fbcc703084e12cbeb82.png 760w,
-               /publication/im3d/results_hu40da7b1c92c60a32bded852532bb1b8e_2223271_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://chengzhag.github.io/publication/im3d/results_hu40da7b1c92c60a32bded852532bb1b8e_2223271_3058ff0e8ae246e820524b09ff625f0a.png&#34;
+               /publication/im3d/results_hu40da7b1c92c60a32bded852532bb1b8e_2223271_974e0c0e3b6a4e4b9629f7b302cf9883.png 400w,
+               /publication/im3d/results_hu40da7b1c92c60a32bded852532bb1b8e_2223271_74508ae60005474b267bfa284ca2971f.png 760w,
+               /publication/im3d/results_hu40da7b1c92c60a32bded852532bb1b8e_2223271_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/im3d/results_hu40da7b1c92c60a32bded852532bb1b8e_2223271_974e0c0e3b6a4e4b9629f7b302cf9883.png&#34;
                width=&#34;666&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

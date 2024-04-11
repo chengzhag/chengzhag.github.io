@@ -5,12 +5,49 @@
     <link>https://chengzhag.github.io/post/</link>
       <atom:link href="https://chengzhag.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 17 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 28 Jun 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://chengzhag.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Trip to Australia</title>
+      <link>https://chengzhag.github.io/post/trip_to_australia/</link>
+      <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/post/trip_to_australia/</guid>
+      <description>&lt;p&gt;The photo was taken from the plane to Australia at a height of 11,000 meters. This is my first trip to another country.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-nikon-d3300-f48-13mm-30s-iso-6400&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Nikon D3300. f/4.8, 13mm, 30s, ISO 6400.&#34; srcset=&#34;
+               /post/trip_to_australia/featured_hu5e808adf48bdc9e36bb670daa19cd043_348970_ffa4f33897ed5b5e4e11e4a8ab33b43f.jpg 400w,
+               /post/trip_to_australia/featured_hu5e808adf48bdc9e36bb670daa19cd043_348970_5604ff9302d6cb14c57e2cb1b56975eb.jpg 760w,
+               /post/trip_to_australia/featured_hu5e808adf48bdc9e36bb670daa19cd043_348970_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
+               src=&#34;https://chengzhag.github.io/post/trip_to_australia/featured_hu5e808adf48bdc9e36bb670daa19cd043_348970_ffa4f33897ed5b5e4e11e4a8ab33b43f.jpg&#34;
+               width=&#34;760&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Nikon D3300. f/4.8, 13mm, 30s, ISO 6400.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
     
     <item>
       <title>Long Exposure of Airplane Turning</title>
