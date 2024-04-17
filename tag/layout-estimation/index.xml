@@ -179,7 +179,7 @@ Given a single color image,
 &lt;/ul&gt;
  --&gt;
   &lt;!-- &lt;a href=&#34;https://arxiv.org/abs/2103.06422&#34; class=&#34;btn btn-primary px-3 py-3&#34;&gt;Paper&lt;/a&gt; --&gt;
-  &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;/publication/im3d/cite.bib&#34;&gt;
+  &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;cite.bib&#34;&gt;
   Cite
   &lt;/a&gt;
   &lt;a href=&#34;https://github.com/pidan1231239/Implicit3DUnderstanding&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;

@@ -69,7 +69,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
   &lt;a href=&#34;https://building4pointzero.org&#34; target=&#34;_blank&#34;&gt;Building 4.0 CRC, Caulfield East, Victoria, Australia&lt;/a&gt;
 &lt;/div&gt;
 &lt;center&gt;
-  &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;/publication/im3d/cite.bib&#34;&gt;
+  &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;cite.bib&#34;&gt;
   Cite
   &lt;/a&gt;
   &lt;a href=&#34;https://github.com/chengzhag/PanFusion&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
@@ -482,7 +482,7 @@ Experiments demonstrate that our method outperforms existing methods on panorami
 &lt;/div&gt;
 &lt;/center&gt;
 &lt;center&gt;
-  &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;/publication/dpc/cite.bib&#34;&gt;
+  &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;cite.bib&#34;&gt;
   Cite
   &lt;/a&gt;
   &lt;a href=&#34;https://github.com/chengzhag/DeepPanoContext&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
