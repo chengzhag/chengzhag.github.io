@@ -5,12 +5,177 @@
     <link>https://chengzhag.github.io/</link>
       <atom:link href="https://chengzhag.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Cheng Zhang</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 11 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 12 Dec 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Cheng Zhang</title>
       <link>https://chengzhag.github.io/</link>
     </image>
+    
+    <item>
+      <title>PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting</title>
+      <link>https://chengzhag.github.io/publication/pansplat/</link>
+      <pubDate>Thu, 12 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/publication/pansplat/</guid>
+      <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h2 id=&#34;div-classpublication-headerarxiv-2024div&#34;&gt;&lt;div class=&#34;publication-header&#34;&gt;arXiv 2024&lt;/div&gt;&lt;/h2&gt;
+&lt;div class=&#34;publication-header&#34;&gt;
+  &lt;a href=&#34;https://chengzhag.github.io/&#34; target=&#34;_blank&#34;&gt;Cheng Zhang&lt;/a&gt;
+  &lt;sup&gt;1,2&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://haofeixu.github.io&#34; target=&#34;_blank&#34;&gt;Haofei Xu&lt;/a&gt;
+  &lt;sup&gt;3&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://wuqianyi.top&#34; target=&#34;_blank&#34;&gt;Qianyi Wu&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &lt;!-- &amp;nbsp; &amp;nbsp; --&gt;
+  &lt;br /&gt;
+  &lt;a href=&#34;https://www.researchgate.net/profile/Camilo-Cruz-Gambardella&#34; target=&#34;_blank&#34;&gt;Camilo Cruz Gambardella&lt;/a&gt;
+  &lt;sup&gt;1,2&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://dinhphung.ml&#34; target=&#34;_blank&#34;&gt;Dinh Phung&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://jianfei-cai.github.io&#34; target=&#34;_blank&#34;&gt;Jianfei Cai&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+&lt;/div&gt;
+&lt;div class=&#34;publication-header&#34;&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &lt;a href=&#34;https://www.monash.edu&#34; target=&#34;_blank&#34;&gt;Monash University&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;!-- &lt;br /&gt; --&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
+  &lt;a href=&#34;https://building4pointzero.org&#34; target=&#34;_blank&#34;&gt;Building 4.0 CRC, Caulfield East, Victoria, Australia&lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;sup&gt;3&lt;/sup&gt;
+  &lt;a href=&#34;https://ethz.ch/en.html&#34; target=&#34;_blank&#34;&gt;ETH Zurich&lt;/a&gt; 
+  &lt;!-- &lt;br /&gt; --&gt;
+&lt;/div&gt;
+&lt;center&gt;
+  &lt;!-- &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;cite.bib&#34;&gt;
+  Cite
+  &lt;/a&gt; --&gt;
+  &lt;a href=&#34;https://github.com/chengzhag/PanSplat&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Code
+  &lt;/a&gt;
+  &lt;!-- &lt;a href=&#34;https://www.youtube.com/watch?v=Kg0du7mFu60&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  YouTube
+  &lt;/a&gt;
+  &lt;a href=&#34;https://www.bilibili.com/video/BV1By4y1g7c5/&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  bilibili
+  &lt;/a&gt; --&gt;
+  &lt;a href=&#34;.&#34; class=&#34;btn btn-outline-primary&#34;&gt;
+  arXiv
+  &lt;/a&gt; 
+  &lt;a href=&#34;.&#34; class=&#34;btn btn-outline-primary&#34;&gt;
+  Paper
+  &lt;/a&gt;
+&lt;/center&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;short-video&#34;&gt;Short Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/R3qIzL77ZSc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;With the advent of portable 360° cameras, panorama has gained significant attention in applications like virtual reality (VR), virtual tours, robotics, and autonomous driving.
+As a result, wide-baseline panorama view synthesis has emerged as a vital task, where high resolution, fast inference, and memory efficiency are essential.
+Nevertheless, existing methods are typically constrained to lower resolutions (512 × 1024) due to demanding memory and computational requirements.
+In this paper, we present &lt;strong&gt;PanSplat&lt;/strong&gt;, a generalizable, feed-forward approach that efficiently supports &lt;strong&gt;resolution up to 4K&lt;/strong&gt; (2048 × 4096).
+Our approach features a tailored spherical 3D Gaussian pyramid with a Fibonacci lattice arrangement, enhancing image quality while reducing information redundancy.
+To accommodate the demands of high resolution, we propose a pipeline that integrates a hierarchical spherical cost volume and Gaussian heads with local operations, enabling two-step deferred backpropagation for memory-efficient training on a single A100 GPU.
+Experiments demonstrate that PanSplat achieves state-of-the-art results with superior efficiency and image quality across both synthetic and real-world datasets.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;full-video&#34;&gt;Full Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/77G9AQkweg0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-our-proposed-pansplat-pipeline-given-two-wide-baseline-panoramas-we-first-construct-a-hierarchical-spherical-cost-volume-using-a-transformer-based-fpn-to-extract-feature-pyramid-and-2d-u-nets-to-integrate-monocular-depth-priors-for-cost-volume-refinement-we-then-build-gaussian-heads-to-generate-a-feature-pyramid-which-is-later-sampled-with-fibonacci-lattice-and-transformed-to-spherical-3d-gaussian-pyramid-finally-we-unproject-the-gaussian-parameters-for-each-level-and-view-consolidate-them-into-a-global-representation-and-splat-it-into-novel-views-using-a-cubemap-renderer-for-simplicity-intermediate-results-of-only-a-single-view-are-shown&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Our proposed PanSplat pipeline. Given two wide-baseline panoramas, we first construct a hierarchical spherical cost volume using a Transformer-based FPN to extract feature pyramid and 2D U-Nets to integrate monocular depth priors for cost volume refinement. We then build Gaussian heads to generate a feature pyramid, which is later sampled with Fibonacci lattice and transformed to spherical 3D Gaussian pyramid. Finally, we unproject the Gaussian parameters for each level and view, consolidate them into a global representation, and splat it into novel views using a cubemap renderer. For simplicity, intermediate results of only a single view are shown.&#34; srcset=&#34;
+               /publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_7e2bd5dc1b79802b2b0f980fcb653cfd.png 400w,
+               /publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_a952ef3b115c64bb64e2157e43f5d7a7.png 760w,
+               /publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_7e2bd5dc1b79802b2b0f980fcb653cfd.png&#34;
+               width=&#34;760&#34;
+               height=&#34;187&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Our proposed PanSplat pipeline. Given two wide-baseline panoramas, we first construct a hierarchical spherical cost volume using a Transformer-based FPN to extract feature pyramid and 2D U-Nets to integrate monocular depth priors for cost volume refinement. We then build Gaussian heads to generate a feature pyramid, which is later sampled with Fibonacci lattice and transformed to spherical 3D Gaussian pyramid. Finally, we unproject the Gaussian parameters for each level and view, consolidate them into a global representation, and splat it into novel views using a cubemap renderer. For simplicity, intermediate results of only a single view are shown.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;interactive-demo&#34;&gt;Interactive Demo&lt;/h2&gt;
+&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/9bKZA2zxAbw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+(Best viewed on a desktop browser or Youtube app.)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/pansplat/teaser_hue964f49ef3a040669a69db22bafcc8b8_1783743_297f179c8e43cb969457540e33f5f78a.png 400w,
+               /publication/pansplat/teaser_hue964f49ef3a040669a69db22bafcc8b8_1783743_65c8c1a847e40e086f1a35c9b8961378.png 760w,
+               /publication/pansplat/teaser_hue964f49ef3a040669a69db22bafcc8b8_1783743_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/pansplat/teaser_hue964f49ef3a040669a69db22bafcc8b8_1783743_297f179c8e43cb969457540e33f5f78a.png&#34;
+               width=&#34;90%&#34;
+               height=&#34;300&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+</description>
+    </item>
     
     <item>
       <title>Taming Stable Diffusion for Text to 360° Panorama Image Generation</title>

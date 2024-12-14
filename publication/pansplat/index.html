@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="We introduce a novel dual-branch diffusion model named PanFusion to generate a 360-degree image from a text prompt." />
+  <meta name="description" content="We present PanSplat, a generalizable, feed-forward approach that efficiently supports resolution up to 4K (2048 × 4096)." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://chengzhag.github.io/publication/panfusion/" />
+  <link rel="alternate" hreflang="en-us" href="https://chengzhag.github.io/publication/pansplat/" />
 
   
 
@@ -73,8 +73,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
 
     
-    
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -314,7 +312,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
 
-  <link rel="canonical" href="https://chengzhag.github.io/publication/panfusion/" />
+  <link rel="canonical" href="https://chengzhag.github.io/publication/pansplat/" />
 
   
   
@@ -330,10 +328,10 @@
   <meta property="twitter:card" content="summary_large_image" />
   
   <meta property="og:site_name" content="Cheng Zhang" />
-  <meta property="og:url" content="https://chengzhag.github.io/publication/panfusion/" />
-  <meta property="og:title" content="Taming Stable Diffusion for Text to 360° Panorama Image Generation | Cheng Zhang" />
-  <meta property="og:description" content="We introduce a novel dual-branch diffusion model named PanFusion to generate a 360-degree image from a text prompt." /><meta property="og:image" content="https://chengzhag.github.io/publication/panfusion/featured.png" />
-    <meta property="twitter:image" content="https://chengzhag.github.io/publication/panfusion/featured.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:url" content="https://chengzhag.github.io/publication/pansplat/" />
+  <meta property="og:title" content="PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting | Cheng Zhang" />
+  <meta property="og:description" content="We present PanSplat, a generalizable, feed-forward approach that efficiently supports resolution up to 4K (2048 × 4096)." /><meta property="og:image" content="https://chengzhag.github.io/publication/pansplat/featured.png" />
+    <meta property="twitter:image" content="https://chengzhag.github.io/publication/pansplat/featured.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -341,7 +339,7 @@
         content="2017-01-01T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2024-04-11T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2024-12-12T00:00:00&#43;00:00">
   
 
   
@@ -363,16 +361,16 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://chengzhag.github.io/publication/panfusion/"
+    "@id": "https://chengzhag.github.io/publication/pansplat/"
   },
-  "headline": "Taming Stable Diffusion for Text to 360° Panorama Image Generation",
+  "headline": "PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting",
   
   "image": [
-    "https://chengzhag.github.io/publication/panfusion/featured.png"
+    "https://chengzhag.github.io/publication/pansplat/featured.png"
   ],
   
   "datePublished": "2017-01-01T00:00:00Z",
-  "dateModified": "2024-04-11T00:00:00Z",
+  "dateModified": "2024-12-12T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -387,7 +385,7 @@
       "url": "https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "We introduce a novel dual-branch diffusion model named PanFusion to generate a 360-degree image from a text prompt."
+  "description": "We present PanSplat, a generalizable, feed-forward approach that efficiently supports resolution up to 4K (2048 × 4096)."
 }
 </script>
 
@@ -403,11 +401,11 @@
 
 
 
-  <title>Taming Stable Diffusion for Text to 360° Panorama Image Generation | Cheng Zhang</title>
+  <title>PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting | Cheng Zhang</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="9e21dceb9587391aa0c58ef5c2cc6f59" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="66418d7fe2db1f9ef6027a449a111cee" >
 
   
   
@@ -728,7 +726,7 @@
 
 <div class="article-container pt-3">
 	
-		<h1 class="publication-header">Taming Stable Diffusion for Text to 360° Panorama Image Generation</h1>
+		<h1 class="publication-header">PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting</h1>
 	
 
   
@@ -766,26 +764,23 @@
 
 
 Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). -->
-<h2 id="div-classpublication-headercvpr-2024-hightlightdivhttpscvprthecvfcomconferences2024"><a href="https://cvpr.thecvf.com/Conferences/2024" target="_blank" rel="noopener"><div class="publication-header">CVPR 2024 Hightlight</div></a></h2>
+<h2 id="div-classpublication-headerarxiv-2024div"><div class="publication-header">arXiv 2024</div></h2>
 <div class="publication-header">
   <a href="https://chengzhag.github.io/" target="_blank">Cheng Zhang</a>
-  <sup>1,3</sup>
+  <sup>1,2</sup>
+  &nbsp; &nbsp;
+  <a href="https://haofeixu.github.io" target="_blank">Haofei Xu</a>
+  <sup>3</sup>
   &nbsp; &nbsp;
   <a href="https://wuqianyi.top" target="_blank">Qianyi Wu</a>
   <sup>1</sup>
-  &nbsp; &nbsp;
-  <a href="https://www.researchgate.net/profile/Camilo-Cruz-Gambardella" target="_blank">Camilo Cruz Gambardella</a>
-  <sup>1,3</sup>
-  &nbsp; &nbsp;
-  <a href="https://xiaoshuihuang.github.io" target="_blank">Xiaoshui Huang</a>
-  <sup>2</sup>
   <!-- &nbsp; &nbsp; -->
   <br />
+  <a href="https://www.researchgate.net/profile/Camilo-Cruz-Gambardella" target="_blank">Camilo Cruz Gambardella</a>
+  <sup>1,2</sup>
+  &nbsp; &nbsp;
   <a href="https://dinhphung.ml" target="_blank">Dinh Phung</a>
   <sup>1</sup>
-  &nbsp; &nbsp;
-  <a href="https://wlouyang.github.io" target="_blank">Wanli Ouyang</a>
-  <sup>2</sup>
   &nbsp; &nbsp;
   <a href="https://jianfei-cai.github.io" target="_blank">Jianfei Cai</a>
   <sup>1</sup>
@@ -796,17 +791,17 @@ Supplementary notes can be added here, including [code, math, and images](https:
   &nbsp; &nbsp;
   <!-- <br /> -->
   <sup>2</sup>
-  <a href="https://www.shlab.org.cn" target="_blank">Shanghai AI Laboratory</a> 
-  <!-- <br /> -->
+  <a href="https://building4pointzero.org" target="_blank">Building 4.0 CRC, Caulfield East, Victoria, Australia</a>
   &nbsp; &nbsp;
   <sup>3</sup>
-  <a href="https://building4pointzero.org" target="_blank">Building 4.0 CRC, Caulfield East, Victoria, Australia</a>
+  <a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a> 
+  <!-- <br /> -->
 </div>
 <center>
-  <a href="#" class="btn btn-outline-primary js-cite-modal" data-filename="cite.bib">
+  <!-- <a href="#" class="btn btn-outline-primary js-cite-modal" data-filename="cite.bib">
   Cite
-  </a>
-  <a href="https://github.com/chengzhag/PanFusion" class="btn btn-outline-primary" target="_blank">
+  </a> -->
+  <a href="https://github.com/chengzhag/PanSplat" class="btn btn-outline-primary" target="_blank">
   Code
   </a>
   <!-- <a href="https://www.youtube.com/watch?v=Kg0du7mFu60" class="btn btn-outline-primary" target="_blank">
@@ -815,13 +810,76 @@ Supplementary notes can be added here, including [code, math, and images](https:
   <a href="https://www.bilibili.com/video/BV1By4y1g7c5/" class="btn btn-outline-primary" target="_blank">
   bilibili
   </a> -->
-  <a href="https://arxiv.org/abs/2404.07949" class="btn btn-outline-primary" target="_blank">
+  <a href="." class="btn btn-outline-primary">
   arXiv
   </a> 
-  <a href="https://arxiv.org/pdf/2404.07949.pdf" class="btn btn-outline-primary" target="_blank">
+  <a href="." class="btn btn-outline-primary">
   Paper
   </a>
 </center>
+<hr>
+<h2 id="short-video">Short Video</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/R3qIzL77ZSc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<hr>
+<h2 id="abstract">Abstract</h2>
+<p>With the advent of portable 360° cameras, panorama has gained significant attention in applications like virtual reality (VR), virtual tours, robotics, and autonomous driving.
+As a result, wide-baseline panorama view synthesis has emerged as a vital task, where high resolution, fast inference, and memory efficiency are essential.
+Nevertheless, existing methods are typically constrained to lower resolutions (512 × 1024) due to demanding memory and computational requirements.
+In this paper, we present <strong>PanSplat</strong>, a generalizable, feed-forward approach that efficiently supports <strong>resolution up to 4K</strong> (2048 × 4096).
+Our approach features a tailored spherical 3D Gaussian pyramid with a Fibonacci lattice arrangement, enhancing image quality while reducing information redundancy.
+To accommodate the demands of high resolution, we propose a pipeline that integrates a hierarchical spherical cost volume and Gaussian heads with local operations, enabling two-step deferred backpropagation for memory-efficient training on a single A100 GPU.
+Experiments demonstrate that PanSplat achieves state-of-the-art results with superior efficiency and image quality across both synthetic and real-world datasets.</p>
+<hr>
+<h2 id="full-video">Full Video</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/77G9AQkweg0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<hr>
+<h2 id="pipeline">Pipeline</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-our-proposed-pansplat-pipeline-given-two-wide-baseline-panoramas-we-first-construct-a-hierarchical-spherical-cost-volume-using-a-transformer-based-fpn-to-extract-feature-pyramid-and-2d-u-nets-to-integrate-monocular-depth-priors-for-cost-volume-refinement-we-then-build-gaussian-heads-to-generate-a-feature-pyramid-which-is-later-sampled-with-fibonacci-lattice-and-transformed-to-spherical-3d-gaussian-pyramid-finally-we-unproject-the-gaussian-parameters-for-each-level-and-view-consolidate-them-into-a-global-representation-and-splat-it-into-novel-views-using-a-cubemap-renderer-for-simplicity-intermediate-results-of-only-a-single-view-are-shown">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="Our proposed PanSplat pipeline. Given two wide-baseline panoramas, we first construct a hierarchical spherical cost volume using a Transformer-based FPN to extract feature pyramid and 2D U-Nets to integrate monocular depth priors for cost volume refinement. We then build Gaussian heads to generate a feature pyramid, which is later sampled with Fibonacci lattice and transformed to spherical 3D Gaussian pyramid. Finally, we unproject the Gaussian parameters for each level and view, consolidate them into a global representation, and splat it into novel views using a cubemap renderer. For simplicity, intermediate results of only a single view are shown." srcset="
+               /publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_7e2bd5dc1b79802b2b0f980fcb653cfd.png 400w,
+               /publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_a952ef3b115c64bb64e2157e43f5d7a7.png 760w,
+               /publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_1200x1200_fit_lanczos_2.png 1200w"
+               src="/publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_7e2bd5dc1b79802b2b0f980fcb653cfd.png"
+               width="760"
+               height="187"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Our proposed PanSplat pipeline. Given two wide-baseline panoramas, we first construct a hierarchical spherical cost volume using a Transformer-based FPN to extract feature pyramid and 2D U-Nets to integrate monocular depth priors for cost volume refinement. We then build Gaussian heads to generate a feature pyramid, which is later sampled with Fibonacci lattice and transformed to spherical 3D Gaussian pyramid. Finally, we unproject the Gaussian parameters for each level and view, consolidate them into a global representation, and splat it into novel views using a cubemap renderer. For simplicity, intermediate results of only a single view are shown.
+    </figcaption></figure>
+<hr>
+<h2 id="interactive-demo">Interactive Demo</h2>
+<p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/9bKZA2zxAbw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+(Best viewed on a desktop browser or Youtube app.)</p>
+<hr>
+<h2 id="results">Results</h2>
 
 
 
@@ -840,223 +898,14 @@ Supplementary notes can be added here, including [code, math, and images](https:
   <div class="d-flex justify-content-center">
     <div class="w-100" >
         <img alt="" srcset="
-               /publication/panfusion/teaser_hu23e90f8fc396241f8530cb1ea731a87a_1860576_0928c4c585427def2d388ebe77f14275.png 400w,
-               /publication/panfusion/teaser_hu23e90f8fc396241f8530cb1ea731a87a_1860576_f207e05f78e9893810166e7770e29f1c.png 760w,
-               /publication/panfusion/teaser_hu23e90f8fc396241f8530cb1ea731a87a_1860576_1200x1200_fit_lanczos_2.png 1200w"
-               src="/publication/panfusion/teaser_hu23e90f8fc396241f8530cb1ea731a87a_1860576_0928c4c585427def2d388ebe77f14275.png"
+               /publication/pansplat/teaser_hue964f49ef3a040669a69db22bafcc8b8_1783743_297f179c8e43cb969457540e33f5f78a.png 400w,
+               /publication/pansplat/teaser_hue964f49ef3a040669a69db22bafcc8b8_1783743_65c8c1a847e40e086f1a35c9b8961378.png 760w,
+               /publication/pansplat/teaser_hue964f49ef3a040669a69db22bafcc8b8_1783743_1200x1200_fit_lanczos_2.png 1200w"
+               src="/publication/pansplat/teaser_hue964f49ef3a040669a69db22bafcc8b8_1783743_297f179c8e43cb969457540e33f5f78a.png"
                width="90%"
-               height="312"
+               height="300"
                loading="lazy" data-zoomable /></div>
   </div></figure>
-<hr>
-<h2 id="abstract">Abstract</h2>
-<p>Generative models, e.g., Stable Diffusion, have enabled the creation of photorealistic images from text prompts. Yet, the generation of 360-degree panorama images from text remains a challenge, particularly due to the dearth of paired text-panorama data and the domain gap between panorama and perspective images. In this paper, we introduce a novel dual-branch diffusion model named PanFusion to generate a 360-degree image from a text prompt. We leverage the stable diffusion model as one branch to provide prior knowledge in natural image generation and register it to another panorama branch for holistic image generation. We propose a unique cross-attention mechanism with projection awareness to minimize distortion during the collaborative denoising process. Our experiments validate that PanFusion surpasses existing methods and, thanks to its dual-branch structure, can integrate additional constraints like room layout for customized panorama outputs. Code is available at <a href="https://chengzhag.github.io/publication/panfusion" target="_blank" rel="noopener">https://chengzhag.github.io/publication/panfusion</a>.</p>
-<hr>
-<h2 id="pipeline">Pipeline</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  id="figure-our-proposed-dual-branch-panfusion-pipeline-the-panorama-branch-upper-provides-global-layout-guidance-and-registers-the-perspective-information-to-get-seamless-panorama-output-the-perspective-branch-lower-harnesses-the-rich-prior-knowledge-of-stable-diffusion-sd-and-provides-guidance-to-alleviate-distortion-under-perspective-projection-both-branches-employ-the-same-unet-backbone-with-shared-weights-while-finetuned-with-separate-lora-layers-equirectangular-perspective-projection-attention-eppa-modules-are-plugged-into-different-layers-of-the-unet-to-pass-information-between-the-two-branches">
-  <div class="d-flex justify-content-center">
-    <div class="w-100" >
-        <img alt="Our proposed dual-branch PanFusion pipeline. The panorama branch (upper) provides global layout guidance and registers the perspective information to get seamless panorama output. The perspective branch (lower) harnesses the rich prior knowledge of Stable Diffusion (SD) and provides guidance to alleviate distortion under perspective projection. Both branches employ the same UNet backbone with shared weights, while finetuned with separate LoRA layers. Equirectangular-Perspective Projection Attention (EPPA) modules are plugged into different layers of the UNet to pass information between the two branches." srcset="
-               /publication/panfusion/pipeline_hu5f367bf169fefbabfa80074700fc729f_661292_326e05803f6d9f1e5ffd2f4213e4ea06.png 400w,
-               /publication/panfusion/pipeline_hu5f367bf169fefbabfa80074700fc729f_661292_da9ba806b6797c65f763d5a92a23b4fb.png 760w,
-               /publication/panfusion/pipeline_hu5f367bf169fefbabfa80074700fc729f_661292_1200x1200_fit_lanczos_2.png 1200w"
-               src="/publication/panfusion/pipeline_hu5f367bf169fefbabfa80074700fc729f_661292_326e05803f6d9f1e5ffd2f4213e4ea06.png"
-               width="760"
-               height="280"
-               loading="lazy" data-zoomable /></div>
-  </div><figcaption>
-      Our proposed dual-branch PanFusion pipeline. The panorama branch (upper) provides global layout guidance and registers the perspective information to get seamless panorama output. The perspective branch (lower) harnesses the rich prior knowledge of Stable Diffusion (SD) and provides guidance to alleviate distortion under perspective projection. Both branches employ the same UNet backbone with shared weights, while finetuned with separate LoRA layers. Equirectangular-Perspective Projection Attention (EPPA) modules are plugged into different layers of the UNet to pass information between the two branches.
-    </figcaption></figure>
-<hr>
-<h2 id="comparisons">Comparisons</h2>
-<center>
-  
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-<div class="gallery">
-
-  
-  
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-comp" href="/publication/panfusion/comp/629_supp_Page_05.jpg" >
-      <img src="/publication/panfusion/comp/629_supp_Page_05_hu700275244aab45103b63a9bdebf71928_853380_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_05.jpg" width="147" height="190">
-    </a>
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-comp" href="/publication/panfusion/comp/629_supp_Page_06.jpg" >
-      <img src="/publication/panfusion/comp/629_supp_Page_06_hu700275244aab45103b63a9bdebf71928_912323_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_06.jpg" width="147" height="190">
-    </a>
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-comp" href="/publication/panfusion/comp/629_supp_Page_07.jpg" >
-      <img src="/publication/panfusion/comp/629_supp_Page_07_hu700275244aab45103b63a9bdebf71928_745484_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_07.jpg" width="147" height="190">
-    </a>
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-comp" href="/publication/panfusion/comp/629_supp_Page_08.jpg" >
-      <img src="/publication/panfusion/comp/629_supp_Page_08_hu700275244aab45103b63a9bdebf71928_990152_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_08.jpg" width="147" height="190">
-    </a>
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-comp" href="/publication/panfusion/comp/629_supp_Page_09.jpg" >
-      <img src="/publication/panfusion/comp/629_supp_Page_09_hu700275244aab45103b63a9bdebf71928_1072684_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_09.jpg" width="147" height="190">
-    </a>
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-comp" href="/publication/panfusion/comp/629_supp_Page_10.jpg" >
-      <img src="/publication/panfusion/comp/629_supp_Page_10_hu700275244aab45103b63a9bdebf71928_1114310_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_10.jpg" width="147" height="190">
-    </a>
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-comp" href="/publication/panfusion/comp/629_supp_Page_11.jpg" >
-      <img src="/publication/panfusion/comp/629_supp_Page_11_hu700275244aab45103b63a9bdebf71928_873045_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_11.jpg" width="147" height="190">
-    </a>
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-comp" href="/publication/panfusion/comp/629_supp_Page_12.jpg" >
-      <img src="/publication/panfusion/comp/629_supp_Page_12_hu700275244aab45103b63a9bdebf71928_892583_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_12.jpg" width="147" height="190">
-    </a>
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-comp" href="/publication/panfusion/comp/629_supp_Page_13.jpg" >
-      <img src="/publication/panfusion/comp/629_supp_Page_13_hu700275244aab45103b63a9bdebf71928_786101_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_13.jpg" width="147" height="190">
-    </a>
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-comp" href="/publication/panfusion/comp/629_supp_Page_14.jpg" >
-      <img src="/publication/panfusion/comp/629_supp_Page_14_hu700275244aab45103b63a9bdebf71928_926780_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_14.jpg" width="147" height="190">
-    </a>
-  
-
-</div>
-</center>
-<hr>
-<h2 id="generalization">Generalization</h2>
-<center>
-  
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-<div class="gallery">
-
-  
-  
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-generalization" href="/publication/panfusion/generalization/629_supp_Page_17.jpg" >
-      <img src="/publication/panfusion/generalization/629_supp_Page_17_hu700275244aab45103b63a9bdebf71928_1248988_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_17.jpg" width="147" height="190">
-    </a>
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-generalization" href="/publication/panfusion/generalization/629_supp_Page_18.jpg" >
-      <img src="/publication/panfusion/generalization/629_supp_Page_18_hu700275244aab45103b63a9bdebf71928_1174457_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_18.jpg" width="147" height="190">
-    </a>
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-generalization" href="/publication/panfusion/generalization/629_supp_Page_19.jpg" >
-      <img src="/publication/panfusion/generalization/629_supp_Page_19_hu700275244aab45103b63a9bdebf71928_1171826_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_19.jpg" width="147" height="190">
-    </a>
-  
-    
-    
-    
-    
-    
-    <a data-fancybox="gallery-generalization" href="/publication/panfusion/generalization/629_supp_Page_20.jpg" >
-      <img src="/publication/panfusion/generalization/629_supp_Page_20_hu700275244aab45103b63a9bdebf71928_1066654_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="629_supp_Page_20.jpg" width="147" height="190">
-    </a>
-  
-
-</div>
-</center>
 </div>
 
     
@@ -1070,7 +919,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
   
   <a class="badge badge-light" href="/tag/deep-learning/">Deep Learning</a>
   
-  <a class="badge badge-light" href="/tag/image-generation/">Image Generation</a>
+  <a class="badge badge-light" href="/tag/novel-view-synthesis/">Novel View Synthesis</a>
   
   <a class="badge badge-light" href="/tag/panorama/">Panorama</a>
   
@@ -1089,7 +938,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://chengzhag.github.io/publication/panfusion/&amp;text=Taming%20Stable%20Diffusion%20for%20Text%20to%20360%c2%b0%20Panorama%20Image%20Generation" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://chengzhag.github.io/publication/pansplat/&amp;text=PanSplat:%204K%20Panorama%20Synthesis%20with%20Feed-Forward%20Gaussian%20Splatting" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1102,7 +951,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://chengzhag.github.io/publication/panfusion/&amp;t=Taming%20Stable%20Diffusion%20for%20Text%20to%20360%c2%b0%20Panorama%20Image%20Generation" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://chengzhag.github.io/publication/pansplat/&amp;t=PanSplat:%204K%20Panorama%20Synthesis%20with%20Feed-Forward%20Gaussian%20Splatting" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1115,7 +964,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
       
       
       <li>
-        <a href="mailto:?subject=Taming%20Stable%20Diffusion%20for%20Text%20to%20360%c2%b0%20Panorama%20Image%20Generation&amp;body=https://chengzhag.github.io/publication/panfusion/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=PanSplat:%204K%20Panorama%20Synthesis%20with%20Feed-Forward%20Gaussian%20Splatting&amp;body=https://chengzhag.github.io/publication/pansplat/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1128,7 +977,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://chengzhag.github.io/publication/panfusion/&amp;title=Taming%20Stable%20Diffusion%20for%20Text%20to%20360%c2%b0%20Panorama%20Image%20Generation" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://chengzhag.github.io/publication/pansplat/&amp;title=PanSplat:%204K%20Panorama%20Synthesis%20with%20Feed-Forward%20Gaussian%20Splatting" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1141,7 +990,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
       
       
       <li>
-        <a href="whatsapp://send?text=Taming%20Stable%20Diffusion%20for%20Text%20to%20360%c2%b0%20Panorama%20Image%20Generation%20https://chengzhag.github.io/publication/panfusion/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=PanSplat:%204K%20Panorama%20Synthesis%20with%20Feed-Forward%20Gaussian%20Splatting%20https://chengzhag.github.io/publication/pansplat/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1154,7 +1003,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://chengzhag.github.io/publication/panfusion/&amp;title=Taming%20Stable%20Diffusion%20for%20Text%20to%20360%c2%b0%20Panorama%20Image%20Generation" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://chengzhag.github.io/publication/pansplat/&amp;title=PanSplat:%204K%20Panorama%20Synthesis%20with%20Feed-Forward%20Gaussian%20Splatting" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1248,12 +1097,6 @@ Supplementary notes can be added here, including [code, math, and images](https:
 
     </div>
   </div>
-
-
-  
-    
-
-
 
 
   
@@ -1391,8 +1234,6 @@ Supplementary notes can be added here, including [code, math, and images](https:
       
 
       
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
       
 
       

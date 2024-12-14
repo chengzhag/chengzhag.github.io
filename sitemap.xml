@@ -2,28 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://chengzhag.github.io/publication-type/3/</loc>
+    <lastmod>2024-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://chengzhag.github.io/</loc>
+    <lastmod>2024-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://chengzhag.github.io/tag/deep-learning/</loc>
+    <lastmod>2024-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://chengzhag.github.io/tag/novel-view-synthesis/</loc>
+    <lastmod>2024-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://chengzhag.github.io/tag/panorama/</loc>
+    <lastmod>2024-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://chengzhag.github.io/publication/pansplat/</loc>
+    <lastmod>2024-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://chengzhag.github.io/publication_types/</loc>
+    <lastmod>2024-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://chengzhag.github.io/publication/</loc>
+    <lastmod>2024-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://chengzhag.github.io/tags/</loc>
+    <lastmod>2024-12-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://chengzhag.github.io/publication-type/1/</loc>
     <lastmod>2024-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://chengzhag.github.io/</loc>
-    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://chengzhag.github.io/tag/deep-learning/</loc>
-    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://chengzhag.github.io/tag/image-generation/</loc>
-    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://chengzhag.github.io/tag/panorama/</loc>
-    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://chengzhag.github.io/publication_types/</loc>
-    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://chengzhag.github.io/publication/</loc>
-    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://chengzhag.github.io/tags/</loc>
     <lastmod>2024-04-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://chengzhag.github.io/publication/panfusion/</loc>
