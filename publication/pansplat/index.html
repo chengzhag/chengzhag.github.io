@@ -1,0 +1,1323 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Cheng Zhang" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="We present PanSplat, a generalizable, feed-forward approach that efficiently supports resolution up to 4K (2048 × 4096)." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://chengzhag.github.io/publication/pansplat/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=PT+Serif&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=PT+Serif&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.38f432b080e009b75f82e0873d71d8c8.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120268499-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-120268499-3', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="https://chengzhag.github.io/publication/pansplat/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Cheng Zhang" />
+  <meta property="og:url" content="https://chengzhag.github.io/publication/pansplat/" />
+  <meta property="og:title" content="PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting | Cheng Zhang" />
+  <meta property="og:description" content="We present PanSplat, a generalizable, feed-forward approach that efficiently supports resolution up to 4K (2048 × 4096)." /><meta property="og:image" content="https://chengzhag.github.io/publication/pansplat/featured.png" />
+    <meta property="twitter:image" content="https://chengzhag.github.io/publication/pansplat/featured.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2017-01-01T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2024-12-12T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chengzhag.github.io/publication/pansplat/"
+  },
+  "headline": "PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting",
+  
+  "image": [
+    "https://chengzhag.github.io/publication/pansplat/featured.png"
+  ],
+  
+  "datePublished": "2017-01-01T00:00:00Z",
+  "dateModified": "2024-12-12T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Cheng Zhang"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cheng Zhang",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "We present PanSplat, a generalizable, feed-forward approach that efficiently supports resolution up to 4K (2048 × 4096)."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting | Cheng Zhang</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="66418d7fe2db1f9ef6027a449a111cee" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2656b96b9273c77f9f1758e7dfbeb3fe.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Cheng Zhang</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Cheng Zhang</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>About</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publication</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+
+
+
+<div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+	
+		<h1 class="publication-header">PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting</h1>
+	
+
+  
+
+	
+</div>
+
+
+
+	
+
+
+  <div class="article-container">
+
+    
+
+    
+
+    
+
+    
+
+    <div class="article-style"><!-- <div class="alert alert-note">
+  <div>
+    Click the <em>Cite</em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  </div>
+</div>
+
+
+<div class="alert alert-note">
+  <div>
+    Create your slides in Markdown - click the <em>Slides</em> button to check out the example.
+  </div>
+</div>
+
+
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). -->
+<h2 id="div-classpublication-headercvpr-2025div"><div class="publication-header">CVPR 2025</div></h2>
+<div class="publication-header">
+  <a href="https://chengzhag.github.io/" target="_blank">Cheng Zhang</a>
+  <sup>1,2</sup>
+  &nbsp; &nbsp;
+  <a href="https://haofeixu.github.io" target="_blank">Haofei Xu</a>
+  <sup>3</sup>
+  &nbsp; &nbsp;
+  <a href="https://wuqianyi.top" target="_blank">Qianyi Wu</a>
+  <sup>1</sup>
+  <!-- &nbsp; &nbsp; -->
+  <br />
+  <a href="https://www.researchgate.net/profile/Camilo-Cruz-Gambardella" target="_blank">Camilo Cruz Gambardella</a>
+  <sup>1,2</sup>
+  &nbsp; &nbsp;
+  <a href="https://dinhphung.ml" target="_blank">Dinh Phung</a>
+  <sup>1</sup>
+  &nbsp; &nbsp;
+  <a href="https://jianfei-cai.github.io" target="_blank">Jianfei Cai</a>
+  <sup>1</sup>
+</div>
+<div class="publication-header">
+  <sup>1</sup>
+  <a href="https://www.monash.edu" target="_blank">Monash University</a> 
+  &nbsp; &nbsp;
+  <!-- <br /> -->
+  <sup>2</sup>
+  <a href="https://building4pointzero.org" target="_blank">Building 4.0 CRC, Caulfield East, Victoria, Australia</a>
+  &nbsp; &nbsp;
+  <sup>3</sup>
+  <a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a> 
+  <!-- <br /> -->
+</div>
+<center>
+  <!-- <a href="#" class="btn btn-outline-primary js-cite-modal" data-filename="cite.bib">
+  Cite
+  </a> -->
+  <a href="https://github.com/chengzhag/PanSplat" class="btn btn-outline-primary" target="_blank">
+  Code
+  </a>
+  <!-- <a href="https://www.youtube.com/watch?v=Kg0du7mFu60" class="btn btn-outline-primary" target="_blank">
+  YouTube
+  </a>
+  <a href="https://www.bilibili.com/video/BV1By4y1g7c5/" class="btn btn-outline-primary" target="_blank">
+  bilibili
+  </a> -->
+  <a href="https://arxiv.org/abs/2412.12096" class="btn btn-outline-primary">
+  arXiv
+  </a> 
+  <a href="https://arxiv.org/pdf/2412.12096" class="btn btn-outline-primary">
+  Paper
+  </a>
+</center>
+<hr>
+<h2 id="short-video">Short Video</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/R3qIzL77ZSc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<hr>
+<h2 id="abstract">Abstract</h2>
+<p>With the advent of portable 360° cameras, panorama has gained significant attention in applications like virtual reality (VR), virtual tours, robotics, and autonomous driving.
+As a result, wide-baseline panorama view synthesis has emerged as a vital task, where high resolution, fast inference, and memory efficiency are essential.
+Nevertheless, existing methods are typically constrained to lower resolutions (512 × 1024) due to demanding memory and computational requirements.
+In this paper, we present <strong>PanSplat</strong>, a generalizable, feed-forward approach that efficiently supports <strong>resolution up to 4K</strong> (2048 × 4096).
+Our approach features a tailored spherical 3D Gaussian pyramid with a Fibonacci lattice arrangement, enhancing image quality while reducing information redundancy.
+To accommodate the demands of high resolution, we propose a pipeline that integrates a hierarchical spherical cost volume and Gaussian heads with local operations, enabling two-step deferred backpropagation for memory-efficient training on a single A100 GPU.
+Experiments demonstrate that PanSplat achieves state-of-the-art results with superior efficiency and image quality across both synthetic and real-world datasets.</p>
+<hr>
+<h2 id="full-video">Full Video</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/77G9AQkweg0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<hr>
+<h2 id="pipeline">Pipeline</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-our-proposed-pansplat-pipeline-given-two-wide-baseline-panoramas-we-first-construct-a-hierarchical-spherical-cost-volume-using-a-transformer-based-fpn-to-extract-feature-pyramid-and-2d-u-nets-to-integrate-monocular-depth-priors-for-cost-volume-refinement-we-then-build-gaussian-heads-to-generate-a-feature-pyramid-which-is-later-sampled-with-fibonacci-lattice-and-transformed-to-spherical-3d-gaussian-pyramid-finally-we-unproject-the-gaussian-parameters-for-each-level-and-view-consolidate-them-into-a-global-representation-and-splat-it-into-novel-views-using-a-cubemap-renderer-for-simplicity-intermediate-results-of-only-a-single-view-are-shown">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="Our proposed PanSplat pipeline. Given two wide-baseline panoramas, we first construct a hierarchical spherical cost volume using a Transformer-based FPN to extract feature pyramid and 2D U-Nets to integrate monocular depth priors for cost volume refinement. We then build Gaussian heads to generate a feature pyramid, which is later sampled with Fibonacci lattice and transformed to spherical 3D Gaussian pyramid. Finally, we unproject the Gaussian parameters for each level and view, consolidate them into a global representation, and splat it into novel views using a cubemap renderer. For simplicity, intermediate results of only a single view are shown." srcset="
+               /publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_7e2bd5dc1b79802b2b0f980fcb653cfd.png 400w,
+               /publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_a952ef3b115c64bb64e2157e43f5d7a7.png 760w,
+               /publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_1200x1200_fit_lanczos_2.png 1200w"
+               src="/publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_7e2bd5dc1b79802b2b0f980fcb653cfd.png"
+               width="80%"
+               height="187"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Our proposed PanSplat pipeline. Given two wide-baseline panoramas, we first construct a hierarchical spherical cost volume using a Transformer-based FPN to extract feature pyramid and 2D U-Nets to integrate monocular depth priors for cost volume refinement. We then build Gaussian heads to generate a feature pyramid, which is later sampled with Fibonacci lattice and transformed to spherical 3D Gaussian pyramid. Finally, we unproject the Gaussian parameters for each level and view, consolidate them into a global representation, and splat it into novel views using a cubemap renderer. For simplicity, intermediate results of only a single view are shown.
+    </figcaption></figure>
+<hr>
+<h2 id="interactive-demo">Interactive Demo</h2>
+<p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/9bKZA2zxAbw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+(Best viewed on a desktop browser or Youtube app.)</p>
+<hr>
+<h2 id="results">Results</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="" srcset="
+               /publication/pansplat/teaser_hue964f49ef3a040669a69db22bafcc8b8_1783743_297f179c8e43cb969457540e33f5f78a.png 400w,
+               /publication/pansplat/teaser_hue964f49ef3a040669a69db22bafcc8b8_1783743_65c8c1a847e40e086f1a35c9b8961378.png 760w,
+               /publication/pansplat/teaser_hue964f49ef3a040669a69db22bafcc8b8_1783743_1200x1200_fit_lanczos_2.png 1200w"
+               src="/publication/pansplat/teaser_hue964f49ef3a040669a69db22bafcc8b8_1783743_297f179c8e43cb969457540e33f5f78a.png"
+               width="90%"
+               height="300"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/deep-learning/">Deep Learning</a>
+  
+  <a class="badge badge-light" href="/tag/novel-view-synthesis/">Novel View Synthesis</a>
+  
+  <a class="badge badge-light" href="/tag/panorama/">Panorama</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://chengzhag.github.io/publication/pansplat/&amp;text=PanSplat:%204K%20Panorama%20Synthesis%20with%20Feed-Forward%20Gaussian%20Splatting" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://chengzhag.github.io/publication/pansplat/&amp;t=PanSplat:%204K%20Panorama%20Synthesis%20with%20Feed-Forward%20Gaussian%20Splatting" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=PanSplat:%204K%20Panorama%20Synthesis%20with%20Feed-Forward%20Gaussian%20Splatting&amp;body=https://chengzhag.github.io/publication/pansplat/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://chengzhag.github.io/publication/pansplat/&amp;title=PanSplat:%204K%20Panorama%20Synthesis%20with%20Feed-Forward%20Gaussian%20Splatting" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=PanSplat:%204K%20Panorama%20Synthesis%20with%20Feed-Forward%20Gaussian%20Splatting%20https://chengzhag.github.io/publication/pansplat/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://chengzhag.github.io/publication/pansplat/&amp;title=PanSplat:%204K%20Panorama%20Synthesis%20with%20Feed-Forward%20Gaussian%20Splatting" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://chengzhag.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu576bf810bc605a94727766389217b97b_418874_270x270_fill_q75_lanczos_center.jpg" alt="Cheng Zhang"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://chengzhag.github.io/">Cheng Zhang</a></h5>
+      <h6 class="card-subtitle">Ph.D Student</h6>
+      <p class="card-text">My research interests include 3D generation, novel view synthesis, image generation etc.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=2uEyZJQAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/chengzhag/" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:cheng.zhang@monash.edu" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.71e713848164e269bc250f377042949d.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1349 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Cheng Zhang" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="PanFlow is a framework for controllable 360° panoramic video generation that decouples motion input into two interpretable components: rotation flow and derotated flow." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://chengzhag.github.io/publication/panflow/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=PT+Serif&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=PT+Serif&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.38f432b080e009b75f82e0873d71d8c8.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120268499-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-120268499-3', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="https://chengzhag.github.io/publication/panflow/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Cheng Zhang" />
+  <meta property="og:url" content="https://chengzhag.github.io/publication/panflow/" />
+  <meta property="og:title" content="PanFlow: Decoupled Motion Control for Panoramic Video Generation | Cheng Zhang" />
+  <meta property="og:description" content="PanFlow is a framework for controllable 360° panoramic video generation that decouples motion input into two interpretable components: rotation flow and derotated flow." /><meta property="og:image" content="https://chengzhag.github.io/publication/panflow/featured.png" />
+    <meta property="twitter:image" content="https://chengzhag.github.io/publication/panflow/featured.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2017-01-01T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2025-12-21T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chengzhag.github.io/publication/panflow/"
+  },
+  "headline": "PanFlow: Decoupled Motion Control for Panoramic Video Generation",
+  
+  "image": [
+    "https://chengzhag.github.io/publication/panflow/featured.png"
+  ],
+  
+  "datePublished": "2017-01-01T00:00:00Z",
+  "dateModified": "2025-12-21T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Cheng Zhang"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cheng Zhang",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "PanFlow is a framework for controllable 360° panoramic video generation that decouples motion input into two interpretable components: rotation flow and derotated flow."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>PanFlow: Decoupled Motion Control for Panoramic Video Generation | Cheng Zhang</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="b32004b53ac55339b8f405b3b79896d2" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2656b96b9273c77f9f1758e7dfbeb3fe.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Cheng Zhang</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Cheng Zhang</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>About</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publication</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+
+
+
+<div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+	
+		<h1 class="publication-header">PanFlow: Decoupled Motion Control for Panoramic Video Generation</h1>
+	
+
+  
+
+	
+</div>
+
+
+
+	
+
+
+  <div class="article-container">
+
+    
+
+    
+
+    
+
+    
+
+    <div class="article-style"><!-- <div class="alert alert-note">
+  <div>
+    Click the <em>Cite</em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  </div>
+</div>
+
+
+<div class="alert alert-note">
+  <div>
+    Create your slides in Markdown - click the <em>Slides</em> button to check out the example.
+  </div>
+</div>
+
+
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). -->
+<h2 id="div-classpublication-headeraaai-2026div"><div class="publication-header">AAAI 2026</div></h2>
+<div class="publication-header">
+  <a href="https://chengzhag.github.io/" target="_blank">Cheng Zhang</a>
+  <sup>1,2</sup>
+  &nbsp; &nbsp;
+  <a href="https://github.com/hw-liang" target="_blank">Hanwen Liang</a>
+  <sup>3</sup>
+  &nbsp; &nbsp;
+  <a href="https://donydchen.github.io" target="_blank">Donny Y. Chen</a>
+  <sup>1</sup>
+  &nbsp; &nbsp;
+  <a href="https://wuqianyi.top" target="_blank">Qianyi Wu</a>
+  <sup>1</sup>
+  <!-- &nbsp; &nbsp; -->
+  <br />
+  <a href="https://www.ece.utoronto.ca/people/plataniotis-k-n/" target="_blank">Konstantinos N. Plataniotis</a>
+  <sup>3</sup>
+  &nbsp; &nbsp;
+  <a href="https://www.researchgate.net/profile/Camilo-Cruz-Gambardella" target="_blank">Camilo Cruz Gambardella</a>
+  <sup>1,2</sup>
+  &nbsp; &nbsp;
+  <a href="https://jianfei-cai.github.io" target="_blank">Jianfei Cai</a>
+  <sup>1</sup>
+</div>
+<div class="publication-header">
+  <sup>1</sup>
+  <a href="https://www.monash.edu" target="_blank">Monash University</a> 
+  &nbsp; &nbsp;
+  <!-- <br /> -->
+  <sup>2</sup>
+  <a href="https://building4pointzero.org" target="_blank">Building 4.0 CRC</a>
+  &nbsp; &nbsp;
+  <sup>3</sup>
+  <a href="https://www.utoronto.ca" target="_blank">University of Toronto</a> 
+  <!-- <br /> -->
+</div>
+<center>
+  <!-- <a href="#" class="btn btn-outline-primary js-cite-modal" data-filename="cite.bib">
+  Cite
+  </a> -->
+  <a href="https://github.com/chengzhag/PanFlow" class="btn btn-outline-primary" target="_blank">
+  Code
+  </a>
+  <a href="https://www.youtube.com/watch?v=sFTWwlHjNtg" class="btn btn-outline-primary" target="_blank">
+  Video
+  </a>
+  <!-- <a href="https://www.bilibili.com/video/BV1By4y1g7c5/" class="btn btn-outline-primary" target="_blank">
+  bilibili
+  </a> -->
+  <a href="https://arxiv.org/abs/2512.00832" class="btn btn-outline-primary">
+  arXiv
+  </a> 
+  <a href="https://arxiv.org/pdf/2512.00832" class="btn btn-outline-primary">
+  Paper
+  </a>
+</center>
+<hr>
+<h2 id="video">Video</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/sFTWwlHjNtg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<hr>
+<h2 id="abstract">Abstract</h2>
+<p>Panoramic video generation has attracted growing attention due to its applications in virtual reality and immersive media. However, existing methods lack explicit motion control and struggle to generate scenes with large and complex motions. We propose PanFlow, a novel approach that exploits the spherical nature of <u>pan</u>oramas to decouple the highly dynamic camera rotation from the input optical <u>flow</u> condition, enabling more precise control over large and dynamic motions. We further introduce a spherical noise warping strategy to promote loop consistency in motion across panorama boundaries. To support effective training, we curate a large-scale, motion-rich panoramic video dataset with frame-level pose and flow annotations. We also showcase the effectiveness of our method in various applications, including motion transfer and video editing. Extensive experiments demonstrate that PanFlow significantly outperforms prior methods in motion fidelity, visual quality, and temporal coherence.</p>
+<hr>
+<h2 id="method">Method</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-spherical-camera-optical-flow-the-optical-flow-from-a-panoramic-video-left-can-be-interpreted-as-a-spherical-camera-optical-flow-right-for-complex-motion-f-the-camera-rotation-yields-an-analytic-rotation-flow-fr-on-the-sphere-by-decomposing-f-into-fr-and-its-residual-we-obtain-a-derotated-flow-fd-that-more-clearly-captures-camera-translation-and-object-dynamics">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="**Spherical Camera Optical Flow.** The optical flow from a panoramic video (left) can be interpreted as a spherical camera optical flow (right). For complex motion **f**, the camera rotation yields an analytic rotation flow **f**r on the sphere. By decomposing **f** into **f**r and its residual, we obtain a derotated flow **f**d that more clearly captures camera translation and object dynamics." srcset="
+               /publication/panflow/teaser_hu8f94f8bd176fc76feb23c2a004bde52e_828004_1372630565d310e580904b411bf67150.png 400w,
+               /publication/panflow/teaser_hu8f94f8bd176fc76feb23c2a004bde52e_828004_fdb1a4d12b2c667dbba09abc80b9d109.png 760w,
+               /publication/panflow/teaser_hu8f94f8bd176fc76feb23c2a004bde52e_828004_1200x1200_fit_lanczos_2.png 1200w"
+               src="/publication/panflow/teaser_hu8f94f8bd176fc76feb23c2a004bde52e_828004_1372630565d310e580904b411bf67150.png"
+               width="480"
+               height="639"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      <strong>Spherical Camera Optical Flow.</strong> The optical flow from a panoramic video (left) can be interpreted as a spherical camera optical flow (right). For complex motion <strong>f</strong>, the camera rotation yields an analytic rotation flow <strong>f</strong>r on the sphere. By decomposing <strong>f</strong> into <strong>f</strong>r and its residual, we obtain a derotated flow <strong>f</strong>d that more clearly captures camera translation and object dynamics.
+    </figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-our-proposed-panflow-pipeline-given-an-input-image-and-text-prompt-panflow-uses-a-decoupled-motion-from-a-video-as-reference-to-generate-a-panoramic-video-we-first-estimate-a-decoupled-optical-flow-from-the-reference-video-of-which-the-derotated-flow-is-used-to-generate-a-latent-noise-with-spherical-noise-warping-the-latent-noise-then-serves-as-a-motion-condition-for-a-video-diffusion-transformer-with-lora-fine-tuning-to-generate-derotated-videos-finally-the-decoupled-rotation-is-accumulated-and-applied-to-the-generated-video-frames-to-recover-the-full-motion">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="**Our proposed PanFlow pipeline.** Given an input image and text prompt, PanFlow uses a decoupled motion from a video as reference to generate a panoramic video. We first estimate a decoupled optical flow from the reference video, of which the derotated flow is used to generate a latent noise with spherical noise warping. The latent noise then serves as a motion condition for a video diffusion transformer with LoRA fine-tuning to generate derotated videos. Finally, the decoupled rotation is accumulated and applied to the generated video frames to recover the full motion." srcset="
+               /publication/panflow/pipeline_hu56d2780c2ed99b29e4fc3878bdb0433e_1183105_d1da4b9c5bc8b0eba7fea6e3bcbf8081.png 400w,
+               /publication/panflow/pipeline_hu56d2780c2ed99b29e4fc3878bdb0433e_1183105_01e40490b605386007714678e24656ee.png 760w,
+               /publication/panflow/pipeline_hu56d2780c2ed99b29e4fc3878bdb0433e_1183105_1200x1200_fit_lanczos_2.png 1200w"
+               src="/publication/panflow/pipeline_hu56d2780c2ed99b29e4fc3878bdb0433e_1183105_d1da4b9c5bc8b0eba7fea6e3bcbf8081.png"
+               width="1000"
+               height="211"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      <strong>Our proposed PanFlow pipeline.</strong> Given an input image and text prompt, PanFlow uses a decoupled motion from a video as reference to generate a panoramic video. We first estimate a decoupled optical flow from the reference video, of which the derotated flow is used to generate a latent noise with spherical noise warping. The latent noise then serves as a motion condition for a video diffusion transformer with LoRA fine-tuning to generate derotated videos. Finally, the decoupled rotation is accumulated and applied to the generated video frames to recover the full motion.
+    </figcaption></figure>
+<hr>
+<h2 id="applications">Applications</h2>
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="" srcset="
+               /publication/panflow/editing_huf1f7b188ed05826a963caeaad294c687_5085472_066b1b0677397289d57a4724f0ee2abd.gif 400w,
+               /publication/panflow/editing_huf1f7b188ed05826a963caeaad294c687_5085472_e9dfb9be0ff120985a2ad02e3b4aac82.gif 760w,
+               /publication/panflow/editing_huf1f7b188ed05826a963caeaad294c687_5085472_1200x1200_fit_lanczos.gif 1200w"
+               src="/publication/panflow/editing_huf1f7b188ed05826a963caeaad294c687_5085472_066b1b0677397289d57a4724f0ee2abd.gif"
+               width="90%"
+               height="428"
+               loading="lazy" data-zoomable /></div>
+  </div></figure> -->
+<p>By conditioning diffusion on spherical-warped motion noise, PanFlow enables precise motion control, produces loop-consistent panoramas, and supports applications such as motion transfer:</p>
+<p align="center">
+  <img src="transfer.gif" alt="transfer" width="860">
+</p>
+<p>and panoramic video editing:</p>
+<p align="center">
+  <img src="editing.gif" alt="editing" width="860">
+</p>
+</div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/deep-learning/">Deep Learning</a>
+  
+  <a class="badge badge-light" href="/tag/video-generation/">Video Generation</a>
+  
+  <a class="badge badge-light" href="/tag/panorama/">Panorama</a>
+  
+  <a class="badge badge-light" href="/tag/motion-control/">Motion Control</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://chengzhag.github.io/publication/panflow/&amp;text=PanFlow:%20Decoupled%20Motion%20Control%20for%20Panoramic%20Video%20Generation" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://chengzhag.github.io/publication/panflow/&amp;t=PanFlow:%20Decoupled%20Motion%20Control%20for%20Panoramic%20Video%20Generation" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=PanFlow:%20Decoupled%20Motion%20Control%20for%20Panoramic%20Video%20Generation&amp;body=https://chengzhag.github.io/publication/panflow/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://chengzhag.github.io/publication/panflow/&amp;title=PanFlow:%20Decoupled%20Motion%20Control%20for%20Panoramic%20Video%20Generation" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=PanFlow:%20Decoupled%20Motion%20Control%20for%20Panoramic%20Video%20Generation%20https://chengzhag.github.io/publication/panflow/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://chengzhag.github.io/publication/panflow/&amp;title=PanFlow:%20Decoupled%20Motion%20Control%20for%20Panoramic%20Video%20Generation" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://chengzhag.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu576bf810bc605a94727766389217b97b_418874_270x270_fill_q75_lanczos_center.jpg" alt="Cheng Zhang"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://chengzhag.github.io/">Cheng Zhang</a></h5>
+      <h6 class="card-subtitle">Ph.D Student</h6>
+      <p class="card-text">My research interests include 3D generation, novel view synthesis, image generation etc.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=2uEyZJQAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/chengzhag/" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:cheng.zhang@monash.edu" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.71e713848164e269bc250f377042949d.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

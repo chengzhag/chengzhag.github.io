@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Camera Control | Cheng Zhang</title>
+    <link>https://chengzhag.github.io/tag/camera-control/</link>
+      <atom:link href="https://chengzhag.github.io/tag/camera-control/index.xml" rel="self" type="application/rss+xml" />
+    <description>Camera Control</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 22 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Camera Control</title>
+      <link>https://chengzhag.github.io/tag/camera-control/</link>
+    </image>
+    
+    <item>
+      <title>Unified Camera Positional Encoding for Controlled Video Generation</title>
+      <link>https://chengzhag.github.io/publication/ucpe/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/publication/ucpe/</guid>
+      <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h2 id=&#34;div-classpublication-headerarxiv-2026div&#34;&gt;&lt;div class=&#34;publication-header&#34;&gt;arXiv 2026&lt;/div&gt;&lt;/h2&gt;
+&lt;div class=&#34;publication-header&#34;&gt;
+  &lt;a href=&#34;https://chengzhag.github.io/&#34; target=&#34;_blank&#34;&gt;Cheng Zhang&lt;/a&gt;
+  &lt;sup&gt;1,2&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://leeby68.github.io&#34; target=&#34;_blank&#34;&gt;Boying Li&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://github.com/Meng-Wei&#34; target=&#34;_blank&#34;&gt;Meng Wei&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &lt;!-- &amp;nbsp; &amp;nbsp; --&gt;
+  &lt;br /&gt;
+  &lt;a href=&#34;https://yanpei.me&#34; target=&#34;_blank&#34;&gt;Yan-Pei Cao&lt;/a&gt;
+  &lt;sup&gt;3&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://www.researchgate.net/profile/Camilo-Cruz-Gambardella&#34; target=&#34;_blank&#34;&gt;Camilo Cruz Gambardella&lt;/a&gt;
+  &lt;sup&gt;1,2&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://dinhphung.ml&#34; target=&#34;_blank&#34;&gt;Dinh Phung&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://jianfei-cai.github.io&#34; target=&#34;_blank&#34;&gt;Jianfei Cai&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+&lt;/div&gt;
+&lt;div class=&#34;publication-header&#34;&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &lt;a href=&#34;https://www.monash.edu&#34; target=&#34;_blank&#34;&gt;Monash University&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;!-- &lt;br /&gt; --&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
+  &lt;a href=&#34;https://building4pointzero.org&#34; target=&#34;_blank&#34;&gt;Building 4.0 CRC&lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;sup&gt;3&lt;/sup&gt;
+  &lt;a href=&#34;https://github.com/VAST-AI-Research&#34; target=&#34;_blank&#34;&gt;VAST&lt;/a&gt; 
+  &lt;!-- &lt;br /&gt; --&gt;
+&lt;/div&gt;
+&lt;center&gt;
+  &lt;!-- &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;cite.bib&#34;&gt;
+  Cite
+  &lt;/a&gt; --&gt;
+  &lt;a href=&#34;https://github.com/chengzhag/UCPE&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Code
+  &lt;/a&gt;
+  &lt;a href=&#34;https://www.youtube.com/watch?v=DogzWyoVBEs&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Video
+  &lt;/a&gt;
+  &lt;!-- &lt;a href=&#34;https://www.bilibili.com/video/BV1By4y1g7c5/&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  bilibili
+  &lt;/a&gt; --&gt;
+  &lt;a href=&#34;https://arxiv.org/abs/2512.07237&#34; class=&#34;btn btn-outline-primary&#34;&gt;
+  arXiv
+  &lt;/a&gt; 
+  &lt;a href=&#34;https://arxiv.org/pdf/2512.07237&#34; class=&#34;btn btn-outline-primary&#34;&gt;
+  Paper
+  &lt;/a&gt;
+&lt;/center&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;video&#34;&gt;Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/DogzWyoVBEs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Our UCPE introduces a geometry-consistent alternative to Plücker rays as one of the core contributions, enabling better generalization in Transformers. We hope to inspire future research on camera-aware architectures.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;TLDR&lt;/h2&gt;
+&lt;p&gt;🔥 Camera-controlled text-to-video generation, now with intrinsics, distortion and orientation control!&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;cameras.png&#34;
+       height=&#34;120&#34;
+       style=&#34;display:inline-block; margin-right:48px;&#34;&gt;
+  &lt;img src=&#34;orientation.png&#34;
+       height=&#34;140&#34;
+       style=&#34;display:inline-block;&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;📷 UCPE integrates Relative Ray Encoding—which delivers significantly better generalization than Plücker across diverse camera motion, intrinsics and lens distortions—with Absolute Orientation Encoding for controllable pitch and roll, enabling a unified camera representation for Transformers and state-of-the-art camera-controlled video generation with just 0.5% extra parameters (35.5M over the 7.3B parameters of the base model)&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;video-ucpe.gif&#34;
+       alt=&#34;UCPE&#34;
+       style=&#34;max-height:480px; width:auto;&#34;&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;highlights&#34;&gt;Highlights&lt;/h2&gt;
+&lt;p&gt;Our &lt;strong&gt;Relative Ray Encoding&lt;/strong&gt; not only generalizes to but also enables controllability over a wide range of camera intrinsics and lens distortions.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;video-lens.gif&#34;
+       alt=&#34;Lens control&#34;
+       style=&#34;max-height:480px; width:auto;&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Its geometry-consistent design further allows strong generalization and controllability over diverse camera motions.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;video-pose.gif&#34;
+       alt=&#34;Pose control&#34;
+       style=&#34;max-height:480px; width:auto;&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;We also introduce &lt;strong&gt;Absolute Orientation Encoding&lt;/strong&gt; to eliminate the ambiguity in pitch and roll in previous T2V methods.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;video-orientation.gif&#34;
+       alt=&#34;Orientation control&#34;
+       style=&#34;max-height:480px; width:auto;&#34;&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Transformers have emerged as a universal backbone across 3D perception, video generation, and world models for autonomous driving and embodied AI, where understanding camera geometry is essential for grounding visual observations in three-dimensional space. However, existing camera encoding methods often rely on simplified pinhole assumptions, restricting generalization across the diverse intrinsics and lens distortions in real-world cameras. We introduce &lt;strong&gt;Relative Ray Encoding&lt;/strong&gt;, a geometry-consistent representation that unifies complete camera information, including 6-DoF poses, intrinsics, and lens distortions. To evaluate its capability under diverse controllability demands, we adopt camera-controlled text-to-video generation as a testbed task. Within this setting, we further identify pitch and roll as two components effective for &lt;strong&gt;Absolute Orientation Encoding&lt;/strong&gt;, enabling full control over the initial camera orientation. Together, these designs form &lt;strong&gt;UCPE (Unified Camera Positional Encoding)&lt;/strong&gt;, which integrates into a pretrained video Diffusion Transformer through a lightweight spatial attention adapter, adding &lt;strong&gt;less than 1% trainable parameters&lt;/strong&gt; while achieving state-of-the-art camera controllability and visual fidelity. To facilitate systematic training and evaluation, we construct a large video dataset covering a wide range of camera motions and lens types. Extensive experiments validate the effectiveness of UCPE in camera-controllable video generation and highlight its potential as a general camera representation for Transformers across future multi-view, video, and 3D tasks.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;method&#34;&gt;Method&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-spherical-camera-optical-flow-the-optical-flow-from-a-panoramic-video-left-can-be-interpreted-as-a-spherical-camera-optical-flow-right-for-complex-motion-f-the-camera-rotation-yields-an-analytic-rotation-flow-fr-on-the-sphere-by-decomposing-f-into-fr-and-its-residual-we-obtain-a-derotated-flow-fd-that-more-clearly-captures-camera-translation-and-object-dynamics&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;**Spherical Camera Optical Flow.** The optical flow from a panoramic video (left) can be interpreted as a spherical camera optical flow (right). For complex motion **f**, the camera rotation yields an analytic rotation flow **fr** on the sphere. By decomposing **f** into **fr** and its residual, we obtain a derotated flow **fd** that more clearly captures camera translation and object dynamics.&#34; srcset=&#34;
+               /publication/ucpe/rays_huf96a726b94f0773c18e7799673545a3c_285521_f76fc91118a1f9d20711dd25a31ad0e9.png 400w,
+               /publication/ucpe/rays_huf96a726b94f0773c18e7799673545a3c_285521_244bbb45294d02e8da834643011dfe03.png 760w,
+               /publication/ucpe/rays_huf96a726b94f0773c18e7799673545a3c_285521_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/ucpe/rays_huf96a726b94f0773c18e7799673545a3c_285521_f76fc91118a1f9d20711dd25a31ad0e9.png&#34;
+               width=&#34;600&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      &lt;strong&gt;Spherical Camera Optical Flow.&lt;/strong&gt; The optical flow from a panoramic video (left) can be interpreted as a spherical camera optical flow (right). For complex motion &lt;strong&gt;f&lt;/strong&gt;, the camera rotation yields an analytic rotation flow &lt;strong&gt;fr&lt;/strong&gt; on the sphere. By decomposing &lt;strong&gt;f&lt;/strong&gt; into &lt;strong&gt;fr&lt;/strong&gt; and its residual, we obtain a derotated flow &lt;strong&gt;fd&lt;/strong&gt; that more clearly captures camera translation and object dynamics.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-overview-of-spatial-attention-adapter-the-adapter-injects-ucpe-into-pretrained-transformers-through-a-lightweight-branch-that-preserves-pretrained-priors-it-constructs-hybrid-encoding-from-the-world-to-ray-transform-trw-and-an-optional-lat-up-map-applies-them-within-attention-and-fuses-the-resulting-camera-aware-tokens-back-through-a-zero-initialized-linear-layer&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;**Overview of Spatial Attention Adapter.** The adapter injects UCPE into pretrained Transformers through a lightweight branch that preserves pretrained priors. It constructs hybrid encoding from the world-to-ray transform **T**^rw and an optional Lat-Up map, applies them within attention, and fuses the resulting camera-aware tokens back through a zero-initialized linear layer.&#34; srcset=&#34;
+               /publication/ucpe/pipeline_hu37d829d2573ae743d96282aa90f1e0a6_209628_82e714677e536f631b4063378e1ec42f.png 400w,
+               /publication/ucpe/pipeline_hu37d829d2573ae743d96282aa90f1e0a6_209628_9e87f62395826ca4cb8b622ed3f94666.png 760w,
+               /publication/ucpe/pipeline_hu37d829d2573ae743d96282aa90f1e0a6_209628_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/ucpe/pipeline_hu37d829d2573ae743d96282aa90f1e0a6_209628_82e714677e536f631b4063378e1ec42f.png&#34;
+               width=&#34;600&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      &lt;strong&gt;Overview of Spatial Attention Adapter.&lt;/strong&gt; The adapter injects UCPE into pretrained Transformers through a lightweight branch that preserves pretrained priors. It constructs hybrid encoding from the world-to-ray transform &lt;strong&gt;T&lt;/strong&gt;^rw and an optional Lat-Up map, applies them within attention, and fuses the resulting camera-aware tokens back through a zero-initialized linear layer.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

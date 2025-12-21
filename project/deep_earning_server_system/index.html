@@ -1,0 +1,1331 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Cheng Zhang" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A deep learning system for small research teams, with multiple GPU servers, centralized network storage, server and user management, 10 GbE network, and per-server SSD cache." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://chengzhag.github.io/project/deep_earning_server_system/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=PT+Serif&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=PT+Serif&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.38f432b080e009b75f82e0873d71d8c8.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120268499-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-120268499-3', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="https://chengzhag.github.io/project/deep_earning_server_system/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Cheng Zhang" />
+  <meta property="og:url" content="https://chengzhag.github.io/project/deep_earning_server_system/" />
+  <meta property="og:title" content="Deep Learning Server System | Cheng Zhang" />
+  <meta property="og:description" content="A deep learning system for small research teams, with multiple GPU servers, centralized network storage, server and user management, 10 GbE network, and per-server SSD cache." /><meta property="og:image" content="https://chengzhag.github.io/project/deep_earning_server_system/featured.jpg" />
+    <meta property="twitter:image" content="https://chengzhag.github.io/project/deep_earning_server_system/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2019-10-21T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2019-10-21T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chengzhag.github.io/project/deep_earning_server_system/"
+  },
+  "headline": "Deep Learning Server System",
+  
+  "image": [
+    "https://chengzhag.github.io/project/deep_earning_server_system/featured.jpg"
+  ],
+  
+  "datePublished": "2019-10-21T00:00:00Z",
+  "dateModified": "2019-10-21T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Cheng Zhang"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cheng Zhang",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "A deep learning system for small research teams, with multiple GPU servers, centralized network storage, server and user management, 10 GbE network, and per-server SSD cache."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Deep Learning Server System | Cheng Zhang</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="b9bcc7ff90adaaa3fbb8f29daff8aa1e" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2656b96b9273c77f9f1758e7dfbeb3fe.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Cheng Zhang</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Cheng Zhang</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>About</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publication</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+	
+  	<h1>Deep Learning Server System</h1>
+	
+
+  
+
+	
+  	
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Oct 21, 2019
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+		
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">
+    
+    Docs
+  </a>
+
+
+</div>
+
+
+	
+</div>
+
+
+
+	
+	<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 540px;">
+		<div style="position: relative">
+			<img src="/project/deep_earning_server_system/featured_hu02b39be9b628f4fe8f694c545a03ad15_158487_720x0_resize_q75_lanczos.jpg" alt="" class="featured-image">
+			<span class="article-header-caption">Completed hardware</span>
+		</div>
+	</div>
+	
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <hr>
+<h2 id="introduction">Introduction</h2>
+<p>For a small research team with more than a dozen of students, several servers with 4 or 8 GPUs are necessary. However, with independent storage for each servers, datasets, codes, and environments are often duplicated across different servers, which is inefficient and troublesome when using different servers. Also, user management becomes a problem if every user needs to be setup on each of the server.</p>
+<p>To solve the above problems, a system is built with centralized network storage, server and user management, 10 GbE network, and per-server SSD cache. This can be used as a reference for small academic teams on deep learning or maybe small companies.</p>
+<p>For new users and admins, <a href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">documentation</a> (in Chinese) are wrote to provide basic informations and regulations.</p>
+<h2 id="hardware">Hardware</h2>
+<h3 id="servers-and-network">Servers and Network</h3>
+<p>Our team has 5 existing servers, each with 4 x 1080Ti and a system SSD. The problem is that every server is not able to install an extra 10 GbE Network Interface Card (NIC) since all PCIE ports are preserved for GPUs. Thus an NBASE-T switch is used to connect each server via 5 GbE USB NICs. (A more stable and affordable configuration might be using 10 GbE SFP+ switch with PCIE NIC.)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-no-space-to-install-10-gbe-nic-for-existing-server">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="No space to install 10 GbE NIC for existing server" srcset="
+               /project/deep_earning_server_system/%E7%85%A7%E7%89%87%20012_hu1aff075b4e8a5dba3f71e9ad4b16f525_247758_3de88a8d69dcaa38351698e7f733ed51.jpg 400w,
+               /project/deep_earning_server_system/%E7%85%A7%E7%89%87%20012_hu1aff075b4e8a5dba3f71e9ad4b16f525_247758_228ef1ef075dd83911d6950962fa0b34.jpg 760w,
+               /project/deep_earning_server_system/%E7%85%A7%E7%89%87%20012_hu1aff075b4e8a5dba3f71e9ad4b16f525_247758_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/deep_earning_server_system/%E7%85%A7%E7%89%87%20012_hu1aff075b4e8a5dba3f71e9ad4b16f525_247758_3de88a8d69dcaa38351698e7f733ed51.jpg"
+               width="30%"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      No space to install 10 GbE NIC for existing server
+    </figcaption></figure>
+<h3 id="storage">Storage</h3>
+<p>We chose to use QNAP Network Attached Storage (NAS) TS-932X, which can accommodate 5 x 3.5-inch hard drives and 4 x 2.5-inch SSDs, and has dual 10GbE SFP+ ports. The performance of its ARM processor is quit as SSD cache is configured on each server, which makes it possible to load frequently used data from NAS at the first time.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-nas-and-switch">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="NAS and switch" srcset="
+               /project/deep_earning_server_system/IMG_20191107_161030_hub5951621c5a662dcd39dd207dc787f1e_169416_92b960d00a745cd90d293a8257142fd1.jpg 400w,
+               /project/deep_earning_server_system/IMG_20191107_161030_hub5951621c5a662dcd39dd207dc787f1e_169416_af1397ccbb4cc064edbab70c06ca431b.jpg 760w,
+               /project/deep_earning_server_system/IMG_20191107_161030_hub5951621c5a662dcd39dd207dc787f1e_169416_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/deep_earning_server_system/IMG_20191107_161030_hub5951621c5a662dcd39dd207dc787f1e_169416_92b960d00a745cd90d293a8257142fd1.jpg"
+               width="30%"
+               height="570"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      NAS and switch
+    </figcaption></figure>
+<h2 id="software">Software</h2>
+<h3 id="nas">NAS</h3>
+<p>We configure our NAS with a <code>Public</code> folder (contraining the git repo of <a href="https://github.com/chengzhag/nas_directory" target="_blank" rel="noopener">documentation</a>) for <a href="https://github.com/chengzhag/nas_directory/tree/master/datasets" target="_blank" rel="noopener">shared datasets</a> storage, and a home folder for each user, allowing users to access their environment (e.g. anaconda), codes, and datasets on every server. QNAP NAS provides an easy-to-use operating system with serveral customizable services. In our cases, it is configured with the following services:</p>
+<ul>
+<li>NFS server: For mounting storage on server</li>
+<li>samba server: For mounting storage on client computers</li>
+<li>LDAP server: Centralized authorization and user management for both NAS and GPU server</li>
+<li>Other services like Download Station, file management from browser, restoring from snapshot/recycle bin, Qsync, VPN, DDNS, and iperf3 are also available to users.</li>
+</ul>
+<h3 id="server">Server</h3>
+<p>Each server is installed with same version of Ubuntu and Nvidia GPU driver, and is configured with the following services:</p>
+<ul>
+<li>autofs: Automatically mount two types of folders (i.e. user home folders to <code>/home</code> and <code>Public</code> folder to <code>/media</code>) through NFS</li>
+<li>cachefilesd: Local SSD cache for NFS</li>
+<li>LDAP authentication: Configured with Pluggable Authentication Modules (PAM)</li>
+<li>ThinLinc: Remote desktop</li>
+</ul>
+<p>With the configurations above, students can use the same username to login to NAS or any server, access their data or share datasets with others, and configure anaconda environments once to use them on all servers. A <a href="https://github.com/chengzhag/nas_directory/blob/master/documents/server/initserver.sh" target="_blank" rel="noopener">shell script</a> is used to configure servers. It is validated on Ubuntu 18 and might be used as a reference. For easier deployment and management of servers, virtual machine system (e.g. Proxmox) is installed on each server, with GPU passthrough configured. The difference between virtual machine and bare-metal Ubuntu is barely sensible.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/deep-learning/">Deep Learning</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://chengzhag.github.io/project/deep_earning_server_system/&amp;text=Deep%20Learning%20Server%20System" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://chengzhag.github.io/project/deep_earning_server_system/&amp;t=Deep%20Learning%20Server%20System" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Deep%20Learning%20Server%20System&amp;body=https://chengzhag.github.io/project/deep_earning_server_system/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://chengzhag.github.io/project/deep_earning_server_system/&amp;title=Deep%20Learning%20Server%20System" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Deep%20Learning%20Server%20System%20https://chengzhag.github.io/project/deep_earning_server_system/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://chengzhag.github.io/project/deep_earning_server_system/&amp;title=Deep%20Learning%20Server%20System" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://chengzhag.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu576bf810bc605a94727766389217b97b_418874_270x270_fill_q75_lanczos_center.jpg" alt="Cheng Zhang"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://chengzhag.github.io/">Cheng Zhang</a></h5>
+      <h6 class="card-subtitle">Ph.D Student</h6>
+      <p class="card-text">My research interests include 3D generation, novel view synthesis, image generation etc.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=2uEyZJQAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/chengzhag/" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:cheng.zhang@monash.edu" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/publication/dpc/">DeepPanoContext: Panoramic 3D Scene Understanding with Holistic Scene Context Graph and Relation-based Optimization</a></li>
+      
+      <li><a href="/publication/im3d/">Holistic 3D Scene Understanding from a Single Image with Implicit Representation</a></li>
+      
+      <li><a href="/publication/panflow/">PanFlow: Decoupled Motion Control for Panoramic Video Generation</a></li>
+      
+      <li><a href="/publication/pansplat/">PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting</a></li>
+      
+      <li><a href="/publication/panfusion/">Taming Stable Diffusion for Text to 360° Panorama Image Generation</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.71e713848164e269bc250f377042949d.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

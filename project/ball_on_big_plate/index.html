@@ -1,0 +1,1663 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Cheng Zhang" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="The project focus on balancing and controlling the movement of a metal ball on a 65cm wide plate, and is a work of 3 team-mates which get us first prize in 2017NUEDC." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://chengzhag.github.io/project/ball_on_big_plate/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=PT+Serif&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=PT+Serif&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.38f432b080e009b75f82e0873d71d8c8.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120268499-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-120268499-3', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="https://chengzhag.github.io/project/ball_on_big_plate/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Cheng Zhang" />
+  <meta property="og:url" content="https://chengzhag.github.io/project/ball_on_big_plate/" />
+  <meta property="og:title" content="Ball on Big Plate | Cheng Zhang" />
+  <meta property="og:description" content="The project focus on balancing and controlling the movement of a metal ball on a 65cm wide plate, and is a work of 3 team-mates which get us first prize in 2017NUEDC." /><meta property="og:image" content="https://chengzhag.github.io/project/ball_on_big_plate/featured.jpg" />
+    <meta property="twitter:image" content="https://chengzhag.github.io/project/ball_on_big_plate/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2017-09-03T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2017-09-03T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chengzhag.github.io/project/ball_on_big_plate/"
+  },
+  "headline": "Ball on Big Plate",
+  
+  "image": [
+    "https://chengzhag.github.io/project/ball_on_big_plate/featured.jpg"
+  ],
+  
+  "datePublished": "2017-09-03T00:00:00Z",
+  "dateModified": "2017-09-03T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Cheng Zhang"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cheng Zhang",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "The project focus on balancing and controlling the movement of a metal ball on a 65cm wide plate, and is a work of 3 team-mates which get us first prize in 2017NUEDC."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Ball on Big Plate | Cheng Zhang</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="fedfb20833290a8d7531050fb8d70ca1" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2656b96b9273c77f9f1758e7dfbeb3fe.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Cheng Zhang</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Cheng Zhang</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>About</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publication</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+	
+  	<h1>Ball on Big Plate</h1>
+	
+
+  
+
+	
+  	
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Sep 3, 2017
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+		
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="/project/ball_on_big_plate/ball_on_big_plate.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://github.com/pidan1231239/ball_on_big_plate" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+	
+</div>
+
+
+
+	
+	<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 960px;">
+		<div style="position: relative">
+			<img src="/project/ball_on_big_plate/featured_hu9cd5afef1db27636d675cd88743d69a4_2462070_720x0_resize_q75_lanczos.jpg" alt="" class="featured-image">
+			<span class="article-header-caption">The complete work</span>
+		</div>
+	</div>
+	
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <hr>
+<h2 id="introduction">Introduction</h2>
+<p>This project is a work of team of 3, which includes <a href="https://github.com/shicaiwei123" target="_blank" rel="noopener">shicaiwei123</a> and <a href="https://github.com/zianglei" target="_blank" rel="noopener">zianglei</a>.
+The preparations of the contest are done with the help of <a href="https://github.com/yoyolalala" target="_blank" rel="noopener">yoyolalala</a>.
+I was responsible for building mechanical structures and embedded programming (i.e. STM32, Raspberry Pi).
+We are lucky to have received the first prize in <a href="https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html" target="_blank" rel="noopener">2017NUEDC</a>.
+The final work has been handed in to our school thus details will not be provided.
+However, code and document can be found <a href="https://github.com/pidan1231239/ball_on_big_plate" target="_blank" rel="noopener">here</a>.</p>
+<blockquote>
+<p>The ball-on-plate system is a promoted version of the traditional ball-on-beam control problem. The problem consists of a plate which its deviation can be manipulated in two perpendicular directions. The goal is to carry the ball moving on the plate to a desired position, that is to control a freely rolling ball on a specific position or moving on a trajectory on the plate. - <a href="http://web.engr.illinois.edu/~khashab2/files/2011_LinearControl/16.pdf" target="_blank" rel="noopener">Modelling and Control of Ball-Plate System</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-ball-on-plate-system">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="Ball-on-plate system" srcset="
+               /project/ball_on_big_plate/ball-on-plate_system_hu401e0adde6039723bbf54217f0a1800e_52854_00bb0da7b79b8ec2a89f74aaa8c272b3.png 400w,
+               /project/ball_on_big_plate/ball-on-plate_system_hu401e0adde6039723bbf54217f0a1800e_52854_0f51bcccccf543a8bad20b0bca7cc22a.png 760w,
+               /project/ball_on_big_plate/ball-on-plate_system_hu401e0adde6039723bbf54217f0a1800e_52854_1200x1200_fit_lanczos_2.png 1200w"
+               src="/project/ball_on_big_plate/ball-on-plate_system_hu401e0adde6039723bbf54217f0a1800e_52854_00bb0da7b79b8ec2a89f74aaa8c272b3.png"
+               width="732"
+               height="310"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Ball-on-plate system
+    </figcaption></figure></p>
+</blockquote>
+<p>Specifically in this project, according to the contest requirements, the system is supposed to move a ball between any two of nine evenly distributed circles and avoids the others. The plate must have a size around 65cm*65cm. The <a href="%e6%bb%9a%e7%90%83%e6%8e%a7%e5%88%b6%e7%b3%bb%e7%bb%9f%ef%bc%88B%e9%a2%98%ef%bc%89.pdf">document</a> shows the distribution of the circles.</p>
+<hr>
+<h2 id="the-contest">The Contest</h2>
+<p><a href="https://www2.renesas.cn/zh-cn/about/university-program/nuedc/2017.html" target="_blank" rel="noopener">NUEDC</a> is one of the largest electronic design contest for undergraduate students in China. The contest lasts three and a half days. More than ten topics of four types including control, measurement, communication and power are published in the first day morning, indicating the start of the contest. Participants usually prepare for a long time before the contest. We attended the contest in 2017 starting from August 9th to 12th. Our team started the preparation four months in advance.</p>
+<p>Although I had got some experience with programming, I barely knew the basics of control system. However, I chose this type of topic just in the interest of it.</p>
+<p>In the preparation process, we learned from five projects, three of which are listed below.</p>
+<ul>
+<li><a href="/project/rotary_inverted_pendulum/">Rotary Inverted Pendulum</a></li>
+<li><a href="/project/ball_on_beam/">Ball on Beam</a></li>
+<li><a href="/project/ball_on_small_plate/">Ball on Small Plate</a></li>
+</ul>
+<p>Sadly, no video demo was taken for the limit of time.</p>
+<hr>
+<h2 id="platform">Platform</h2>
+<ul>
+<li>Raspberry Pi Zero and Raspberry Pi 3b with OpenCV installed</li>
+<li>STM32F103 minimum system board</li>
+<li>PC with Visual Studio and VisualGDB installed</li>
+</ul>
+<p>The Raspberry Pi is developed with C++ using Raspberry Pi toolchain provided by <a href="https://visualgdb.com/" target="_blank" rel="noopener">VisualGDB</a> (tutorial <a href="https://visualgdb.com/tutorials/raspberry/crosscompiler/" target="_blank" rel="noopener">here</a>).
+It deals with the machine vision tasks and sends the results to STM32 through UART.</p>
+<p>The STM32 is developed with C++ language using Arm toolchain provided by <a href="https://visualgdb.com/" target="_blank" rel="noopener">VisualGDB</a> (tutorial <a href="https://visualgdb.com/tutorials/arm/stm32/" target="_blank" rel="noopener">here</a>).
+A C++ API for STM32 (<a href="https://github.com/eboxmaker/eBox_STM32F1" target="_blank" rel="noopener">Ebox</a>) was used as a replacement of ardunio, which is not allowed in the contest.</p>
+<hr>
+<h2 id="mechanical-structure">Mechanical structure</h2>
+<p>The final work uses a PCB motherboard (designed by <a href="https://github.com/shicaiwei123" target="_blank" rel="noopener">shicaiwei123</a>) same as <a href="/project/ball_on_small_plate/">Ball on Small Plate project</a> to connect modular electronic parts.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-pcb-mother-board">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="PCB mother board" srcset="
+               /project/ball_on_big_plate/3_hu5b2f59df253a5b5e17c21a55e3e8cdac_73189_785d6f99c757b7c770351aa00cd38ac0.jpg 400w,
+               /project/ball_on_big_plate/3_hu5b2f59df253a5b5e17c21a55e3e8cdac_73189_76497d01199216078995878235f2a7eb.jpg 760w,
+               /project/ball_on_big_plate/3_hu5b2f59df253a5b5e17c21a55e3e8cdac_73189_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/ball_on_big_plate/3_hu5b2f59df253a5b5e17c21a55e3e8cdac_73189_785d6f99c757b7c770351aa00cd38ac0.jpg"
+               width="304"
+               height="444"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      PCB mother board
+    </figcaption></figure>
+<p>The 65cm*65cm plate is made of laminated balsa wood board.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-the-plate">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="The plate" srcset="
+               /project/ball_on_big_plate/ball_on_big_plate_camera_support_hu9faa7677584c6a5ed502ac08b85761df_63275_7529cfd3cbfeb014e84b0f14d612ce50.jpg 400w,
+               /project/ball_on_big_plate/ball_on_big_plate_camera_support_hu9faa7677584c6a5ed502ac08b85761df_63275_3c7994c340e4570077e6356c74ed2dba.jpg 760w,
+               /project/ball_on_big_plate/ball_on_big_plate_camera_support_hu9faa7677584c6a5ed502ac08b85761df_63275_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/ball_on_big_plate/ball_on_big_plate_camera_support_hu9faa7677584c6a5ed502ac08b85761df_63275_7529cfd3cbfeb014e84b0f14d612ce50.jpg"
+               width="555"
+               height="464"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      The plate
+    </figcaption></figure>
+<p>We design metre-shaped ribs to further reinforce the plate.
+We follow <a href="/project/ball_on_small_plate/">Ball on small plate</a> to support the plate with a universal joint in the center and drive the board with two servos using ball joint rods as connection.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-under-the-plate">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="Under the plate" srcset="
+               /project/ball_on_big_plate/ball_on_big_plate_under_the_plate_hu075f68648887d406443fbbde5c88157d_55883_47ba6f4ebc7c5a8714543d6a25641ea4.jpg 400w,
+               /project/ball_on_big_plate/ball_on_big_plate_under_the_plate_hu075f68648887d406443fbbde5c88157d_55883_52b3de4d7bb87d95f5506311cc5dc83d.jpg 760w,
+               /project/ball_on_big_plate/ball_on_big_plate_under_the_plate_hu075f68648887d406443fbbde5c88157d_55883_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/ball_on_big_plate/ball_on_big_plate_under_the_plate_hu075f68648887d406443fbbde5c88157d_55883_47ba6f4ebc7c5a8714543d6a25641ea4.jpg"
+               width="754"
+               height="465"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Under the plate
+    </figcaption></figure>
+<p>Design documents of the reinforcing ribs are also available <a href="https://github.com/pidan1231239/ball_on_big_plate" target="_blank" rel="noopener">here</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-reinforcing-ribs">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="Reinforcing ribs" srcset="
+               /project/ball_on_big_plate/650%E6%9D%BF%E5%8A%A0%E5%BC%BA%E7%AD%8B%E6%BF%80%E5%85%89%E5%88%87%E5%89%B2.dwg_hu3707290dae8ca9a240fccc758ec42ec3_10971_5f29f62ec286cc651effb28aad29cff0.png 400w,
+               /project/ball_on_big_plate/650%E6%9D%BF%E5%8A%A0%E5%BC%BA%E7%AD%8B%E6%BF%80%E5%85%89%E5%88%87%E5%89%B2.dwg_hu3707290dae8ca9a240fccc758ec42ec3_10971_4ff11d6cd4fd877a8f3710d898ffeaec.png 760w,
+               /project/ball_on_big_plate/650%E6%9D%BF%E5%8A%A0%E5%BC%BA%E7%AD%8B%E6%BF%80%E5%85%89%E5%88%87%E5%89%B2.dwg_hu3707290dae8ca9a240fccc758ec42ec3_10971_1200x1200_fit_lanczos_2.png 1200w"
+               src="/project/ball_on_big_plate/650%E6%9D%BF%E5%8A%A0%E5%BC%BA%E7%AD%8B%E6%BF%80%E5%85%89%E5%88%87%E5%89%B2.dwg_hu3707290dae8ca9a240fccc758ec42ec3_10971_5f29f62ec286cc651effb28aad29cff0.png"
+               width="574"
+               height="223"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Reinforcing ribs
+    </figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-cardan-joint">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="Cardan joint" srcset="
+               /project/ball_on_big_plate/ball_on_big_plate_universal_joint_hue5065797c09f45fbc09bea488ffff103_39155_032c1cb11fa2384b78956807d939a682.jpg 400w,
+               /project/ball_on_big_plate/ball_on_big_plate_universal_joint_hue5065797c09f45fbc09bea488ffff103_39155_4b64b643aba6a621bcc5b4ae86a297e7.jpg 760w,
+               /project/ball_on_big_plate/ball_on_big_plate_universal_joint_hue5065797c09f45fbc09bea488ffff103_39155_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/ball_on_big_plate/ball_on_big_plate_universal_joint_hue5065797c09f45fbc09bea488ffff103_39155_032c1cb11fa2384b78956807d939a682.jpg"
+               width="545"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Cardan joint
+    </figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-servo-with-connecting-rod">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="Servo with connecting rod" srcset="
+               /project/ball_on_big_plate/ball_on_big_plate_ball_rod_hu98463fa3f0b48c879fc04fc962965cec_35251_3d30553a4a68fa1047d9432bbfcf94fa.jpg 400w,
+               /project/ball_on_big_plate/ball_on_big_plate_ball_rod_hu98463fa3f0b48c879fc04fc962965cec_35251_525aaebd67fa8ad444a342b74086402b.jpg 760w,
+               /project/ball_on_big_plate/ball_on_big_plate_ball_rod_hu98463fa3f0b48c879fc04fc962965cec_35251_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/ball_on_big_plate/ball_on_big_plate_ball_rod_hu98463fa3f0b48c879fc04fc962965cec_35251_3d30553a4a68fa1047d9432bbfcf94fa.jpg"
+               width="503"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Servo with connecting rod
+    </figcaption></figure>
+<p>The camera is supported by carbon fiber tubes like in <a href="/project/ball_on_small_plate/">Ball on small plate</a>.
+And the same ring light is installed around the camera to provide better illumination.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-led-around-camera">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="LED around camera" srcset="
+               /project/ball_on_big_plate/ball_on_big_plate_led_hu967ebdb53dcb1fcd9d5e0564e6e1f0e4_40911_554b83073aaa5c7569d200f94e5d74b4.jpg 400w,
+               /project/ball_on_big_plate/ball_on_big_plate_led_hu967ebdb53dcb1fcd9d5e0564e6e1f0e4_40911_6760e63b37666f5eb57c328bdb3c2fd6.jpg 760w,
+               /project/ball_on_big_plate/ball_on_big_plate_led_hu967ebdb53dcb1fcd9d5e0564e6e1f0e4_40911_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/ball_on_big_plate/ball_on_big_plate_led_hu967ebdb53dcb1fcd9d5e0564e6e1f0e4_40911_554b83073aaa5c7569d200f94e5d74b4.jpg"
+               width="555"
+               height="461"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      LED around camera
+    </figcaption></figure>
+<p>The Raspberry Pi 3b is hanged beyond the camera to reduce the load on the servos.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-the-complete-work">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="The complete work" srcset="
+               /project/ball_on_big_plate/featured_hu9cd5afef1db27636d675cd88743d69a4_2462070_36b25ea95fc8663e56ea82866b5f5336.jpg 400w,
+               /project/ball_on_big_plate/featured_hu9cd5afef1db27636d675cd88743d69a4_2462070_a53eb37a612ee16dd33f4e33bb96d381.jpg 760w,
+               /project/ball_on_big_plate/featured_hu9cd5afef1db27636d675cd88743d69a4_2462070_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/ball_on_big_plate/featured_hu9cd5afef1db27636d675cd88743d69a4_2462070_36b25ea95fc8663e56ea82866b5f5336.jpg"
+               width="570"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      The complete work
+    </figcaption></figure>
+<p>The final work is packed with cardboard then submitted to the competition organizer.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-complete-work-packed-with-cardboard-kinda-like-a-house">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="Complete work packed with cardboard, kinda like a house" srcset="
+               /project/ball_on_big_plate/IMG_20170812_225850_001_hu4ab653ed4835e564cdb00ed26b426726_3478685_c49ff276e79c38571e79b8e772e0bf85.jpg 400w,
+               /project/ball_on_big_plate/IMG_20170812_225850_001_hu4ab653ed4835e564cdb00ed26b426726_3478685_aac123b99d5ddb77c53ab3e32c74abd1.jpg 760w,
+               /project/ball_on_big_plate/IMG_20170812_225850_001_hu4ab653ed4835e564cdb00ed26b426726_3478685_1200x1200_fit_q75_lanczos.jpg 1200w"
+               src="/project/ball_on_big_plate/IMG_20170812_225850_001_hu4ab653ed4835e564cdb00ed26b426726_3478685_c49ff276e79c38571e79b8e772e0bf85.jpg"
+               width="570"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Complete work packed with cardboard, kinda like a house
+    </figcaption></figure>
+<hr>
+<h2 id="final-test">Final test</h2>
+<p>After a successful test in front of the judges of Sichuan division, follwed by a basic on-site electronic design test, we went to Xi&rsquo;an for the final test. Below shows some photos taken along the trip.</p>
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="gallery">
+
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    <a data-fancybox="gallery-xian" href="/project/ball_on_big_plate/xian/IMG_20170830_175531.jpg" data-caption="On the way to the final test">
+      <img src="/project/ball_on_big_plate/xian/IMG_20170830_175531_huf239b37952eacffb4c4031101051e0b4_2249789_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="On the way to the final test" width="143" height="190">
+    </a>
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    <a data-fancybox="gallery-xian" href="/project/ball_on_big_plate/xian/IMG_20170831_144038_01.jpg" data-caption="Final test in Jiaotong University">
+      <img src="/project/ball_on_big_plate/xian/IMG_20170831_144038_01_hu4d15f4a00f65c19f29f729be94eecbff_3993016_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="Final test in Jiaotong University" width="253" height="190">
+    </a>
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    <a data-fancybox="gallery-xian" href="/project/ball_on_big_plate/xian/IMG_20170831_163601.jpg" data-caption="DaYanTa station of Xi&amp;rsquo;an metro Line 3">
+      <img src="/project/ball_on_big_plate/xian/IMG_20170831_163601_hu6ae07835f4e9d1fb4809e4095e62bb43_2586014_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="DaYanTa station of Xi&#39;an metro Line 3" width="253" height="190">
+    </a>
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    <a data-fancybox="gallery-xian" href="/project/ball_on_big_plate/xian/IMG_20170831_164508.jpg" data-caption="Dayan Tower of Xi&amp;rsquo;an">
+      <img src="/project/ball_on_big_plate/xian/IMG_20170831_164508_hu3f841f8eeb94b158707483dd82dfd544_2201361_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="Dayan Tower of Xi&#39;an" width="253" height="190">
+    </a>
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    <a data-fancybox="gallery-xian" href="/project/ball_on_big_plate/xian/IMG_20170831_190316.jpg" data-caption="Mutton soup with bread of Xi&amp;rsquo;an">
+      <img src="/project/ball_on_big_plate/xian/IMG_20170831_190316_huf91ae3e5c3d16363a0d1fc79b9b6709b_3390636_0x190_resize_q75_lanczos.jpg" loading="lazy" alt="Mutton soup with bread of Xi&#39;an" width="253" height="190">
+    </a>
+  
+
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/contest/">Contest</a>
+  
+  <a class="badge badge-light" href="/tag/control-system/">Control System</a>
+  
+  <a class="badge badge-light" href="/tag/electronics-design/">Electronics Design</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://chengzhag.github.io/project/ball_on_big_plate/&amp;text=Ball%20on%20Big%20Plate" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://chengzhag.github.io/project/ball_on_big_plate/&amp;t=Ball%20on%20Big%20Plate" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Ball%20on%20Big%20Plate&amp;body=https://chengzhag.github.io/project/ball_on_big_plate/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://chengzhag.github.io/project/ball_on_big_plate/&amp;title=Ball%20on%20Big%20Plate" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Ball%20on%20Big%20Plate%20https://chengzhag.github.io/project/ball_on_big_plate/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://chengzhag.github.io/project/ball_on_big_plate/&amp;title=Ball%20on%20Big%20Plate" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://chengzhag.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu576bf810bc605a94727766389217b97b_418874_270x270_fill_q75_lanczos_center.jpg" alt="Cheng Zhang"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://chengzhag.github.io/">Cheng Zhang</a></h5>
+      <h6 class="card-subtitle">Ph.D Student</h6>
+      <p class="card-text">My research interests include 3D generation, novel view synthesis, image generation etc.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=2uEyZJQAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/chengzhag/" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:cheng.zhang@monash.edu" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/project/ball_on_small_plate/">Ball on Small Plate</a></li>
+      
+      <li><a href="/project/ball_on_beam/">Ball on Beam</a></li>
+      
+      <li><a href="/project/rotary_inverted_pendulum/">Rotary Inverted Pendulum</a></li>
+      
+      <li><a href="/project/fmcw_positioning_radar/">FMCW Positioning Radar</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.71e713848164e269bc250f377042949d.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

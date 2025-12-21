@@ -33,12 +33,6 @@
 
 Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
 &lt;h2 id=&#34;div-classpublication-headeraaai-2026div&#34;&gt;&lt;div class=&#34;publication-header&#34;&gt;AAAI 2026&lt;/div&gt;&lt;/h2&gt;
-&lt;!-- - Hanwen Liang
-- Donny Y. Chen
-- Qianyi Wu
-- Konstantinos N. Plataniotis
-- Camilo Cruz Gambardella
-- Jianfei Cai --&gt;
 &lt;div class=&#34;publication-header&#34;&gt;
   &lt;a href=&#34;https://chengzhag.github.io/&#34; target=&#34;_blank&#34;&gt;Cheng Zhang&lt;/a&gt;
   &lt;sup&gt;1,2&lt;/sup&gt;
@@ -78,19 +72,19 @@ Supplementary notes can be added here, including [code, math, and images](https:
   &lt;!-- &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;cite.bib&#34;&gt;
   Cite
   &lt;/a&gt; --&gt;
-  &lt;a href=&#34;https://github.com/chengzhag/PanSplat&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  &lt;a href=&#34;https://github.com/chengzhag/PanFlow&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   Code
   &lt;/a&gt;
-  &lt;!-- &lt;a href=&#34;https://www.youtube.com/watch?v=Kg0du7mFu60&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
-  YouTube
+  &lt;a href=&#34;https://www.youtube.com/watch?v=sFTWwlHjNtg&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Video
   &lt;/a&gt;
-  &lt;a href=&#34;https://www.bilibili.com/video/BV1By4y1g7c5/&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  &lt;!-- &lt;a href=&#34;https://www.bilibili.com/video/BV1By4y1g7c5/&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
   bilibili
   &lt;/a&gt; --&gt;
-  &lt;a href=&#34;https://arxiv.org/abs/2412.12096&#34; class=&#34;btn btn-outline-primary&#34;&gt;
+  &lt;a href=&#34;https://arxiv.org/abs/2512.00832&#34; class=&#34;btn btn-outline-primary&#34;&gt;
   arXiv
   &lt;/a&gt; 
-  &lt;a href=&#34;https://arxiv.org/pdf/2412.12096&#34; class=&#34;btn btn-outline-primary&#34;&gt;
+  &lt;a href=&#34;https://arxiv.org/pdf/2512.00832&#34; class=&#34;btn btn-outline-primary&#34;&gt;
   Paper
   &lt;/a&gt;
 &lt;/center&gt;
@@ -105,7 +99,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;Panoramic video generation has attracted growing attention due to its applications in virtual reality and immersive media. However, existing methods lack explicit motion control and struggle to generate scenes with large and complex motions. We propose PanFlow, a novel approach that exploits the spherical nature of &lt;u&gt;pan&lt;/u&gt;oramas to decouple the highly dynamic camera rotation from the input optical &lt;u&gt;flow&lt;/u&gt; condition, enabling more precise control over large and dynamic motions. We further introduce a spherical noise warping strategy to promote loop consistency in motion across panorama boundaries. To support effective training, we curate a large-scale, motion-rich panoramic video dataset with frame-level pose and flow annotations. We also showcase the effectiveness of our method in various applications, including motion transfer and video editing. Extensive experiments demonstrate that PanFlow significantly outperforms prior methods in motion fidelity, visual quality, and temporal coherence.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
+&lt;h2 id=&#34;method&#34;&gt;Method&lt;/h2&gt;
 
 
 
@@ -123,16 +117,16 @@ Supplementary notes can be added here, including [code, math, and images](https:
 &lt;figure  id=&#34;figure-spherical-camera-optical-flow-the-optical-flow-from-a-panoramic-video-left-can-be-interpreted-as-a-spherical-camera-optical-flow-right-for-complex-motion-f-the-camera-rotation-yields-an-analytic-rotation-flow-fr-on-the-sphere-by-decomposing-f-into-fr-and-its-residual-we-obtain-a-derotated-flow-fd-that-more-clearly-captures-camera-translation-and-object-dynamics&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;Spherical Camera Optical Flow. The optical flow from a panoramic video (left) can be interpreted as a spherical camera optical flow (right). For complex motion **f**, the camera rotation yields an analytic rotation flow **fr** on the sphere. By decomposing **f** into **fr** and its residual, we obtain a derotated flow **fd** that more clearly captures camera translation and object dynamics.&#34; srcset=&#34;
+        &lt;img alt=&#34;**Spherical Camera Optical Flow.** The optical flow from a panoramic video (left) can be interpreted as a spherical camera optical flow (right). For complex motion **f**, the camera rotation yields an analytic rotation flow **f**r on the sphere. By decomposing **f** into **f**r and its residual, we obtain a derotated flow **f**d that more clearly captures camera translation and object dynamics.&#34; srcset=&#34;
                /publication/panflow/teaser_hu8f94f8bd176fc76feb23c2a004bde52e_828004_1372630565d310e580904b411bf67150.png 400w,
                /publication/panflow/teaser_hu8f94f8bd176fc76feb23c2a004bde52e_828004_fdb1a4d12b2c667dbba09abc80b9d109.png 760w,
                /publication/panflow/teaser_hu8f94f8bd176fc76feb23c2a004bde52e_828004_1200x1200_fit_lanczos_2.png 1200w&#34;
                src=&#34;https://chengzhag.github.io/publication/panflow/teaser_hu8f94f8bd176fc76feb23c2a004bde52e_828004_1372630565d310e580904b411bf67150.png&#34;
-               width=&#34;50%&#34;
+               width=&#34;480&#34;
                height=&#34;639&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
-      Spherical Camera Optical Flow. The optical flow from a panoramic video (left) can be interpreted as a spherical camera optical flow (right). For complex motion &lt;strong&gt;f&lt;/strong&gt;, the camera rotation yields an analytic rotation flow &lt;strong&gt;fr&lt;/strong&gt; on the sphere. By decomposing &lt;strong&gt;f&lt;/strong&gt; into &lt;strong&gt;fr&lt;/strong&gt; and its residual, we obtain a derotated flow &lt;strong&gt;fd&lt;/strong&gt; that more clearly captures camera translation and object dynamics.
+      &lt;strong&gt;Spherical Camera Optical Flow.&lt;/strong&gt; The optical flow from a panoramic video (left) can be interpreted as a spherical camera optical flow (right). For complex motion &lt;strong&gt;f&lt;/strong&gt;, the camera rotation yields an analytic rotation flow &lt;strong&gt;f&lt;/strong&gt;r on the sphere. By decomposing &lt;strong&gt;f&lt;/strong&gt; into &lt;strong&gt;f&lt;/strong&gt;r and its residual, we obtain a derotated flow &lt;strong&gt;f&lt;/strong&gt;d that more clearly captures camera translation and object dynamics.
     &lt;/figcaption&gt;&lt;/figure&gt;
 
 
@@ -151,16 +145,16 @@ Supplementary notes can be added here, including [code, math, and images](https:
 &lt;figure  id=&#34;figure-our-proposed-panflow-pipeline-given-an-input-image-and-text-prompt-panflow-uses-a-decoupled-motion-from-a-video-as-reference-to-generate-a-panoramic-video-we-first-estimate-a-decoupled-optical-flow-from-the-reference-video-of-which-the-derotated-flow-is-used-to-generate-a-latent-noise-with-spherical-noise-warping-the-latent-noise-then-serves-as-a-motion-condition-for-a-video-diffusion-transformer-with-lora-fine-tuning-to-generate-derotated-videos-finally-the-decoupled-rotation-is-accumulated-and-applied-to-the-generated-video-frames-to-recover-the-full-motion&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;Our proposed PanFlow pipeline. Given an input image and text prompt, PanFlow uses a decoupled motion from a video as reference to generate a panoramic video. We first estimate a decoupled optical flow from the reference video, of which the derotated flow is used to generate a latent noise with spherical noise warping. The latent noise then serves as a motion condition for a video diffusion transformer with LoRA fine-tuning to generate derotated videos. Finally, the decoupled rotation is accumulated and applied to the generated video frames to recover the full motion.&#34; srcset=&#34;
+        &lt;img alt=&#34;**Our proposed PanFlow pipeline.** Given an input image and text prompt, PanFlow uses a decoupled motion from a video as reference to generate a panoramic video. We first estimate a decoupled optical flow from the reference video, of which the derotated flow is used to generate a latent noise with spherical noise warping. The latent noise then serves as a motion condition for a video diffusion transformer with LoRA fine-tuning to generate derotated videos. Finally, the decoupled rotation is accumulated and applied to the generated video frames to recover the full motion.&#34; srcset=&#34;
                /publication/panflow/pipeline_hu56d2780c2ed99b29e4fc3878bdb0433e_1183105_d1da4b9c5bc8b0eba7fea6e3bcbf8081.png 400w,
                /publication/panflow/pipeline_hu56d2780c2ed99b29e4fc3878bdb0433e_1183105_01e40490b605386007714678e24656ee.png 760w,
                /publication/panflow/pipeline_hu56d2780c2ed99b29e4fc3878bdb0433e_1183105_1200x1200_fit_lanczos_2.png 1200w&#34;
                src=&#34;https://chengzhag.github.io/publication/panflow/pipeline_hu56d2780c2ed99b29e4fc3878bdb0433e_1183105_d1da4b9c5bc8b0eba7fea6e3bcbf8081.png&#34;
-               width=&#34;80%&#34;
+               width=&#34;1000&#34;
                height=&#34;211&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
-      Our proposed PanFlow pipeline. Given an input image and text prompt, PanFlow uses a decoupled motion from a video as reference to generate a panoramic video. We first estimate a decoupled optical flow from the reference video, of which the derotated flow is used to generate a latent noise with spherical noise warping. The latent noise then serves as a motion condition for a video diffusion transformer with LoRA fine-tuning to generate derotated videos. Finally, the decoupled rotation is accumulated and applied to the generated video frames to recover the full motion.
+      &lt;strong&gt;Our proposed PanFlow pipeline.&lt;/strong&gt; Given an input image and text prompt, PanFlow uses a decoupled motion from a video as reference to generate a panoramic video. We first estimate a decoupled optical flow from the reference video, of which the derotated flow is used to generate a latent noise with spherical noise warping. The latent noise then serves as a motion condition for a video diffusion transformer with LoRA fine-tuning to generate derotated videos. Finally, the decoupled rotation is accumulated and applied to the generated video frames to recover the full motion.
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
@@ -191,19 +185,14 @@ Supplementary notes can be added here, including [code, math, and images](https:
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt; --&gt;
 &lt;p&gt;By conditioning diffusion on spherical-warped motion noise, PanFlow enables precise motion control, produces loop-consistent panoramas, and supports applications such as motion transfer:&lt;/p&gt;
-&lt;figure&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34;&gt;
-        &lt;img src=&#34;transfer.gif&#34; width=&#34;70%&#34; loading=&#34;lazy&#34; data-zoomable=&#34;&#34; class=&#34;medium-zoom-image&#34;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;transfer.gif&#34; alt=&#34;transfer&#34; width=&#34;860&#34;&gt;
+&lt;/p&gt;
 &lt;p&gt;and panoramic video editing:&lt;/p&gt;
-&lt;figure&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34;&gt;
-        &lt;img src=&#34;editing.gif&#34; width=&#34;70%&#34; loading=&#34;lazy&#34; data-zoomable=&#34;&#34; class=&#34;medium-zoom-image&#34;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;</description>
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;editing.gif&#34; alt=&#34;editing&#34; width=&#34;860&#34;&gt;
+&lt;/p&gt;
+</description>
     </item>
     
   </channel>
