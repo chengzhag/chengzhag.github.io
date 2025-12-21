@@ -5,12 +5,206 @@
     <link>https://chengzhag.github.io/tag/panorama/</link>
       <atom:link href="https://chengzhag.github.io/tag/panorama/index.xml" rel="self" type="application/rss+xml" />
     <description>Panorama</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 12 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 21 Dec 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://chengzhag.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Panorama</title>
       <link>https://chengzhag.github.io/tag/panorama/</link>
     </image>
+    
+    <item>
+      <title>PanFlow: Decoupled Motion Control for Panoramic Video Generation</title>
+      <link>https://chengzhag.github.io/publication/panflow/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://chengzhag.github.io/publication/panflow/</guid>
+      <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+&lt;h2 id=&#34;div-classpublication-headeraaai-2026div&#34;&gt;&lt;div class=&#34;publication-header&#34;&gt;AAAI 2026&lt;/div&gt;&lt;/h2&gt;
+&lt;!-- - Hanwen Liang
+- Donny Y. Chen
+- Qianyi Wu
+- Konstantinos N. Plataniotis
+- Camilo Cruz Gambardella
+- Jianfei Cai --&gt;
+&lt;div class=&#34;publication-header&#34;&gt;
+  &lt;a href=&#34;https://chengzhag.github.io/&#34; target=&#34;_blank&#34;&gt;Cheng Zhang&lt;/a&gt;
+  &lt;sup&gt;1,2&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://github.com/hw-liang&#34; target=&#34;_blank&#34;&gt;Hanwen Liang&lt;/a&gt;
+  &lt;sup&gt;3&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://donydchen.github.io&#34; target=&#34;_blank&#34;&gt;Donny Y. Chen&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://wuqianyi.top&#34; target=&#34;_blank&#34;&gt;Qianyi Wu&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &lt;!-- &amp;nbsp; &amp;nbsp; --&gt;
+  &lt;br /&gt;
+  &lt;a href=&#34;https://www.ece.utoronto.ca/people/plataniotis-k-n/&#34; target=&#34;_blank&#34;&gt;Konstantinos N. Plataniotis&lt;/a&gt;
+  &lt;sup&gt;3&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://www.researchgate.net/profile/Camilo-Cruz-Gambardella&#34; target=&#34;_blank&#34;&gt;Camilo Cruz Gambardella&lt;/a&gt;
+  &lt;sup&gt;1,2&lt;/sup&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;a href=&#34;https://jianfei-cai.github.io&#34; target=&#34;_blank&#34;&gt;Jianfei Cai&lt;/a&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+&lt;/div&gt;
+&lt;div class=&#34;publication-header&#34;&gt;
+  &lt;sup&gt;1&lt;/sup&gt;
+  &lt;a href=&#34;https://www.monash.edu&#34; target=&#34;_blank&#34;&gt;Monash University&lt;/a&gt; 
+  &amp;nbsp; &amp;nbsp;
+  &lt;!-- &lt;br /&gt; --&gt;
+  &lt;sup&gt;2&lt;/sup&gt;
+  &lt;a href=&#34;https://building4pointzero.org&#34; target=&#34;_blank&#34;&gt;Building 4.0 CRC&lt;/a&gt;
+  &amp;nbsp; &amp;nbsp;
+  &lt;sup&gt;3&lt;/sup&gt;
+  &lt;a href=&#34;https://www.utoronto.ca&#34; target=&#34;_blank&#34;&gt;University of Toronto&lt;/a&gt; 
+  &lt;!-- &lt;br /&gt; --&gt;
+&lt;/div&gt;
+&lt;center&gt;
+  &lt;!-- &lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary js-cite-modal&#34; data-filename=&#34;cite.bib&#34;&gt;
+  Cite
+  &lt;/a&gt; --&gt;
+  &lt;a href=&#34;https://github.com/chengzhag/PanSplat&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  Code
+  &lt;/a&gt;
+  &lt;!-- &lt;a href=&#34;https://www.youtube.com/watch?v=Kg0du7mFu60&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  YouTube
+  &lt;/a&gt;
+  &lt;a href=&#34;https://www.bilibili.com/video/BV1By4y1g7c5/&#34; class=&#34;btn btn-outline-primary&#34; target=&#34;_blank&#34;&gt;
+  bilibili
+  &lt;/a&gt; --&gt;
+  &lt;a href=&#34;https://arxiv.org/abs/2412.12096&#34; class=&#34;btn btn-outline-primary&#34;&gt;
+  arXiv
+  &lt;/a&gt; 
+  &lt;a href=&#34;https://arxiv.org/pdf/2412.12096&#34; class=&#34;btn btn-outline-primary&#34;&gt;
+  Paper
+  &lt;/a&gt;
+&lt;/center&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;video&#34;&gt;Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/sFTWwlHjNtg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Panoramic video generation has attracted growing attention due to its applications in virtual reality and immersive media. However, existing methods lack explicit motion control and struggle to generate scenes with large and complex motions. We propose PanFlow, a novel approach that exploits the spherical nature of &lt;u&gt;pan&lt;/u&gt;oramas to decouple the highly dynamic camera rotation from the input optical &lt;u&gt;flow&lt;/u&gt; condition, enabling more precise control over large and dynamic motions. We further introduce a spherical noise warping strategy to promote loop consistency in motion across panorama boundaries. To support effective training, we curate a large-scale, motion-rich panoramic video dataset with frame-level pose and flow annotations. We also showcase the effectiveness of our method in various applications, including motion transfer and video editing. Extensive experiments demonstrate that PanFlow significantly outperforms prior methods in motion fidelity, visual quality, and temporal coherence.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-spherical-camera-optical-flow-the-optical-flow-from-a-panoramic-video-left-can-be-interpreted-as-a-spherical-camera-optical-flow-right-for-complex-motion-f-the-camera-rotation-yields-an-analytic-rotation-flow-fr-on-the-sphere-by-decomposing-f-into-fr-and-its-residual-we-obtain-a-derotated-flow-fd-that-more-clearly-captures-camera-translation-and-object-dynamics&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Spherical Camera Optical Flow. The optical flow from a panoramic video (left) can be interpreted as a spherical camera optical flow (right). For complex motion **f**, the camera rotation yields an analytic rotation flow **fr** on the sphere. By decomposing **f** into **fr** and its residual, we obtain a derotated flow **fd** that more clearly captures camera translation and object dynamics.&#34; srcset=&#34;
+               /publication/panflow/teaser_hu8f94f8bd176fc76feb23c2a004bde52e_828004_1372630565d310e580904b411bf67150.png 400w,
+               /publication/panflow/teaser_hu8f94f8bd176fc76feb23c2a004bde52e_828004_fdb1a4d12b2c667dbba09abc80b9d109.png 760w,
+               /publication/panflow/teaser_hu8f94f8bd176fc76feb23c2a004bde52e_828004_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/panflow/teaser_hu8f94f8bd176fc76feb23c2a004bde52e_828004_1372630565d310e580904b411bf67150.png&#34;
+               width=&#34;50%&#34;
+               height=&#34;639&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Spherical Camera Optical Flow. The optical flow from a panoramic video (left) can be interpreted as a spherical camera optical flow (right). For complex motion &lt;strong&gt;f&lt;/strong&gt;, the camera rotation yields an analytic rotation flow &lt;strong&gt;fr&lt;/strong&gt; on the sphere. By decomposing &lt;strong&gt;f&lt;/strong&gt; into &lt;strong&gt;fr&lt;/strong&gt; and its residual, we obtain a derotated flow &lt;strong&gt;fd&lt;/strong&gt; that more clearly captures camera translation and object dynamics.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-our-proposed-panflow-pipeline-given-an-input-image-and-text-prompt-panflow-uses-a-decoupled-motion-from-a-video-as-reference-to-generate-a-panoramic-video-we-first-estimate-a-decoupled-optical-flow-from-the-reference-video-of-which-the-derotated-flow-is-used-to-generate-a-latent-noise-with-spherical-noise-warping-the-latent-noise-then-serves-as-a-motion-condition-for-a-video-diffusion-transformer-with-lora-fine-tuning-to-generate-derotated-videos-finally-the-decoupled-rotation-is-accumulated-and-applied-to-the-generated-video-frames-to-recover-the-full-motion&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Our proposed PanFlow pipeline. Given an input image and text prompt, PanFlow uses a decoupled motion from a video as reference to generate a panoramic video. We first estimate a decoupled optical flow from the reference video, of which the derotated flow is used to generate a latent noise with spherical noise warping. The latent noise then serves as a motion condition for a video diffusion transformer with LoRA fine-tuning to generate derotated videos. Finally, the decoupled rotation is accumulated and applied to the generated video frames to recover the full motion.&#34; srcset=&#34;
+               /publication/panflow/pipeline_hu56d2780c2ed99b29e4fc3878bdb0433e_1183105_d1da4b9c5bc8b0eba7fea6e3bcbf8081.png 400w,
+               /publication/panflow/pipeline_hu56d2780c2ed99b29e4fc3878bdb0433e_1183105_01e40490b605386007714678e24656ee.png 760w,
+               /publication/panflow/pipeline_hu56d2780c2ed99b29e4fc3878bdb0433e_1183105_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/panflow/pipeline_hu56d2780c2ed99b29e4fc3878bdb0433e_1183105_d1da4b9c5bc8b0eba7fea6e3bcbf8081.png&#34;
+               width=&#34;80%&#34;
+               height=&#34;211&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Our proposed PanFlow pipeline. Given an input image and text prompt, PanFlow uses a decoupled motion from a video as reference to generate a panoramic video. We first estimate a decoupled optical flow from the reference video, of which the derotated flow is used to generate a latent noise with spherical noise warping. The latent noise then serves as a motion condition for a video diffusion transformer with LoRA fine-tuning to generate derotated videos. Finally, the decoupled rotation is accumulated and applied to the generated video frames to recover the full motion.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /publication/panflow/editing_huf1f7b188ed05826a963caeaad294c687_5085472_066b1b0677397289d57a4724f0ee2abd.gif 400w,
+               /publication/panflow/editing_huf1f7b188ed05826a963caeaad294c687_5085472_e9dfb9be0ff120985a2ad02e3b4aac82.gif 760w,
+               /publication/panflow/editing_huf1f7b188ed05826a963caeaad294c687_5085472_1200x1200_fit_lanczos.gif 1200w&#34;
+               src=&#34;https://chengzhag.github.io/publication/panflow/editing_huf1f7b188ed05826a963caeaad294c687_5085472_066b1b0677397289d57a4724f0ee2abd.gif&#34;
+               width=&#34;90%&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt; --&gt;
+&lt;p&gt;By conditioning diffusion on spherical-warped motion noise, PanFlow enables precise motion control, produces loop-consistent panoramas, and supports applications such as motion transfer:&lt;/p&gt;
+&lt;figure&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34;&gt;
+        &lt;img src=&#34;transfer.gif&#34; width=&#34;70%&#34; loading=&#34;lazy&#34; data-zoomable=&#34;&#34; class=&#34;medium-zoom-image&#34;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/figure&gt;
+&lt;p&gt;and panoramic video editing:&lt;/p&gt;
+&lt;figure&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34;&gt;
+        &lt;img src=&#34;editing.gif&#34; width=&#34;70%&#34; loading=&#34;lazy&#34; data-zoomable=&#34;&#34; class=&#34;medium-zoom-image&#34;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/figure&gt;</description>
+    </item>
     
     <item>
       <title>PanSplat: 4K Panorama Synthesis with Feed-Forward Gaussian Splatting</title>
@@ -132,7 +326,7 @@ Experiments demonstrate that PanSplat achieves state-of-the-art results with sup
                /publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_a952ef3b115c64bb64e2157e43f5d7a7.png 760w,
                /publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_1200x1200_fit_lanczos_2.png 1200w&#34;
                src=&#34;https://chengzhag.github.io/publication/pansplat/pipeline_hu69136d99cddca9f0238467cbbc2c2832_1105566_7e2bd5dc1b79802b2b0f980fcb653cfd.png&#34;
-               width=&#34;760&#34;
+               width=&#34;80%&#34;
                height=&#34;187&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
@@ -306,7 +500,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
                /publication/panfusion/pipeline_hu5f367bf169fefbabfa80074700fc729f_661292_da9ba806b6797c65f763d5a92a23b4fb.png 760w,
                /publication/panfusion/pipeline_hu5f367bf169fefbabfa80074700fc729f_661292_1200x1200_fit_lanczos_2.png 1200w&#34;
                src=&#34;https://chengzhag.github.io/publication/panfusion/pipeline_hu5f367bf169fefbabfa80074700fc729f_661292_326e05803f6d9f1e5ffd2f4213e4ea06.png&#34;
-               width=&#34;760&#34;
+               width=&#34;80%&#34;
                height=&#34;280&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
